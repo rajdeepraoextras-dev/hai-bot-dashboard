@@ -1,0 +1,700 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0c1017">
+<title>HAI Task Bot</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:dark;
+  --bg:#0c1017; --bg2:#0f1520; --panel:#131a26; --panel2:#182131; --line:#243044; --line2:#2d3a52;
+  --fg:#f2f5fa; --fg2:#b4bdcc; --dim:#8892a3; --faint:#5f6a7d;
+  --blue:#3987e5; --blue-soft:#5598e7; --blue-track:#0d366b; --aqua:#199e70; --violet:#9085e9;
+  --good:#0ca30c; --warn:#fab219; --serious:#ec835a; --crit:#d03b3b;
+  --r:16px; --r2:12px;
+  --font:Poppins,system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html{background:var(--bg)}
+body{margin:0;color:var(--fg);font:14.5px/1.55 var(--font);padding:18px 16px 56px;-webkit-font-smoothing:antialiased;
+  background:
+    radial-gradient(1200px 500px at 10% -10%,rgba(57,135,229,.16),transparent 60%),
+    radial-gradient(900px 400px at 100% 0%,rgba(144,133,233,.12),transparent 55%),
+    var(--bg)}
+.wrap{max-width:1180px;margin:0 auto}
+h1{font-size:19px;font-weight:600;margin:0;letter-spacing:-.01em;line-height:1.2}
+h2{font-size:12px;font-weight:600;margin:0 0 14px;color:var(--dim);text-transform:uppercase;letter-spacing:.09em;
+  display:flex;align-items:center;gap:8px}
+h2::before{content:"";width:6px;height:6px;border-radius:2px;background:var(--blue);flex:none}
+a{color:var(--blue-soft);text-decoration:none}
+a:hover{text-decoration:underline}
+.num{font-variant-numeric:tabular-nums}
+
+/* header */
+header{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+.brand{display:flex;align-items:center;gap:11px;margin-right:6px}
+.mark{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--blue),var(--violet));
+  box-shadow:0 6px 18px rgba(57,135,229,.35);position:relative;flex:none}
+.mark::after{content:"";position:absolute;inset:9px;border-radius:5px;border:2px solid rgba(255,255,255,.85);border-right-color:transparent;transform:rotate(-45deg)}
+.brand .tag{font-size:11.5px;color:var(--dim);margin-top:1px}
+.pill{display:inline-flex;align-items:center;gap:7px;padding:6px 12px;border-radius:999px;font-size:12px;font-weight:600;
+  background:var(--panel);border:1px solid var(--line);color:var(--fg2);line-height:1.2}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--faint);flex:none}
+.pill.live .dot{background:var(--good);box-shadow:0 0 0 3px rgba(12,163,12,.2);animation:pulse 2s ease-in-out infinite}
+.pill.warn .dot{background:var(--warn)} .pill.dead .dot{background:var(--crit)}
+.pill.live{color:#7fe07f} .pill.warn{color:var(--warn)} .pill.dead{color:#f08080}
+@keyframes pulse{50%{box-shadow:0 0 0 7px rgba(12,163,12,0)}}
+.spacer{flex:1}
+button.power{cursor:pointer;font-family:var(--font);letter-spacing:.02em;transition:background .15s,border-color .15s,color .15s}
+button.power[data-state="on"]{color:#7fe07f;border-color:rgba(12,163,12,.45)}
+button.power[data-state="off"]{color:var(--warn);border-color:rgba(250,178,25,.5);background:rgba(250,178,25,.1)}
+button.power:disabled{opacity:.5;cursor:wait}
+button.power:hover:not(:disabled){background:rgba(255,255,255,.06)}
+.pill.link{color:var(--blue-soft)} .pill.link .arr{transition:transform .15s} .pill.link:hover .arr{transform:translateX(2px)}
+.meta{font-size:12px;color:var(--faint)}
+
+/* banners */
+.banner{padding:12px 15px;border-radius:var(--r2);margin-bottom:12px;font-size:13.5px;border:1px solid;display:flex;gap:10px;align-items:flex-start}
+.banner .ico{flex:none;font-size:15px;line-height:1.4}
+.banner.err{background:rgba(208,59,59,.1);border-color:rgba(208,59,59,.4);color:#ffb3b3}
+.banner.warn{background:rgba(250,178,25,.09);border-color:rgba(250,178,25,.38);color:#ffd88a}
+.banner.info{background:rgba(57,135,229,.1);border-color:rgba(57,135,229,.35);color:#bcd6f7}
+.banner b{font-weight:600;color:var(--fg)}
+
+/* hero + kpi row */
+.hero{display:grid;gap:12px;grid-template-columns:1fr;margin-bottom:14px}
+@media(min-width:820px){.hero{grid-template-columns:minmax(260px,1.15fr) 2fr}}
+.hero-main{background:linear-gradient(160deg,rgba(57,135,229,.18),rgba(144,133,233,.08) 60%,transparent),var(--panel);
+  border:1px solid var(--line2);border-radius:var(--r);padding:20px 22px;position:relative;overflow:hidden;
+  display:flex;flex-direction:column;justify-content:center;min-height:150px}
+.hero-main::after{content:"";position:absolute;right:-40px;top:-40px;width:180px;height:180px;border-radius:50%;
+  background:radial-gradient(closest-side,rgba(57,135,229,.25),transparent)}
+.hero-main .k{font-size:11.5px;color:var(--dim);text-transform:uppercase;letter-spacing:.08em;font-weight:500}
+.hero-v{font-size:54px;font-weight:600;letter-spacing:-.03em;line-height:1.05;margin:6px 0 4px;color:var(--fg)}
+.hero-v.small{font-size:34px}
+.hero-main .sub{font-size:12.5px;color:var(--fg2)}
+.hero-main .sub b{color:var(--fg);font-weight:600}
+.stats{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;position:relative;overflow:hidden;min-height:96px}
+.stat::before{content:"";position:absolute;left:0;top:14px;bottom:14px;width:3px;border-radius:0 3px 3px 0;background:var(--faint)}
+.stat.good::before{background:var(--good)} .stat.warn::before{background:var(--warn)}
+.stat.crit::before{background:var(--crit)} .stat.blue::before{background:var(--blue)}
+.stat.violet::before{background:var(--violet)} .stat.aqua::before{background:var(--aqua)}
+.stat .k{font-size:11px;color:var(--dim);text-transform:uppercase;letter-spacing:.07em;font-weight:500}
+.stat .v{font-size:26px;font-weight:600;margin-top:6px;letter-spacing:-.02em;line-height:1.15;color:var(--fg)}
+.stat .v small{font-size:14px;font-weight:500;color:var(--dim);letter-spacing:0;margin-left:2px}
+.stat .sub{font-size:11.5px;color:var(--dim);margin-top:4px}
+
+/* layout */
+.grid{display:grid;gap:14px;grid-template-columns:1fr}
+@media(min-width:900px){.grid.two{grid-template-columns:1fr 1fr}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:18px;margin-bottom:14px;
+  box-shadow:0 1px 0 rgba(255,255,255,.02) inset}
+.card.slim{padding:16px 18px}
+
+/* definition list */
+dl{display:grid;grid-template-columns:auto 1fr;gap:9px 16px;margin:0;font-size:13.5px}
+dt{color:var(--dim)} dd{margin:0;text-align:right;font-variant-numeric:tabular-nums;color:var(--fg2)}
+dd b{color:var(--fg);font-weight:600}
+.tag{display:inline-flex;align-items:center;gap:5px;padding:2px 9px;border-radius:999px;font-size:11px;font-weight:600;line-height:1.6}
+.tag.on{background:rgba(12,163,12,.16);color:#7fe07f}
+.tag.off{background:rgba(136,146,163,.16);color:var(--fg2)}
+.tag.dry{background:rgba(250,178,25,.16);color:var(--warn)}
+.tag.fix{background:rgba(250,178,25,.16);color:var(--warn)}
+.ok{color:#7fe07f} .warn{color:var(--warn)} .err{color:#f08080} .muted{color:var(--faint)}
+
+/* meter */
+.meter{margin-top:10px}
+.meter .row{display:flex;justify-content:space-between;font-size:12px;color:var(--dim);margin-bottom:6px}
+.meter .row b{color:var(--fg);font-weight:600}
+.meter .track{height:8px;border-radius:4px;background:var(--blue-track);overflow:hidden}
+.meter .track i{display:block;height:100%;border-radius:4px;background:var(--blue);transition:width .4s ease}
+.meter.full .track i{background:var(--warn)}
+
+/* tables */
+table{width:100%;border-collapse:collapse;font-size:12.5px;font-variant-numeric:tabular-nums}
+th{text-align:left;color:var(--dim);font-weight:500;font-size:11px;text-transform:uppercase;letter-spacing:.06em;padding:0 10px 9px 0}
+td{padding:9px 10px 9px 0;border-top:1px solid var(--line);vertical-align:top;color:var(--fg2)}
+td a{color:var(--blue-soft)}
+tr:hover td{background:rgba(255,255,255,.02)}
+th:last-child,td:last-child{text-align:right;padding-right:0}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+
+/* claims by day: single-series bar list */
+.bars{display:flex;flex-direction:column;gap:8px}
+.bar{display:grid;grid-template-columns:92px 1fr 34px;align-items:center;gap:10px;font-size:12px;padding:2px 4px;border-radius:6px}
+.bar:hover{background:rgba(255,255,255,.03)}
+.bar .d{color:var(--dim)}
+.bar .t{height:8px;background:var(--panel2);border-radius:4px;overflow:hidden}
+.bar .t i{display:block;height:100%;background:var(--blue);border-radius:0 4px 4px 0;min-width:2px}
+.bar .n{text-align:right;color:var(--fg);font-variant-numeric:tabular-nums;font-weight:500}
+
+/* log */
+.logbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px}
+.logbar input{flex:1;min-width:130px;padding:8px 12px;border-radius:9px;border:1px solid var(--line);background:var(--bg2);color:var(--fg);font-size:13px;font-family:var(--font)}
+.logbar input:focus{outline:none;border-color:var(--blue)}
+.logbar label{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;color:var(--dim);cursor:pointer}
+.log{max-height:460px;overflow:auto;border-radius:var(--r2);background:var(--bg2);border:1px solid var(--line);padding:10px;font-size:12px;line-height:1.6;-webkit-overflow-scrolling:touch}
+.line{display:flex;gap:10px;padding:2px 6px;border-radius:5px;white-space:pre-wrap;word-break:break-word}
+.line:hover{background:rgba(255,255,255,.035)}
+.line time{color:var(--faint);flex:none;font-variant-numeric:tabular-nums;font-size:11.5px}
+.line .m{flex:1;min-width:0;color:var(--fg2)}
+.k-claim .m{color:#7fe07f} .k-error .m{color:#f08080}
+.k-ratelimit .m{color:var(--warn)} .k-held .m{color:var(--warn)}
+.k-blocked .m{color:var(--violet)} .k-lifecycle .m{color:var(--blue-soft)}
+.k-notify .m{color:#5fd3c6} .k-poll .m{color:var(--faint)}
+
+.empty{color:var(--faint);font-size:13px;padding:14px 0;text-align:center}
+footer{margin-top:22px;font-size:11.5px;color:var(--faint);text-align:center;font-variant-numeric:tabular-nums}
+
+/* static-mode gate */
+#gate{position:fixed;inset:0;display:none;place-items:center;background:rgba(12,16,23,.92);z-index:50;padding:16px}
+#gate.show{display:grid}
+#gate form{background:var(--panel);border:1px solid var(--line2);border-radius:var(--r);padding:26px;width:min(360px,94vw)}
+#gate h1{margin-bottom:4px}
+#gate p{margin:0 0 16px;color:var(--dim);font-size:13px}
+#gate input{width:100%;padding:11px 13px;border-radius:10px;border:1px solid var(--line);background:var(--bg2);color:var(--fg);font-size:15px;font-family:var(--font)}
+#gate button{margin-top:12px;width:100%;padding:11px;border:0;border-radius:10px;background:linear-gradient(135deg,var(--blue),var(--violet));color:#fff;font-size:15px;font-weight:600;cursor:pointer;font-family:var(--font)}
+#gateMsg{margin-top:10px;font-size:12.5px;color:var(--warn);min-height:18px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="mark"></span><div><h1>HAI Task Bot</h1><div class="tag" id="brandTag">watching the portal</div></div></div>
+    <span id="pill" class="pill"><span class="dot"></span><span id="pilltxt">connecting</span></span>
+    <button id="powerBtn" class="pill power" type="button">&#9211; <span id="powerTxt">&hellip;</span></button>
+    <a id="prsLink" href="/prs" class="pill link">PR pipelines <span class="arr">&rarr;</span></a>
+    <span class="spacer"></span>
+    <span class="meta" id="clock"></span>
+  </header>
+
+  <div id="banners"></div>
+
+  <section class="hero">
+    <div class="hero-main">
+      <div class="k" id="heroK">Next predicted drop</div>
+      <div class="hero-v" id="heroV">&mdash;</div>
+      <div class="sub" id="heroSub">learning the drop grid&hellip;</div>
+    </div>
+    <div id="stats" class="stats"></div>
+  </section>
+
+  <div class="card">
+    <h2>Task availability</h2>
+    <div id="avail"></div>
+  </div>
+
+  <div class="card">
+    <h2>Tasks you hold <span id="heldcount" style="margin-left:auto;font-weight:600;color:var(--fg2);letter-spacing:0;text-transform:none"></span></h2>
+    <div id="held"></div>
+  </div>
+
+  <div class="grid two">
+    <div class="card">
+      <h2>Claims by day</h2>
+      <div id="days"></div>
+    </div>
+    <div class="card">
+      <h2>Claim allowance</h2>
+      <dl id="allow"></dl>
+      <div id="allowMeter"></div>
+    </div>
+  </div>
+
+  <div class="grid two">
+    <div class="card">
+      <h2>Drop schedule</h2>
+      <dl id="sched"></dl>
+    </div>
+    <div class="card">
+      <h2>Configuration</h2>
+      <dl id="cfg"></dl>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Health &middot; last hour</h2>
+    <dl id="health"></dl>
+  </div>
+
+  <div class="card">
+    <h2>Live log</h2>
+    <div class="logbar">
+      <input id="q" placeholder="Filter log&hellip;" autocomplete="off">
+      <label><input type="checkbox" id="polls"> show polls</label>
+      <label><input type="checkbox" id="pause"> pause</label>
+    </div>
+    <div class="log" id="log"></div>
+  </div>
+
+  <footer id="foot"></footer>
+</div>
+
+<div id="gate">
+  <form id="gateForm">
+    <h1>HAI Task Bot</h1>
+    <p id="gateHint">Enter the dashboard access token from your Telegram link.</p>
+    <input id="gateTok" type="password" placeholder="Access token" autocomplete="current-password" autofocus>
+    <button type="submit">Open dashboard</button>
+    <div id="gateMsg"></div>
+  </form>
+</div>
+<script>window.HAI_STATIC = true;</script>
+<script>
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+// ---------------------------------------------------------------- transport
+// Served by the bot: same-origin, cookie auth. Static (GitHub Pages): the bot
+// origin comes from endpoint.json next to this page, the token travels as a
+// header, and both are remembered in this browser only.
+const STATIC = !!window.HAI_STATIC;
+const LS_TOKEN = 'hai_dash_token';
+let API = '';
+let TOKEN = '';
+let apiReady = !STATIC;
+
+function loadToken(){
+  try {
+    const m = /[#&]k=([^&]+)/.exec(location.hash || '');
+    if (m) {
+      TOKEN = decodeURIComponent(m[1]);
+      localStorage.setItem(LS_TOKEN, TOKEN);
+      history.replaceState(null, '', location.pathname + location.search);
+    } else {
+      TOKEN = localStorage.getItem(LS_TOKEN) || '';
+    }
+  } catch (e) { /* storage unavailable: token lives for this page load only */ }
+}
+async function resolveApi(){
+  if (!STATIC) return true;
+  try {
+    const r = await fetch('./endpoint.json?t=' + Date.now(), { cache: 'no-store' });
+    const j = await r.json();
+    API = String(j.url || '').replace(/\/+$/, '');
+    apiReady = !!API;
+  } catch (e) { apiReady = false; }
+  return apiReady;
+}
+function api(path, opts){
+  opts = opts || {};
+  const h = Object.assign({}, opts.headers || {});
+  if (STATIC && TOKEN) h['x-dash-token'] = TOKEN;
+  return fetch(API + path, Object.assign({}, opts, { headers: h, credentials: STATIC ? 'omit' : 'same-origin' }));
+}
+function showGate(msg){
+  $('gate').classList.add('show');
+  $('gateMsg').textContent = msg || '';
+  setTimeout(() => $('gateTok').focus(), 50);
+}
+function hideGate(){ $('gate').classList.remove('show'); }
+$('gateForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const v = $('gateTok').value.trim();
+  if (!v) return;
+  TOKEN = v;
+  try { localStorage.setItem(LS_TOKEN, v); } catch (err) { /* ignore */ }
+  hideGate();
+  tick(); tickLog();
+});
+
+// ---------------------------------------------------------------- formatting
+function agoStr(sec){
+  if (sec == null) return 'never';
+  if (sec < 0) sec = 0;
+  if (sec < 60) return sec + 's ago';
+  if (sec < 3600) return Math.floor(sec/60) + 'm ago';
+  if (sec < 86400) return Math.floor(sec/3600) + 'h ' + Math.floor(sec%3600/60) + 'm ago';
+  return Math.floor(sec/86400) + 'd ago';
+}
+function durStr(ms){
+  const s = Math.round(ms/1000);
+  if (s < 60) return s + 's';
+  if (s < 3600) return Math.floor(s/60) + 'm ' + (s%60) + 's';
+  return Math.floor(s/3600) + 'h ' + Math.floor(s%3600/60) + 'm';
+}
+function upStr(sec){
+  if (sec == null) return '\u2014';
+  if (sec < 3600) return Math.floor(sec/60) + 'm';
+  if (sec < 86400) return Math.floor(sec/3600) + 'h ' + Math.floor(sec%3600/60) + 'm';
+  return Math.floor(sec/86400) + 'd ' + Math.floor(sec%86400/3600) + 'h';
+}
+function mmss(ms){
+  const s = Math.max(0, Math.round(ms/1000));
+  const m = Math.floor(s/60), r = s % 60;
+  return (m < 10 ? '0' : '') + m + ':' + (r < 10 ? '0' : '') + r;
+}
+// Every timestamp on this page is IST, pinned explicitly rather than left to
+// the viewer locale: the bot, the drop grid and the fellow all work in IST, so
+// a phone in another timezone would otherwise show times that line up with
+// nothing the user can act on.
+const IST = 'Asia/Kolkata';
+const fmtTime = (v) => { const d = new Date(v); return isNaN(d) ? String(v) : d.toLocaleString('en-GB',
+  {timeZone:IST,month:'short',day:'numeric',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false}); };
+const fmtShort = (v) => { const d = new Date(v); return isNaN(d) ? '' : d.toLocaleTimeString('en-GB',
+  {timeZone:IST,hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false}); };
+const fmtClock = (v) => { const d = new Date(v); return isNaN(d) ? '\u2014' : d.toLocaleTimeString('en-GB',
+  {timeZone:IST,hour:'2-digit',minute:'2-digit',hour12:false}) + ' IST'; };
+const fmtClockSec = (v) => { const d = new Date(v); return isNaN(d) ? '\u2014' : d.toLocaleTimeString('en-GB',
+  {timeZone:IST,hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false}) + ' IST'; };
+const dayLabel = (s) => { const d = new Date(s + 'T12:00:00Z'); return isNaN(d) ? s :
+  d.toLocaleDateString('en-GB',{timeZone:IST,weekday:'short',month:'short',day:'numeric'}); };
+const nowIst = () => new Date().toLocaleTimeString('en-GB',{timeZone:IST,hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false});
+
+// ---------------------------------------------------------------- cells
+function prCell(t){
+  if (!t.repoUrl) return '<span class="muted">\u2014</span>';
+  const c = t.ci;
+  if (!c || !c.pr) {
+    const name = t.repoUrl.split('/').pop().slice(0, 20);
+    return '<a href="' + t.repoUrl + '" target="_blank" rel="noopener" class="muted">' + esc(name) + '</a>';
+  }
+  return '<a href="' + c.pr.url + '" target="_blank" rel="noopener">#' + c.pr.number + '</a>' +
+    (c.openPrCount > 1 ? ' <span class="muted">+' + (c.openPrCount-1) + '</span>' : '');
+}
+function ciCell(t){
+  const c = t.ci;
+  if (!t.repoUrl) return '<span class="muted">\u2014</span>';
+  if (!c) return '<span class="muted">loading\u2026</span>';
+  if (c.error || c.state === 'error') return '<span class="err">\u26A0 error</span>';
+  if (c.state === 'no-token') return '<span class="muted">no gh token</span>';
+  if (c.state === 'no-pr') return '<span class="muted">no PR</span>';
+  if (c.state === 'no-checks') return '<span class="muted">no checks</span>';
+  const k = c.checks || {};
+  const bits = [];
+  if (k.success) bits.push('<span class="ok">\u2713 ' + k.success + ' ok</span>');
+  if (k.failure) bits.push('<span class="err">\u2717 ' + k.failure + ' fail</span>');
+  if (k.running) bits.push('<span class="warn">\u25CF ' + k.running + ' running</span>');
+  if (k.skipped) bits.push('<span class="muted">' + k.skipped + ' skip</span>');
+  let out = bits.join(' <span class="muted">\u00B7</span> ');
+  if (k.failing && k.failing.length) {
+    out += '<div style="margin-top:3px">' + k.failing.map(f =>
+      '<a href="' + f.url + '" target="_blank" rel="noopener" class="err" style="font-size:10.5px">' +
+      esc(f.name) + '</a>').join('<span class="muted">, </span>') + '</div>';
+  }
+  return out;
+}
+
+// ---------------------------------------------------------------- hero
+let heroNext = null;   // epoch ms of the next predicted drop
+let heroPeriod = 0;    // ms between drops
+let heroOpen = null;   // an availability window that is open right now
+function paintHero(){
+  const now = Date.now();
+  if (heroOpen) {
+    $('heroK').textContent = 'Tasks on the board right now';
+    $('heroV').className = 'hero-v';
+    $('heroV').textContent = String(heroOpen.peak || heroOpen.count || 0);
+    $('heroSub').innerHTML = 'claimable for <b>' + durStr(now - heroOpen.start) + '</b> \u00B7 the bot is firing';
+    return;
+  }
+  if (!heroNext) {
+    $('heroK').textContent = 'Next predicted drop';
+    $('heroV').className = 'hero-v small';
+    $('heroV').textContent = 'learning';
+    $('heroSub').textContent = 'the grid locks after a few observed batches';
+    return;
+  }
+  let next = heroNext;
+  while (heroPeriod > 0 && next < now - 8000) next += heroPeriod;
+  const left = next - now;
+  $('heroK').textContent = 'Next predicted drop';
+  $('heroV').className = 'hero-v';
+  $('heroV').textContent = left <= 0 ? 'now' : mmss(left);
+  $('heroSub').innerHTML = 'at <b>' + fmtClockSec(next) + '</b>' +
+    (heroPeriod ? ' \u00B7 every ' + Math.round(heroPeriod/60000) + ' min' : '') +
+    (left > 0 && left < 6000 ? ' \u00B7 <b>striking</b>' : '');
+}
+
+// ---------------------------------------------------------------- status
+async function tick(){
+  if (STATIC && !apiReady) { await resolveApi(); }
+  if (STATIC && !apiReady) {
+    $('pill').className = 'pill warn'; $('pilltxt').textContent = 'no endpoint yet';
+    $('heroK').textContent = 'Waiting for the bot';
+    $('heroV').className = 'hero-v small'; $('heroV').textContent = 'offline';
+    $('heroSub').textContent = 'the bot publishes its address here when its tunnel comes up';
+    return;
+  }
+  if (STATIC && !TOKEN) { showGate(''); $('pill').className = 'pill warn'; $('pilltxt').textContent = 'token needed'; return; }
+  let d, r;
+  try { r = await api('/api/status'); }
+  catch (e) { $('pill').className = 'pill dead'; $('pilltxt').textContent = 'unreachable'; return; }
+  if (r.status === 401) {
+    TOKEN = '';
+    try { localStorage.removeItem(LS_TOKEN); } catch (e) { /* ignore */ }
+    $('pill').className = 'pill warn'; $('pilltxt').textContent = 'token rejected';
+    showGate('That token was not accepted. Use the latest Telegram link, or paste the token again.');
+    return;
+  }
+  try { d = await r.json(); } catch (e) { $('pill').className = 'pill dead'; $('pilltxt').textContent = 'bad response'; return; }
+  hideGate();
+
+  const ac = d.config?.autoClaim || {};
+  const claims = d.claims || {};
+  const proj = (d.projects || [])[0] || {};
+  const av = proj.availability || {};
+  const held = proj.held;
+  const cw = d.claimWindow || {};
+  const sc = d.schedule || {};
+
+  // header
+  const stale = d.lastPollAgoSec != null && d.lastPollAgoSec > Math.max(30, (d.config.pollIntervalSeconds||90)*4);
+  $('pill').className = 'pill ' + (d.alive ? 'live' : stale ? 'warn' : 'dead');
+  $('pilltxt').textContent = d.alive ? 'running' : stale ? 'stale' : 'down';
+  $('clock').textContent = nowIst() + ' IST \u00B7 up ' + upStr(d.uptimeSec) + ' \u00B7 polled ' + agoStr(d.lastPollAgoSec);
+  $('brandTag').textContent = 'watching ' + ((d.config.projects||[]).map(p=>p.name).join(', ') || 'the portal');
+  if (STATIC) $('prsLink').href = API + '/prs?k=' + encodeURIComponent(TOKEN);
+
+  // on/off switch
+  const paused = !!(d.pause && d.pause.paused);
+  const pb = $('powerBtn');
+  pb.dataset.state = paused ? 'off' : 'on';
+  $('powerTxt').textContent = paused ? 'Claiming OFF' : 'Claiming ON';
+  pb.title = paused
+    ? 'Auto-claim is paused. Monitoring and alerts still run. Click to resume.'
+    : 'Auto-claim is live. Click to pause claiming (monitoring keeps running).';
+
+  // hero
+  heroNext = sc.nextDropAt || null;
+  heroPeriod = sc.periodMin ? sc.periodMin * 60000 : 0;
+  heroOpen = av.open ? { start: av.open.start, peak: av.open.peak, count: proj.tasksListed } : null;
+  paintHero();
+
+  // banners
+  const b = [];
+  if (paused) b.push(['warn','\u23F8','Auto-claim is switched OFF.','The bot is still polling and will still alert you, but it will not claim anything.' +
+    (d.pause.since ? ' Paused ' + agoStr(Math.round((d.now - d.pause.since) / 1000)) + '.' : '')]);
+  if (!d.alive) b.push(['err','\u26A0','Bot is not polling.','Last poll ' + agoStr(d.lastPollAgoSec) + '. Check that the HAI Task Bot scheduled task is running on the PC.']);
+  if (d.sessionExpiredAlert) b.push(['err','\u26A0','Portal session expired.','Run <code>npm run login</code> on the PC to sign back in.']);
+  if (d.stateLoadFailed) b.push(['err','\u26A0','State file unreadable.','Auto-claim is paused until it recovers.']);
+  if (d.health?.rateLimited > 0) b.push(['warn','\u26A0','Rate limited by the portal ' + d.health.rateLimited + '\u00D7 in the last hour.','The bot backs off automatically; claims may be delayed.']);
+  if (held && held.reworkCount > 0) b.push(['warn','\u2699',held.reworkCount + ' of your ' + held.count + ' tasks need a fix.','They stay on your list until you submit them. The bot cannot clear these for you.']);
+  if (cw.atCap) b.push(['info','\u2139','Claimed ' + cw.used + ' in the last 24h.','The portal is believed to allow ' + cw.cap + ' per 24h, so further claims will probably be refused until ' + fmtClock(cw.nextSlotAt) + '. Nothing is blocked locally; the bot keeps trying and logs what the portal says.']);
+  $('banners').innerHTML = b.map(([k,i,t,s]) => '<div class="banner ' + k + '"><span class="ico">' + i + '</span><div><b>' + t + '</b> ' + s + '</div></div>').join('');
+
+  // KPI tiles
+  const availNow = proj.tasksListed || 0;
+  const stats = [
+    ['Available now', availNow ? String(availNow) : 'None',
+      availNow ? 'claimable on ' + esc(proj.name||'') : 'last seen ' + agoStr(av.lastAvailableAgoSec), availNow ? 'good' : ''],
+    ['Claimed \u00B7 24h', (cw.used ?? '\u2014') + (cw.cap ? '<small>/ ' + cw.cap + '</small>' : ''),
+      cw.atCap ? 'allowance probably full' : (cw.cap ? (cw.cap - (cw.used||0)) + ' left before the believed allowance' : 'no allowance known'),
+      cw.atCap ? 'warn' : 'blue'],
+    ['Holding', held ? String(held.count) + (cw.localConcurrentCap ? '<small>/ ' + cw.localConcurrentCap + '</small>' : '') : '\u2014',
+      held ? (held.reworkCount ? held.reworkCount + ' need fixing' : 'all in progress') : 'unknown',
+      held && held.reworkCount ? 'warn' : 'aqua'],
+    ['Auto-claim', ac.enabled ? (ac.dryRun ? 'Dry-run' : paused ? 'Paused' : 'Live') : 'Off',
+      ac.enabled ? (ac.dryRun ? 'not actually claiming' : paused ? 'notify only' : 'volleys of ' + (ac.volleySize ?? 6)) : 'notify only',
+      ac.enabled && !ac.dryRun && !paused ? 'good' : 'warn'],
+    ['Claims all-time', String(claims.total ?? '\u2014'),
+      claims.last ? 'last ' + agoStr(Math.round((d.now - Date.parse(claims.last))/1000)) : 'none yet', 'violet'],
+    ['Poll cadence', (d.health?.medianPollGapSec ?? d.config.pollIntervalSeconds ?? '\u2014') + '<small>s</small>',
+      (ac.strikePolling !== false ? '0.4s around drops \u00B7 ' : '') + 'budget ' + (d.health?.budget ? d.health.budget.used + '/' + d.health.budget.limit : '\u2014') + ' per min', 'blue'],
+  ];
+  $('stats').innerHTML = stats.map(([k,v,sub,cls]) =>
+    '<div class="stat ' + (cls||'') + '"><div class="k">' + k + '</div><div class="v">' + v +
+    '</div><div class="sub">' + (sub||'') + '</div></div>').join('');
+
+  // availability
+  let a = '';
+  if (av.open) {
+    a += '<div class="banner warn" style="margin-bottom:14px"><span class="ico">\u26A1</span><div><b>Tasks are available right now.</b> ' +
+      'Open for ' + durStr(av.open.openMs) + ', peak ' + av.open.peak + ' task' + (av.open.peak===1?'':'s') + '.</div></div>';
+  }
+  a += '<dl style="margin-bottom:14px">' + [
+    ['Last time tasks were available', av.lastAvailableAt ? fmtTime(av.lastAvailableAt) + ' \u00B7 ' + agoStr(av.lastAvailableAgoSec) : 'never recorded'],
+    ['Availability windows (24h)', av.windows24h ?? 0],
+    ['Portal had work (24h)', (av.uptimePct24h ?? 0) + '%'],
+    ['Last check', agoStr(proj.lastCheckedAgoSec)],
+    ['Last claim verdict', proj.lastClaimVerdict
+      ? '<b>' + esc(proj.lastClaimVerdict.verdict) + '</b> \u00B7 ' + fmtClockSec(proj.lastClaimVerdict.at) +
+        ' <span class="muted">(' + agoStr(Math.round((d.now-proj.lastClaimVerdict.at)/1000)) + ')</span>'
+      : '\u2014'],
+  ].map(([k,v]) => '<dt>' + k + '</dt><dd>' + v + '</dd>').join('') + '</dl>';
+  const w = av.windows || [];
+  a += w.length
+    ? '<div class="scroll"><table><thead><tr><th>Window opened</th><th>Lasted</th><th>Peak</th><th>Claimed</th></tr></thead><tbody>' +
+      w.slice(0,14).map(x =>
+        '<tr><td>' + fmtTime(x.start) + '</td><td>' + durStr(x.durationMs) + '</td><td>' + x.peak +
+        '</td><td class="' + (x.claims ? 'ok' : 'muted') + '">' + (x.claims ? '\u2713 ' : '') + x.claims + '</td></tr>').join('') +
+      '</tbody></table></div>'
+    : '<div class="empty">No completed availability windows recorded yet</div>';
+  $('avail').innerHTML = a;
+
+  // held tasks
+  const STATUS_LABEL = {
+    task_in_progress: 'In progress',
+    task_fix_in_progress: 'Fixing',
+    task_needs_fixing: 'Needs fix',
+    task_upgraded_needs_fixing: 'Needs fix',
+  };
+  $('heldcount').textContent = held ? held.count + (cw.localConcurrentCap ? ' / ' + cw.localConcurrentCap : '') : '';
+  $('held').innerHTML = held && held.tasks.length
+    ? '<div class="scroll"><table><thead><tr><th>Task</th><th>Status</th><th>Build</th>' +
+      '<th>GitHub PR</th><th>Pipeline checks</th><th>Held for</th><th>Deadline</th></tr></thead><tbody>' +
+      held.tasks.map(t => {
+        const over = t.remainingMs != null && t.remainingMs <= 0;
+        const soon = t.remainingMs != null && t.remainingMs > 0 && t.remainingMs < 2*3600*1000;
+        return '<tr>' +
+          '<td><a href="' + t.url + '" target="_blank" rel="noopener">' + esc(t.short) + '</a>' +
+            (t.category ? '<div class="muted" style="font-size:11px">' + esc(t.category) + '</div>' : '') + '</td>' +
+          '<td><span class="tag ' + (t.rework ? 'fix' : 'on') + '">' + (t.rework ? '\u2699 ' : '\u25B6 ') +
+            esc(STATUS_LABEL[t.status] || t.status || '?') + '</span></td>' +
+          '<td>' + (t.build === 'passing'
+              ? '<span class="ok">\u2713 passing</span>'
+              : t.build === 'failing' ? '<span class="err">\u2717 failing</span>'
+              : '<span class="muted">\u2014</span>') + '</td>' +
+          '<td>' + prCell(t) + '</td>' +
+          '<td>' + ciCell(t) + '</td>' +
+          '<td>' + (t.heldMs != null ? (t.heldExact ? '' : '~') + durStr(t.heldMs) : '\u2014') + '</td>' +
+          '<td class="' + (over ? 'err' : soon ? 'warn' : '') + '">' +
+            (t.remainingMs == null ? '\u2014' : over ? 'overdue ' + durStr(-t.remainingMs) : durStr(t.remainingMs) + ' left') +
+          '</td></tr>';
+      }).join('') +
+      '</tbody></table></div>' +
+      '<div class="muted" style="margin-top:11px;font-size:11.5px">' +
+      held.count + ' held \u00B7 ' + held.reworkCount + ' flagged for rework \u00B7 ' +
+      (held.freeSlots != null ? held.freeSlots + ' slot' + (held.freeSlots===1?'':'s') + ' free \u00B7 ' : '') +
+      'submitting removes a task from this list \u00B7 read ' + agoStr(held.ageSec) +
+      '<br>\u201C~\u201D means the start time is inferred: the task was already held when the bot started watching.' +
+      '</div>'
+    : '<div class="empty">' + (held ? 'Holding nothing right now' : 'Held-task list not read yet') + '</div>';
+
+  // claims by day: one series, so no legend; the count is the direct label
+  const days = claims.byDay || [];
+  const max = Math.max(1, ...days.map(x => x.count));
+  $('days').innerHTML = days.length
+    ? '<div class="bars">' + days.slice(0,10).map(x =>
+        '<div class="bar" title="' + esc(dayLabel(x.day)) + ': ' + x.count + ' claim' + (x.count===1?'':'s') + '"><span class="d">' + dayLabel(x.day) + '</span>' +
+        '<span class="t"><i style="width:' + Math.round(x.count/max*100) + '%"></i></span>' +
+        '<span class="n">' + x.count + '</span></div>').join('') + '</div>'
+    : '<div class="empty">No claims recorded yet</div>';
+
+  // claim allowance: the rolling 24h window the portal is believed to enforce
+  const capHrs = (s) => (s == null ? '\u2014' : (s / 3600).toFixed(1) + 'h');
+  $('allow').innerHTML = [
+    ['Claimed in 24h', '<b>' + (cw.used ?? '\u2014') + '</b>' + (cw.cap ? ' / ' + cw.cap + ' believed allowance' : '')],
+    ['Held right now', '<b>' + (cw.held ?? '\u2014') + '</b>' + (cw.localConcurrentCap ? ' / ' + cw.localConcurrentCap : '') +
+      (cw.reworkHeld ? ' <span class="warn">(' + cw.reworkHeld + ' need fixing)</span>' : '')],
+    ['Local gates', (cw.localDailyCap ? 'daily ' + cw.localDailyCap : '') + (cw.localDailyCap && cw.localConcurrentCap ? ' \u00B7 ' : '') +
+      (cw.localConcurrentCap ? 'held ' + cw.localConcurrentCap : '') || '<span class="ok">off \u2014 the portal decides</span>'],
+    ['Outlook', cw.atCap
+      ? '<span class="warn">refusals likely until the oldest claim ages out</span>'
+      : '<span class="ok">\u2713 room to claim</span>'],
+    ['Next slot frees', cw.atCap && cw.nextSlotAt
+      ? fmtClockSec(cw.nextSlotAt) + ' <span class="muted">(in ' + capHrs(cw.nextSlotInSec) + ')</span>'
+      : 'now'],
+  ].map(([k,v]) => '<dt>' + k + '</dt><dd>' + v + '</dd>').join('');
+  $('allowMeter').innerHTML = cw.cap
+    ? '<div class="meter' + (cw.atCap ? ' full' : '') + '"><div class="row"><span>24h allowance</span><span><b>' + (cw.used||0) + '</b> of ' + cw.cap + '</span></div>' +
+      '<div class="track"><i style="width:' + Math.min(100, Math.round(((cw.used||0)/cw.cap)*100)) + '%"></i></div></div>'
+    : '';
+
+  // drop schedule
+  $('sched').innerHTML = [
+    ['Grid', sc.locked ? '<span class="ok">\u2713 locked</span>' : '<span class="warn">learning</span> <span class="muted">(uniform polling meanwhile)</span>'],
+    ['Period', sc.periodMin != null ? 'every <b>' + sc.periodMin + '</b> min' : '\u2014'],
+    ['Drop lands', sc.phaseSec != null ? '<b>+' + sc.phaseSec + 's</b> past the boundary' : '\u2014'],
+    ['Jitter', sc.spreadSec != null ? '\u00B1' + sc.spreadSec + 's' : '\u2014'],
+    ['Next drop', sc.nextDropAt != null ? fmtClockSec(sc.nextDropAt) + ' <span class="muted">(in ' + sc.nextDropInSec + 's)</span>' : '\u2014'],
+    ['Strike polling', ac.strikePolling === false ? '<span class="muted">off</span>' : '0.4s from 5s before to 7s after each drop'],
+    ['Batches seen', (sc.samples ?? 0) + (sc.inliers != null ? ' <span class="muted">(' + sc.inliers + ' on-grid)</span>' : '')],
+  ].map(([k,v]) => '<dt>' + k + '</dt><dd>' + v + '</dd>').join('');
+
+  // configuration
+  const hrs = ac.activeHours ? (ac.activeHours.start + '\u2013' + ac.activeHours.end) : 'always';
+  $('cfg').innerHTML = [
+    ['Status', ac.enabled ? (ac.dryRun ? '<span class="tag dry">dry-run</span>' : '<span class="tag on">live</span>') : '<span class="tag off">off</span>'],
+    ['Volley size', (ac.volleySize ?? 6) + ' parallel claims'],
+    ['Local daily cap', ac.maxClaimsPerDay ? ac.maxClaimsPerDay : '<span class="muted">off</span>'],
+    ['Local held cap', ac.maxConcurrentClaimed ? ac.maxConcurrentClaimed : '<span class="muted">off</span>'],
+    ['Believed allowance', (ac.allowancePer24h ?? 10) + ' per 24h <span class="muted">(informational)</span>'],
+    ['Min gap between claims', (ac.minSecondsBetweenClaims ?? '\u2014') + 's'],
+    ['Active hours', hrs],
+    ['Watching', (d.config.projects||[]).map(p=>esc(p.name)).join(', ') || '\u2014'],
+    ['Claimer lock', d.lock ? ('pid ' + d.lock.pid + ' \u00B7 ' + agoStr(d.lock.ageSec)) : 'none'],
+  ].map(([k,v]) => '<dt>' + k + '</dt><dd>' + v + '</dd>').join('');
+
+  // health
+  const h = d.health || {};
+  $('health').innerHTML = [
+    ['Polls', h.polls ?? '\u2014'],
+    ['Median gap', (h.medianPollGapSec ?? '\u2014') + 's'],
+    ['Claims', h.claims ?? 0],
+    ['Notifications sent', h.notifies ?? 0],
+    ['Rate limited', (h.rateLimited ?? 0) > 0 ? '<span class="err">\u26A0 ' + h.rateLimited + '</span>' : '0'],
+    ['Errors', (h.errors ?? 0) > 0 ? '<span class="err">\u26A0 ' + h.errors + '</span>' : '0'],
+    ['Restarts', h.restarts ?? 0],
+    ['API budget', h.budget ? (h.budget.used + ' / ' + h.budget.limit + ' per min') : '\u2014'],
+    ['Uptime', upStr(d.uptimeSec)],
+  ].map(([k,v]) => '<dt>' + k + '</dt><dd>' + v + '</dd>').join('');
+
+  $('foot').textContent =
+    'log ' + (d.logSizeBytes != null ? (d.logSizeBytes/1048576).toFixed(1) + ' MB' : '?') +
+    '  \u00B7  started ' + (d.startedAt ? fmtTime(d.startedAt) : '?') + ' IST' +
+    '  \u00B7  heartbeat ' + agoStr(d.lastHeartbeatAt ? Math.round((d.now - d.lastHeartbeatAt)/1000) : null) +
+    '  \u00B7  refreshes every 4s' + (STATIC ? '  \u00B7  via ' + API.replace(/^https?:\/\//, '') : '');
+}
+
+// ---------------------------------------------------------------- log
+async function tickLog(){
+  if ($('pause').checked) return;
+  if (STATIC && (!apiReady || !TOKEN)) return;
+  const q = $('q').value.trim();
+  const polls = $('polls').checked ? '1' : '0';
+  let r;
+  try { r = await (await api('/api/logs?limit=400&polls=' + polls + '&q=' + encodeURIComponent(q))).json(); }
+  catch (e) { return; }
+  const el = $('log');
+  const atTop = el.scrollTop < 24;
+  el.innerHTML = (r.lines || []).map(e =>
+    '<div class="line k-' + e.kind + '"><time>' + fmtShort(e.ts) + '</time><span class="m">' + esc(e.text) + '</span></div>'
+  ).join('') || '<div class="empty">Nothing matches</div>';
+  if (atTop) el.scrollTop = 0;
+}
+
+let t1, t2, t3;
+function start(){
+  loadToken();
+  tick(); tickLog();
+  clearInterval(t1); clearInterval(t2); clearInterval(t3);
+  t1 = setInterval(tick, 4000);
+  t2 = setInterval(tickLog, 4000);
+  t3 = setInterval(paintHero, 1000);
+}
+$('powerBtn').addEventListener('click', async () => {
+  const btn = $('powerBtn');
+  const turningOff = btn.dataset.state === 'on';
+  // Single line on purpose: this whole page is a JS template literal.
+  if (turningOff && !confirm('Pause auto-claiming? The bot keeps monitoring and alerting, it just stops claiming.')) return;
+  btn.disabled = true;
+  $('powerTxt').textContent = turningOff ? 'Pausing\u2026' : 'Resuming\u2026';
+  try {
+    await api('/api/pause', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ paused: turningOff }),
+    });
+  } catch (e) {
+    alert('Could not reach the bot: ' + e);
+  }
+  btn.disabled = false;
+  tick();
+});
+
+$('q').addEventListener('input', () => { clearTimeout(window._d); window._d = setTimeout(tickLog, 250); });
+$('polls').addEventListener('change', tickLog);
+// Stop hammering the server while the tab is in the background on a phone.
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) { clearInterval(t1); clearInterval(t2); clearInterval(t3); } else start();
+});
+start();
+</script>
+</body>
+</html>
