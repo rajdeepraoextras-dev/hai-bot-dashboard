@@ -483,7 +483,7 @@ async function tick(){
   const stats = [
     ['Available now', availNow ? String(availNow) : 'None',
       availNow ? 'claimable on ' + esc(proj.name||'') : 'last seen ' + agoStr(av.lastAvailableAgoSec), availNow ? 'good' : ''],
-    ['Claimed \u00B7 24h', (cw.used ?? '\u2014') + (cw.cap ? '<small>/ ' + cw.cap + '</small>' : ''),
+    ['Claimed \u00B7 24h', (cw.used ?? '\u2014') + (cw.cap ? '<small>of ' + cw.cap + '</small>' : ''),
       cw.atCap ? 'allowance probably full' : (cw.cap ? (cw.cap - (cw.used||0)) + ' left before the believed allowance' : 'no allowance known'),
       cw.atCap ? 'warn' : 'blue'],
     ['Holding', held ? String(held.count) + (cw.localConcurrentCap ? '<small>/ ' + cw.localConcurrentCap + '</small>' : '') : '\u2014',
