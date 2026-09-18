@@ -124,6 +124,15 @@ tr:hover td{background:rgba(255,255,255,.02)}
 th:last-child,td:last-child{text-align:right;padding-right:0}
 .scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
 
+/* full ids and repo links: long values you copy elsewhere */
+.idcell{display:flex;align-items:center;gap:6px}
+.idcell a{word-break:break-all;line-height:1.35}
+.copy{flex:none;cursor:pointer;border:1px solid var(--line);background:var(--panel2);color:var(--dim);
+  border-radius:6px;padding:1px 6px;font-size:10.5px;font-family:var(--font);line-height:1.6;transition:all .12s}
+.copy:hover{color:var(--fg);border-color:var(--line2);background:var(--bg2)}
+.copy.done{color:#7fe07f;border-color:rgba(12,163,12,.45)}
+.sub-id{font-size:10.5px;color:var(--faint);margin-top:2px;word-break:break-all}
+
 /* claims by day: single-series bar list */
 .bars{display:flex;flex-direction:column;gap:8px}
 .bar{display:grid;grid-template-columns:92px 1fr 34px;align-items:center;gap:10px;font-size:12px;padding:2px 4px;border-radius:6px}
@@ -346,6 +355,17 @@ const dayLabel = (s) => { const d = new Date(s + 'T12:00:00Z'); return isNaN(d) 
   d.toLocaleDateString('en-GB',{timeZone:IST,weekday:'short',month:'short',day:'numeric'}); };
 const nowIst = () => new Date().toLocaleTimeString('en-GB',{timeZone:IST,hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false});
 
+// A long value you will paste somewhere else: shown in full, linked, and
+// copyable in one click. Truncating these was the whole complaint.
+function copyCell(text, href, sub, copyVal){
+  const link = href
+    ? '<a href="' + href + '" target="_blank" rel="noopener">' + esc(text) + '</a>'
+    : '<span>' + esc(text) + '</span>';
+  return '<div class="idcell">' + link +
+    '<button class="copy" type="button" data-copy="' + esc(copyVal != null ? copyVal : (href || text)) + '" title="Copy">copy</button></div>' +
+    (sub ? '<div class="sub-id">' + esc(sub) + '</div>' : '');
+}
+
 // ---------------------------------------------------------------- cells
 function prCell(t){
   if (!t.repoUrl) return '<span class="muted">\u2014</span>';
@@ -536,14 +556,18 @@ async function tick(){
   };
   $('heldcount').textContent = held ? held.count + (cw.localConcurrentCap ? ' / ' + cw.localConcurrentCap : '') : '';
   $('held').innerHTML = held && held.tasks.length
-    ? '<div class="scroll"><table><thead><tr><th>Task</th><th>Status</th><th>Build</th>' +
-      '<th>GitHub PR</th><th>Pipeline checks</th><th>Held for</th><th>Deadline</th></tr></thead><tbody>' +
+    ? '<div class="scroll"><table><thead><tr><th>Task ID</th><th>Repo</th><th>Status</th><th>Build</th>' +
+      '<th>PR</th><th>Pipeline checks</th><th>Held for</th><th>Time left</th></tr></thead><tbody>' +
       held.tasks.map(t => {
         const over = t.remainingMs != null && t.remainingMs <= 0;
         const soon = t.remainingMs != null && t.remainingMs > 0 && t.remainingMs < 2*3600*1000;
         return '<tr>' +
-          '<td><a href="' + t.url + '" target="_blank" rel="noopener">' + esc(t.short) + '</a>' +
-            (t.category ? '<div class="muted" style="font-size:11px">' + esc(t.category) + '</div>' : '') + '</td>' +
+          // The full id, as the HAI platform shows it, not an 8-char prefix.
+          '<td>' + copyCell(t.id, t.url, t.category || '', t.id) + '</td>' +
+          // The exact repo, linked and copyable, whether or not a PR was found.
+          '<td>' + (t.repoUrl
+              ? copyCell(t.repoUrl.replace('https://github.com/handshake-project-dynamo/', ''), t.repoUrl)
+              : '<span class="muted">—</span>') + '</td>' +
           '<td><span class="tag ' + (t.rework ? 'fix' : 'on') + '">' + (t.rework ? '\u2699 ' : '\u25B6 ') +
             esc(STATUS_LABEL[t.status] || t.status || '?') + '</span></td>' +
           '<td>' + (t.build === 'passing'
@@ -615,6 +639,7 @@ async function tick(){
     ['Local daily cap', ac.maxClaimsPerDay ? ac.maxClaimsPerDay : '<span class="muted">off</span>'],
     ['Local held cap', ac.maxConcurrentClaimed ? ac.maxConcurrentClaimed : '<span class="muted">off</span>'],
     ['Believed allowance', (ac.allowancePer24h ?? 10) + ' per 24h <span class="muted">(informational)</span>'],
+    ['Task deadline', (d.config.taskDeadlineHours ?? 24) + 'h from claiming'],
     ['Min gap between claims', (ac.minSecondsBetweenClaims ?? '\u2014') + 's'],
     ['Active hours', hrs],
     ['Watching', (d.config.projects||[]).map(p=>esc(p.name)).join(', ') || '\u2014'],
@@ -686,6 +711,26 @@ $('powerBtn').addEventListener('click', async () => {
   }
   btn.disabled = false;
   tick();
+});
+
+// One delegated handler for every copy button on the page.
+document.addEventListener('click', async (e) => {
+  const b = e.target.closest && e.target.closest('.copy');
+  if (!b) return;
+  const v = b.dataset.copy || '';
+  try {
+    await navigator.clipboard.writeText(v);
+  } catch (err) {
+    // Clipboard API needs a secure context; over plain http on the LAN it is
+    // unavailable, so fall back to a selection the user can copy by hand.
+    const ta = document.createElement('textarea');
+    ta.value = v; document.body.appendChild(ta); ta.select();
+    try { document.execCommand('copy'); } catch (e2) { /* nothing more to try */ }
+    ta.remove();
+  }
+  const was = b.textContent;
+  b.textContent = 'copied'; b.classList.add('done');
+  setTimeout(() => { b.textContent = was; b.classList.remove('done'); }, 1200);
 });
 
 $('q').addEventListener('input', () => { clearTimeout(window._d); window._d = setTimeout(tickLog, 250); });
