@@ -845,7 +845,7 @@ async function tick(){
     ? ry.total + ' drops recorded, ' + ry.big + ' of them big'
     : 'no drops recorded yet';
   $('rhythm').innerHTML = ryHours.length
-    ? '<div class="bars">' + hrs.map((h,i) => {
+    ? '<div class="bars">' + ryHours.map((h,i) => {
         const lbl = String(i).padStart(2,'0') + ':00';
         const w = Math.round((h.tasks/maxT)*100);
         return '<div class="bar"><span class="d">' + lbl + '</span>' +
@@ -909,7 +909,27 @@ async function tick(){
   const tn = d.tuning || {};
   const cooling = (tn.cooldownSecLeft || 0) > 0;
   $('tuningCard').classList.toggle('alert', cooling);
+  const rt = d.runtime || {};
+  const strikeTxt = (x) => x ? (x.spent + '/' + x.max + (x.off ? ' <span class="muted">(stood down)</span>' : '')) : '\u2014';
+  $('tuneHint').textContent = rt.tier ? 'polling tier: ' + rt.tier : '';
   $('tuning').innerHTML = [
+    ['Polling tier now', rt.tier
+      ? '<b>' + esc(rt.tier) + '</b>' + (rt.gapMs ? ' <span class="muted">(every ' + (rt.gapMs/1000).toFixed(1) + 's)</span>' : '') +
+        (rt.alert ? ' <span class="warn">alert window</span>' : '')
+      : '\u2014'],
+    ['Time to predicted drop', rt.msToDrop != null
+      ? (rt.msToDrop > 0 ? Math.round(rt.msToDrop/1000) + 's' : 'passed')
+      : '\u2014'],
+    ['Blind claim (fastest route)', (rt.blindCooldownSec ?? 0) > 0
+      ? '<span class="warn">portal asked for ' + rt.blindCooldownSec + 's more</span>'
+      : rt.lastStrikeVerdict === 'rework-would-trap'
+        ? '<span class="err">DISABLED \u2014 a held task is in a fixing state, so claimNextTask would hand it straight back. Submitting re-enables it.</span>'
+        : '<span class="ok">available</span>'],
+    ['Last strike verdict', rt.lastStrikeVerdict
+      ? esc(rt.lastStrikeVerdict) + ' <span class="muted">(' + agoStr(rt.lastStrikeAgoSec) + ')</span>'
+      : '<span class="muted">none yet</span>'],
+    ['Strike budget \u00B7 on-grid', strikeTxt(rt.strikes)],
+    ['Strike budget \u00B7 off-grid', strikeTxt(rt.hotStrikes)],
     ['Claim cooldown', cooling
       ? '<span class="warn">holding off ' + tn.cooldownSecLeft + 's</span>'
       : '<span class="ok">\u2713 clear</span>'],
