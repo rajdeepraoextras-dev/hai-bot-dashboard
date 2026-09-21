@@ -126,6 +126,46 @@ button.power:hover:not(:disabled){background:rgba(255,255,255,.06)}
 .card.alert{border-color:rgba(240,169,42,.4)}
 .card.alert::before{background:linear-gradient(90deg,transparent,rgba(240,169,42,.6),transparent)}
 
+/* Claude check - the written verdict, sized to be read from across a room */
+.ccheck{padding:20px 22px}
+.cc-head{display:flex;align-items:center;gap:15px;margin-bottom:13px}
+.cc-badge{flex:none;min-width:74px;padding:9px 14px;border-radius:12px;text-align:center;
+  font-size:14px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  background:rgba(120,130,150,.14);color:var(--dim);border:1px solid var(--line)}
+.cc-title h2{margin:0;font-size:17px;font-weight:600}
+.cc-when{font-size:12px;color:var(--faint);margin-top:2px}
+.cc-headline{font-size:20px;font-weight:600;line-height:1.38;color:var(--fg);letter-spacing:-.015em}
+.cc-metrics{display:flex;flex-wrap:wrap;gap:9px;margin-top:15px}
+.cc-metric{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:10px;
+  padding:8px 13px;min-width:78px}
+.cc-metric .mk{font-size:10.5px;color:var(--faint);text-transform:uppercase;letter-spacing:.055em}
+.cc-metric .mv{font-size:19px;font-weight:600;font-variant-numeric:tabular-nums;line-height:1.28}
+.cc-notes{margin:15px 0 0;padding:0;list-style:none;display:grid;gap:8px}
+.cc-notes li{font-size:13px;color:var(--fg2);line-height:1.5;padding-left:16px;position:relative}
+.cc-notes li::before{content:"";position:absolute;left:3px;top:8px;width:5px;height:5px;
+  border-radius:50%;background:var(--dim)}
+/* verdicts */
+.ccheck.v-ok{border-color:rgba(34,197,94,.32)}
+.ccheck.v-ok::before{background:linear-gradient(90deg,transparent,rgba(34,197,94,.6),transparent)}
+.ccheck.v-ok .cc-badge{background:rgba(34,197,94,.16);color:#6ee7a0;border-color:rgba(34,197,94,.34)}
+.ccheck.v-warn{border-color:rgba(240,169,42,.4)}
+.ccheck.v-warn::before{background:linear-gradient(90deg,transparent,rgba(240,169,42,.6),transparent)}
+.ccheck.v-warn .cc-badge{background:rgba(240,169,42,.16);color:var(--warn);border-color:rgba(240,169,42,.38)}
+.ccheck.v-bad{border-color:rgba(229,72,77,.45)}
+.ccheck.v-bad::before{background:linear-gradient(90deg,transparent,rgba(229,72,77,.7),transparent)}
+.ccheck.v-bad .cc-badge{background:rgba(229,72,77,.18);color:#f4868a;border-color:rgba(229,72,77,.42)}
+/* A verdict too old to be evidence about right now must not read as reassurance. */
+.ccheck.v-stale{border-color:rgba(120,130,150,.3)}
+.ccheck.v-stale::before{background:linear-gradient(90deg,transparent,rgba(255,255,255,.07),transparent)}
+.ccheck.v-stale .cc-badge{background:rgba(120,130,150,.14);color:var(--dim);border-color:var(--line)}
+.ccheck.v-stale .cc-headline{color:var(--dim)}
+.ccheck.v-stale .cc-metric .mv{color:var(--dim)}
+@media(max-width:560px){
+  .cc-headline{font-size:17px}
+  .cc-head{gap:11px}
+  .cc-badge{min-width:62px;padding:7px 10px;font-size:12.5px}
+}
+
 /* definition list */
 dl{display:grid;grid-template-columns:auto 1fr;gap:9px 16px;margin:0;font-size:13px}
 dt{color:var(--dim)} dd{margin:0;text-align:right;color:var(--fg2)}
@@ -236,6 +276,19 @@ footer{margin-top:20px;font-size:11px;color:var(--faint);text-align:center}
       </div>
     </div>
     <div id="stats" class="stats"></div>
+  </section>
+
+  <section class="card ccheck" id="ccheckCard">
+    <div class="cc-head">
+      <div class="cc-badge" id="ccBadge">&mdash;</div>
+      <div class="cc-title">
+        <h2>Claude check</h2>
+        <div class="cc-when" id="ccWhen">no check yet</div>
+      </div>
+    </div>
+    <div class="cc-headline" id="ccHeadline">Waiting for the first hourly check&hellip;</div>
+    <div class="cc-metrics" id="ccMetrics"></div>
+    <ul class="cc-notes" id="ccNotes"></ul>
   </section>
 
   <div class="grid two">
@@ -790,6 +843,46 @@ async function tick(){
     ['API budget', h.budget ? (h.budget.used + ' / ' + h.budget.limit + ' per min') : '\u2014'],
     ['Uptime', upStr(d.uptimeSec)],
   ].map(([k,v]) => '<dt>' + k + '</dt><dd>' + v + '</dd>').join('');
+
+  // --- Claude check: the written verdict, and how old it is ---
+  // Age is the whole point. An "all good" from four hours ago is not evidence
+  // about now, so it is shown greyed and labelled rather than green.
+  const cc = d.claudeCheck || {};
+  const ccCard = $('ccheckCard');
+  const ccAge = (ms) => {
+    const m = Math.round(ms / 60000);
+    if (m < 1) return 'just now';
+    if (m < 60) return m + ' min ago';
+    const h = Math.floor(m / 60);
+    return h + 'h ' + (m % 60) + 'm ago';
+  };
+  if (!cc.present) {
+    ccCard.className = 'card ccheck v-stale';
+    $('ccBadge').textContent = 'idle';
+    $('ccWhen').textContent = cc.error === 'unreadable' ? 'last check could not be read'
+      : cc.error === 'undated' ? 'last check had no timestamp'
+      : 'no check written yet';
+    $('ccHeadline').textContent = 'No check has been written yet.';
+    $('ccMetrics').innerHTML = '';
+    $('ccNotes').innerHTML = '';
+  } else {
+    const dead = cc.abandoned || cc.stale;
+    ccCard.className = 'card ccheck ' + (dead ? 'v-stale' : 'v-' + cc.verdict);
+    $('ccBadge').textContent = cc.abandoned ? 'stale' : cc.stale ? 'overdue' : cc.verdict;
+    $('ccWhen').textContent = 'checked ' + ccAge(cc.ageMs)
+      + (cc.nextAt && !dead ? ' \u00B7 next ' + new Date(cc.nextAt).toLocaleTimeString() : '');
+    $('ccHeadline').textContent = cc.abandoned
+      ? 'Nobody has checked in ' + ccAge(cc.ageMs) + '. Treat the verdict below as history, not status.'
+      : cc.stale
+        ? 'An hourly check has been missed. Last verdict: ' + (cc.headline || '\u2014')
+        : (cc.headline || '\u2014');
+    const mk = Object.entries(cc.metrics || {});
+    $('ccMetrics').innerHTML = mk.length
+      ? mk.slice(0, 6).map(([k, v]) =>
+          '<div class="cc-metric"><div class="mk">' + esc(k) + '</div><div class="mv">' + esc(v) + '</div></div>').join('')
+      : '';
+    $('ccNotes').innerHTML = (cc.notes || []).map((n) => '<li>' + esc(n) + '</li>').join('');
+  }
 
   // --- race record: are we actually competitive? ---
   const rc = d.race || {};
