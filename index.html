@@ -251,6 +251,13 @@ footer{margin-top:20px;font-size:11px;color:var(--faint);text-align:center}
     </div>
   </div>
 
+  <div class="card accent">
+    <h2>Task pool <span class="hint" id="poolHint">recording&hellip;</span></h2>
+    <div class="figs" id="poolFigs"></div>
+    <dl id="pool"></dl>
+    <div id="poolTop"></div>
+  </div>
+
   <div class="card">
     <h2>Task availability</h2>
     <div id="avail"></div>
@@ -782,6 +789,30 @@ async function tick(){
     ['Throttled volleys', (rc.throttledVolleys ?? 0) > 0 ? '<span class="warn">' + rc.throttledVolleys + '</span>' : '0'],
     ['Measured over', rc.since ? 'log since ' + fmtTime(rc.since) : '\u2014'],
   ].map(([k,v]) => '<dt>' + k + '</dt><dd>' + v + '</dd>').join('');
+
+  // --- task pool: is a batch fresh work, or the same tasks returning? ---
+  const cs = d.census || {};
+  const seenFor = cs.since ? durStr(d.now - cs.since) : null;
+  $('poolHint').textContent = cs.total
+    ? 'watching ' + cs.total + ' distinct task(s)' + (seenFor ? ' over ' + seenFor : '')
+    : 'nothing seen yet — the board is empty ~99.9% of the time';
+  $('poolFigs').innerHTML = [
+    ['Distinct', cs.total ?? 0, ''],
+    ['Returned', cs.recycled ?? 0, (cs.recycled ?? 0) > 0 ? 'warn' : ''],
+    ['Return rate', cs.recycledPct != null ? cs.recycledPct + '%' : '—', ''],
+  ].map(([l,n,c]) => '<div class="fig"><div class="n ' + c + '">' + n + '</div><div class="l">' + l + '</div></div>').join('');
+  $('pool').innerHTML = [
+    ['Tasks seen more than once', cs.recycled
+      ? '<b>' + cs.recycled + '</b> of ' + cs.total + ' <span class="muted">(' + cs.recycledPct + '%)</span>'
+      : '<span class="muted">none yet</span>'],
+    ['Typical time before returning', cs.medianReturnMs ? durStr(cs.medianReturnMs) : '—'],
+    ['Recording since', cs.since ? fmtTime(cs.since) : '—'],
+  ].map(([k,v]) => '<dt>' + k + '</dt><dd>' + v + '</dd>').join('');
+  $('poolTop').innerHTML = (cs.top && cs.top.length)
+    ? '<div class="scroll" style="margin-top:12px"><table><thead><tr><th>Task that keeps returning</th><th>Times seen</th><th>Last seen</th></tr></thead><tbody>' +
+      cs.top.map(t => '<tr><td>' + copyCell(String(t.id).slice(0,8), null, esc(t.title||''), t.id) +
+        '</td><td>' + t.visits + '</td><td>' + agoStr(t.ageSec) + '</td></tr>').join('') + '</tbody></table></div>'
+    : '<div class="empty">No task has been seen twice yet. A batch has to land, go unclaimed, and come back for this to fill.</div>';
 
   // --- latency: the listing read is what loses races, not the claim ---
   const lat = d.latency || {};
