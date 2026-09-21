@@ -252,6 +252,12 @@ footer{margin-top:20px;font-size:11px;color:var(--faint);text-align:center}
   </div>
 
   <div class="card accent">
+    <h2>Daily rhythm <span class="hint" id="rhythmHint">&mdash;</span></h2>
+    <div id="rhythm"></div>
+    <dl id="rhythmDl"></dl>
+  </div>
+
+  <div class="card accent">
     <h2>Task pool <span class="hint" id="poolHint">recording&hellip;</span></h2>
     <div class="figs" id="poolFigs"></div>
     <dl id="pool"></dl>
@@ -788,6 +794,38 @@ async function tick(){
     ['Last win', rc.lastWinAt ? fmtTime(rc.lastWinAt) + ' <span class="muted">(' + agoStr(Math.round((d.now - rc.lastWinAt)/1000)) + ')</span>' : '<span class="muted">none in the retained log</span>'],
     ['Throttled volleys', (rc.throttledVolleys ?? 0) > 0 ? '<span class="warn">' + rc.throttledVolleys + '</span>' : '0'],
     ['Measured over', rc.since ? 'log since ' + fmtTime(rc.since) : '\u2014'],
+  ].map(([k,v]) => '<dt>' + k + '</dt><dd>' + v + '</dd>').join('');
+
+  // --- daily rhythm: does a big release repeat at the same hour? ---
+  const ry = d.rhythm || {};
+  const ryHours = ry.byHour || [];
+  const maxT = Math.max(1, ...ryHours.map(h => h.tasks || 0));
+  $('rhythmHint').textContent = ry.total
+    ? ry.total + ' drops recorded, ' + ry.big + ' of them big'
+    : 'no drops recorded yet';
+  $('rhythm').innerHTML = ryHours.length
+    ? '<div class="bars">' + hrs.map((h,i) => {
+        const lbl = String(i).padStart(2,'0') + ':00';
+        const w = Math.round((h.tasks/maxT)*100);
+        return '<div class="bar"><span class="d">' + lbl + '</span>' +
+          '<span class="t"><i style="width:' + w + '%"></i></span>' +
+          '<span class="n">' + (h.big ? '<span class="warn">' + h.tasks + '</span>' : h.tasks) + '</span></div>';
+      }).join('') + '</div>'
+    : '<div class="empty">Nothing recorded yet.</div>';
+  $('rhythmDl').innerHTML = [
+    ['Big releases repeat at the same hour', ry.bigRatio != null
+      ? (ry.bigRatio > 1.5
+          ? '<span class="warn"><b>' + ry.bigRatio + 'x</b> more than chance</span>'
+          : '<b>' + ry.bigRatio + 'x</b> chance') +
+        ' <span class="muted">(' + ry.bigHits + ' of ' + ry.bigPairs + ' cross-day pairs)</span>'
+      : '<span class="muted">not enough big drops yet</span>'],
+    ['Confidence', (ry.bigHits ?? 0) >= 6
+      ? '<span class="ok">worth acting on</span>'
+      : '<span class="warn">a hint, not a finding — needs more days</span>'],
+    ['Recent big releases', (ry.slots||[]).length
+      ? ry.slots.slice(0,5).map(x => x.hhmm + ' <span class="muted">(' + x.n + ')</span>').join(' · ')
+      : '—'],
+    ['Recording since', ry.since ? fmtTime(ry.since) : '—'],
   ].map(([k,v]) => '<dt>' + k + '</dt><dd>' + v + '</dd>').join('');
 
   // --- task pool: is a batch fresh work, or the same tasks returning? ---
