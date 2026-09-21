@@ -619,7 +619,26 @@ async function tick(){
   if (STATIC && !TOKEN) { showGate(''); $('pill').className = 'pill warn'; $('pilltxt').textContent = 'token needed'; return; }
   let d, r;
   try { r = await api('/api/status'); }
-  catch (e) { $('pill').className = 'pill dead'; $('pilltxt').textContent = 'unreachable'; return; }
+  catch (e) {
+    // The tunnel URL rotates on every restart, and the GitHub CDN can serve a
+    // stale endpoint.json for a minute or two afterwards. Resolving that old
+    // URL still sets apiReady, so without this the page latches onto a dead
+    // tunnel and shows "connecting" forever - only a hard refresh recovers it.
+    // A transport failure is the signal that our address is out of date, so
+    // re-read endpoint.json and try once more before giving up on this tick.
+    if (STATIC) {
+      const was = API;
+      await resolveApi();
+      if (apiReady && API !== was) {
+        try { r = await api('/api/status'); }
+        catch (e2) { $('pill').className = 'pill dead'; $('pilltxt').textContent = 'unreachable'; return; }
+      } else {
+        $('pill').className = 'pill dead'; $('pilltxt').textContent = 'unreachable'; return;
+      }
+    } else {
+      $('pill').className = 'pill dead'; $('pilltxt').textContent = 'unreachable'; return;
+    }
+  }
   if (r.status === 401) {
     TOKEN = '';
     try { localStorage.removeItem(LS_TOKEN); } catch (e) { /* ignore */ }
