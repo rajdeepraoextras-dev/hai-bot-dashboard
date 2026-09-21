@@ -252,6 +252,12 @@ footer{margin-top:20px;font-size:11px;color:var(--faint);text-align:center}
   </div>
 
   <div class="card accent">
+    <h2>Today &amp; outlook <span class="hint" id="fcHint">&mdash;</span></h2>
+    <div class="figs" id="fcFigs"></div>
+    <dl id="fc"></dl>
+  </div>
+
+  <div class="card accent">
     <h2>Daily rhythm <span class="hint" id="rhythmHint">&mdash;</span></h2>
     <div id="rhythm"></div>
     <dl id="rhythmDl"></dl>
@@ -522,18 +528,18 @@ function paintHero(){
     (left > 0 && left < 6000 ? ' \u00B7 <b>striking</b>' : '');
   setRing(heroPeriod ? 1 - (left / heroPeriod) : 0, 'until<br>drop');
 
-  // The allowance outranks the drop clock: when it is spent, the next drop
-  // is not what is stopping us claiming, and saying so avoids the daily
-  // "why did it miss that batch" question.
+  // Only a REFUSAL outranks the drop clock. This used to fire on
+  // used >= believedCap, which is a number we chose - so it announced a
+  // spent allowance while the portal was happily still handing out tasks.
   const cap = heroCap;
   $('heroCard').classList.toggle('waiting', !!(cap && cap.atCap));
   if (cap && cap.atCap && cap.nextSlotInSec != null) {
-    $('heroK').textContent = '24h allowance spent';
+    $('heroK').textContent = 'portal refused a claim';
     $('heroV').className = 'hero-v med';
     $('heroV').textContent = hmsShort(cap.nextSlotInSec);
-    $('heroSub').innerHTML = '<b>' + (cap.used ?? 0) + '</b> of ' + cap.cap +
-      ' claimed \u00B7 a slot frees at <b>' + fmtClockSec(cap.nextSlotAt) + '</b>' +
-      ' \u00B7 next drop in ' + (left <= 0 ? 'moments' : mmss(left));
+    $('heroSub').innerHTML = '<b>' + (cap.used ?? 0) + '</b> claimed in 24h \u00B7 ' +
+      'the portal refused a claim on its own limits \u00B7 oldest ages out at <b>' +
+      fmtClockSec(cap.nextSlotAt) + '</b> \u00B7 next drop in ' + (left <= 0 ? 'moments' : mmss(left));
     setRing(1 - Math.min(1, cap.nextSlotInSec / 86400), 'until<br>a slot');
   }
 }
@@ -612,7 +618,7 @@ async function tick(){
   if (d.stateLoadFailed) b.push(['err','\u26A0','State file unreadable.','Auto-claim is paused until it recovers.']);
   if (d.health?.rateLimited > 0) b.push(['warn','\u26A0','Rate limited by the portal ' + d.health.rateLimited + '\u00D7 in the last hour.','The bot backs off automatically; claims may be delayed.']);
   if (held && held.reworkCount > 0) b.push(['warn','\u2699',held.reworkCount + ' of your ' + held.count + ' tasks need a fix.','They stay on your list until you submit them. The bot cannot clear these for you.']);
-  if (cw.atCap) b.push(['info','\u2139','Claimed ' + cw.used + ' in the last 24h.','The portal is believed to allow ' + cw.cap + ' per 24h, so further claims will probably be refused until ' + fmtClock(cw.nextSlotAt) + '. Nothing is blocked locally; the bot keeps trying and logs what the portal says.']);
+  if (cw.atCap) b.push(['warn','\u26A0','The portal refused a claim on its own limits.','That is the only real evidence of a ceiling. Claimed ' + cw.used + ' in the last 24h; the oldest ages out at ' + fmtClock(cw.nextSlotAt) + '. Nothing is blocked locally \u2014 the bot keeps trying and logs what the portal says.']);
   $('banners').innerHTML = b.map(([k,i,t,s]) => '<div class="banner ' + k + '"><span class="ico">' + i + '</span><div><b>' + t + '</b> ' + s + '</div></div>').join('');
 
   // KPI tiles
@@ -621,7 +627,7 @@ async function tick(){
     ['Available now', availNow ? String(availNow) : 'None',
       availNow ? 'claimable on ' + esc(proj.name||'') : 'last seen ' + agoStr(av.lastAvailableAgoSec), availNow ? 'good' : ''],
     ['Claimed \u00B7 24h', (cw.used ?? '\u2014') + (cw.cap ? '<small>of ' + cw.cap + '</small>' : ''),
-      cw.atCap ? 'allowance probably full' : (cw.cap ? (cw.cap - (cw.used||0)) + ' left before the believed allowance' : 'no allowance known'),
+      cw.atCap ? 'the portal refused a claim' : (cw.observedMax24h ? 'most ever in 24h: ' + cw.observedMax24h : 'no ceiling observed'),
       cw.atCap ? 'warn' : 'blue'],
     ['Holding', held ? String(held.count) + (cw.localConcurrentCap ? '<small>/ ' + cw.localConcurrentCap + '</small>' : '') : '\u2014',
       held ? (held.reworkCount ? held.reworkCount + ' need fixing' : 'all in progress') : 'unknown',
@@ -720,21 +726,29 @@ async function tick(){
   // claim allowance: the rolling 24h window the portal is believed to enforce
   const capHrs = (s) => (s == null ? '\u2014' : (s / 3600).toFixed(1) + 'h');
   $('allow').innerHTML = [
-    ['Claimed in 24h', '<b>' + (cw.used ?? '\u2014') + '</b>' + (cw.cap ? ' / ' + cw.cap + ' believed allowance' : '')],
+    ['Claimed in 24h', '<b>' + (cw.used ?? '\u2014') + '</b>'],
+    ['Most ever in a 24h window', cw.observedMax24h
+      ? '<b>' + cw.observedMax24h + '</b>' + (cw.cap && cw.observedMax24h > cw.cap
+        ? ' <span class="muted">(above the believed ' + cw.cap + ', so that figure is a guess)</span>' : '')
+      : '\u2014'],
     ['Held right now', '<b>' + (cw.held ?? '\u2014') + '</b>' + (cw.localConcurrentCap ? ' / ' + cw.localConcurrentCap : '') +
       (cw.reworkHeld ? ' <span class="warn">(' + cw.reworkHeld + ' need fixing)</span>' : '')],
     ['Local gates', (cw.localDailyCap ? 'daily ' + cw.localDailyCap : '') + (cw.localDailyCap && cw.localConcurrentCap ? ' \u00B7 ' : '') +
       (cw.localConcurrentCap ? 'held ' + cw.localConcurrentCap : '') || '<span class="ok">off \u2014 the portal decides</span>'],
-    ['Outlook', cw.atCap
-      ? '<span class="warn">refusals likely until the oldest claim ages out</span>'
-      : '<span class="ok">\u2713 room to claim</span>'],
-    ['Next slot frees', cw.atCap && cw.nextSlotAt
+    ['Portal ever refused a claim?', cw.lastRefusedAt
+      ? '<span class="warn">yes \u2014 ' + fmtTime(cw.lastRefusedAt) + '</span>'
+      : '<span class="ok">never observed</span> <span class="muted">(no ceiling has been demonstrated)</span>'],
+    ['Oldest claim ages out', cw.nextSlotAt
       ? fmtClockSec(cw.nextSlotAt) + ' <span class="muted">(in ' + capHrs(cw.nextSlotInSec) + ')</span>'
-      : 'now'],
+      : '\u2014'],
   ].map(([k,v]) => '<dt>' + k + '</dt><dd>' + v + '</dd>').join('');
-  $('allowMeter').innerHTML = cw.cap
-    ? '<div class="meter' + (cw.atCap ? ' full' : '') + '"><div class="row"><span>24h allowance</span><span><b>' + (cw.used||0) + '</b> of ' + cw.cap + '</span></div>' +
-      '<div class="track"><i style="width:' + Math.min(100, Math.round(((cw.used||0)/cw.cap)*100)) + '%"></i></div></div>'
+  // Scaled against the measured peak, not the guess: a bar that reads 110%
+  // of a ceiling nobody has ever hit is worse than no bar.
+  const scale = Math.max(cw.observedMax24h || 0, cw.cap || 0, cw.used || 0, 1);
+  $('allowMeter').innerHTML = scale > 1
+    ? '<div class="meter' + (cw.atCap ? ' full' : '') + '"><div class="row"><span>claims in the last 24h</span>' +
+      '<span><b>' + (cw.used||0) + '</b> \u00B7 most ever ' + (cw.observedMax24h || '\u2014') + '</span></div>' +
+      '<div class="track"><i style="width:' + Math.min(100, Math.round(((cw.used||0)/scale)*100)) + '%"></i></div></div>'
     : '';
 
   // drop schedule
@@ -755,7 +769,7 @@ async function tick(){
     ['Volley size', (ac.volleySize ?? 6) + ' parallel claims'],
     ['Local daily cap', ac.maxClaimsPerDay ? ac.maxClaimsPerDay : '<span class="muted">off</span>'],
     ['Local held cap', ac.maxConcurrentClaimed ? ac.maxConcurrentClaimed : '<span class="muted">off</span>'],
-    ['Believed allowance', (ac.allowancePer24h ?? 10) + ' per 24h <span class="muted">(informational)</span>'],
+    ['Believed allowance', (ac.allowancePer24h ?? 10) + ' per 24h <span class="muted">(a prior, never enforced \u2014 the portal has allowed more)</span>'],
     ['Task deadline', (d.config.taskDeadlineHours ?? 24) + 'h from claiming'],
     ['Min gap between claims', (ac.minSecondsBetweenClaims ?? '\u2014') + 's'],
     ['Active hours', hrs],
@@ -794,6 +808,33 @@ async function tick(){
     ['Last win', rc.lastWinAt ? fmtTime(rc.lastWinAt) + ' <span class="muted">(' + agoStr(Math.round((d.now - rc.lastWinAt)/1000)) + ')</span>' : '<span class="muted">none in the retained log</span>'],
     ['Throttled volleys', (rc.throttledVolleys ?? 0) > 0 ? '<span class="warn">' + rc.throttledVolleys + '</span>' : '0'],
     ['Measured over', rc.since ? 'log since ' + fmtTime(rc.since) : '\u2014'],
+  ].map(([k,v]) => '<dt>' + k + '</dt><dd>' + v + '</dd>').join('');
+
+  // --- today, and what is left of it ---
+  const fc = d.forecast || {};
+  const conf = fc.confidence || 'none';
+  const confWord = conf === 'fair' ? 'fair' : conf === 'weak' ? 'weak' : 'a guess';
+  $('fcHint').textContent = fc.daysObserved != null
+    ? 'forecast confidence: ' + confWord + ' · ' + fc.daysObserved + ' full day(s) observed'
+    : '—';
+  $('fcFigs').innerHTML = [
+    ['Appeared', fc.appearedToday ?? 0, ''],
+    ['Claimed', fc.claimedToday ?? 0, (fc.claimedToday ?? 0) > 0 ? 'good' : 'warn'],
+    ['Capture', fc.capturePct != null ? fc.capturePct + '%' : '—', (fc.capturePct ?? 0) < 10 ? 'warn' : ''],
+    ['Still to come', fc.expected != null ? '~' + fc.expected : '—', ''],
+  ].map(([l,n,c]) => '<div class="fig"><div class="n ' + c + '">' + n + '</div><div class="l">' + l + '</div></div>').join('');
+  $('fc').innerHTML = [
+    ['Tasks appeared today', '<b>' + (fc.appearedToday ?? 0) + '</b> across ' + (fc.dropsToday ?? 0) + ' drop(s)' +
+      ((fc.bigToday ?? 0) > 0 ? ' <span class="muted">(' + fc.bigToday + ' big)</span>' : '')],
+    ['We claimed', '<b>' + (fc.claimedToday ?? 0) + '</b>' + (fc.capturePct != null
+      ? ' <span class="' + ((fc.capturePct < 10) ? 'warn' : 'ok') + '">(' + fc.capturePct + '% of what appeared)</span>' : '')],
+    ['Expected for the rest of today', fc.expected != null
+      ? '<b>~' + fc.expected + '</b> <span class="muted">(seen ' + fc.lo + '–' + fc.hi + ' on the days watched, ' + fc.hoursLeft + 'h left)</span>'
+      : '—'],
+    ['How good is that number?', conf === 'guess'
+      ? '<span class="warn">a guess</span> <span class="muted">— ' + (fc.daysObserved ?? 0) + ' full day(s) watched, ' + (fc.minSamplesPerHour ?? 0) + ' sample(s) on the thinnest hour. Not a model; an hour-of-day average. It sharpens with every day.</span>'
+      : '<span class="' + (conf === 'fair' ? 'ok' : 'warn') + '">' + confWord + '</span> <span class="muted">(' + fc.daysObserved + ' days)</span>'],
+    ['Since the last drop', fc.sinceLastDropSec != null ? agoStr(fc.sinceLastDropSec) : '—'],
   ].map(([k,v]) => '<dt>' + k + '</dt><dd>' + v + '</dd>').join('');
 
   // --- daily rhythm: does a big release repeat at the same hour? ---
