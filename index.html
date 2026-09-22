@@ -885,8 +885,8 @@ async function tick(){
   } else if (!nt.grade) {
     netCard.className = 'card netcard v-unknown';
     $('netBadge').textContent = 'wait';
-    $('netWhen').textContent = (nt.samples || 0) + ' of 4 samples';
-    $('netHeadline').textContent = 'Measuring the link…';
+    $('netWhen').textContent = (nt.samples || 0) + ' of ' + (nt.need || 20) + ' samples';
+    $('netHeadline').textContent = 'Measuring the link… a tail needs enough samples to mean anything.';
     $('netMetrics').innerHTML = '';
     $('netNotes').innerHTML = '';
   } else {
@@ -898,16 +898,18 @@ async function tick(){
       + (nt.ageSec != null ? ' · last ' + nt.ageSec + 's ago' : '');
     $('netHeadline').textContent = line;
     $('netMetrics').innerHTML = [
-      ['latency', nt.p50 != null ? nt.p50 + ' ms' : '—'],
-      ['jitter', nt.jitter != null ? nt.jitter + ' ms' : '—'],
+      ['typical', nt.p50 != null ? nt.p50 + ' ms' : '—'],
+      ['stalls', (nt.stallPct || 0) + '%'],
       ['worst', nt.p95 != null ? nt.p95 + ' ms' : '—'],
       ['loss', (nt.lossPct || 0) + '%'],
     ].map(([k, v]) => '<div class="cc-metric"><div class="mk">' + k + '</div><div class="mv">'
       + esc(v) + '</div></div>').join('');
+    // Say which number drove the grade, so the card cannot look arbitrary.
+    const stallSec = Math.round((nt.stallMs || 1000) / 100) / 10;
     const notes = [];
     if ((nt.lossPct || 0) > 0) notes.push(nt.lossPct + '% of probes got no answer at all. Those are polls that would have seen nothing.');
-    if (nt.jitter != null && nt.jitter > 80) notes.push('Jitter of ' + nt.jitter + 'ms is the problem, not the ' + nt.p50 + 'ms average — the slow tail is what blows past a request deadline.');
-    if (nt.grade === 'good') notes.push('Typical poll is ' + nt.p50 + 'ms with a ' + nt.jitter + 'ms spread. Nothing here is costing you tasks.');
+    if ((nt.stallPct || 0) > 5) notes.push(nt.stallPct + '% of requests took over ' + stallSec + 's, against a typical ' + nt.p50 + 'ms. A board can clear inside one of those.');
+    if (nt.grade === 'good') notes.push('Typical request is ' + nt.p50 + 'ms and ' + (100 - (nt.stallPct || 0)) + '% land under ' + stallSec + 's. Nothing here is costing you tasks.');
     $('netNotes').innerHTML = notes.map((n) => '<li>' + esc(n) + '</li>').join('');
   }
 
