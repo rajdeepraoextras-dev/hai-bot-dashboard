@@ -252,7 +252,7 @@ footer{margin-top:20px;font-size:11px;color:var(--faint);text-align:center}
     <div class="brand"><span class="mark"></span><div><h1>HAI Task Bot</h1><div class="tag" id="brandTag">watching the portal</div></div></div>
     <span id="pill" class="pill"><span class="dot"></span><span id="pilltxt">connecting</span></span>
     <button id="powerBtn" class="pill power" type="button">&#9211; <span id="powerTxt">&hellip;</span></button>
-    <a id="prsLink" href="/prs" class="pill link">PR pipelines <span class="arr">&rarr;</span></a>
+    <a id="prsLink" href="https://rajdeepraoextras-dev.github.io/pr-check-monitor/" target="_blank" rel="noopener" class="pill link">PR pipelines <span class="arr">&rarr;</span></a>
     <span class="spacer"></span>
     <span class="meta" id="clock"></span>
   </header>
@@ -663,7 +663,10 @@ async function tick(){
   $('pilltxt').textContent = d.alive ? 'running' : stale ? 'stale' : 'down';
   $('clock').textContent = nowIst() + ' IST \u00B7 up ' + upStr(d.uptimeSec) + ' \u00B7 polled ' + agoStr(d.lastPollAgoSec);
   $('brandTag').textContent = 'watching ' + ((d.config.projects||[]).map(p=>p.name).join(', ') || 'the portal');
-  if (STATIC) $('prsLink').href = API + '/prs?k=' + encodeURIComponent(TOKEN);
+  // prsLink is a fixed external address now, not the /prs page this bot serves,
+  // so it is NOT rewritten here. It used to be pointed at the tunnel with the
+  // dashboard token in the query string, which both put that token in a URL and
+  // broke on every tunnel rotation.
 
   // on/off switch
   const paused = !!(d.pause && d.pause.paused);
