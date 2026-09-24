@@ -1,5 +1,5 @@
 {
-  "now": 1790233131122,
+  "now": 1790233191136,
   "ok": true,
   "config": {
     "pollIntervalSeconds": 2,
@@ -273,14 +273,14 @@
   },
   "schedule": {
     "locked": true,
-    "summary": "every 10m, phase ±3s, 60 samples, next in 76.5s",
+    "summary": "every 10m, phase ±3s, 60 samples, next in 16.4s",
     "periodMin": 10,
     "phaseSec": 7.6,
     "spreadSec": 3,
     "samples": 60,
     "inliers": 47,
     "nextDropAt": 1790233207572.5427,
-    "nextDropInSec": 76,
+    "nextDropInSec": 16,
     "observed": [
       1790177409666.5,
       1790178405092.5,
@@ -321,7 +321,7 @@
     "concurrentCap": null,
     "atConcurrentCap": false,
     "nextSlotAt": 1790261308006,
-    "nextSlotInSec": 28177,
+    "nextSlotInSec": 28117,
     "localDailyCap": null,
     "localConcurrentCap": null
   },
@@ -343,8 +343,8 @@
       "hasClaimable": false,
       "tasksListed": 0,
       "newTaskCount": 0,
-      "lastCheckedAt": 1790233127961,
-      "lastCheckedAgoSec": 3,
+      "lastCheckedAt": 1790233189202,
+      "lastCheckedAgoSec": 2,
       "lastNotifyAt": 1790231712031,
       "lastHeldNagAt": 1789606246822,
       "lastClaimVerdict": {
@@ -353,7 +353,7 @@
       },
       "availability": {
         "lastAvailableAt": 1790231715048,
-        "lastAvailableAgoSec": 1416,
+        "lastAvailableAgoSec": 1476,
         "open": null,
         "windows": [
           {
@@ -642,8 +642,8 @@
       },
       "held": {
         "count": 2,
-        "at": 1790233117045,
-        "ageSec": 14,
+        "at": 1790233180122,
+        "ageSec": 11,
         "tasks": [
           {
             "id": "7555bb4b-a638-4d77-9084-4a10efa760b0",
@@ -656,11 +656,11 @@
             "stage": "Attempt",
             "priority": 0,
             "heldSince": 1790214036206,
-            "heldMs": 19094916,
+            "heldMs": 19154930,
             "heldExact": true,
             "stageTimeLimitSec": 36000,
             "timeLimitSec": 86400,
-            "remainingMs": 67305084,
+            "remainingMs": 67245070,
             "repoUrl": "https://github.com/handshake-project-dynamo/dynamo-d867126-security",
             "category": "Security",
             "ci": {
@@ -702,11 +702,11 @@
             "stage": "Attempt",
             "priority": 0,
             "heldSince": 1790221820197,
-            "heldMs": 11310925,
+            "heldMs": 11370939,
             "heldExact": true,
             "stageTimeLimitSec": 36000,
             "timeLimitSec": 86400,
-            "remainingMs": 75089075,
+            "remainingMs": 75029061,
             "repoUrl": "https://github.com/handshake-project-dynamo/dynamo-75bb5b2-model-training-and-ml-infrastructure",
             "category": "Model Training and ML Infrastructure",
             "ci": {
@@ -745,8 +745,8 @@
   ],
   "lock": {
     "pid": 40152,
-    "ts": 1790233129634,
-    "ageSec": 1
+    "ts": 1790233188854,
+    "ageSec": 2
   },
   "events": [
     {
@@ -863,11 +863,6 @@
       "ts": "2026-09-24T06:10:03.263Z",
       "kind": "info",
       "text": "strike: armed — polling every 400ms around the predicted drop at 06:10:07.624Z"
-    },
-    {
-      "ts": "2026-09-24T06:07:32.142Z",
-      "kind": "error",
-      "text": "project Project Dynamo: API status 0 AbortError: signal is aborted without reason"
     }
   ],
   "lastPollSummary": {
@@ -883,8 +878,8 @@
     }
   },
   "health": {
-    "polls": 1476,
-    "errors": 2,
+    "polls": 1477,
+    "errors": 1,
     "rateLimited": 0,
     "claims": 0,
     "restarts": 0,
@@ -892,7 +887,7 @@
     "medianPollGapSec": 2,
     "windowLabel": "last hour",
     "budget": {
-      "used": 34,
+      "used": 22,
       "limit": 52,
       "pollLimit": 46
     }
@@ -909,10 +904,10 @@
     "waitSamples": 0
   },
   "runtime": {
-    "at": 1790233129634,
-    "tier": "idle",
-    "gapMs": 2000,
-    "msToDrop": 77938.54272460938,
+    "at": 1790233188854,
+    "tier": "approach",
+    "gapMs": 6000,
+    "msToDrop": 18718.542724609375,
     "alert": null,
     "hot": false,
     "strikes": {
@@ -927,8 +922,8 @@
     },
     "lastStrikeVerdict": "rework-would-trap",
     "lastStrikeAt": 1790232607995,
-    "ageSec": 1,
-    "lastStrikeAgoSec": 523,
+    "ageSec": 2,
+    "lastStrikeAgoSec": 583,
     "blindCooldownSec": 0,
     "blindOkAt": 1790191868652
   },
@@ -947,7 +942,7 @@
     "throttledVolleys": 0,
     "winRate": 0,
     "lastWinAt": null,
-    "since": 1790190364976,
+    "since": 1790190405642,
     "lastRefusedAt": null,
     "refusals": 0
   },
@@ -964,7 +959,7 @@
         "title": "",
         "first": 1790034270579,
         "last": 1790221820195,
-        "ageSec": 11311
+        "ageSec": 11371
       },
       {
         "id": "16b28371-3248-452c-87db-d0ee7fb213fb",
@@ -972,7 +967,7 @@
         "title": "",
         "first": 1790041807161,
         "last": 1790217012831,
-        "ageSec": 16118
+        "ageSec": 16178
       },
       {
         "id": "34a3d433-96d7-448d-8b0d-b7afb7ad8f30",
@@ -980,7 +975,7 @@
         "title": "",
         "first": 1790034270579,
         "last": 1790208011961,
-        "ageSec": 25119
+        "ageSec": 25179
       },
       {
         "id": "46efca31-b9de-4f59-ac0c-b69328009f4d",
@@ -988,7 +983,7 @@
         "title": "",
         "first": 1790034270579,
         "last": 1790208011961,
-        "ageSec": 25119
+        "ageSec": 25179
       },
       {
         "id": "61a9d980-65dd-4b51-8f27-1c297e310e71",
@@ -996,7 +991,7 @@
         "title": "",
         "first": 1790034270579,
         "last": 1790208011961,
-        "ageSec": 25119
+        "ageSec": 25179
       },
       {
         "id": "8b8649ca-c767-489a-8462-0edfa4556cbd",
@@ -1004,7 +999,7 @@
         "title": "",
         "first": 1790034270579,
         "last": 1790208011961,
-        "ageSec": 25119
+        "ageSec": 25179
       },
       {
         "id": "af4aa370-07f1-45a1-bf91-31e25cd0f66f",
@@ -1012,7 +1007,7 @@
         "title": "",
         "first": 1790034283509,
         "last": 1790208011961,
-        "ageSec": 25119
+        "ageSec": 25179
       },
       {
         "id": "b7102964-5792-478b-bf3a-341f6230524b",
@@ -1020,7 +1015,7 @@
         "title": "",
         "first": 1790034283509,
         "last": 1790208011961,
-        "ageSec": 25119
+        "ageSec": 25179
       },
       {
         "id": "f16912cf-003d-4f86-a69f-52c24120b3a9",
@@ -1028,7 +1023,7 @@
         "title": "",
         "first": 1790034283509,
         "last": 1790208011961,
-        "ageSec": 25119
+        "ageSec": 25179
       },
       {
         "id": "7e0d8650-3bad-4c69-bcee-bdcf8c23a4a3",
@@ -1036,7 +1031,7 @@
         "title": "",
         "first": 1790014806584,
         "last": 1790188811030,
-        "ageSec": 44320
+        "ageSec": 44380
       },
       {
         "id": "9e5a59eb-acbf-4456-b4e0-8da24b6c73da",
@@ -1044,7 +1039,7 @@
         "title": "",
         "first": 1790014806584,
         "last": 1790188811030,
-        "ageSec": 44320
+        "ageSec": 44380
       },
       {
         "id": "860acea7-aaaf-4da9-abc2-0b0a3c88a7d2",
@@ -1052,7 +1047,7 @@
         "title": "",
         "first": 1790036113217,
         "last": 1790179118334,
-        "ageSec": 54013
+        "ageSec": 54073
       }
     ]
   },
@@ -1252,14 +1247,14 @@
     "claimedToday": 3,
     "capturePct": 4.1,
     "lastDropAt": 1790231710251.5,
-    "sinceLastDropSec": 1421
+    "sinceLastDropSec": 1481
   },
-  "uptimeSec": 3902,
-  "startedAt": 1790229229122,
-  "lastPollAt": 1790233127967,
-  "lastPollAgoSec": 3,
+  "uptimeSec": 3962,
+  "startedAt": 1790229229136,
+  "lastPollAt": 1790233189207,
+  "lastPollAgoSec": 2,
   "alive": true,
-  "logSizeBytes": 5736977,
+  "logSizeBytes": 5740097,
   "net": {
     "enabled": true,
     "grade": "good",
@@ -1271,8 +1266,8 @@
     "stallMs": 1000,
     "samples": 60,
     "windowSec": 600,
-    "lastAt": "2026-09-24T06:58:44.475Z",
+    "lastAt": "2026-09-24T06:59:44.526Z",
     "ageSec": 7
   },
-  "publishedAt": "2026-09-24T06:58:51.189Z"
+  "publishedAt": "2026-09-24T06:59:51.204Z"
 }
