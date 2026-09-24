@@ -1,5 +1,5 @@
 {
-  "now": 1790266047571,
+  "now": 1790266107575,
   "ok": true,
   "config": {
     "pollIntervalSeconds": 2,
@@ -278,14 +278,14 @@
   },
   "schedule": {
     "locked": true,
-    "summary": "every 10m, phase ±3s, 60 samples, next in 160.0s",
+    "summary": "every 10m, phase ±3s, 60 samples, next in 100.0s",
     "periodMin": 10,
     "phaseSec": 7.6,
     "spreadSec": 3,
     "samples": 60,
     "inliers": 45,
     "nextDropAt": 1790266207585.8323,
-    "nextDropInSec": 160,
+    "nextDropInSec": 100,
     "observed": [
       1790188805889.5,
       1790191811814,
@@ -326,7 +326,7 @@
     "concurrentCap": null,
     "atConcurrentCap": false,
     "nextSlotAt": 1790278210293,
-    "nextSlotInSec": 12163,
+    "nextSlotInSec": 12103,
     "localDailyCap": null,
     "localConcurrentCap": null
   },
@@ -348,8 +348,8 @@
       "hasClaimable": false,
       "tasksListed": 0,
       "newTaskCount": 0,
-      "lastCheckedAt": 1790266047525,
-      "lastCheckedAgoSec": 0,
+      "lastCheckedAt": 1790266106685,
+      "lastCheckedAgoSec": 1,
       "lastNotifyAt": 1790261412596,
       "lastHeldNagAt": 1789606246822,
       "lastClaimVerdict": {
@@ -358,7 +358,7 @@
       },
       "availability": {
         "lastAvailableAt": 1790261425902,
-        "lastAvailableAgoSec": 4622,
+        "lastAvailableAgoSec": 4682,
         "open": null,
         "windows": [
           {
@@ -647,8 +647,8 @@
       },
       "held": {
         "count": 5,
-        "at": 1790266046740,
-        "ageSec": 1,
+        "at": 1790266090806,
+        "ageSec": 17,
         "tasks": [
           {
             "id": "dac5155f-a397-4dbf-8b72-40573dafe860",
@@ -661,18 +661,50 @@
             "stage": "Attempt",
             "priority": 0,
             "heldSince": 1790261461246,
-            "heldMs": 4586325,
+            "heldMs": 4646329,
             "heldExact": true,
             "stageTimeLimitSec": 36000,
             "timeLimitSec": 86400,
-            "remainingMs": 81813675,
+            "remainingMs": 81753671,
             "repoUrl": "https://github.com/handshake-project-dynamo/dynamo-0705184-scientific-computing-and-domain-science",
             "category": "Scientific Computing and Domain Science",
             "ci": {
               "slug": "handshake-project-dynamo/dynamo-0705184-scientific-computing-and-domain-science",
-              "state": "error",
-              "error": "404 {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#list-pull-requests\",\"status\":\"404\"}",
-              "fetchedAt": 1790265448494
+              "pr": {
+                "number": 4,
+                "title": "Convert exact-rk4-events from TB2 to TB3",
+                "url": "https://github.com/handshake-project-dynamo/dynamo-0705184-scientific-computing-and-domain-science/pull/4",
+                "state": "open",
+                "draft": false,
+                "headSha": "dbb9c9e9",
+                "updatedAt": "2026-09-05T01:39:28Z"
+              },
+              "openPrCount": 1,
+              "prCount": 4,
+              "checks": {
+                "total": 25,
+                "success": 1,
+                "failure": 2,
+                "running": 0,
+                "skipped": 22,
+                "other": 0,
+                "failing": [
+                  {
+                    "name": "conversion-checks / Conversion QC gate",
+                    "conclusion": "failure",
+                    "url": "https://github.com/handshake-project-dynamo/dynamo-0705184-scientific-computing-and-domain-science/actions/runs/33936755302/job/101226223402"
+                  },
+                  {
+                    "name": "conversion-checks / Artificiality (C1)",
+                    "conclusion": "failure",
+                    "url": "https://github.com/handshake-project-dynamo/dynamo-0705184-scientific-computing-and-domain-science/actions/runs/33936755302/job/101226084435"
+                  }
+                ]
+              },
+              "lastRunAt": 1788572360000,
+              "state": "failing",
+              "error": null,
+              "fetchedAt": 1790266052313
             }
           },
           {
@@ -686,18 +718,39 @@
             "stage": "Attempt",
             "priority": 0,
             "heldSince": 1790261461246,
-            "heldMs": 4586325,
+            "heldMs": 4646329,
             "heldExact": true,
             "stageTimeLimitSec": 36000,
             "timeLimitSec": 86400,
-            "remainingMs": 81813675,
+            "remainingMs": 81753671,
             "repoUrl": "https://github.com/handshake-project-dynamo/dynamo-d73e65f-mathematics-and-formal-reasoning",
             "category": "Mathematics and Formal Reasoning",
             "ci": {
               "slug": "handshake-project-dynamo/dynamo-d73e65f-mathematics-and-formal-reasoning",
-              "state": "error",
-              "error": "404 {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#list-pull-requests\",\"status\":\"404\"}",
-              "fetchedAt": 1790265448496
+              "pr": {
+                "number": 4,
+                "title": "Add schur-congruence-recovery task",
+                "url": "https://github.com/handshake-project-dynamo/dynamo-d73e65f-mathematics-and-formal-reasoning/pull/4",
+                "state": "closed",
+                "draft": false,
+                "headSha": "43e4f2c8",
+                "updatedAt": "2026-09-10T20:28:33Z"
+              },
+              "openPrCount": 0,
+              "prCount": 3,
+              "checks": {
+                "total": 17,
+                "success": 16,
+                "failure": 0,
+                "running": 0,
+                "skipped": 1,
+                "other": 0,
+                "failing": []
+              },
+              "lastRunAt": 1788385973000,
+              "state": "passing",
+              "error": null,
+              "fetchedAt": 1790266052314
             }
           },
           {
@@ -711,18 +764,50 @@
             "stage": "Attempt 2",
             "priority": 0,
             "heldSince": 1790261461246,
-            "heldMs": 4586325,
+            "heldMs": 4646329,
             "heldExact": true,
             "stageTimeLimitSec": 18000,
             "timeLimitSec": 86400,
-            "remainingMs": 81813675,
+            "remainingMs": 81753671,
             "repoUrl": "https://github.com/handshake-project-dynamo/dynamo-2ea3b19-debugging-and-repair",
             "category": "Debugging and Repair",
             "ci": {
               "slug": "handshake-project-dynamo/dynamo-2ea3b19-debugging-and-repair",
-              "state": "error",
-              "error": "404 {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#list-pull-requests\",\"status\":\"404\"}",
-              "fetchedAt": 1790265448074
+              "pr": {
+                "number": 5,
+                "title": "Convert variant-runtime-repair from TB2 to TB3",
+                "url": "https://github.com/handshake-project-dynamo/dynamo-2ea3b19-debugging-and-repair/pull/5",
+                "state": "open",
+                "draft": false,
+                "headSha": "9359a4ba",
+                "updatedAt": "2026-09-04T22:16:20Z"
+              },
+              "openPrCount": 1,
+              "prCount": 5,
+              "checks": {
+                "total": 25,
+                "success": 1,
+                "failure": 2,
+                "running": 0,
+                "skipped": 22,
+                "other": 0,
+                "failing": [
+                  {
+                    "name": "conversion-checks / Conversion QC gate",
+                    "conclusion": "failure",
+                    "url": "https://github.com/handshake-project-dynamo/dynamo-2ea3b19-debugging-and-repair/actions/runs/33924706765/job/101190799662"
+                  },
+                  {
+                    "name": "conversion-checks / Artificiality (C1)",
+                    "conclusion": "failure",
+                    "url": "https://github.com/handshake-project-dynamo/dynamo-2ea3b19-debugging-and-repair/actions/runs/33924706765/job/101190607666"
+                  }
+                ]
+              },
+              "lastRunAt": 1788560172000,
+              "state": "failing",
+              "error": null,
+              "fetchedAt": 1790266052315
             }
           },
           {
@@ -736,18 +821,50 @@
             "stage": "Attempt 2",
             "priority": 0,
             "heldSince": 1790261461246,
-            "heldMs": 4586325,
+            "heldMs": 4646329,
             "heldExact": true,
             "stageTimeLimitSec": 18000,
             "timeLimitSec": 86400,
-            "remainingMs": 81813675,
+            "remainingMs": 81753671,
             "repoUrl": "https://github.com/handshake-project-dynamo/dynamo-a6ce627-machine-learning-and-ai",
             "category": "Machine Learning and AI",
             "ci": {
               "slug": "handshake-project-dynamo/dynamo-a6ce627-machine-learning-and-ai",
-              "state": "error",
-              "error": "404 {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#list-pull-requests\",\"status\":\"404\"}",
-              "fetchedAt": 1790265448052
+              "pr": {
+                "number": 4,
+                "title": "Convert replay-model-history from TB2 to TB3",
+                "url": "https://github.com/handshake-project-dynamo/dynamo-a6ce627-machine-learning-and-ai/pull/4",
+                "state": "open",
+                "draft": false,
+                "headSha": "19b5abd9",
+                "updatedAt": "2026-09-05T11:09:03Z"
+              },
+              "openPrCount": 1,
+              "prCount": 3,
+              "checks": {
+                "total": 25,
+                "success": 1,
+                "failure": 2,
+                "running": 0,
+                "skipped": 22,
+                "other": 0,
+                "failing": [
+                  {
+                    "name": "conversion-checks / Conversion QC gate",
+                    "conclusion": "failure",
+                    "url": "https://github.com/handshake-project-dynamo/dynamo-a6ce627-machine-learning-and-ai/actions/runs/33962494726/job/101296818468"
+                  },
+                  {
+                    "name": "conversion-checks / Artificiality (C1)",
+                    "conclusion": "failure",
+                    "url": "https://github.com/handshake-project-dynamo/dynamo-a6ce627-machine-learning-and-ai/actions/runs/33962494726/job/101296703575"
+                  }
+                ]
+              },
+              "lastRunAt": 1788606535000,
+              "state": "failing",
+              "error": null,
+              "fetchedAt": 1790266052316
             }
           },
           {
@@ -761,11 +878,11 @@
             "stage": "Attempt 2",
             "priority": 0,
             "heldSince": 1790261419127,
-            "heldMs": 4628444,
+            "heldMs": 4688448,
             "heldExact": true,
             "stageTimeLimitSec": 18000,
             "timeLimitSec": 86400,
-            "remainingMs": 81771556,
+            "remainingMs": 81711552,
             "repoUrl": "https://github.com/handshake-project-dynamo/dynamo-16ea8e1-build-dependency-and-release-management",
             "category": "Build Dependency and Release Management",
             "ci": {
@@ -783,7 +900,7 @@
   ],
   "lock": {
     "pid": 36612,
-    "ts": 1790266047166,
+    "ts": 1790266107116,
     "ageSec": 0
   },
   "events": [
@@ -1021,10 +1138,10 @@
     "waitSamples": 0
   },
   "runtime": {
-    "at": 1790266047166,
+    "at": 1790266107116,
     "tier": "idle",
     "gapMs": 2000,
-    "msToDrop": 160419.83227539062,
+    "msToDrop": 100469.83227539062,
     "alert": null,
     "hot": false,
     "strikes": {
@@ -1040,7 +1157,7 @@
     "lastStrikeVerdict": "rework-would-trap",
     "lastStrikeAt": 1790265607959,
     "ageSec": 0,
-    "lastStrikeAgoSec": 440,
+    "lastStrikeAgoSec": 500,
     "blindCooldownSec": 0,
     "blindOkAt": 1790261472879
   },
@@ -1059,7 +1176,7 @@
     "throttledVolleys": 0,
     "winRate": 12.1,
     "lastWinAt": 1790261421785,
-    "since": 1790224927193,
+    "since": 1790224986778,
     "lastRefusedAt": null,
     "refusals": 0
   },
@@ -1076,7 +1193,7 @@
         "title": "",
         "first": 1790034283509,
         "last": 1790249060393,
-        "ageSec": 16987
+        "ageSec": 17047
       },
       {
         "id": "0d8a9ded-adfc-4b65-90f6-6fce323874fa",
@@ -1084,7 +1201,7 @@
         "title": "",
         "first": 1790119239890,
         "last": 1790235448428,
-        "ageSec": 30599
+        "ageSec": 30659
       },
       {
         "id": "03aca6cc-a415-482b-840c-42cfb4e66813",
@@ -1092,7 +1209,7 @@
         "title": "",
         "first": 1790034270579,
         "last": 1790221820195,
-        "ageSec": 44227
+        "ageSec": 44287
       },
       {
         "id": "16b28371-3248-452c-87db-d0ee7fb213fb",
@@ -1100,7 +1217,7 @@
         "title": "",
         "first": 1790041807161,
         "last": 1790217012831,
-        "ageSec": 49035
+        "ageSec": 49095
       },
       {
         "id": "34a3d433-96d7-448d-8b0d-b7afb7ad8f30",
@@ -1108,7 +1225,7 @@
         "title": "",
         "first": 1790034270579,
         "last": 1790208011961,
-        "ageSec": 58036
+        "ageSec": 58096
       },
       {
         "id": "46efca31-b9de-4f59-ac0c-b69328009f4d",
@@ -1116,7 +1233,7 @@
         "title": "",
         "first": 1790034270579,
         "last": 1790208011961,
-        "ageSec": 58036
+        "ageSec": 58096
       },
       {
         "id": "61a9d980-65dd-4b51-8f27-1c297e310e71",
@@ -1124,7 +1241,7 @@
         "title": "",
         "first": 1790034270579,
         "last": 1790208011961,
-        "ageSec": 58036
+        "ageSec": 58096
       },
       {
         "id": "8b8649ca-c767-489a-8462-0edfa4556cbd",
@@ -1132,7 +1249,7 @@
         "title": "",
         "first": 1790034270579,
         "last": 1790208011961,
-        "ageSec": 58036
+        "ageSec": 58096
       },
       {
         "id": "af4aa370-07f1-45a1-bf91-31e25cd0f66f",
@@ -1140,7 +1257,7 @@
         "title": "",
         "first": 1790034283509,
         "last": 1790208011961,
-        "ageSec": 58036
+        "ageSec": 58096
       },
       {
         "id": "b7102964-5792-478b-bf3a-341f6230524b",
@@ -1148,7 +1265,7 @@
         "title": "",
         "first": 1790034283509,
         "last": 1790208011961,
-        "ageSec": 58036
+        "ageSec": 58096
       },
       {
         "id": "f16912cf-003d-4f86-a69f-52c24120b3a9",
@@ -1156,7 +1273,7 @@
         "title": "",
         "first": 1790034283509,
         "last": 1790208011961,
-        "ageSec": 58036
+        "ageSec": 58096
       },
       {
         "id": "7e0d8650-3bad-4c69-bcee-bdcf8c23a4a3",
@@ -1164,7 +1281,7 @@
         "title": "",
         "first": 1790014806584,
         "last": 1790188811030,
-        "ageSec": 77237
+        "ageSec": 77297
       }
     ]
   },
@@ -1353,7 +1470,7 @@
   "forecast": {
     "expected": 31,
     "lo": 0,
-    "hi": 92,
+    "hi": 91,
     "hoursLeft": 2.4,
     "daysObserved": 4,
     "minSamplesPerHour": 5,
@@ -1364,14 +1481,14 @@
     "claimedToday": 8,
     "capturePct": 6.1,
     "lastDropAt": 1790261410070.5,
-    "sinceLastDropSec": 4638
+    "sinceLastDropSec": 4698
   },
-  "uptimeSec": 7325,
-  "startedAt": 1790258722571,
-  "lastPollAt": 1790266047530,
-  "lastPollAgoSec": 0,
+  "uptimeSec": 7385,
+  "startedAt": 1790258722575,
+  "lastPollAt": 1790266106690,
+  "lastPollAgoSec": 1,
   "alive": true,
-  "logSizeBytes": 8264008,
+  "logSizeBytes": 8268220,
   "net": {
     "enabled": true,
     "grade": "good",
@@ -1383,8 +1500,8 @@
     "stallMs": 1000,
     "samples": 60,
     "windowSec": 600,
-    "lastAt": "2026-09-24T16:07:22.770Z",
+    "lastAt": "2026-09-24T16:08:22.815Z",
     "ageSec": 5
   },
-  "publishedAt": "2026-09-24T16:07:27.638Z"
+  "publishedAt": "2026-09-24T16:08:27.646Z"
 }
