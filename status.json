@@ -1,5 +1,5 @@
 {
-  "now": 1790263827331,
+  "now": 1790263887334,
   "ok": true,
   "config": {
     "pollIntervalSeconds": 2,
@@ -278,14 +278,14 @@
   },
   "schedule": {
     "locked": true,
-    "summary": "every 10m, phase ±3s, 60 samples, next in 580.3s",
+    "summary": "every 10m, phase ±3s, 60 samples, next in 520.3s",
     "periodMin": 10,
     "phaseSec": 7.6,
     "spreadSec": 3,
     "samples": 60,
     "inliers": 45,
     "nextDropAt": 1790264407585.8323,
-    "nextDropInSec": 580,
+    "nextDropInSec": 520,
     "observed": [
       1790188805889.5,
       1790191811814,
@@ -326,7 +326,7 @@
     "concurrentCap": null,
     "atConcurrentCap": false,
     "nextSlotAt": 1790278210293,
-    "nextSlotInSec": 14383,
+    "nextSlotInSec": 14323,
     "localDailyCap": null,
     "localConcurrentCap": null
   },
@@ -348,7 +348,7 @@
       "hasClaimable": false,
       "tasksListed": 0,
       "newTaskCount": 0,
-      "lastCheckedAt": 1790263826654,
+      "lastCheckedAt": 1790263886071,
       "lastCheckedAgoSec": 1,
       "lastNotifyAt": 1790261412596,
       "lastHeldNagAt": 1789606246822,
@@ -358,7 +358,7 @@
       },
       "availability": {
         "lastAvailableAt": 1790261425902,
-        "lastAvailableAgoSec": 2401,
+        "lastAvailableAgoSec": 2461,
         "open": null,
         "windows": [
           {
@@ -647,8 +647,8 @@
       },
       "held": {
         "count": 5,
-        "at": 1790263815857,
-        "ageSec": 11,
+        "at": 1790263881271,
+        "ageSec": 6,
         "tasks": [
           {
             "id": "dac5155f-a397-4dbf-8b72-40573dafe860",
@@ -661,11 +661,11 @@
             "stage": "Attempt",
             "priority": 0,
             "heldSince": 1790261461246,
-            "heldMs": 2366085,
+            "heldMs": 2426088,
             "heldExact": true,
             "stageTimeLimitSec": 36000,
             "timeLimitSec": 86400,
-            "remainingMs": 84033915,
+            "remainingMs": 83973912,
             "repoUrl": "https://github.com/handshake-project-dynamo/dynamo-0705184-scientific-computing-and-domain-science",
             "category": "Scientific Computing and Domain Science",
             "ci": {
@@ -686,11 +686,11 @@
             "stage": "Attempt",
             "priority": 0,
             "heldSince": 1790261461246,
-            "heldMs": 2366085,
+            "heldMs": 2426088,
             "heldExact": true,
             "stageTimeLimitSec": 36000,
             "timeLimitSec": 86400,
-            "remainingMs": 84033915,
+            "remainingMs": 83973912,
             "repoUrl": "https://github.com/handshake-project-dynamo/dynamo-d73e65f-mathematics-and-formal-reasoning",
             "category": "Mathematics and Formal Reasoning",
             "ci": {
@@ -711,11 +711,11 @@
             "stage": "Attempt 2",
             "priority": 0,
             "heldSince": 1790261461246,
-            "heldMs": 2366085,
+            "heldMs": 2426088,
             "heldExact": true,
             "stageTimeLimitSec": 18000,
             "timeLimitSec": 86400,
-            "remainingMs": 84033915,
+            "remainingMs": 83973912,
             "repoUrl": "https://github.com/handshake-project-dynamo/dynamo-2ea3b19-debugging-and-repair",
             "category": "Debugging and Repair",
             "ci": {
@@ -736,11 +736,11 @@
             "stage": "Attempt 2",
             "priority": 0,
             "heldSince": 1790261461246,
-            "heldMs": 2366085,
+            "heldMs": 2426088,
             "heldExact": true,
             "stageTimeLimitSec": 18000,
             "timeLimitSec": 86400,
-            "remainingMs": 84033915,
+            "remainingMs": 83973912,
             "repoUrl": "https://github.com/handshake-project-dynamo/dynamo-a6ce627-machine-learning-and-ai",
             "category": "Machine Learning and AI",
             "ci": {
@@ -761,11 +761,11 @@
             "stage": "Attempt 2",
             "priority": 0,
             "heldSince": 1790261419127,
-            "heldMs": 2408204,
+            "heldMs": 2468207,
             "heldExact": true,
             "stageTimeLimitSec": 18000,
             "timeLimitSec": 86400,
-            "remainingMs": 83991796,
+            "remainingMs": 83931793,
             "repoUrl": "https://github.com/handshake-project-dynamo/dynamo-16ea8e1-build-dependency-and-release-management",
             "category": "Build Dependency and Release Management",
             "ci": {
@@ -783,8 +783,8 @@
   ],
   "lock": {
     "pid": 36612,
-    "ts": 1790263826299,
-    "ageSec": 1
+    "ts": 1790263885700,
+    "ageSec": 2
   },
   "events": [
     {
@@ -1079,7 +1079,7 @@
     "blind": false,
     "windowLabel": "last hour",
     "budget": {
-      "used": 38,
+      "used": 30,
       "limit": 52,
       "pollLimit": 46
     }
@@ -1096,10 +1096,10 @@
     "waitSamples": 0
   },
   "runtime": {
-    "at": 1790263826299,
+    "at": 1790263885700,
     "tier": "idle",
     "gapMs": 2000,
-    "msToDrop": -18713.167724609375,
+    "msToDrop": -78114.16772460938,
     "alert": null,
     "hot": false,
     "strikes": {
@@ -1114,8 +1114,8 @@
     },
     "lastStrikeVerdict": "rework-would-trap",
     "lastStrikeAt": 1790263807641,
-    "ageSec": 1,
-    "lastStrikeAgoSec": 20,
+    "ageSec": 2,
+    "lastStrikeAgoSec": 80,
     "blindCooldownSec": 0,
     "blindOkAt": 1790261472879
   },
@@ -1134,7 +1134,7 @@
     "throttledVolleys": 0,
     "winRate": 12.1,
     "lastWinAt": 1790261421785,
-    "since": 1790222653563,
+    "since": 1790222707428,
     "lastRefusedAt": null,
     "refusals": 0
   },
@@ -1151,7 +1151,7 @@
         "title": "",
         "first": 1790034283509,
         "last": 1790249060393,
-        "ageSec": 14767
+        "ageSec": 14827
       },
       {
         "id": "0d8a9ded-adfc-4b65-90f6-6fce323874fa",
@@ -1159,7 +1159,7 @@
         "title": "",
         "first": 1790119239890,
         "last": 1790235448428,
-        "ageSec": 28379
+        "ageSec": 28439
       },
       {
         "id": "03aca6cc-a415-482b-840c-42cfb4e66813",
@@ -1167,7 +1167,7 @@
         "title": "",
         "first": 1790034270579,
         "last": 1790221820195,
-        "ageSec": 42007
+        "ageSec": 42067
       },
       {
         "id": "16b28371-3248-452c-87db-d0ee7fb213fb",
@@ -1175,7 +1175,7 @@
         "title": "",
         "first": 1790041807161,
         "last": 1790217012831,
-        "ageSec": 46815
+        "ageSec": 46875
       },
       {
         "id": "34a3d433-96d7-448d-8b0d-b7afb7ad8f30",
@@ -1183,7 +1183,7 @@
         "title": "",
         "first": 1790034270579,
         "last": 1790208011961,
-        "ageSec": 55815
+        "ageSec": 55875
       },
       {
         "id": "46efca31-b9de-4f59-ac0c-b69328009f4d",
@@ -1191,7 +1191,7 @@
         "title": "",
         "first": 1790034270579,
         "last": 1790208011961,
-        "ageSec": 55815
+        "ageSec": 55875
       },
       {
         "id": "61a9d980-65dd-4b51-8f27-1c297e310e71",
@@ -1199,7 +1199,7 @@
         "title": "",
         "first": 1790034270579,
         "last": 1790208011961,
-        "ageSec": 55815
+        "ageSec": 55875
       },
       {
         "id": "8b8649ca-c767-489a-8462-0edfa4556cbd",
@@ -1207,7 +1207,7 @@
         "title": "",
         "first": 1790034270579,
         "last": 1790208011961,
-        "ageSec": 55815
+        "ageSec": 55875
       },
       {
         "id": "af4aa370-07f1-45a1-bf91-31e25cd0f66f",
@@ -1215,7 +1215,7 @@
         "title": "",
         "first": 1790034283509,
         "last": 1790208011961,
-        "ageSec": 55815
+        "ageSec": 55875
       },
       {
         "id": "b7102964-5792-478b-bf3a-341f6230524b",
@@ -1223,7 +1223,7 @@
         "title": "",
         "first": 1790034283509,
         "last": 1790208011961,
-        "ageSec": 55815
+        "ageSec": 55875
       },
       {
         "id": "f16912cf-003d-4f86-a69f-52c24120b3a9",
@@ -1231,7 +1231,7 @@
         "title": "",
         "first": 1790034283509,
         "last": 1790208011961,
-        "ageSec": 55815
+        "ageSec": 55875
       },
       {
         "id": "7e0d8650-3bad-4c69-bcee-bdcf8c23a4a3",
@@ -1239,7 +1239,7 @@
         "title": "",
         "first": 1790014806584,
         "last": 1790188811030,
-        "ageSec": 75016
+        "ageSec": 75076
       }
     ]
   },
@@ -1439,27 +1439,27 @@
     "claimedToday": 8,
     "capturePct": 6.1,
     "lastDropAt": 1790261410070.5,
-    "sinceLastDropSec": 2417
+    "sinceLastDropSec": 2477
   },
-  "uptimeSec": 5104,
-  "startedAt": 1790258723331,
-  "lastPollAt": 1790263826658,
+  "uptimeSec": 5164,
+  "startedAt": 1790258723334,
+  "lastPollAt": 1790263886076,
   "lastPollAgoSec": 1,
   "alive": true,
-  "logSizeBytes": 8095194,
+  "logSizeBytes": 8099094,
   "net": {
     "enabled": true,
     "grade": "good",
-    "p50": 97,
+    "p50": 95,
     "p95": 132,
-    "jitter": 35,
+    "jitter": 37,
     "lossPct": 0,
     "stallPct": 3,
     "stallMs": 1000,
     "samples": 60,
     "windowSec": 600,
-    "lastAt": "2026-09-24T15:30:20.824Z",
-    "ageSec": 7
+    "lastAt": "2026-09-24T15:31:20.874Z",
+    "ageSec": 6
   },
-  "publishedAt": "2026-09-24T15:30:27.402Z"
+  "publishedAt": "2026-09-24T15:31:27.405Z"
 }
