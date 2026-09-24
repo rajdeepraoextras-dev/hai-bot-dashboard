@@ -618,6 +618,7 @@ async function tick(){
   }
   if (STATIC && !TOKEN) { showGate(''); $('pill').className = 'pill warn'; $('pilltxt').textContent = 'token needed'; return; }
   let d, r;
+  let fromSnapshot = false;
   try { r = await api('/api/status'); }
   catch (e) {
     // The tunnel URL rotates on every restart, and the GitHub CDN can serve a
@@ -631,22 +632,38 @@ async function tick(){
       await resolveApi();
       if (apiReady && API !== was) {
         try { r = await api('/api/status'); }
-        catch (e2) { $('pill').className = 'pill dead'; $('pilltxt').textContent = 'unreachable'; return; }
+        catch (e2) { r = null; }
       } else {
-        $('pill').className = 'pill dead'; $('pilltxt').textContent = 'unreachable'; return;
+        r = null;
+      }
+      // Last resort: the snapshot the bot publishes next to this page.
+      //
+      // The tunnel is the least reliable part of this system - over one run it
+      // flapped 22 times that self-rescued before the recycle threshold and 11
+      // that recycled, and while flapping roughly one request in five hangs
+      // outright. That showed up as a completely blank dashboard even though
+      // the bot was polling normally. Stale data beats no data.
+      if (!r) {
+        try {
+          const sr = await fetch('./status.json?t=' + Date.now(), { cache: 'no-store' });
+          if (sr.ok) { d = await sr.json(); fromSnapshot = true; }
+        } catch (e3) { /* nothing left to try */ }
+        if (!d) { $('pill').className = 'pill dead'; $('pilltxt').textContent = 'unreachable'; return; }
       }
     } else {
       $('pill').className = 'pill dead'; $('pilltxt').textContent = 'unreachable'; return;
     }
   }
-  if (r.status === 401) {
+  if (r && r.status === 401) {
     TOKEN = '';
     try { localStorage.removeItem(LS_TOKEN); } catch (e) { /* ignore */ }
     $('pill').className = 'pill warn'; $('pilltxt').textContent = 'token rejected';
     showGate('That token was not accepted. Use the latest Telegram link, or paste the token again.');
     return;
   }
-  try { d = await r.json(); } catch (e) { $('pill').className = 'pill dead'; $('pilltxt').textContent = 'bad response'; return; }
+  if (!fromSnapshot) {
+    try { d = await r.json(); } catch (e) { $('pill').className = 'pill dead'; $('pilltxt').textContent = 'bad response'; return; }
+  }
   hideGate();
 
   const ac = d.config?.autoClaim || {};
@@ -659,8 +676,16 @@ async function tick(){
 
   // header
   const stale = d.lastPollAgoSec != null && d.lastPollAgoSec > Math.max(30, (d.config.pollIntervalSeconds||90)*4);
-  $('pill').className = 'pill ' + (d.alive ? 'live' : stale ? 'warn' : 'dead');
-  $('pilltxt').textContent = d.alive ? 'running' : stale ? 'stale' : 'down';
+  if (fromSnapshot) {
+    // Be explicit. A snapshot that silently reads as live is how someone
+    // concludes the bot is fine when it stopped twenty minutes ago.
+    const ageSec = d.publishedAt ? Math.round((Date.now() - Date.parse(d.publishedAt)) / 1000) : null;
+    $('pill').className = 'pill warn';
+    $('pilltxt').textContent = 'snapshot' + (ageSec != null ? ' ' + agoStr(ageSec) : '');
+  } else {
+    $('pill').className = 'pill ' + (d.alive ? 'live' : stale ? 'warn' : 'dead');
+    $('pilltxt').textContent = d.alive ? 'running' : stale ? 'stale' : 'down';
+  }
   $('clock').textContent = nowIst() + ' IST \u00B7 up ' + upStr(d.uptimeSec) + ' \u00B7 polled ' + agoStr(d.lastPollAgoSec);
   $('brandTag').textContent = 'watching ' + ((d.config.projects||[]).map(p=>p.name).join(', ') || 'the portal');
   // prsLink is a fixed external address now, not the /prs page this bot serves,
