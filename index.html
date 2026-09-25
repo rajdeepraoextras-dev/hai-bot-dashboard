@@ -282,7 +282,7 @@ footer{margin-top:20px;font-size:11px;color:var(--faint);text-align:center}
     <div class="cc-head">
       <div class="cc-badge" id="projBadge">&mdash;</div>
       <div class="cc-title">
-        <h2>Projects</h2>
+        <h2>Project status</h2>
         <div class="cc-when" id="projWhen"></div>
       </div>
     </div>
@@ -904,64 +904,35 @@ async function tick(){
     ['Uptime', upStr(d.uptimeSec)],
   ].map(([k,v]) => '<dt>' + k + '</dt><dd>' + v + '</dd>').join('');
 
-  // --- Projects: everything on this account, and what it is doing ---
-  // Driven off the SWEEP, not config. Four projects on this account had never
-  // been configured, and a card built from config.projects showed one paused
-  // project and gave no hint the others existed.
-  const allProj = d.projectStatus || [];
-  const pausedProj = allProj.filter((p) => p.paused);
+  // --- Project status: is the portal even taking claims? ---
+  // PROJECT_PAUSED keeps tasks listed while refusing every claim with a 403,
+  // so a paused project looks exactly like an unlucky day unless it is said
+  // out loud. Hidden entirely when nothing is paused - a permanent green
+  // "active" badge is noise.
+  const ps = (d.projectStatus || []).filter((p) => p && p.paused);
   const projCard = $('projCard');
-  if (!allProj.length) {
+  if (!ps.length) {
     projCard.style.display = 'none';
   } else {
+    const p0 = ps[0];
+    const mins = Math.round((p0.pausedForSec || 0) / 60);
+    const forTxt = mins >= 60 ? Math.floor(mins / 60) + 'h ' + (mins % 60) + 'm' : mins + ' min';
     projCard.style.display = '';
-    const claiming = allProj.filter((p) => p.configured && !p.paused).length;
-    projCard.className = 'card netcard ' + (claiming ? 'v-good' : pausedProj.length ? 'v-poor' : 'v-fair');
-    $('projBadge').textContent = claiming ? 'active' : pausedProj.length ? 'paused' : 'idle';
-    const sw = d.projectSweep || {};
-    $('projWhen').textContent =
-      allProj.length + ' project' + (allProj.length === 1 ? '' : 's') + ' on this account'
-      + (sw.sweptAgoSec != null ? ' · swept ' + agoStr(sw.sweptAgoSec) : '');
-    $('projHeadline').textContent = claiming
-      ? 'Claiming on ' + claiming + ' of ' + allProj.length + '.'
-      : pausedProj.length
-        ? 'Every configured project is paused. Nothing is being claimed.'
-        : 'No project is configured for claiming.';
-
-    // One row per project: what it is, whether the bot claims on it, status.
-    $('projMetrics').innerHTML = allProj
-      .map((p) => {
-        const state = p.paused
-          ? 'paused'
-          : p.configured
-            ? 'claiming'
-            : 'not monitored';
-        const cls = p.paused ? 'err' : p.configured ? 'ok' : 'muted';
-        const extra = p.paused && p.pausedForSec
-          ? ' ' + Math.round(p.pausedForSec / 60) + 'm'
-          : '';
-        return '<div class="cc-metric" style="min-width:150px">'
-          + '<div class="mk">' + esc(p.name) + '</div>'
-          + '<div class="mv" style="font-size:14px"><span class="' + cls + '">' + state + extra + '</span></div>'
-          + '</div>';
-      })
-      .join('');
-
-    const notes = [];
-    if (pausedProj.length) {
-      const p0 = pausedProj[0];
-      notes.push('Claiming is stopped on ' + pausedProj.map((p) => p.name).join(', ')
-        + ' and polling is slowed. A probe every 10 min resumes it automatically'
-        + (p0.nextProbeInSec ? ' (next in ' + p0.nextProbeInSec + 's).' : '.'));
-    }
-    const unmonitored = allProj.filter((p) => !p.configured);
-    if (unmonitored.length) {
-      notes.push(unmonitored.length + ' project' + (unmonitored.length === 1 ? ' is' : 's are')
-        + ' on this account but not in config.projects, so the bot does not claim on '
-        + (unmonitored.length === 1 ? 'it' : 'them') + ': '
-        + unmonitored.map((p) => p.name).join(', ') + '.');
-    }
-    $('projNotes').innerHTML = notes.map((n) => '<li>' + esc(n) + '</li>').join('');
+    projCard.className = 'card netcard v-poor';
+    $('projBadge').textContent = 'paused';
+    $('projWhen').textContent = ps.map((p) => p.name).join(', ');
+    $('projHeadline').textContent =
+      'The portal has paused this project. Tasks may still be listed, but every claim is refused.';
+    $('projMetrics').innerHTML = [
+      ['paused for', forTxt],
+      ['refusals', String(p0.refusals || 0)],
+      ['next check', (p0.nextProbeInSec || 0) + 's'],
+    ].map(([k, v]) => '<div class="cc-metric"><div class="mk">' + k + '</div><div class="mv">'
+      + esc(v) + '</div></div>').join('');
+    $('projNotes').innerHTML = [
+      'Claiming is stopped and polling slowed to once a minute, so nothing is spent racing for tasks that cannot be claimed.',
+      'The bot retries once every 10 minutes and resumes on its own the moment the portal accepts a claim again.',
+    ].map((n) => '<li>' + esc(n) + '</li>').join('');
   }
 
   // --- Network: is the link good enough to win a race right now? ---
