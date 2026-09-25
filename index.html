@@ -278,6 +278,19 @@ footer{margin-top:20px;font-size:11px;color:var(--faint);text-align:center}
     <div id="stats" class="stats"></div>
   </section>
 
+  <section class="card netcard" id="projCard" style="display:none">
+    <div class="cc-head">
+      <div class="cc-badge" id="projBadge">&mdash;</div>
+      <div class="cc-title">
+        <h2>Project status</h2>
+        <div class="cc-when" id="projWhen"></div>
+      </div>
+    </div>
+    <div class="cc-headline" id="projHeadline"></div>
+    <div class="cc-metrics" id="projMetrics"></div>
+    <ul class="cc-notes" id="projNotes"></ul>
+  </section>
+
   <section class="card netcard" id="netCard">
     <div class="cc-head">
       <div class="cc-badge" id="netBadge">&mdash;</div>
@@ -890,6 +903,37 @@ async function tick(){
     ['API budget', h.budget ? (h.budget.used + ' / ' + h.budget.limit + ' per min') : '\u2014'],
     ['Uptime', upStr(d.uptimeSec)],
   ].map(([k,v]) => '<dt>' + k + '</dt><dd>' + v + '</dd>').join('');
+
+  // --- Project status: is the portal even taking claims? ---
+  // PROJECT_PAUSED keeps tasks listed while refusing every claim with a 403,
+  // so a paused project looks exactly like an unlucky day unless it is said
+  // out loud. Hidden entirely when nothing is paused - a permanent green
+  // "active" badge is noise.
+  const ps = (d.projectStatus || []).filter((p) => p && p.paused);
+  const projCard = $('projCard');
+  if (!ps.length) {
+    projCard.style.display = 'none';
+  } else {
+    const p0 = ps[0];
+    const mins = Math.round((p0.pausedForSec || 0) / 60);
+    const forTxt = mins >= 60 ? Math.floor(mins / 60) + 'h ' + (mins % 60) + 'm' : mins + ' min';
+    projCard.style.display = '';
+    projCard.className = 'card netcard v-poor';
+    $('projBadge').textContent = 'paused';
+    $('projWhen').textContent = ps.map((p) => p.name).join(', ');
+    $('projHeadline').textContent =
+      'The portal has paused this project. Tasks may still be listed, but every claim is refused.';
+    $('projMetrics').innerHTML = [
+      ['paused for', forTxt],
+      ['refusals', String(p0.refusals || 0)],
+      ['next check', (p0.nextProbeInSec || 0) + 's'],
+    ].map(([k, v]) => '<div class="cc-metric"><div class="mk">' + k + '</div><div class="mv">'
+      + esc(v) + '</div></div>').join('');
+    $('projNotes').innerHTML = [
+      'Claiming is stopped and polling slowed to once a minute, so nothing is spent racing for tasks that cannot be claimed.',
+      'The bot retries once every 10 minutes and resumes on its own the moment the portal accepts a claim again.',
+    ].map((n) => '<li>' + esc(n) + '</li>').join('');
+  }
 
   // --- Network: is the link good enough to win a race right now? ---
   // Not bandwidth. The bot moves a few KB per poll; what loses tasks is the
