@@ -1,5 +1,5 @@
 {
-  "now": 1790309770420,
+  "now": 1790309826412,
   "ok": true,
   "config": {
     "pollIntervalSeconds": 2,
@@ -278,14 +278,14 @@
   },
   "schedule": {
     "locked": true,
-    "summary": "every 10m, phase ±3s, 60 samples, next in 237.1s",
+    "summary": "every 10m, phase ±3s, 60 samples, next in 181.1s",
     "periodMin": 10,
     "phaseSec": 7.5,
     "spreadSec": 2.9,
     "samples": 60,
     "inliers": 44,
     "nextDropAt": 1790310007472.2205,
-    "nextDropInSec": 237,
+    "nextDropInSec": 181,
     "observed": [
       1790193146078.5,
       1790194804458.5,
@@ -326,11 +326,11 @@
     "concurrentCap": null,
     "atConcurrentCap": false,
     "nextSlotAt": 1790347807697,
-    "nextSlotInSec": 38037,
+    "nextSlotInSec": 37981,
     "localDailyCap": null,
     "localConcurrentCap": null
   },
-  "lastClaimAttemptAt": 1790309726496,
+  "lastClaimAttemptAt": 1790309784931,
   "lastHeartbeatAt": 1790269528953,
   "sessionExpiredAlert": false,
   "stateLoadFailed": false,
@@ -339,7 +339,7 @@
     "since": 1790173184397,
     "by": "dashboard"
   },
-  "ciKnown": 5,
+  "ciKnown": 0,
   "ciTracked": 5,
   "projects": [
     {
@@ -348,21 +348,21 @@
       "hasClaimable": true,
       "tasksListed": 4,
       "newTaskCount": 4,
-      "lastCheckedAt": 1790309726879,
-      "lastCheckedAgoSec": 44,
+      "lastCheckedAt": 1790309785332,
+      "lastCheckedAgoSec": 41,
       "lastNotifyAt": 1790275809471,
       "lastHeldNagAt": 1789606246822,
       "lastClaimVerdict": {
         "verdict": "no-claim:403",
-        "at": 1790309726879
+        "at": 1790309785332
       },
       "availability": {
-        "lastAvailableAt": 1790309726879,
-        "lastAvailableAgoSec": 44,
+        "lastAvailableAt": 1790309785332,
+        "lastAvailableAgoSec": 41,
         "open": {
           "start": 1790309147283,
           "peak": 4,
-          "openMs": 623137
+          "openMs": 679129
         },
         "windows": [
           {
@@ -651,8 +651,8 @@
       },
       "held": {
         "count": 5,
-        "at": 1790309726879,
-        "ageSec": 44,
+        "at": 1790309771356,
+        "ageSec": 55,
         "tasks": [
           {
             "id": "dac5155f-a397-4dbf-8b72-40573dafe860",
@@ -665,40 +665,14 @@
             "stage": "Attempt",
             "priority": 0,
             "heldSince": 1790261461246,
-            "heldMs": 48309174,
+            "heldMs": 48365166,
             "heldExact": true,
             "stageTimeLimitSec": 36000,
             "timeLimitSec": 86400,
-            "remainingMs": 38090826,
+            "remainingMs": 38034834,
             "repoUrl": "https://github.com/handshake-project-dynamo/dynamo-0705184-scientific-computing-and-domain-science",
             "category": "Scientific Computing and Domain Science",
-            "ci": {
-              "slug": "handshake-project-dynamo/dynamo-0705184-scientific-computing-and-domain-science",
-              "pr": {
-                "number": 7,
-                "title": "Rework: close the lookup-table false accept and the zero-start-reset findings",
-                "url": "https://github.com/handshake-project-dynamo/dynamo-0705184-scientific-computing-and-domain-science/pull/7",
-                "state": "open",
-                "draft": false,
-                "headSha": "15e3c15a",
-                "updatedAt": "2026-09-24T20:47:33Z"
-              },
-              "openPrCount": 2,
-              "prCount": 5,
-              "checks": {
-                "total": 17,
-                "success": 16,
-                "failure": 0,
-                "running": 0,
-                "skipped": 1,
-                "other": 0,
-                "failing": []
-              },
-              "lastRunAt": 1790282845000,
-              "state": "passing",
-              "error": null,
-              "fetchedAt": 1790309655634
-            }
+            "ci": null
           },
           {
             "id": "80401092-6fea-4ad2-bbca-6b6dda1e80ee",
@@ -711,51 +685,14 @@
             "stage": "Attempt",
             "priority": 0,
             "heldSince": 1790261461246,
-            "heldMs": 48309174,
+            "heldMs": 48365166,
             "heldExact": true,
             "stageTimeLimitSec": 36000,
             "timeLimitSec": 86400,
-            "remainingMs": 38090826,
+            "remainingMs": 38034834,
             "repoUrl": "https://github.com/handshake-project-dynamo/dynamo-d73e65f-mathematics-and-formal-reasoning",
             "category": "Mathematics and Formal Reasoning",
-            "ci": {
-              "slug": "handshake-project-dynamo/dynamo-d73e65f-mathematics-and-formal-reasoning",
-              "pr": {
-                "number": 6,
-                "title": "Rework: publish the normative partition_application rule for nested modular schedules",
-                "url": "https://github.com/handshake-project-dynamo/dynamo-d73e65f-mathematics-and-formal-reasoning/pull/6",
-                "state": "open",
-                "draft": false,
-                "headSha": "49c66c75",
-                "updatedAt": "2026-09-24T21:15:09Z"
-              },
-              "openPrCount": 1,
-              "prCount": 4,
-              "checks": {
-                "total": 17,
-                "success": 14,
-                "failure": 2,
-                "running": 0,
-                "skipped": 1,
-                "other": 0,
-                "failing": [
-                  {
-                    "name": "review / gate",
-                    "conclusion": "failure",
-                    "url": "https://github.com/handshake-project-dynamo/dynamo-d73e65f-mathematics-and-formal-reasoning/actions/runs/36039132151/job/107837152679"
-                  },
-                  {
-                    "name": "review / trials",
-                    "conclusion": "failure",
-                    "url": "https://github.com/handshake-project-dynamo/dynamo-d73e65f-mathematics-and-formal-reasoning/actions/runs/36039132151/job/107812009697"
-                  }
-                ]
-              },
-              "lastRunAt": 1790284503000,
-              "state": "failing",
-              "error": null,
-              "fetchedAt": 1790309655639
-            }
+            "ci": null
           },
           {
             "id": "74e6c5bf-9429-4bab-9efc-6c756ffc79ce",
@@ -768,51 +705,14 @@
             "stage": "Attempt 2",
             "priority": 0,
             "heldSince": 1790261461246,
-            "heldMs": 48309174,
+            "heldMs": 48365166,
             "heldExact": true,
             "stageTimeLimitSec": 18000,
             "timeLimitSec": 86400,
-            "remainingMs": 38090826,
+            "remainingMs": 38034834,
             "repoUrl": "https://github.com/handshake-project-dynamo/dynamo-2ea3b19-debugging-and-repair",
             "category": "Debugging and Repair",
-            "ci": {
-              "slug": "handshake-project-dynamo/dynamo-2ea3b19-debugging-and-repair",
-              "pr": {
-                "number": 8,
-                "title": "Rework: repair unbounded recurrence expansion and grade count-omitted rules",
-                "url": "https://github.com/handshake-project-dynamo/dynamo-2ea3b19-debugging-and-repair/pull/8",
-                "state": "open",
-                "draft": false,
-                "headSha": "e32bdd2d",
-                "updatedAt": "2026-09-24T19:19:42Z"
-              },
-              "openPrCount": 2,
-              "prCount": 6,
-              "checks": {
-                "total": 17,
-                "success": 10,
-                "failure": 2,
-                "running": 0,
-                "skipped": 5,
-                "other": 0,
-                "failing": [
-                  {
-                    "name": "review / gate",
-                    "conclusion": "failure",
-                    "url": "https://github.com/handshake-project-dynamo/dynamo-2ea3b19-debugging-and-repair/actions/runs/36038456386/job/107794112252"
-                  },
-                  {
-                    "name": "review / tier1",
-                    "conclusion": "failure",
-                    "url": "https://github.com/handshake-project-dynamo/dynamo-2ea3b19-debugging-and-repair/actions/runs/36038456386/job/107793851530"
-                  }
-                ]
-              },
-              "lastRunAt": 1790277573000,
-              "state": "failing",
-              "error": null,
-              "fetchedAt": 1790309655641
-            }
+            "ci": null
           },
           {
             "id": "719c9dcb-0af9-474a-ac94-9dea47a1de45",
@@ -825,40 +725,14 @@
             "stage": "Attempt 2",
             "priority": 0,
             "heldSince": 1790261461246,
-            "heldMs": 48309174,
+            "heldMs": 48365166,
             "heldExact": true,
             "stageTimeLimitSec": 18000,
             "timeLimitSec": 86400,
-            "remainingMs": 38090826,
+            "remainingMs": 38034834,
             "repoUrl": "https://github.com/handshake-project-dynamo/dynamo-a6ce627-machine-learning-and-ai",
             "category": "Machine Learning and AI",
-            "ci": {
-              "slug": "handshake-project-dynamo/dynamo-a6ce627-machine-learning-and-ai",
-              "pr": {
-                "number": 6,
-                "title": "Rework: enforce the U+001F bucket separator and strict RFC3339 history timestamps",
-                "url": "https://github.com/handshake-project-dynamo/dynamo-a6ce627-machine-learning-and-ai/pull/6",
-                "state": "open",
-                "draft": false,
-                "headSha": "21941419",
-                "updatedAt": "2026-09-24T21:12:16Z"
-              },
-              "openPrCount": 2,
-              "prCount": 4,
-              "checks": {
-                "total": 17,
-                "success": 16,
-                "failure": 0,
-                "running": 0,
-                "skipped": 1,
-                "other": 0,
-                "failing": []
-              },
-              "lastRunAt": 1790284328000,
-              "state": "passing",
-              "error": null,
-              "fetchedAt": 1790309655653
-            }
+            "ci": null
           },
           {
             "id": "0bf51024-b790-46a3-876c-5fa27a60be77",
@@ -871,51 +745,14 @@
             "stage": "Attempt 2",
             "priority": 0,
             "heldSince": 1790261419127,
-            "heldMs": 48351293,
+            "heldMs": 48407285,
             "heldExact": true,
             "stageTimeLimitSec": 18000,
             "timeLimitSec": 86400,
-            "remainingMs": 38048707,
+            "remainingMs": 37992715,
             "repoUrl": "https://github.com/handshake-project-dynamo/dynamo-16ea8e1-build-dependency-and-release-management",
             "category": "Build Dependency and Release Management",
-            "ci": {
-              "slug": "handshake-project-dynamo/dynamo-16ea8e1-build-dependency-and-release-management",
-              "pr": {
-                "number": 5,
-                "title": "Rework: make the plan order total and grade conflicts against provided names",
-                "url": "https://github.com/handshake-project-dynamo/dynamo-16ea8e1-build-dependency-and-release-management/pull/5",
-                "state": "open",
-                "draft": false,
-                "headSha": "8b4d3490",
-                "updatedAt": "2026-09-24T19:41:44Z"
-              },
-              "openPrCount": 1,
-              "prCount": 3,
-              "checks": {
-                "total": 17,
-                "success": 10,
-                "failure": 2,
-                "running": 0,
-                "skipped": 5,
-                "other": 0,
-                "failing": [
-                  {
-                    "name": "review / gate",
-                    "conclusion": "failure",
-                    "url": "https://github.com/handshake-project-dynamo/dynamo-16ea8e1-build-dependency-and-release-management/actions/runs/36039768728/job/107802412706"
-                  },
-                  {
-                    "name": "review / tier1",
-                    "conclusion": "failure",
-                    "url": "https://github.com/handshake-project-dynamo/dynamo-16ea8e1-build-dependency-and-release-management/actions/runs/36039768728/job/107802179172"
-                  }
-                ]
-              },
-              "lastRunAt": 1790278897000,
-              "state": "failing",
-              "error": null,
-              "fetchedAt": 1790309656922
-            }
+            "ci": null
           }
         ],
         "reworkCount": 5,
@@ -924,11 +761,221 @@
     }
   ],
   "lock": {
-    "pid": 36612,
-    "ts": 1790309727152,
-    "ageSec": 43
+    "pid": 63608,
+    "ts": 1790309826598,
+    "ageSec": 0
   },
   "events": [
+    {
+      "ts": "2026-09-25T04:17:07.072Z",
+      "kind": "lifecycle",
+      "text": "watch started — every 2s, 0.4s around predicted drops — projects: Project Dynamo — autoClaim LIVE"
+    },
+    {
+      "ts": "2026-09-25T04:17:07.071Z",
+      "kind": "info",
+      "text": "supabase: syncing telemetry to enyesotijvpsymyyvthw.supabase.co every 20s"
+    },
+    {
+      "ts": "2026-09-25T04:17:06.395Z",
+      "kind": "info",
+      "text": "netcheck: probing every 10s — link latency and jitter, off the portal budget"
+    },
+    {
+      "ts": "2026-09-25T04:17:06.583Z",
+      "kind": "lifecycle",
+      "text": "dashboard: http://localhost:7878 (token required)"
+    },
+    {
+      "ts": "2026-09-25T04:17:06.412Z",
+      "kind": "info",
+      "text": "pages: publishing a status snapshot every 60s"
+    },
+    {
+      "ts": "2026-09-25T04:16:51.661Z",
+      "kind": "lifecycle",
+      "text": "received SIGINT, shutting down"
+    },
+    {
+      "ts": "2026-09-25T04:16:25.331Z",
+      "kind": "error",
+      "text": "autoclaim: no claim on Project Dynamo (HTTP 403, this project 5 -> 5) [{\"error\":{\"json\":{\"message\":\"PROJECT_PAUSED\",\"code\":-32003,\"data\":{\"code\":\"FORBIDDEN\",\"httpStatus\":403,\"path\":\"task.claimTask\",\"requestId\":\"756b0579-662e-4f29-bd85-7c16bb6e04c1\",\"zodError\":null,\"zodIssues\":null,\"isIgnorable\":true}},\"meta\":{\"values\":{\"data.zodError\":[\"undefined\"],\"data.zodIssues\":[\"undefined\"]},\"v\":1}}}]"
+    },
+    {
+      "ts": "2026-09-25T04:16:25.322Z",
+      "kind": "info",
+      "text": "autoclaim: the portal said: \"PROJECT_PAUSED\" x4"
+    },
+    {
+      "ts": "2026-09-25T04:16:25.322Z",
+      "kind": "error",
+      "text": "autoclaim: volley of 4 on Project Dynamo in 390ms — 0 won, 0 lost to other fellows, 4 server error(s)"
+    },
+    {
+      "ts": "2026-09-25T04:16:25.321Z",
+      "kind": "error",
+      "text": "autoclaim: pick positions in a board of 4 — 2:error 1:error 3:error 0:error"
+    },
+    {
+      "ts": "2026-09-25T04:16:23.484Z",
+      "kind": "error",
+      "text": "autoclaim: no claim on Project Dynamo (HTTP 403, this project 5 -> 5) [{\"error\":{\"json\":{\"message\":\"PROJECT_PAUSED\",\"code\":-32003,\"data\":{\"code\":\"FORBIDDEN\",\"httpStatus\":403,\"path\":\"task.claimTask\",\"requestId\":\"f116d61c-0706-4b90-aae0-65b023c898a8\",\"zodError\":null,\"zodIssues\":null,\"isIgnorable\":true}},\"meta\":{\"values\":{\"data.zodError\":[\"undefined\"],\"data.zodIssues\":[\"undefined\"]},\"v\":1}}}]"
+    },
+    {
+      "ts": "2026-09-25T04:16:23.477Z",
+      "kind": "info",
+      "text": "autoclaim: the portal said: \"PROJECT_PAUSED\" x4"
+    },
+    {
+      "ts": "2026-09-25T04:16:23.476Z",
+      "kind": "error",
+      "text": "autoclaim: volley of 4 on Project Dynamo in 403ms — 0 won, 0 lost to other fellows, 4 server error(s)"
+    },
+    {
+      "ts": "2026-09-25T04:16:23.476Z",
+      "kind": "error",
+      "text": "autoclaim: pick positions in a board of 4 — 1:error 0:error 2:error 3:error"
+    },
+    {
+      "ts": "2026-09-25T04:16:22.257Z",
+      "kind": "error",
+      "text": "autoclaim: no claim on Project Dynamo (HTTP 403, this project 5 -> 5) [{\"error\":{\"json\":{\"message\":\"PROJECT_PAUSED\",\"code\":-32003,\"data\":{\"code\":\"FORBIDDEN\",\"httpStatus\":403,\"path\":\"task.claimTask\",\"requestId\":\"d9d9a417-7734-4e16-bdfb-f12fefe6565a\",\"zodError\":null,\"zodIssues\":null,\"isIgnorable\":true}},\"meta\":{\"values\":{\"data.zodError\":[\"undefined\"],\"data.zodIssues\":[\"undefined\"]},\"v\":1}}}]"
+    },
+    {
+      "ts": "2026-09-25T04:16:22.249Z",
+      "kind": "info",
+      "text": "autoclaim: the portal said: \"PROJECT_PAUSED\" x4"
+    },
+    {
+      "ts": "2026-09-25T04:16:22.249Z",
+      "kind": "error",
+      "text": "autoclaim: volley of 4 on Project Dynamo in 394ms — 0 won, 0 lost to other fellows, 4 server error(s)"
+    },
+    {
+      "ts": "2026-09-25T04:16:22.248Z",
+      "kind": "error",
+      "text": "autoclaim: pick positions in a board of 4 — 0:error 2:error 3:error 1:error"
+    },
+    {
+      "ts": "2026-09-25T04:16:20.485Z",
+      "kind": "error",
+      "text": "autoclaim: no claim on Project Dynamo (HTTP 403, this project 5 -> 5) [{\"error\":{\"json\":{\"message\":\"PROJECT_PAUSED\",\"code\":-32003,\"data\":{\"code\":\"FORBIDDEN\",\"httpStatus\":403,\"path\":\"task.claimTask\",\"requestId\":\"655df27e-5a80-414b-bc60-c47351cdbe9e\",\"zodError\":null,\"zodIssues\":null,\"isIgnorable\":true}},\"meta\":{\"values\":{\"data.zodError\":[\"undefined\"],\"data.zodIssues\":[\"undefined\"]},\"v\":1}}}]"
+    },
+    {
+      "ts": "2026-09-25T04:16:20.477Z",
+      "kind": "info",
+      "text": "autoclaim: the portal said: \"PROJECT_PAUSED\" x4"
+    },
+    {
+      "ts": "2026-09-25T04:16:20.475Z",
+      "kind": "error",
+      "text": "autoclaim: pick positions in a board of 4 — 0:error 2:error 3:error 1:error"
+    },
+    {
+      "ts": "2026-09-25T04:16:20.476Z",
+      "kind": "error",
+      "text": "autoclaim: volley of 4 on Project Dynamo in 371ms — 0 won, 0 lost to other fellows, 4 server error(s)"
+    },
+    {
+      "ts": "2026-09-25T04:16:18.525Z",
+      "kind": "error",
+      "text": "autoclaim: no claim on Project Dynamo (HTTP 403, this project 5 -> 5) [{\"error\":{\"json\":{\"message\":\"PROJECT_PAUSED\",\"code\":-32003,\"data\":{\"code\":\"FORBIDDEN\",\"httpStatus\":403,\"path\":\"task.claimTask\",\"requestId\":\"5cb9a015-5cd6-4f0b-b498-d8ce13c57c37\",\"zodError\":null,\"zodIssues\":null,\"isIgnorable\":true}},\"meta\":{\"values\":{\"data.zodError\":[\"undefined\"],\"data.zodIssues\":[\"undefined\"]},\"v\":1}}}]"
+    },
+    {
+      "ts": "2026-09-25T04:16:18.514Z",
+      "kind": "info",
+      "text": "autoclaim: the portal said: \"PROJECT_PAUSED\" x4"
+    },
+    {
+      "ts": "2026-09-25T04:16:18.514Z",
+      "kind": "error",
+      "text": "autoclaim: volley of 4 on Project Dynamo in 364ms — 0 won, 0 lost to other fellows, 4 server error(s)"
+    },
+    {
+      "ts": "2026-09-25T04:16:18.513Z",
+      "kind": "error",
+      "text": "autoclaim: pick positions in a board of 4 — 1:error 2:error 0:error 3:error"
+    },
+    {
+      "ts": "2026-09-25T04:16:17.104Z",
+      "kind": "error",
+      "text": "autoclaim: no claim on Project Dynamo (HTTP 403, this project 5 -> 5) [{\"error\":{\"json\":{\"message\":\"PROJECT_PAUSED\",\"code\":-32003,\"data\":{\"code\":\"FORBIDDEN\",\"httpStatus\":403,\"path\":\"task.claimTask\",\"requestId\":\"a06f61c2-4e16-44bd-bf40-967422177840\",\"zodError\":null,\"zodIssues\":null,\"isIgnorable\":true}},\"meta\":{\"values\":{\"data.zodError\":[\"undefined\"],\"data.zodIssues\":[\"undefined\"]},\"v\":1}}}]"
+    },
+    {
+      "ts": "2026-09-25T04:16:17.095Z",
+      "kind": "info",
+      "text": "autoclaim: the portal said: \"PROJECT_PAUSED\" x4"
+    },
+    {
+      "ts": "2026-09-25T04:16:17.094Z",
+      "kind": "error",
+      "text": "autoclaim: volley of 4 on Project Dynamo in 385ms — 0 won, 0 lost to other fellows, 4 server error(s)"
+    },
+    {
+      "ts": "2026-09-25T04:16:17.094Z",
+      "kind": "error",
+      "text": "autoclaim: pick positions in a board of 4 — 3:error 1:error 2:error 0:error"
+    },
+    {
+      "ts": "2026-09-25T04:16:15.878Z",
+      "kind": "error",
+      "text": "autoclaim: no claim on Project Dynamo (HTTP 403, this project 5 -> 5) [{\"error\":{\"json\":{\"message\":\"PROJECT_PAUSED\",\"code\":-32003,\"data\":{\"code\":\"FORBIDDEN\",\"httpStatus\":403,\"path\":\"task.claimTask\",\"requestId\":\"9d234a2f-dea1-4ceb-840e-67f278993342\",\"zodError\":null,\"zodIssues\":null,\"isIgnorable\":true}},\"meta\":{\"values\":{\"data.zodError\":[\"undefined\"],\"data.zodIssues\":[\"undefined\"]},\"v\":1}}}]"
+    },
+    {
+      "ts": "2026-09-25T04:16:15.870Z",
+      "kind": "info",
+      "text": "autoclaim: the portal said: \"PROJECT_PAUSED\" x4"
+    },
+    {
+      "ts": "2026-09-25T04:16:15.869Z",
+      "kind": "error",
+      "text": "autoclaim: volley of 4 on Project Dynamo in 393ms — 0 won, 0 lost to other fellows, 4 server error(s)"
+    },
+    {
+      "ts": "2026-09-25T04:16:15.868Z",
+      "kind": "error",
+      "text": "autoclaim: pick positions in a board of 4 — 0:error 2:error 1:error 3:error"
+    },
+    {
+      "ts": "2026-09-25T04:16:13.799Z",
+      "kind": "error",
+      "text": "autoclaim: no claim on Project Dynamo (HTTP 403, this project 5 -> 5) [{\"error\":{\"json\":{\"message\":\"PROJECT_PAUSED\",\"code\":-32003,\"data\":{\"code\":\"FORBIDDEN\",\"httpStatus\":403,\"path\":\"task.claimTask\",\"requestId\":\"cdb5f6ab-5ab0-4c69-a966-60e31b17801f\",\"zodError\":null,\"zodIssues\":null,\"isIgnorable\":true}},\"meta\":{\"values\":{\"data.zodError\":[\"undefined\"],\"data.zodIssues\":[\"undefined\"]},\"v\":1}}}]"
+    },
+    {
+      "ts": "2026-09-25T04:16:13.790Z",
+      "kind": "info",
+      "text": "autoclaim: the portal said: \"PROJECT_PAUSED\" x4"
+    },
+    {
+      "ts": "2026-09-25T04:16:13.789Z",
+      "kind": "error",
+      "text": "autoclaim: volley of 4 on Project Dynamo in 445ms — 0 won, 0 lost to other fellows, 4 server error(s)"
+    },
+    {
+      "ts": "2026-09-25T04:16:13.789Z",
+      "kind": "error",
+      "text": "autoclaim: pick positions in a board of 4 — 3:error 0:error 2:error 1:error"
+    },
+    {
+      "ts": "2026-09-25T04:16:11.354Z",
+      "kind": "error",
+      "text": "autoclaim: no claim on Project Dynamo (HTTP 403, this project 5 -> 5) [{\"error\":{\"json\":{\"message\":\"PROJECT_PAUSED\",\"code\":-32003,\"data\":{\"code\":\"FORBIDDEN\",\"httpStatus\":403,\"path\":\"task.claimTask\",\"requestId\":\"d6291963-6d02-46c6-b45a-f2f5cbd0e283\",\"zodError\":null,\"zodIssues\":null,\"isIgnorable\":true}},\"meta\":{\"values\":{\"data.zodError\":[\"undefined\"],\"data.zodIssues\":[\"undefined\"]},\"v\":1}}}]"
+    },
+    {
+      "ts": "2026-09-25T04:16:11.345Z",
+      "kind": "info",
+      "text": "autoclaim: the portal said: \"PROJECT_PAUSED\" x4"
+    },
+    {
+      "ts": "2026-09-25T04:16:11.344Z",
+      "kind": "error",
+      "text": "autoclaim: volley of 4 on Project Dynamo in 388ms — 0 won, 0 lost to other fellows, 4 server error(s)"
+    },
+    {
+      "ts": "2026-09-25T04:16:11.343Z",
+      "kind": "error",
+      "text": "autoclaim: pick positions in a board of 4 — 3:error 0:error 2:error 1:error"
+    },
     {
       "ts": "2026-09-25T04:15:26.878Z",
       "kind": "error",
@@ -1318,216 +1365,6 @@
       "ts": "2026-09-25T04:13:15.399Z",
       "kind": "info",
       "text": "autoclaim: the portal said: \"PROJECT_PAUSED\" x4"
-    },
-    {
-      "ts": "2026-09-25T04:13:15.398Z",
-      "kind": "error",
-      "text": "autoclaim: volley of 4 on Project Dynamo in 384ms — 0 won, 0 lost to other fellows, 4 server error(s)"
-    },
-    {
-      "ts": "2026-09-25T04:13:15.395Z",
-      "kind": "error",
-      "text": "autoclaim: pick positions in a board of 4 — 0:error 2:error 3:error 1:error"
-    },
-    {
-      "ts": "2026-09-25T04:13:14.223Z",
-      "kind": "error",
-      "text": "autoclaim: no claim on Project Dynamo (HTTP 403, this project 5 -> 5) [{\"error\":{\"json\":{\"message\":\"PROJECT_PAUSED\",\"code\":-32003,\"data\":{\"code\":\"FORBIDDEN\",\"httpStatus\":403,\"path\":\"task.claimTask\",\"requestId\":\"31b013dc-81e2-4867-a0e1-f04f27d2af76\",\"zodError\":null,\"zodIssues\":null,\"isIgnorable\":true}},\"meta\":{\"values\":{\"data.zodError\":[\"undefined\"],\"data.zodIssues\":[\"undefined\"]},\"v\":1}}}]"
-    },
-    {
-      "ts": "2026-09-25T04:13:14.214Z",
-      "kind": "info",
-      "text": "autoclaim: the portal said: \"PROJECT_PAUSED\" x4"
-    },
-    {
-      "ts": "2026-09-25T04:13:14.214Z",
-      "kind": "error",
-      "text": "autoclaim: volley of 4 on Project Dynamo in 418ms — 0 won, 0 lost to other fellows, 4 server error(s)"
-    },
-    {
-      "ts": "2026-09-25T04:13:14.213Z",
-      "kind": "error",
-      "text": "autoclaim: pick positions in a board of 4 — 2:error 3:error 1:error 0:error"
-    },
-    {
-      "ts": "2026-09-25T04:13:13.002Z",
-      "kind": "error",
-      "text": "autoclaim: no claim on Project Dynamo (HTTP 403, this project 5 -> 5) [{\"error\":{\"json\":{\"message\":\"PROJECT_PAUSED\",\"code\":-32003,\"data\":{\"code\":\"FORBIDDEN\",\"httpStatus\":403,\"path\":\"task.claimTask\",\"requestId\":\"ea67df73-e65c-4bcd-8524-f69ad3722aee\",\"zodError\":null,\"zodIssues\":null,\"isIgnorable\":true}},\"meta\":{\"values\":{\"data.zodError\":[\"undefined\"],\"data.zodIssues\":[\"undefined\"]},\"v\":1}}}]"
-    },
-    {
-      "ts": "2026-09-25T04:13:12.994Z",
-      "kind": "info",
-      "text": "autoclaim: the portal said: \"PROJECT_PAUSED\" x4"
-    },
-    {
-      "ts": "2026-09-25T04:13:12.994Z",
-      "kind": "error",
-      "text": "autoclaim: volley of 4 on Project Dynamo in 1251ms — 0 won, 0 lost to other fellows, 4 server error(s)"
-    },
-    {
-      "ts": "2026-09-25T04:13:12.993Z",
-      "kind": "error",
-      "text": "autoclaim: pick positions in a board of 4 — 0:error 2:error 1:error 3:error"
-    },
-    {
-      "ts": "2026-09-25T04:13:10.742Z",
-      "kind": "error",
-      "text": "autoclaim: no claim on Project Dynamo (HTTP 403, this project 5 -> 5) [{\"error\":{\"json\":{\"message\":\"PROJECT_PAUSED\",\"code\":-32003,\"data\":{\"code\":\"FORBIDDEN\",\"httpStatus\":403,\"path\":\"task.claimTask\",\"requestId\":\"f9096625-5482-4dab-9be8-7edacb4205b5\",\"zodError\":null,\"zodIssues\":null,\"isIgnorable\":true}},\"meta\":{\"values\":{\"data.zodError\":[\"undefined\"],\"data.zodIssues\":[\"undefined\"]},\"v\":1}}}]"
-    },
-    {
-      "ts": "2026-09-25T04:13:10.722Z",
-      "kind": "info",
-      "text": "autoclaim: the portal said: \"PROJECT_PAUSED\" x4"
-    },
-    {
-      "ts": "2026-09-25T04:13:10.721Z",
-      "kind": "error",
-      "text": "autoclaim: volley of 4 on Project Dynamo in 479ms — 0 won, 0 lost to other fellows, 4 server error(s)"
-    },
-    {
-      "ts": "2026-09-25T04:13:10.721Z",
-      "kind": "error",
-      "text": "autoclaim: pick positions in a board of 4 — 2:error 1:error 0:error 3:error"
-    },
-    {
-      "ts": "2026-09-25T04:13:09.177Z",
-      "kind": "error",
-      "text": "autoclaim: no claim on Project Dynamo (HTTP 403, this project 5 -> 5) [{\"error\":{\"json\":{\"message\":\"PROJECT_PAUSED\",\"code\":-32003,\"data\":{\"code\":\"FORBIDDEN\",\"httpStatus\":403,\"path\":\"task.claimTask\",\"requestId\":\"50ceadba-7d25-48cb-bd65-ab58f01a0c5c\",\"zodError\":null,\"zodIssues\":null,\"isIgnorable\":true}},\"meta\":{\"values\":{\"data.zodError\":[\"undefined\"],\"data.zodIssues\":[\"undefined\"]},\"v\":1}}}]"
-    },
-    {
-      "ts": "2026-09-25T04:13:09.160Z",
-      "kind": "info",
-      "text": "autoclaim: the portal said: \"PROJECT_PAUSED\" x4"
-    },
-    {
-      "ts": "2026-09-25T04:13:09.160Z",
-      "kind": "error",
-      "text": "autoclaim: volley of 4 on Project Dynamo in 391ms — 0 won, 0 lost to other fellows, 4 server error(s)"
-    },
-    {
-      "ts": "2026-09-25T04:13:09.158Z",
-      "kind": "error",
-      "text": "autoclaim: pick positions in a board of 4 — 3:error 0:error 2:error 1:error"
-    },
-    {
-      "ts": "2026-09-25T04:13:07.584Z",
-      "kind": "error",
-      "text": "autoclaim: no claim on Project Dynamo (HTTP 403, this project 5 -> 5) [{\"error\":{\"json\":{\"message\":\"PROJECT_PAUSED\",\"code\":-32003,\"data\":{\"code\":\"FORBIDDEN\",\"httpStatus\":403,\"path\":\"task.claimTask\",\"requestId\":\"057fb6e3-6b90-4895-992f-7e3581678262\",\"zodError\":null,\"zodIssues\":null,\"isIgnorable\":true}},\"meta\":{\"values\":{\"data.zodError\":[\"undefined\"],\"data.zodIssues\":[\"undefined\"]},\"v\":1}}}]"
-    },
-    {
-      "ts": "2026-09-25T04:13:07.567Z",
-      "kind": "info",
-      "text": "autoclaim: the portal said: \"PROJECT_PAUSED\" x4"
-    },
-    {
-      "ts": "2026-09-25T04:13:07.567Z",
-      "kind": "ratelimit",
-      "text": "autoclaim: volley of 4 on Project Dynamo in 429ms — 0 won, 0 lost to other fellows, 4 server error(s)"
-    },
-    {
-      "ts": "2026-09-25T04:13:07.565Z",
-      "kind": "error",
-      "text": "autoclaim: pick positions in a board of 4 — 3:error 0:error 2:error 1:error"
-    },
-    {
-      "ts": "2026-09-25T04:13:06.222Z",
-      "kind": "error",
-      "text": "autoclaim: no claim on Project Dynamo (HTTP 403, this project 5 -> 5) [{\"error\":{\"json\":{\"message\":\"PROJECT_PAUSED\",\"code\":-32003,\"data\":{\"code\":\"FORBIDDEN\",\"httpStatus\":403,\"path\":\"task.claimTask\",\"requestId\":\"fc5caefb-09ff-4336-8907-bab1d65ceeb4\",\"zodError\":null,\"zodIssues\":null,\"isIgnorable\":true}},\"meta\":{\"values\":{\"data.zodError\":[\"undefined\"],\"data.zodIssues\":[\"undefined\"]},\"v\":1}}}]"
-    },
-    {
-      "ts": "2026-09-25T04:13:06.200Z",
-      "kind": "info",
-      "text": "autoclaim: the portal said: \"PROJECT_PAUSED\" x4"
-    },
-    {
-      "ts": "2026-09-25T04:13:06.194Z",
-      "kind": "error",
-      "text": "autoclaim: volley of 4 on Project Dynamo in 411ms — 0 won, 0 lost to other fellows, 4 server error(s)"
-    },
-    {
-      "ts": "2026-09-25T04:13:06.194Z",
-      "kind": "error",
-      "text": "autoclaim: pick positions in a board of 4 — 1:error 0:error 2:error 3:error"
-    },
-    {
-      "ts": "2026-09-25T04:13:04.470Z",
-      "kind": "error",
-      "text": "autoclaim: no claim on Project Dynamo (HTTP 403, this project 5 -> 5) [{\"error\":{\"json\":{\"message\":\"PROJECT_PAUSED\",\"code\":-32003,\"data\":{\"code\":\"FORBIDDEN\",\"httpStatus\":403,\"path\":\"task.claimTask\",\"requestId\":\"1f1a33a1-a5d4-4ba6-a3ca-bbe28f56ca27\",\"zodError\":null,\"zodIssues\":null,\"isIgnorable\":true}},\"meta\":{\"values\":{\"data.zodError\":[\"undefined\"],\"data.zodIssues\":[\"undefined\"]},\"v\":1}}}]"
-    },
-    {
-      "ts": "2026-09-25T04:13:04.443Z",
-      "kind": "info",
-      "text": "autoclaim: the portal said: \"PROJECT_PAUSED\" x4"
-    },
-    {
-      "ts": "2026-09-25T04:13:04.443Z",
-      "kind": "error",
-      "text": "autoclaim: volley of 4 on Project Dynamo in 522ms — 0 won, 0 lost to other fellows, 4 server error(s)"
-    },
-    {
-      "ts": "2026-09-25T04:13:04.442Z",
-      "kind": "error",
-      "text": "autoclaim: pick positions in a board of 4 — 3:error 1:error 2:error 0:error"
-    },
-    {
-      "ts": "2026-09-25T04:12:21.194Z",
-      "kind": "error",
-      "text": "autoclaim: no claim on Project Dynamo (HTTP 403, this project 5 -> 5) [{\"error\":{\"json\":{\"message\":\"PROJECT_PAUSED\",\"code\":-32003,\"data\":{\"code\":\"FORBIDDEN\",\"httpStatus\":403,\"path\":\"task.claimTask\",\"requestId\":\"e830d1da-ffb6-408a-a9e8-5207b2d1b597\",\"zodError\":null,\"zodIssues\":null,\"isIgnorable\":true}},\"meta\":{\"values\":{\"data.zodError\":[\"undefined\"],\"data.zodIssues\":[\"undefined\"]},\"v\":1}}}]"
-    },
-    {
-      "ts": "2026-09-25T04:12:21.185Z",
-      "kind": "info",
-      "text": "autoclaim: the portal said: \"PROJECT_PAUSED\" x4"
-    },
-    {
-      "ts": "2026-09-25T04:12:21.185Z",
-      "kind": "error",
-      "text": "autoclaim: volley of 4 on Project Dynamo in 412ms — 0 won, 0 lost to other fellows, 4 server error(s)"
-    },
-    {
-      "ts": "2026-09-25T04:12:21.184Z",
-      "kind": "error",
-      "text": "autoclaim: pick positions in a board of 4 — 3:error 1:error 2:error 0:error"
-    },
-    {
-      "ts": "2026-09-25T04:12:12.001Z",
-      "kind": "error",
-      "text": "autoclaim: no claim on Project Dynamo (HTTP 403, this project 5 -> 5) [{\"error\":{\"json\":{\"message\":\"PROJECT_PAUSED\",\"code\":-32003,\"data\":{\"code\":\"FORBIDDEN\",\"httpStatus\":403,\"path\":\"task.claimTask\",\"requestId\":\"c5a61228-12a5-4047-a12a-ec9ab1b738fe\",\"zodError\":null,\"zodIssues\":null,\"isIgnorable\":true}},\"meta\":{\"values\":{\"data.zodError\":[\"undefined\"],\"data.zodIssues\":[\"undefined\"]},\"v\":1}}}]"
-    },
-    {
-      "ts": "2026-09-25T04:12:11.995Z",
-      "kind": "info",
-      "text": "autoclaim: the portal said: \"PROJECT_PAUSED\" x4"
-    },
-    {
-      "ts": "2026-09-25T04:12:11.994Z",
-      "kind": "error",
-      "text": "autoclaim: volley of 4 on Project Dynamo in 367ms — 0 won, 0 lost to other fellows, 4 server error(s)"
-    },
-    {
-      "ts": "2026-09-25T04:12:11.994Z",
-      "kind": "error",
-      "text": "autoclaim: pick positions in a board of 4 — 0:error 2:error 1:error 3:error"
-    },
-    {
-      "ts": "2026-09-25T04:12:10.503Z",
-      "kind": "error",
-      "text": "autoclaim: no claim on Project Dynamo (HTTP 403, this project 5 -> 5) [{\"error\":{\"json\":{\"message\":\"PROJECT_PAUSED\",\"code\":-32003,\"data\":{\"code\":\"FORBIDDEN\",\"httpStatus\":403,\"path\":\"task.claimTask\",\"requestId\":\"e529072e-3f58-4375-8572-f9a66bc1f3bc\",\"zodError\":null,\"zodIssues\":null,\"isIgnorable\":true}},\"meta\":{\"values\":{\"data.zodError\":[\"undefined\"],\"data.zodIssues\":[\"undefined\"]},\"v\":1}}}]"
-    },
-    {
-      "ts": "2026-09-25T04:12:10.496Z",
-      "kind": "info",
-      "text": "autoclaim: the portal said: \"PROJECT_PAUSED\" x4"
-    },
-    {
-      "ts": "2026-09-25T04:12:10.495Z",
-      "kind": "error",
-      "text": "autoclaim: volley of 4 on Project Dynamo in 380ms — 0 won, 0 lost to other fellows, 4 server error(s)"
-    },
-    {
-      "ts": "2026-09-25T04:12:10.495Z",
-      "kind": "error",
-      "text": "autoclaim: pick positions in a board of 4 — 3:error 1:error 2:error 0:error"
     }
   ],
   "lastPollSummary": {
@@ -1535,10 +1372,10 @@
     "projects": {
       "Project Dynamo": {
         "tasks": 4,
-        "listMs": 1224,
-        "listBreak": "1139/14/1ms 78kb",
-        "heldMs": 2133,
-        "claimMs": 371,
+        "listMs": 540,
+        "listWaitMs": 630,
+        "listBreak": "425/47/0ms 78kb",
+        "claimMs": 389,
         "newTasks": 4,
         "hasClaimable": true,
         "new": 0,
@@ -1549,56 +1386,48 @@
     "hot": true
   },
   "health": {
-    "polls": 94,
+    "polls": 103,
     "pollsFailed": 3,
-    "errors": 282,
+    "errors": 309,
     "rateLimited": 1,
     "claims": 0,
-    "restarts": 0,
+    "restarts": 1,
     "notifies": 0,
     "medianPollGapSec": 2,
-    "pollsOk": 91,
-    "pollFailPct": 3.2,
+    "pollsOk": 100,
+    "pollFailPct": 2.9,
     "blind": false,
     "windowLabel": "last hour",
     "budget": {
-      "used": 43,
+      "used": 0,
       "limit": 52,
       "pollLimit": 46
     }
   },
   "latency": {
-    "listP50": 573,
+    "listP50": 560,
     "listP95": 1057,
     "listMax": 2094,
-    "claimP50": 407,
+    "claimP50": 402,
     "claimMax": 4846,
-    "samples": 91,
-    "waitP50": 2826,
+    "samples": 100,
+    "waitP50": 2513,
     "waitMax": 45200,
-    "waitSamples": 32
+    "waitSamples": 39
   },
   "runtime": {
-    "at": 1790309727152,
-    "tier": "hot",
-    "gapMs": 1000,
+    "at": 0,
+    "tier": null,
+    "gapMs": null,
     "msToDrop": null,
     "alert": null,
-    "hot": true,
-    "strikes": {
-      "spent": 0,
-      "max": 2,
-      "off": false
-    },
-    "hotStrikes": {
-      "spent": 2,
-      "max": 2,
-      "off": false
-    },
-    "lastStrikeVerdict": "rework-would-trap",
-    "lastStrikeAt": 1790275810574,
-    "ageSec": 43,
-    "lastStrikeAgoSec": 33960,
+    "hot": false,
+    "strikes": null,
+    "hotStrikes": null,
+    "lastStrikeVerdict": null,
+    "lastStrikeAt": 0,
+    "ageSec": null,
+    "lastStrikeAgoSec": null,
     "blindCooldownSec": 0,
     "blindOkAt": 1790261472879
   },
@@ -1606,12 +1435,12 @@
     "cooldownUntil": 0,
     "throttleBackoffMs": 0,
     "volleyCapAdaptive": null,
-    "knownTakenIds": 22,
+    "knownTakenIds": 0,
     "cooldownSecLeft": 0
   },
   "race": {
-    "volleys": 90,
-    "posts": 360,
+    "volleys": 99,
+    "posts": 396,
     "won": 0,
     "lost": 0,
     "throttledVolleys": 0,
@@ -1633,8 +1462,8 @@
         "visits": 3,
         "title": "",
         "first": 1790174915802,
-        "last": 1790309726493,
-        "ageSec": 44
+        "last": 1790309770954,
+        "ageSec": 55
       },
       {
         "id": "a6d7217b-a525-46c8-954c-980ac88e48a4",
@@ -1642,7 +1471,7 @@
         "title": "",
         "first": 1790034283509,
         "last": 1790249060393,
-        "ageSec": 60710
+        "ageSec": 60766
       },
       {
         "id": "0d8a9ded-adfc-4b65-90f6-6fce323874fa",
@@ -1650,7 +1479,7 @@
         "title": "",
         "first": 1790119239890,
         "last": 1790235448428,
-        "ageSec": 74322
+        "ageSec": 74378
       },
       {
         "id": "03aca6cc-a415-482b-840c-42cfb4e66813",
@@ -1658,7 +1487,7 @@
         "title": "",
         "first": 1790034270579,
         "last": 1790221820195,
-        "ageSec": 87950
+        "ageSec": 88006
       },
       {
         "id": "16b28371-3248-452c-87db-d0ee7fb213fb",
@@ -1666,7 +1495,7 @@
         "title": "",
         "first": 1790041807161,
         "last": 1790217012831,
-        "ageSec": 92758
+        "ageSec": 92814
       },
       {
         "id": "34a3d433-96d7-448d-8b0d-b7afb7ad8f30",
@@ -1674,7 +1503,7 @@
         "title": "",
         "first": 1790034270579,
         "last": 1790208011961,
-        "ageSec": 101758
+        "ageSec": 101814
       },
       {
         "id": "46efca31-b9de-4f59-ac0c-b69328009f4d",
@@ -1682,7 +1511,7 @@
         "title": "",
         "first": 1790034270579,
         "last": 1790208011961,
-        "ageSec": 101758
+        "ageSec": 101814
       },
       {
         "id": "61a9d980-65dd-4b51-8f27-1c297e310e71",
@@ -1690,7 +1519,7 @@
         "title": "",
         "first": 1790034270579,
         "last": 1790208011961,
-        "ageSec": 101758
+        "ageSec": 101814
       },
       {
         "id": "8b8649ca-c767-489a-8462-0edfa4556cbd",
@@ -1698,7 +1527,7 @@
         "title": "",
         "first": 1790034270579,
         "last": 1790208011961,
-        "ageSec": 101758
+        "ageSec": 101814
       },
       {
         "id": "af4aa370-07f1-45a1-bf91-31e25cd0f66f",
@@ -1706,7 +1535,7 @@
         "title": "",
         "first": 1790034283509,
         "last": 1790208011961,
-        "ageSec": 101758
+        "ageSec": 101814
       },
       {
         "id": "b7102964-5792-478b-bf3a-341f6230524b",
@@ -1714,7 +1543,7 @@
         "title": "",
         "first": 1790034283509,
         "last": 1790208011961,
-        "ageSec": 101758
+        "ageSec": 101814
       },
       {
         "id": "f16912cf-003d-4f86-a69f-52c24120b3a9",
@@ -1722,7 +1551,7 @@
         "title": "",
         "first": 1790034283509,
         "last": 1790208011961,
-        "ageSec": 101758
+        "ageSec": 101814
       }
     ]
   },
@@ -1922,27 +1751,28 @@
     "claimedToday": 0,
     "capturePct": 0,
     "lastDropAt": 1790309147283,
-    "sinceLastDropSec": 623
+    "sinceLastDropSec": 679
   },
-  "uptimeSec": 51052,
-  "startedAt": 1790258718420,
-  "lastPollAt": 1790309726889,
-  "lastPollAgoSec": 44,
+  "uptimeSec": 7,
+  "startedAt": 1790309827072,
+  "lastPollAt": 1790309785341,
+  "lastPollAgoSec": 41,
   "alive": false,
-  "logSizeBytes": 1786179,
+  "logSizeBytes": 1795719,
   "net": {
     "enabled": true,
-    "grade": "good",
-    "p50": 83,
-    "p95": 179,
-    "jitter": 96,
-    "lossPct": 0,
-    "stallPct": 0,
-    "stallMs": 1000,
-    "samples": 60,
-    "windowSec": 600,
-    "lastAt": "2026-09-25T04:16:05.708Z",
-    "ageSec": 5
+    "grade": null,
+    "samples": 1,
+    "need": 20,
+    "warmingUp": true
   },
-  "publishedAt": "2026-09-25T04:16:10.651Z"
+  "projectStatus": [
+    {
+      "id": "a1d39753-ae51-41df-8c86-2b7e73c6bd6b",
+      "name": "Project Dynamo",
+      "paused": false,
+      "known": false
+    }
+  ],
+  "publishedAt": "2026-09-25T04:17:07.262Z"
 }
