@@ -1,5 +1,5 @@
 {
-  "now": 1790431141506,
+  "now": 1790485209434,
   "ok": true,
   "config": {
     "pollIntervalSeconds": 2,
@@ -278,14 +278,14 @@
   },
   "schedule": {
     "locked": true,
-    "summary": "every 10m, phase ±3s, 60 samples, next in 66.0s",
+    "summary": "every 10m, phase ±3s, 60 samples, next in 598.0s",
     "periodMin": 10,
     "phaseSec": 7.5,
     "spreadSec": 2.9,
     "samples": 60,
     "inliers": 44,
-    "nextDropAt": 1790431207472.2205,
-    "nextDropInSec": 66,
+    "nextDropAt": 1790485807472.2205,
+    "nextDropInSec": 598,
     "observed": [
       1790193146078.5,
       1790194804458.5,
@@ -330,8 +330,8 @@
     "localDailyCap": null,
     "localConcurrentCap": null
   },
-  "lastClaimAttemptAt": 1790430797775,
-  "lastHeartbeatAt": 1790403251185,
+  "lastClaimAttemptAt": 1790484747522,
+  "lastHeartbeatAt": 1790446452956,
   "sessionExpiredAlert": false,
   "stateLoadFailed": false,
   "pause": {
@@ -348,21 +348,21 @@
       "hasClaimable": true,
       "tasksListed": 9,
       "newTaskCount": 9,
-      "lastCheckedAt": 1790431097016,
-      "lastCheckedAgoSec": 44,
+      "lastCheckedAt": 1790485208955,
+      "lastCheckedAgoSec": 0,
       "lastNotifyAt": 1790353165392,
       "lastHeldNagAt": 1789606246822,
       "lastClaimVerdict": {
         "verdict": "project-paused",
-        "at": 1790431097016
+        "at": 1790485208955
       },
       "availability": {
-        "lastAvailableAt": 1790431097016,
-        "lastAvailableAgoSec": 44,
+        "lastAvailableAt": 1790485208955,
+        "lastAvailableAgoSec": 0,
         "open": {
           "start": 1790309147283,
           "peak": 9,
-          "openMs": 121994223
+          "openMs": 176062151
         },
         "windows": [
           {
@@ -651,8 +651,8 @@
       },
       "held": {
         "count": 5,
-        "at": 1790431097016,
-        "ageSec": 44,
+        "at": 1790485203145,
+        "ageSec": 6,
         "tasks": [
           {
             "id": "dac5155f-a397-4dbf-8b72-40573dafe860",
@@ -665,39 +665,18 @@
             "stage": "Attempt",
             "priority": 0,
             "heldSince": 1790261461246,
-            "heldMs": 169680260,
+            "heldMs": 223748188,
             "heldExact": true,
             "stageTimeLimitSec": 36000,
             "timeLimitSec": 86400,
-            "remainingMs": -83280260,
+            "remainingMs": -137348188,
             "repoUrl": "https://github.com/handshake-project-dynamo/dynamo-0705184-scientific-computing-and-domain-science",
             "category": "Scientific Computing and Domain Science",
             "ci": {
               "slug": "handshake-project-dynamo/dynamo-0705184-scientific-computing-and-domain-science",
-              "pr": {
-                "number": 7,
-                "title": "Rework: close the lookup-table false accept and the zero-start-reset findings",
-                "url": "https://github.com/handshake-project-dynamo/dynamo-0705184-scientific-computing-and-domain-science/pull/7",
-                "state": "open",
-                "draft": false,
-                "headSha": "15e3c15a",
-                "updatedAt": "2026-09-24T20:47:33Z"
-              },
-              "openPrCount": 2,
-              "prCount": 5,
-              "checks": {
-                "total": 17,
-                "success": 16,
-                "failure": 0,
-                "running": 0,
-                "skipped": 1,
-                "other": 0,
-                "failing": []
-              },
-              "lastRunAt": 1790282845000,
-              "state": "passing",
-              "error": null,
-              "fetchedAt": 1790430421447
+              "state": "error",
+              "error": "fetch failed",
+              "fetchedAt": 1790484549314
             }
           },
           {
@@ -711,50 +690,18 @@
             "stage": "Attempt",
             "priority": 0,
             "heldSince": 1790261461246,
-            "heldMs": 169680260,
+            "heldMs": 223748188,
             "heldExact": true,
             "stageTimeLimitSec": 36000,
             "timeLimitSec": 86400,
-            "remainingMs": -83280260,
+            "remainingMs": -137348188,
             "repoUrl": "https://github.com/handshake-project-dynamo/dynamo-d73e65f-mathematics-and-formal-reasoning",
             "category": "Mathematics and Formal Reasoning",
             "ci": {
               "slug": "handshake-project-dynamo/dynamo-d73e65f-mathematics-and-formal-reasoning",
-              "pr": {
-                "number": 6,
-                "title": "Rework: publish the normative partition_application rule for nested modular schedules",
-                "url": "https://github.com/handshake-project-dynamo/dynamo-d73e65f-mathematics-and-formal-reasoning/pull/6",
-                "state": "closed",
-                "draft": false,
-                "headSha": "49c66c75",
-                "updatedAt": "2026-09-25T13:20:39Z"
-              },
-              "openPrCount": 0,
-              "prCount": 4,
-              "checks": {
-                "total": 17,
-                "success": 14,
-                "failure": 2,
-                "running": 0,
-                "skipped": 1,
-                "other": 0,
-                "failing": [
-                  {
-                    "name": "review / gate",
-                    "conclusion": "failure",
-                    "url": "https://github.com/handshake-project-dynamo/dynamo-d73e65f-mathematics-and-formal-reasoning/actions/runs/36039132151/job/107837152679"
-                  },
-                  {
-                    "name": "review / trials",
-                    "conclusion": "failure",
-                    "url": "https://github.com/handshake-project-dynamo/dynamo-d73e65f-mathematics-and-formal-reasoning/actions/runs/36039132151/job/107812009697"
-                  }
-                ]
-              },
-              "lastRunAt": 1790284503000,
-              "state": "failing",
-              "error": null,
-              "fetchedAt": 1790430421449
+              "state": "error",
+              "error": "fetch failed",
+              "fetchedAt": 1790484549316
             }
           },
           {
@@ -768,50 +715,18 @@
             "stage": "Attempt 2",
             "priority": 0,
             "heldSince": 1790261461246,
-            "heldMs": 169680260,
+            "heldMs": 223748188,
             "heldExact": true,
             "stageTimeLimitSec": 18000,
             "timeLimitSec": 86400,
-            "remainingMs": -83280260,
+            "remainingMs": -137348188,
             "repoUrl": "https://github.com/handshake-project-dynamo/dynamo-2ea3b19-debugging-and-repair",
             "category": "Debugging and Repair",
             "ci": {
               "slug": "handshake-project-dynamo/dynamo-2ea3b19-debugging-and-repair",
-              "pr": {
-                "number": 5,
-                "title": "Convert variant-runtime-repair from TB2 to TB3",
-                "url": "https://github.com/handshake-project-dynamo/dynamo-2ea3b19-debugging-and-repair/pull/5",
-                "state": "open",
-                "draft": false,
-                "headSha": "9359a4ba",
-                "updatedAt": "2026-09-04T22:16:20Z"
-              },
-              "openPrCount": 1,
-              "prCount": 6,
-              "checks": {
-                "total": 25,
-                "success": 1,
-                "failure": 2,
-                "running": 0,
-                "skipped": 22,
-                "other": 0,
-                "failing": [
-                  {
-                    "name": "conversion-checks / Conversion QC gate",
-                    "conclusion": "failure",
-                    "url": "https://github.com/handshake-project-dynamo/dynamo-2ea3b19-debugging-and-repair/actions/runs/33924706765/job/101190799662"
-                  },
-                  {
-                    "name": "conversion-checks / Artificiality (C1)",
-                    "conclusion": "failure",
-                    "url": "https://github.com/handshake-project-dynamo/dynamo-2ea3b19-debugging-and-repair/actions/runs/33924706765/job/101190607666"
-                  }
-                ]
-              },
-              "lastRunAt": 1788560172000,
-              "state": "failing",
-              "error": null,
-              "fetchedAt": 1790430421450
+              "state": "error",
+              "error": "fetch failed",
+              "fetchedAt": 1790484549317
             }
           },
           {
@@ -825,39 +740,18 @@
             "stage": "Attempt 2",
             "priority": 0,
             "heldSince": 1790261461246,
-            "heldMs": 169680260,
+            "heldMs": 223748188,
             "heldExact": true,
             "stageTimeLimitSec": 18000,
             "timeLimitSec": 86400,
-            "remainingMs": -83280260,
+            "remainingMs": -137348188,
             "repoUrl": "https://github.com/handshake-project-dynamo/dynamo-a6ce627-machine-learning-and-ai",
             "category": "Machine Learning and AI",
             "ci": {
               "slug": "handshake-project-dynamo/dynamo-a6ce627-machine-learning-and-ai",
-              "pr": {
-                "number": 6,
-                "title": "Rework: enforce the U+001F bucket separator and strict RFC3339 history timestamps",
-                "url": "https://github.com/handshake-project-dynamo/dynamo-a6ce627-machine-learning-and-ai/pull/6",
-                "state": "open",
-                "draft": false,
-                "headSha": "21941419",
-                "updatedAt": "2026-09-24T21:12:16Z"
-              },
-              "openPrCount": 2,
-              "prCount": 4,
-              "checks": {
-                "total": 17,
-                "success": 16,
-                "failure": 0,
-                "running": 0,
-                "skipped": 1,
-                "other": 0,
-                "failing": []
-              },
-              "lastRunAt": 1790284328000,
-              "state": "passing",
-              "error": null,
-              "fetchedAt": 1790430421452
+              "state": "error",
+              "error": "fetch failed",
+              "fetchedAt": 1790484549318
             }
           },
           {
@@ -871,50 +765,18 @@
             "stage": "Attempt 2",
             "priority": 0,
             "heldSince": 1790261419127,
-            "heldMs": 169722379,
+            "heldMs": 223790307,
             "heldExact": true,
             "stageTimeLimitSec": 18000,
             "timeLimitSec": 86400,
-            "remainingMs": -83322379,
+            "remainingMs": -137390307,
             "repoUrl": "https://github.com/handshake-project-dynamo/dynamo-16ea8e1-build-dependency-and-release-management",
             "category": "Build Dependency and Release Management",
             "ci": {
               "slug": "handshake-project-dynamo/dynamo-16ea8e1-build-dependency-and-release-management",
-              "pr": {
-                "number": 5,
-                "title": "Rework: make the plan order total and grade conflicts against provided names",
-                "url": "https://github.com/handshake-project-dynamo/dynamo-16ea8e1-build-dependency-and-release-management/pull/5",
-                "state": "closed",
-                "draft": false,
-                "headSha": "8b4d3490",
-                "updatedAt": "2026-09-25T13:20:47Z"
-              },
-              "openPrCount": 0,
-              "prCount": 3,
-              "checks": {
-                "total": 17,
-                "success": 10,
-                "failure": 2,
-                "running": 0,
-                "skipped": 5,
-                "other": 0,
-                "failing": [
-                  {
-                    "name": "review / gate",
-                    "conclusion": "failure",
-                    "url": "https://github.com/handshake-project-dynamo/dynamo-16ea8e1-build-dependency-and-release-management/actions/runs/36039768728/job/107802412706"
-                  },
-                  {
-                    "name": "review / tier1",
-                    "conclusion": "failure",
-                    "url": "https://github.com/handshake-project-dynamo/dynamo-16ea8e1-build-dependency-and-release-management/actions/runs/36039768728/job/107802179172"
-                  }
-                ]
-              },
-              "lastRunAt": 1790278897000,
-              "state": "failing",
-              "error": null,
-              "fetchedAt": 1790430422934
+              "state": "error",
+              "error": "fetch failed",
+              "fetchedAt": 1790484549318
             }
           }
         ],
@@ -925,607 +787,607 @@
   ],
   "lock": {
     "pid": 67144,
-    "ts": 1790431093532,
-    "ageSec": 48
+    "ts": 1790485209074,
+    "ageSec": 0
   },
   "events": [
     {
-      "ts": "2026-09-26T13:58:18.680Z",
-      "kind": "error",
-      "text": "tunnel: probe 1/3 failed (no answer in 12s)"
-    },
-    {
-      "ts": "2026-09-26T13:54:07.928Z",
-      "kind": "error",
-      "text": "tunnel: reachable again after 1 failed probe(s)"
-    },
-    {
-      "ts": "2026-09-26T13:53:18.645Z",
-      "kind": "error",
-      "text": "tunnel: probe 1/3 failed (no answer in 12s)"
-    },
-    {
-      "ts": "2026-09-26T13:53:18.301Z",
-      "kind": "error",
-      "text": "autoclaim: volley of 6 on Project Dynamo in 526ms — 0 won, 0 lost to other fellows, 6 server error(s)"
-    },
-    {
-      "ts": "2026-09-26T13:53:18.302Z",
+      "ts": "2026-09-27T05:00:08.263Z",
       "kind": "info",
-      "text": "autoclaim: the portal said: \"PROJECT_PAUSED\" x6"
+      "text": "strike 1/2: rework-would-trap"
     },
     {
-      "ts": "2026-09-26T13:53:18.293Z",
+      "ts": "2026-09-27T05:00:08.258Z",
+      "kind": "info",
+      "text": "blind: refusing untargeted claim on Project Dynamo — holding 5 task(s) in a fixing state (dac5155f 80401092 74e6c5bf 719c9dcb 0bf51024), which claimNextTask would return instead of a new task. Submit them to re-enable it."
+    },
+    {
+      "ts": "2026-09-27T05:00:03.289Z",
+      "kind": "info",
+      "text": "strike: armed — polling every 400ms around the predicted drop at 05:00:07.472Z"
+    },
+    {
+      "ts": "2026-09-27T04:57:26.856Z",
       "kind": "error",
-      "text": "autoclaim: pick positions in a board of 9 — 0:error 6:error 4:error 2:error 8:error 5:error"
+      "text": "project Project Dynamo: held-task list unreadable this cycle — deferring to auto-claim verdict"
     },
     {
-      "ts": "2026-09-26T13:52:08.143Z",
-      "kind": "error",
-      "text": "tunnel: reachable again after 1 failed probe(s)"
-    },
-    {
-      "ts": "2026-09-26T13:51:18.616Z",
-      "kind": "error",
-      "text": "tunnel: probe 1/3 failed (no answer in 12s)"
-    },
-    {
-      "ts": "2026-09-26T13:50:10.659Z",
+      "ts": "2026-09-27T04:54:18.163Z",
       "kind": "error",
       "text": "tunnel: reachable again after 2 failed probe(s)"
     },
     {
-      "ts": "2026-09-26T13:50:09.432Z",
-      "kind": "info",
-      "text": "strike 1/2: rework-would-trap"
+      "ts": "2026-09-27T04:53:16.137Z",
+      "kind": "error",
+      "text": "tunnel: probe 2/3 failed (fetch failed)"
     },
     {
-      "ts": "2026-09-26T13:50:09.421Z",
+      "ts": "2026-09-27T04:52:28.605Z",
       "kind": "info",
-      "text": "blind: refusing untargeted claim on Project Dynamo — holding 5 task(s) in a fixing state (dac5155f 80401092 74e6c5bf 719c9dcb 0bf51024), which claimNextTask would return instead of a new task. Submit them to re-enable it."
+      "text": "autoclaim: the portal said: \"PROJECT_PAUSED\" x6"
     },
     {
-      "ts": "2026-09-26T13:50:04.168Z",
-      "kind": "info",
-      "text": "strike: armed — polling every 400ms around the predicted drop at 13:50:07.472Z"
+      "ts": "2026-09-27T04:52:28.584Z",
+      "kind": "error",
+      "text": "autoclaim: pick positions in a board of 9 — 5:error 7:error 4:error 3:error 0:error 2:error"
     },
     {
-      "ts": "2026-09-26T13:49:24.133Z",
+      "ts": "2026-09-27T04:52:28.600Z",
+      "kind": "error",
+      "text": "autoclaim: volley of 6 on Project Dynamo in 1059ms — 0 won, 0 lost to other fellows, 6 server error(s)"
+    },
+    {
+      "ts": "2026-09-27T04:52:22.563Z",
+      "kind": "info",
+      "text": "blind: no fresh held snapshot for Project Dynamo — not firing an untargeted claim"
+    },
+    {
+      "ts": "2026-09-27T04:52:22.206Z",
       "kind": "error",
       "text": "project Project Dynamo: held-task list unreadable this cycle — deferring to auto-claim verdict"
     },
     {
-      "ts": "2026-09-26T13:49:15.465Z",
+      "ts": "2026-09-27T04:52:22.205Z",
       "kind": "error",
-      "text": "supabase: hai_tasks_seen write failed (0) timed out — telemetry only, claiming is unaffected"
+      "text": "autoclaim: a claimed-count read failed, not claiming [0]"
     },
     {
-      "ts": "2026-09-26T13:49:08.923Z",
-      "kind": "error",
-      "text": "tunnel: probe 2/3 failed (HTTP 530)"
+      "ts": "2026-09-27T04:52:19.523Z",
+      "kind": "info",
+      "text": "pages: published endpoint.json -> rajdeepraoextras-dev/hai-bot-dashboard@main (https://improve-book-delays-salvador.trycloudflare.com)"
     },
     {
-      "ts": "2026-09-26T13:48:27.095Z",
-      "kind": "error",
-      "text": "project Project Dynamo: held-task list unreadable this cycle — deferring to auto-claim verdict"
-    },
-    {
-      "ts": "2026-09-26T13:48:17.092Z",
+      "ts": "2026-09-27T04:52:16.227Z",
       "kind": "error",
       "text": "tunnel: probe 1/3 failed (fetch failed)"
     },
     {
-      "ts": "2026-09-26T13:48:11.268Z",
-      "kind": "error",
-      "text": "supabase: hai_tasks_seen write failed (0) timed out — telemetry only, claiming is unaffected"
-    },
-    {
-      "ts": "2026-09-26T13:42:24.076Z",
-      "kind": "error",
-      "text": "autoclaim: volley of 6 on Project Dynamo in 619ms — 0 won, 0 lost to other fellows, 6 server error(s)"
-    },
-    {
-      "ts": "2026-09-26T13:42:24.076Z",
+      "ts": "2026-09-27T04:52:16.110Z",
       "kind": "info",
-      "text": "autoclaim: the portal said: \"PROJECT_PAUSED\" x6"
+      "text": "tunnel: up at https://improve-book-delays-salvador.trycloudflare.com"
     },
     {
-      "ts": "2026-09-26T13:42:24.075Z",
-      "kind": "error",
-      "text": "autoclaim: pick positions in a board of 9 — 7:error 1:error 3:error 5:error 8:error 0:error"
-    },
-    {
-      "ts": "2026-09-26T13:41:14.138Z",
-      "kind": "error",
-      "text": "supabase: hai_tasks_seen write failed (0) timed out — telemetry only, claiming is unaffected"
-    },
-    {
-      "ts": "2026-09-26T13:40:23.816Z",
-      "kind": "error",
-      "text": "project Project Dynamo: held-task list unreadable this cycle — deferring to auto-claim verdict"
-    },
-    {
-      "ts": "2026-09-26T13:40:18.589Z",
-      "kind": "error",
-      "text": "project Project Dynamo: API status 0 AbortError: signal is aborted without reason"
-    },
-    {
-      "ts": "2026-09-26T13:40:15.155Z",
-      "kind": "error",
-      "text": "project Project Dynamo: API status 0 AbortError: signal is aborted without reason"
-    },
-    {
-      "ts": "2026-09-26T13:40:09.177Z",
-      "kind": "info",
-      "text": "strike 1/2: rework-would-trap"
-    },
-    {
-      "ts": "2026-09-26T13:40:09.170Z",
-      "kind": "info",
-      "text": "blind: refusing untargeted claim on Project Dynamo — holding 5 task(s) in a fixing state (dac5155f 80401092 74e6c5bf 719c9dcb 0bf51024), which claimNextTask would return instead of a new task. Submit them to re-enable it."
-    },
-    {
-      "ts": "2026-09-26T13:40:03.445Z",
-      "kind": "info",
-      "text": "strike: armed — polling every 400ms around the predicted drop at 13:40:07.472Z"
-    },
-    {
-      "ts": "2026-09-26T13:39:42.104Z",
-      "kind": "error",
-      "text": "project Project Dynamo: held-task list unreadable this cycle — deferring to auto-claim verdict"
-    },
-    {
-      "ts": "2026-09-26T13:38:08.243Z",
-      "kind": "error",
-      "text": "tunnel: reachable again after 1 failed probe(s)"
-    },
-    {
-      "ts": "2026-09-26T13:37:19.370Z",
-      "kind": "error",
-      "text": "project Project Dynamo: held-task list unreadable this cycle — deferring to auto-claim verdict"
-    },
-    {
-      "ts": "2026-09-26T13:37:11.245Z",
-      "kind": "error",
-      "text": "tunnel: probe 1/3 failed (HTTP 530)"
-    },
-    {
-      "ts": "2026-09-26T13:36:19.021Z",
-      "kind": "error",
-      "text": "project Project Dynamo: held-task list unreadable this cycle — deferring to auto-claim verdict"
-    },
-    {
-      "ts": "2026-09-26T13:36:10.880Z",
-      "kind": "error",
-      "text": "supabase: hai_tasks_seen write failed (0) timed out — telemetry only, claiming is unaffected"
-    },
-    {
-      "ts": "2026-09-26T13:35:21.535Z",
-      "kind": "error",
-      "text": "project Project Dynamo: held-task list unreadable this cycle — deferring to auto-claim verdict"
-    },
-    {
-      "ts": "2026-09-26T13:34:19.345Z",
-      "kind": "error",
-      "text": "project Project Dynamo: held-task list unreadable this cycle — deferring to auto-claim verdict"
-    },
-    {
-      "ts": "2026-09-26T13:34:11.773Z",
-      "kind": "error",
-      "text": "supabase: hai_tasks_seen write failed (0) timed out — telemetry only, claiming is unaffected"
-    },
-    {
-      "ts": "2026-09-26T13:33:20.175Z",
-      "kind": "error",
-      "text": "project Project Dynamo: held-task list unreadable this cycle — deferring to auto-claim verdict"
-    },
-    {
-      "ts": "2026-09-26T13:32:19.463Z",
-      "kind": "info",
-      "text": "autoclaim: the portal said: \"PROJECT_PAUSED\" x6"
-    },
-    {
-      "ts": "2026-09-26T13:32:19.463Z",
-      "kind": "error",
-      "text": "autoclaim: volley of 6 on Project Dynamo in 749ms — 0 won, 0 lost to other fellows, 6 server error(s)"
-    },
-    {
-      "ts": "2026-09-26T13:32:19.461Z",
-      "kind": "error",
-      "text": "autoclaim: pick positions in a board of 9 — 1:error 2:error 7:error 0:error 8:error 3:error"
-    },
-    {
-      "ts": "2026-09-26T13:30:11.069Z",
-      "kind": "error",
-      "text": "project Project Dynamo: API status 0 AbortError: signal is aborted without reason"
-    },
-    {
-      "ts": "2026-09-26T13:30:08.052Z",
-      "kind": "info",
-      "text": "strike 1/2: rework-would-trap"
-    },
-    {
-      "ts": "2026-09-26T13:30:08.045Z",
-      "kind": "error",
-      "text": "tunnel: reachable again after 1 failed probe(s)"
-    },
-    {
-      "ts": "2026-09-26T13:30:08.043Z",
-      "kind": "info",
-      "text": "blind: refusing untargeted claim on Project Dynamo — holding 5 task(s) in a fixing state (dac5155f 80401092 74e6c5bf 719c9dcb 0bf51024), which claimNextTask would return instead of a new task. Submit them to re-enable it."
-    },
-    {
-      "ts": "2026-09-26T13:30:04.377Z",
-      "kind": "info",
-      "text": "strike: armed — polling every 400ms around the predicted drop at 13:30:07.472Z"
-    },
-    {
-      "ts": "2026-09-26T13:29:51.432Z",
-      "kind": "info",
-      "text": "auth check inconclusive, will retry next cycle"
-    },
-    {
-      "ts": "2026-09-26T13:29:18.484Z",
-      "kind": "error",
-      "text": "tunnel: probe 1/3 failed (no answer in 12s)"
-    },
-    {
-      "ts": "2026-09-26T13:29:09.343Z",
-      "kind": "error",
-      "text": "supabase: hai_drops write failed (0) timed out — telemetry only, claiming is unaffected"
-    },
-    {
-      "ts": "2026-09-26T13:27:16.444Z",
-      "kind": "error",
-      "text": "supabase: hai_tasks_seen write failed (0) timed out — telemetry only, claiming is unaffected"
-    },
-    {
-      "ts": "2026-09-26T13:26:19.662Z",
-      "kind": "error",
-      "text": "project Project Dynamo: held-task list unreadable this cycle — deferring to auto-claim verdict"
-    },
-    {
-      "ts": "2026-09-26T13:26:09.322Z",
-      "kind": "error",
-      "text": "supabase: hai_drops write failed (0) timed out — telemetry only, claiming is unaffected"
-    },
-    {
-      "ts": "2026-09-26T13:25:20.471Z",
-      "kind": "error",
-      "text": "project Project Dynamo: held-task list unreadable this cycle — deferring to auto-claim verdict"
-    },
-    {
-      "ts": "2026-09-26T13:24:23.216Z",
-      "kind": "error",
-      "text": "pages: status snapshot failed (400) — backing off 10min"
-    },
-    {
-      "ts": "2026-09-26T13:24:19.957Z",
-      "kind": "error",
-      "text": "project Project Dynamo: held-task list unreadable this cycle — deferring to auto-claim verdict"
-    },
-    {
-      "ts": "2026-09-26T13:24:13.527Z",
-      "kind": "error",
-      "text": "supabase: hai_tasks_seen write failed (0) timed out — telemetry only, claiming is unaffected"
-    },
-    {
-      "ts": "2026-09-26T13:22:17.859Z",
-      "kind": "info",
-      "text": "autoclaim: the portal said: \"PROJECT_PAUSED\" x6"
-    },
-    {
-      "ts": "2026-09-26T13:22:17.858Z",
-      "kind": "error",
-      "text": "autoclaim: pick positions in a board of 9 — 3:error 2:error 8:error 6:error 7:error 4:error"
-    },
-    {
-      "ts": "2026-09-26T13:22:17.859Z",
-      "kind": "error",
-      "text": "autoclaim: volley of 6 on Project Dynamo in 613ms — 0 won, 0 lost to other fellows, 6 server error(s)"
-    },
-    {
-      "ts": "2026-09-26T13:20:08.014Z",
-      "kind": "info",
-      "text": "strike 1/2: rework-would-trap"
-    },
-    {
-      "ts": "2026-09-26T13:20:08.008Z",
-      "kind": "info",
-      "text": "blind: refusing untargeted claim on Project Dynamo — holding 5 task(s) in a fixing state (dac5155f 80401092 74e6c5bf 719c9dcb 0bf51024), which claimNextTask would return instead of a new task. Submit them to re-enable it."
-    },
-    {
-      "ts": "2026-09-26T13:20:03.107Z",
-      "kind": "info",
-      "text": "strike: armed — polling every 400ms around the predicted drop at 13:20:07.472Z"
-    },
-    {
-      "ts": "2026-09-26T13:20:03.098Z",
-      "kind": "error",
-      "text": "project Project Dynamo: held-task list unreadable this cycle — deferring to auto-claim verdict"
-    },
-    {
-      "ts": "2026-09-26T13:19:56.540Z",
-      "kind": "error",
-      "text": "project Project Dynamo: held-task list unreadable this cycle — deferring to auto-claim verdict"
-    },
-    {
-      "ts": "2026-09-26T13:19:49.981Z",
-      "kind": "error",
-      "text": "project Project Dynamo: held-task list unreadable this cycle — deferring to auto-claim verdict"
-    },
-    {
-      "ts": "2026-09-26T13:19:44.365Z",
-      "kind": "error",
-      "text": "project Project Dynamo: held-task list unreadable this cycle — deferring to auto-claim verdict"
-    },
-    {
-      "ts": "2026-09-26T13:19:09.420Z",
-      "kind": "error",
-      "text": "supabase: hai_tasks_seen write failed (0) timed out — telemetry only, claiming is unaffected"
-    },
-    {
-      "ts": "2026-09-26T13:11:20.341Z",
-      "kind": "error",
-      "text": "autoclaim: pick positions in a board of 9 — 4:error 1:error 0:error 8:error 3:error 2:error"
-    },
-    {
-      "ts": "2026-09-26T13:11:20.342Z",
-      "kind": "info",
-      "text": "autoclaim: the portal said: \"PROJECT_PAUSED\" x6"
-    },
-    {
-      "ts": "2026-09-26T13:11:20.341Z",
-      "kind": "error",
-      "text": "autoclaim: volley of 6 on Project Dynamo in 563ms — 0 won, 0 lost to other fellows, 6 server error(s)"
-    },
-    {
-      "ts": "2026-09-26T13:10:08.154Z",
-      "kind": "info",
-      "text": "strike 1/2: rework-would-trap"
-    },
-    {
-      "ts": "2026-09-26T13:10:08.147Z",
-      "kind": "info",
-      "text": "blind: refusing untargeted claim on Project Dynamo — holding 5 task(s) in a fixing state (dac5155f 80401092 74e6c5bf 719c9dcb 0bf51024), which claimNextTask would return instead of a new task. Submit them to re-enable it."
-    },
-    {
-      "ts": "2026-09-26T13:10:02.543Z",
-      "kind": "info",
-      "text": "strike: armed — polling every 400ms around the predicted drop at 13:10:07.472Z"
-    },
-    {
-      "ts": "2026-09-26T13:09:17.909Z",
-      "kind": "error",
-      "text": "project Project Dynamo: held-task list unreadable this cycle — deferring to auto-claim verdict"
-    },
-    {
-      "ts": "2026-09-26T13:01:18.190Z",
-      "kind": "error",
-      "text": "autoclaim: volley of 6 on Project Dynamo in 754ms — 0 won, 0 lost to other fellows, 6 server error(s)"
-    },
-    {
-      "ts": "2026-09-26T13:01:18.190Z",
-      "kind": "info",
-      "text": "autoclaim: the portal said: \"PROJECT_PAUSED\" x6"
-    },
-    {
-      "ts": "2026-09-26T13:01:18.189Z",
-      "kind": "error",
-      "text": "autoclaim: pick positions in a board of 9 — 5:error 7:error 1:error 0:error 8:error 2:error"
-    },
-    {
-      "ts": "2026-09-26T13:00:07.786Z",
-      "kind": "info",
-      "text": "strike 1/2: rework-would-trap"
-    },
-    {
-      "ts": "2026-09-26T13:00:07.780Z",
-      "kind": "info",
-      "text": "blind: refusing untargeted claim on Project Dynamo — holding 5 task(s) in a fixing state (dac5155f 80401092 74e6c5bf 719c9dcb 0bf51024), which claimNextTask would return instead of a new task. Submit them to re-enable it."
-    },
-    {
-      "ts": "2026-09-26T13:00:04.945Z",
-      "kind": "info",
-      "text": "strike: armed — polling every 400ms around the predicted drop at 13:00:07.472Z"
-    },
-    {
-      "ts": "2026-09-26T12:53:30.506Z",
-      "kind": "error",
-      "text": "project Project Dynamo: held-task list unreadable this cycle — deferring to auto-claim verdict"
-    },
-    {
-      "ts": "2026-09-26T12:53:27.640Z",
-      "kind": "error",
-      "text": "supabase: hai_daily write failed (0) timed out — telemetry only, claiming is unaffected"
-    },
-    {
-      "ts": "2026-09-26T12:52:13.926Z",
-      "kind": "error",
-      "text": "supabase: hai_tasks_seen write failed (0) timed out — telemetry only, claiming is unaffected"
-    },
-    {
-      "ts": "2026-09-26T12:51:24.974Z",
-      "kind": "error",
-      "text": "project Project Dynamo: API status 0 AbortError: The user aborted a request."
-    },
-    {
-      "ts": "2026-09-26T12:50:26.734Z",
-      "kind": "info",
-      "text": "autoclaim: the portal said: \"PROJECT_PAUSED\" x6"
-    },
-    {
-      "ts": "2026-09-26T12:50:26.733Z",
-      "kind": "error",
-      "text": "autoclaim: volley of 6 on Project Dynamo in 845ms — 0 won, 0 lost to other fellows, 6 server error(s)"
-    },
-    {
-      "ts": "2026-09-26T12:50:26.733Z",
-      "kind": "error",
-      "text": "autoclaim: pick positions in a board of 9 — 2:error 4:error 6:error 8:error 5:error 0:error"
-    },
-    {
-      "ts": "2026-09-26T12:50:20.355Z",
-      "kind": "info",
-      "text": "blind: no fresh held snapshot for Project Dynamo — not firing an untargeted claim"
-    },
-    {
-      "ts": "2026-09-26T12:50:20.083Z",
-      "kind": "error",
-      "text": "project Project Dynamo: held-task list unreadable this cycle — deferring to auto-claim verdict"
-    },
-    {
-      "ts": "2026-09-26T12:50:20.083Z",
-      "kind": "error",
-      "text": "autoclaim: a claimed-count read failed, not claiming [0]"
-    },
-    {
-      "ts": "2026-09-26T12:50:14.524Z",
-      "kind": "error",
-      "text": "supabase: hai_tasks_seen write failed (0) timed out — telemetry only, claiming is unaffected"
-    },
-    {
-      "ts": "2026-09-26T12:50:12.281Z",
-      "kind": "info",
-      "text": "blind: no fresh held snapshot for Project Dynamo — not firing an untargeted claim"
-    },
-    {
-      "ts": "2026-09-26T12:50:12.163Z",
-      "kind": "info",
-      "text": "strike: armed — polling every 400ms around the predicted drop at 12:50:07.472Z"
-    },
-    {
-      "ts": "2026-09-26T12:50:12.154Z",
-      "kind": "error",
-      "text": "project Project Dynamo: API status 0 AbortError: The user aborted a request."
-    },
-    {
-      "ts": "2026-09-26T12:50:09.146Z",
-      "kind": "info",
-      "text": "strike 1/2 (off-grid): rework-would-trap"
-    },
-    {
-      "ts": "2026-09-26T12:50:09.141Z",
-      "kind": "info",
-      "text": "blind: refusing untargeted claim on Project Dynamo — holding 5 task(s) in a fixing state (dac5155f 80401092 74e6c5bf 719c9dcb 0bf51024), which claimNextTask would return instead of a new task. Submit them to re-enable it."
-    },
-    {
-      "ts": "2026-09-26T12:50:08.858Z",
-      "kind": "error",
-      "text": "project Project Dynamo: held-task list unreadable this cycle — deferring to auto-claim verdict"
-    },
-    {
-      "ts": "2026-09-26T12:50:08.857Z",
-      "kind": "error",
-      "text": "autoclaim: a claimed-count read failed, not claiming [0]"
-    },
-    {
-      "ts": "2026-09-26T12:49:50.089Z",
-      "kind": "error",
-      "text": "project Project Dynamo: held-task list unreadable this cycle — deferring to auto-claim verdict"
-    },
-    {
-      "ts": "2026-09-26T12:49:41.957Z",
-      "kind": "error",
-      "text": "project Project Dynamo: API status 0 AbortError: The user aborted a request."
-    },
-    {
-      "ts": "2026-09-26T12:49:29.938Z",
-      "kind": "error",
-      "text": "project Project Dynamo: API status 0 AbortError: signal is aborted without reason"
-    },
-    {
-      "ts": "2026-09-26T12:48:19.677Z",
-      "kind": "error",
-      "text": "project Project Dynamo: held-task list unreadable this cycle — deferring to auto-claim verdict"
-    },
-    {
-      "ts": "2026-09-26T12:48:10.483Z",
-      "kind": "error",
-      "text": "supabase: hai_tasks_seen write failed (0) timed out — telemetry only, claiming is unaffected"
-    },
-    {
-      "ts": "2026-09-26T12:47:22.056Z",
-      "kind": "error",
-      "text": "project Project Dynamo: held-task list unreadable this cycle — deferring to auto-claim verdict"
-    },
-    {
-      "ts": "2026-09-26T12:46:12.846Z",
-      "kind": "error",
-      "text": "supabase: hai_tasks_seen write failed (0) timed out — telemetry only, claiming is unaffected"
-    },
-    {
-      "ts": "2026-09-26T12:45:21.009Z",
-      "kind": "error",
-      "text": "project Project Dynamo: held-task list unreadable this cycle — deferring to auto-claim verdict"
-    },
-    {
-      "ts": "2026-09-26T12:45:13.278Z",
-      "kind": "error",
-      "text": "tunnel: reachable again after 1 failed probe(s)"
-    },
-    {
-      "ts": "2026-09-26T12:44:16.440Z",
-      "kind": "error",
-      "text": "tunnel: probe 1/3 failed (HTTP 530)"
-    },
-    {
-      "ts": "2026-09-26T12:44:11.580Z",
-      "kind": "error",
-      "text": "supabase: hai_tasks_seen write failed (0) timed out — telemetry only, claiming is unaffected"
-    },
-    {
-      "ts": "2026-09-26T12:43:21.297Z",
-      "kind": "error",
-      "text": "project Project Dynamo: held-task list unreadable this cycle — deferring to auto-claim verdict"
-    },
-    {
-      "ts": "2026-09-26T12:43:10.911Z",
-      "kind": "error",
-      "text": "supabase: hai_tasks_seen write failed (0) timed out — telemetry only, claiming is unaffected"
-    },
-    {
-      "ts": "2026-09-26T12:40:07.940Z",
-      "kind": "info",
-      "text": "strike 1/2: rework-would-trap"
-    },
-    {
-      "ts": "2026-09-26T12:40:07.933Z",
-      "kind": "info",
-      "text": "blind: refusing untargeted claim on Project Dynamo — holding 5 task(s) in a fixing state (dac5155f 80401092 74e6c5bf 719c9dcb 0bf51024), which claimNextTask would return instead of a new task. Submit them to re-enable it."
-    },
-    {
-      "ts": "2026-09-26T12:40:03.185Z",
-      "kind": "info",
-      "text": "strike: armed — polling every 400ms around the predicted drop at 12:40:07.472Z"
-    },
-    {
-      "ts": "2026-09-26T12:40:03.158Z",
-      "kind": "info",
-      "text": "autoclaim: the portal said: \"PROJECT_PAUSED\" x6"
-    },
-    {
-      "ts": "2026-09-26T12:40:03.158Z",
-      "kind": "error",
-      "text": "autoclaim: volley of 6 on Project Dynamo in 701ms — 0 won, 0 lost to other fellows, 6 server error(s)"
-    },
-    {
-      "ts": "2026-09-26T12:40:03.157Z",
-      "kind": "error",
-      "text": "autoclaim: pick positions in a board of 9 — 6:error 2:error 1:error 7:error 0:error 3:error"
-    },
-    {
-      "ts": "2026-09-26T12:39:57.249Z",
-      "kind": "error",
-      "text": "project Project Dynamo: API status 0 AbortError: signal is aborted without reason"
-    },
-    {
-      "ts": "2026-09-26T12:39:47.591Z",
+      "ts": "2026-09-27T04:52:10.735Z",
       "kind": "error",
       "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
     },
     {
-      "ts": "2026-09-26T12:39:41.491Z",
+      "ts": "2026-09-27T04:52:09.276Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 AbortError: signal is aborted without reason"
+    },
+    {
+      "ts": "2026-09-27T04:52:05.057Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:51:58.088Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:51:55.664Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:51:53.751Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:51:51.269Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:51:51.164Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+    },
+    {
+      "ts": "2026-09-27T04:51:49.763Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:51:47.258Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:51:45.254Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:51:43.246Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:51:41.239Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:51:40.996Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+    },
+    {
+      "ts": "2026-09-27T04:51:39.224Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:51:37.219Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:51:35.214Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:51:33.209Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:51:31.194Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:51:30.464Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+    },
+    {
+      "ts": "2026-09-27T04:51:29.192Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:51:27.277Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:51:25.169Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:51:23.164Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:51:21.156Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:51:19.939Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+    },
+    {
+      "ts": "2026-09-27T04:51:19.148Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:51:17.144Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:51:15.136Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:51:14.684Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:51:11.345Z",
+      "kind": "error",
+      "text": "supabase: hai_drops write failed (0) fetch failed — telemetry only, claiming is unaffected"
+    },
+    {
+      "ts": "2026-09-27T04:51:11.014Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:51:09.485Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+    },
+    {
+      "ts": "2026-09-27T04:51:08.996Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:51:06.993Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:51:04.980Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:51:02.973Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:51:02.540Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:51:00.055Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:50:58.954Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+    },
+    {
+      "ts": "2026-09-27T04:50:54.036Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:50:50.800Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:50:48.800Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:50:48.437Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+    },
+    {
+      "ts": "2026-09-27T04:50:46.786Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:50:44.776Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:50:43.635Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:50:40.756Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:50:38.749Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:50:38.013Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+    },
+    {
+      "ts": "2026-09-27T04:50:36.763Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:50:34.739Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:50:32.736Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:50:30.765Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:50:28.719Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:50:26.712Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:50:26.452Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+    },
+    {
+      "ts": "2026-09-27T04:50:24.703Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:50:22.691Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:50:20.845Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:50:18.643Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:50:16.647Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:50:15.853Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+    },
+    {
+      "ts": "2026-09-27T04:50:14.635Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:50:14.227Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:50:13.809Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:50:13.407Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:50:12.996Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:50:12.585Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:50:12.183Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:50:11.765Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:50:11.631Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:50:11.332Z",
+      "kind": "error",
+      "text": "supabase: hai_drops write failed (0) fetch failed — telemetry only, claiming is unaffected"
+    },
+    {
+      "ts": "2026-09-27T04:50:09.076Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:50:08.672Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:50:08.263Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:50:08.249Z",
+      "kind": "info",
+      "text": "blind: no fresh held snapshot for Project Dynamo — not firing an untargeted claim"
+    },
+    {
+      "ts": "2026-09-27T04:50:07.854Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:50:07.840Z",
+      "kind": "info",
+      "text": "blind: no fresh held snapshot for Project Dynamo — not firing an untargeted claim"
+    },
+    {
+      "ts": "2026-09-27T04:50:07.434Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:50:07.022Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:50:06.615Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:50:06.203Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:50:05.791Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:50:05.585Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+    },
+    {
+      "ts": "2026-09-27T04:50:05.388Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:50:04.977Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:50:04.561Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:50:04.149Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:50:03.740Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:50:03.334Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:50:02.920Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:50:02.521Z",
+      "kind": "info",
+      "text": "strike: armed — polling every 400ms around the predicted drop at 04:50:07.472Z"
+    },
+    {
+      "ts": "2026-09-27T04:50:02.510Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:50:00.035Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:49:55.433Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+    },
+    {
+      "ts": "2026-09-27T04:49:54.020Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:49:48.018Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:49:45.269Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+    },
+    {
+      "ts": "2026-09-27T04:49:42.015Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:49:36.002Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:49:35.102Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+    },
+    {
+      "ts": "2026-09-27T04:49:30.003Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-09-27T04:49:24.941Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+    },
+    {
+      "ts": "2026-09-27T04:49:24.002Z",
       "kind": "error",
       "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
     }
@@ -1535,9 +1397,8 @@
     "projects": {
       "Project Dynamo": {
         "tasks": 9,
-        "listMs": 883,
-        "listBreak": "684/113/1ms 145kb",
-        "heldMs": 2597,
+        "listMs": 689,
+        "listBreak": "490/132/1ms 145kb",
         "newTasks": 9,
         "hasClaimable": true,
         "new": 0,
@@ -1549,53 +1410,53 @@
       "known": true,
       "paused": true,
       "since": 1790403254697,
-      "pausedForSec": 27842,
-      "refusals": 14,
-      "nextProbeInSec": 301
+      "pausedForSec": 81954,
+      "refusals": 15,
+      "nextProbeInSec": 139
     },
     "minGapMs": 60000
   },
   "health": {
-    "polls": 147,
-    "pollsFailed": 3,
-    "errors": 55,
+    "polls": 671,
+    "pollsFailed": 650,
+    "errors": 689,
     "rateLimited": 0,
     "claims": 0,
     "restarts": 0,
     "notifies": 0,
     "medianPollGapSec": 2,
-    "pollsOk": 144,
-    "pollFailPct": 2,
-    "blind": false,
+    "pollsOk": 21,
+    "pollFailPct": 96.9,
+    "blind": true,
     "windowLabel": "last hour",
     "budget": {
-      "used": 2,
+      "used": 18,
       "limit": 52,
       "pollLimit": 46
     }
   },
   "latency": {
-    "listP50": 1074,
-    "listP95": 2258,
-    "listMax": 4912,
-    "claimP50": 698,
-    "claimMax": 2050,
-    "samples": 229,
+    "listP50": 1200,
+    "listP95": 2063,
+    "listMax": 3458,
+    "claimP50": 1033,
+    "claimMax": 1033,
+    "samples": 21,
     "waitP50": null,
     "waitMax": null,
     "waitSamples": 0
   },
   "runtime": {
-    "at": 1790431093533,
-    "tier": "idle",
-    "gapMs": 2000,
-    "msToDrop": 113939.22045898438,
+    "at": 1790485209074,
+    "tier": "strike",
+    "gapMs": 400,
+    "msToDrop": -1601.779541015625,
     "alert": null,
     "hot": false,
     "strikes": {
-      "spent": 0,
+      "spent": 1,
       "max": 2,
-      "off": false
+      "off": true
     },
     "hotStrikes": {
       "spent": 1,
@@ -1603,9 +1464,9 @@
       "off": false
     },
     "lastStrikeVerdict": "rework-would-trap",
-    "lastStrikeAt": 1790430609432,
-    "ageSec": 48,
-    "lastStrikeAgoSec": 532,
+    "lastStrikeAt": 1790485208263,
+    "ageSec": 0,
+    "lastStrikeAgoSec": 1,
     "blindCooldownSec": 0,
     "blindOkAt": 1790261472879
   },
@@ -1617,14 +1478,14 @@
     "cooldownSecLeft": 0
   },
   "race": {
-    "volleys": 105,
-    "posts": 611,
+    "volleys": 1,
+    "posts": 6,
     "won": 0,
     "lost": 0,
     "throttledVolleys": 0,
     "winRate": null,
     "lastWinAt": null,
-    "since": 1790311202486,
+    "since": 1790464202940,
     "lastRefusedAt": null,
     "refusals": 0
   },
@@ -1637,75 +1498,75 @@
     "top": [
       {
         "id": "20556321-83f5-4ed4-b985-2e91075fd94d",
-        "visits": 554,
+        "visits": 559,
         "title": "",
         "first": 1790174915802,
-        "last": 1790431097016,
-        "ageSec": 44
+        "last": 1790485208955,
+        "ageSec": 0
       },
       {
         "id": "a738d554-1a5b-466b-b2f0-8e55040587e1",
-        "visits": 553,
+        "visits": 558,
         "title": "",
         "first": 1790174947039,
-        "last": 1790431097016,
-        "ageSec": 44
+        "last": 1790485208955,
+        "ageSec": 0
       },
       {
         "id": "a86a408e-b1d3-4809-8d3a-0da79442995e",
-        "visits": 553,
+        "visits": 558,
         "title": "",
         "first": 1790174947039,
-        "last": 1790431097016,
-        "ageSec": 44
+        "last": 1790485208955,
+        "ageSec": 0
       },
       {
         "id": "b2015940-5792-47e6-9abd-029c74644bed",
-        "visits": 553,
+        "visits": 558,
         "title": "",
         "first": 1790174947039,
-        "last": 1790431097016,
-        "ageSec": 44
+        "last": 1790485208955,
+        "ageSec": 0
       },
       {
         "id": "c7833216-e935-4c5a-a06a-3c5d756b15a4",
-        "visits": 500,
+        "visits": 505,
         "title": "",
         "first": 1790316316343,
-        "last": 1790431097016,
-        "ageSec": 44
+        "last": 1790485208955,
+        "ageSec": 0
       },
       {
         "id": "0d8be869-fcc3-4b80-b677-791d9379fc56",
-        "visits": 487,
+        "visits": 492,
         "title": "",
         "first": 1790317936054,
-        "last": 1790431097016,
-        "ageSec": 44
+        "last": 1790485208955,
+        "ageSec": 0
       },
       {
         "id": "a72a821f-253d-455e-8010-6bf7a26ec4a5",
-        "visits": 472,
+        "visits": 477,
         "title": "",
         "first": 1790034283509,
-        "last": 1790431097016,
-        "ageSec": 44
+        "last": 1790485208955,
+        "ageSec": 0
       },
       {
         "id": "e061b205-f8c1-4e90-89c6-14a6e4e3e955",
-        "visits": 387,
+        "visits": 392,
         "title": "",
         "first": 1790101805726,
-        "last": 1790431097016,
-        "ageSec": 44
+        "last": 1790485208955,
+        "ageSec": 0
       },
       {
         "id": "6c515567-eecf-4b50-a55c-9885e00fdf9c",
-        "visits": 194,
+        "visits": 199,
         "title": "",
         "first": 1790202004281,
-        "last": 1790431097016,
-        "ageSec": 44
+        "last": 1790485208955,
+        "ageSec": 0
       },
       {
         "id": "a6d7217b-a525-46c8-954c-980ac88e48a4",
@@ -1713,7 +1574,7 @@
         "title": "",
         "first": 1790034283509,
         "last": 1790249060393,
-        "ageSec": 182081
+        "ageSec": 236149
       },
       {
         "id": "0d8a9ded-adfc-4b65-90f6-6fce323874fa",
@@ -1721,7 +1582,7 @@
         "title": "",
         "first": 1790119239890,
         "last": 1790235448428,
-        "ageSec": 195693
+        "ageSec": 249761
       },
       {
         "id": "03aca6cc-a415-482b-840c-42cfb4e66813",
@@ -1729,7 +1590,7 @@
         "title": "",
         "first": 1790034270579,
         "last": 1790221820195,
-        "ageSec": 209321
+        "ageSec": 263389
       }
     ]
   },
@@ -1916,12 +1777,12 @@
     "since": 1789797793124
   },
   "forecast": {
-    "expected": 38,
+    "expected": 56,
     "lo": 0,
-    "hi": 153,
-    "hoursLeft": 4.5,
+    "hi": 218,
+    "hoursLeft": 13.5,
     "daysObserved": 6,
-    "minSamplesPerHour": 7,
+    "minSamplesPerHour": 6,
     "confidence": "weak",
     "appearedToday": 0,
     "dropsToday": 0,
@@ -1931,25 +1792,25 @@
     "lastDropAt": null,
     "sinceLastDropSec": null
   },
-  "uptimeSec": 27256,
-  "startedAt": 1790403885506,
-  "lastPollAt": 1790431097059,
-  "lastPollAgoSec": 44,
-  "alive": false,
-  "logSizeBytes": 4969224,
+  "uptimeSec": 81324,
+  "startedAt": 1790403885434,
+  "lastPollAt": 1790485208962,
+  "lastPollAgoSec": 0,
+  "alive": true,
+  "logSizeBytes": 2146670,
   "net": {
     "enabled": true,
-    "grade": "fair",
-    "p50": 210,
-    "p95": 3076,
-    "jitter": 2866,
-    "lossPct": 0,
-    "stallPct": 10,
+    "grade": "poor",
+    "p50": 273,
+    "p95": 1898,
+    "jitter": 1625,
+    "lossPct": 20,
+    "stallPct": 30,
     "stallMs": 1000,
     "samples": 60,
     "windowSec": 600,
-    "lastAt": "2026-09-26T13:58:52.883Z",
-    "ageSec": 9
+    "lastAt": "2026-09-27T05:00:08.526Z",
+    "ageSec": 1
   },
   "projectStatus": [
     {
@@ -1958,10 +1819,10 @@
       "known": true,
       "paused": true,
       "since": 1790403254697,
-      "pausedForSec": 27887,
-      "refusals": 14,
-      "nextProbeInSec": 256
+      "pausedForSec": 81955,
+      "refusals": 15,
+      "nextProbeInSec": 138
     }
   ],
-  "publishedAt": "2026-09-26T13:59:01.620Z"
+  "publishedAt": "2026-09-27T05:00:09.611Z"
 }
