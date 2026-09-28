@@ -1,5 +1,5 @@
 {
-  "now": 1790530277110,
+  "now": 1790568559133,
   "ok": true,
   "config": {
     "pollIntervalSeconds": 2,
@@ -29,7 +29,7 @@
     "total": 124,
     "today": 0,
     "last24h": 0,
-    "last7d": 38,
+    "last7d": 33,
     "remainingToday": null,
     "byDay": [
       {
@@ -278,14 +278,14 @@
   },
   "schedule": {
     "locked": true,
-    "summary": "every 10m, phase ±3s, 60 samples, next in 530.4s",
+    "summary": "every 10m, phase ±3s, 60 samples, next in 48.3s",
     "periodMin": 10,
     "phaseSec": 7.5,
     "spreadSec": 2.9,
     "samples": 60,
     "inliers": 44,
-    "nextDropAt": 1790530807472.2205,
-    "nextDropInSec": 530,
+    "nextDropAt": 1790568607472.2205,
+    "nextDropInSec": 48,
     "observed": [
       1790193146078.5,
       1790194804458.5,
@@ -330,8 +330,8 @@
     "localDailyCap": null,
     "localConcurrentCap": null
   },
-  "lastClaimAttemptAt": 1790529797196,
-  "lastHeartbeatAt": 1790490219335,
+  "lastClaimAttemptAt": 1790568556957,
+  "lastHeartbeatAt": 1790567950886,
   "sessionExpiredAlert": false,
   "stateLoadFailed": false,
   "pause": {
@@ -348,21 +348,21 @@
       "hasClaimable": true,
       "tasksListed": 9,
       "newTaskCount": 9,
-      "lastCheckedAt": 1790530276689,
-      "lastCheckedAgoSec": 0,
+      "lastCheckedAt": 1790568557451,
+      "lastCheckedAgoSec": 2,
       "lastNotifyAt": 1790353165392,
       "lastHeldNagAt": 1789606246822,
       "lastClaimVerdict": {
         "verdict": "project-paused",
-        "at": 1790530276689
+        "at": 1790568557451
       },
       "availability": {
-        "lastAvailableAt": 1790530276689,
-        "lastAvailableAgoSec": 0,
+        "lastAvailableAt": 1790568557451,
+        "lastAvailableAgoSec": 2,
         "open": {
           "start": 1790309147283,
           "peak": 9,
-          "openMs": 221129827
+          "openMs": 259411850
         },
         "windows": [
           {
@@ -651,8 +651,8 @@
       },
       "held": {
         "count": 5,
-        "at": 1790530276689,
-        "ageSec": 0,
+        "at": 1790568557451,
+        "ageSec": 2,
         "tasks": [
           {
             "id": "dac5155f-a397-4dbf-8b72-40573dafe860",
@@ -665,39 +665,18 @@
             "stage": "Attempt",
             "priority": 0,
             "heldSince": 1790261461246,
-            "heldMs": 268815864,
+            "heldMs": 307097887,
             "heldExact": true,
             "stageTimeLimitSec": 36000,
             "timeLimitSec": 86400,
-            "remainingMs": -182415864,
+            "remainingMs": -220697887,
             "repoUrl": "https://github.com/handshake-project-dynamo/dynamo-0705184-scientific-computing-and-domain-science",
             "category": "Scientific Computing and Domain Science",
             "ci": {
               "slug": "handshake-project-dynamo/dynamo-0705184-scientific-computing-and-domain-science",
-              "pr": {
-                "number": 7,
-                "title": "Rework: close the lookup-table false accept and the zero-start-reset findings",
-                "url": "https://github.com/handshake-project-dynamo/dynamo-0705184-scientific-computing-and-domain-science/pull/7",
-                "state": "open",
-                "draft": false,
-                "headSha": "15e3c15a",
-                "updatedAt": "2026-09-24T20:47:33Z"
-              },
-              "openPrCount": 2,
-              "prCount": 5,
-              "checks": {
-                "total": 17,
-                "success": 16,
-                "failure": 0,
-                "running": 0,
-                "skipped": 1,
-                "other": 0,
-                "failing": []
-              },
-              "lastRunAt": 1790282845000,
-              "state": "passing",
-              "error": null,
-              "fetchedAt": 1790530097096
+              "state": "error",
+              "error": "fetch failed",
+              "fetchedAt": 1790567899977
             }
           },
           {
@@ -711,50 +690,18 @@
             "stage": "Attempt",
             "priority": 0,
             "heldSince": 1790261461246,
-            "heldMs": 268815864,
+            "heldMs": 307097887,
             "heldExact": true,
             "stageTimeLimitSec": 36000,
             "timeLimitSec": 86400,
-            "remainingMs": -182415864,
+            "remainingMs": -220697887,
             "repoUrl": "https://github.com/handshake-project-dynamo/dynamo-d73e65f-mathematics-and-formal-reasoning",
             "category": "Mathematics and Formal Reasoning",
             "ci": {
               "slug": "handshake-project-dynamo/dynamo-d73e65f-mathematics-and-formal-reasoning",
-              "pr": {
-                "number": 6,
-                "title": "Rework: publish the normative partition_application rule for nested modular schedules",
-                "url": "https://github.com/handshake-project-dynamo/dynamo-d73e65f-mathematics-and-formal-reasoning/pull/6",
-                "state": "closed",
-                "draft": false,
-                "headSha": "49c66c75",
-                "updatedAt": "2026-09-25T13:20:39Z"
-              },
-              "openPrCount": 0,
-              "prCount": 4,
-              "checks": {
-                "total": 17,
-                "success": 14,
-                "failure": 2,
-                "running": 0,
-                "skipped": 1,
-                "other": 0,
-                "failing": [
-                  {
-                    "name": "review / gate",
-                    "conclusion": "failure",
-                    "url": "https://github.com/handshake-project-dynamo/dynamo-d73e65f-mathematics-and-formal-reasoning/actions/runs/36039132151/job/107837152679"
-                  },
-                  {
-                    "name": "review / trials",
-                    "conclusion": "failure",
-                    "url": "https://github.com/handshake-project-dynamo/dynamo-d73e65f-mathematics-and-formal-reasoning/actions/runs/36039132151/job/107812009697"
-                  }
-                ]
-              },
-              "lastRunAt": 1790284503000,
-              "state": "failing",
-              "error": null,
-              "fetchedAt": 1790530097098
+              "state": "error",
+              "error": "fetch failed",
+              "fetchedAt": 1790567899987
             }
           },
           {
@@ -768,50 +715,18 @@
             "stage": "Attempt 2",
             "priority": 0,
             "heldSince": 1790261461246,
-            "heldMs": 268815864,
+            "heldMs": 307097887,
             "heldExact": true,
             "stageTimeLimitSec": 18000,
             "timeLimitSec": 86400,
-            "remainingMs": -182415864,
+            "remainingMs": -220697887,
             "repoUrl": "https://github.com/handshake-project-dynamo/dynamo-2ea3b19-debugging-and-repair",
             "category": "Debugging and Repair",
             "ci": {
               "slug": "handshake-project-dynamo/dynamo-2ea3b19-debugging-and-repair",
-              "pr": {
-                "number": 5,
-                "title": "Convert variant-runtime-repair from TB2 to TB3",
-                "url": "https://github.com/handshake-project-dynamo/dynamo-2ea3b19-debugging-and-repair/pull/5",
-                "state": "open",
-                "draft": false,
-                "headSha": "9359a4ba",
-                "updatedAt": "2026-09-04T22:16:20Z"
-              },
-              "openPrCount": 1,
-              "prCount": 6,
-              "checks": {
-                "total": 25,
-                "success": 1,
-                "failure": 2,
-                "running": 0,
-                "skipped": 22,
-                "other": 0,
-                "failing": [
-                  {
-                    "name": "conversion-checks / Conversion QC gate",
-                    "conclusion": "failure",
-                    "url": "https://github.com/handshake-project-dynamo/dynamo-2ea3b19-debugging-and-repair/actions/runs/33924706765/job/101190799662"
-                  },
-                  {
-                    "name": "conversion-checks / Artificiality (C1)",
-                    "conclusion": "failure",
-                    "url": "https://github.com/handshake-project-dynamo/dynamo-2ea3b19-debugging-and-repair/actions/runs/33924706765/job/101190607666"
-                  }
-                ]
-              },
-              "lastRunAt": 1788560172000,
-              "state": "failing",
-              "error": null,
-              "fetchedAt": 1790530097099
+              "state": "error",
+              "error": "fetch failed",
+              "fetchedAt": 1790567899993
             }
           },
           {
@@ -825,39 +740,18 @@
             "stage": "Attempt 2",
             "priority": 0,
             "heldSince": 1790261461246,
-            "heldMs": 268815864,
+            "heldMs": 307097887,
             "heldExact": true,
             "stageTimeLimitSec": 18000,
             "timeLimitSec": 86400,
-            "remainingMs": -182415864,
+            "remainingMs": -220697887,
             "repoUrl": "https://github.com/handshake-project-dynamo/dynamo-a6ce627-machine-learning-and-ai",
             "category": "Machine Learning and AI",
             "ci": {
               "slug": "handshake-project-dynamo/dynamo-a6ce627-machine-learning-and-ai",
-              "pr": {
-                "number": 6,
-                "title": "Rework: enforce the U+001F bucket separator and strict RFC3339 history timestamps",
-                "url": "https://github.com/handshake-project-dynamo/dynamo-a6ce627-machine-learning-and-ai/pull/6",
-                "state": "open",
-                "draft": false,
-                "headSha": "21941419",
-                "updatedAt": "2026-09-24T21:12:16Z"
-              },
-              "openPrCount": 2,
-              "prCount": 4,
-              "checks": {
-                "total": 17,
-                "success": 16,
-                "failure": 0,
-                "running": 0,
-                "skipped": 1,
-                "other": 0,
-                "failing": []
-              },
-              "lastRunAt": 1790284328000,
-              "state": "passing",
-              "error": null,
-              "fetchedAt": 1790530097100
+              "state": "error",
+              "error": "fetch failed",
+              "fetchedAt": 1790567899994
             }
           },
           {
@@ -871,50 +765,18 @@
             "stage": "Attempt 2",
             "priority": 0,
             "heldSince": 1790261419127,
-            "heldMs": 268857983,
+            "heldMs": 307140006,
             "heldExact": true,
             "stageTimeLimitSec": 18000,
             "timeLimitSec": 86400,
-            "remainingMs": -182457983,
+            "remainingMs": -220740006,
             "repoUrl": "https://github.com/handshake-project-dynamo/dynamo-16ea8e1-build-dependency-and-release-management",
             "category": "Build Dependency and Release Management",
             "ci": {
               "slug": "handshake-project-dynamo/dynamo-16ea8e1-build-dependency-and-release-management",
-              "pr": {
-                "number": 5,
-                "title": "Rework: make the plan order total and grade conflicts against provided names",
-                "url": "https://github.com/handshake-project-dynamo/dynamo-16ea8e1-build-dependency-and-release-management/pull/5",
-                "state": "closed",
-                "draft": false,
-                "headSha": "8b4d3490",
-                "updatedAt": "2026-09-25T13:20:47Z"
-              },
-              "openPrCount": 0,
-              "prCount": 3,
-              "checks": {
-                "total": 17,
-                "success": 10,
-                "failure": 2,
-                "running": 0,
-                "skipped": 5,
-                "other": 0,
-                "failing": [
-                  {
-                    "name": "review / gate",
-                    "conclusion": "failure",
-                    "url": "https://github.com/handshake-project-dynamo/dynamo-16ea8e1-build-dependency-and-release-management/actions/runs/36039768728/job/107802412706"
-                  },
-                  {
-                    "name": "review / tier1",
-                    "conclusion": "failure",
-                    "url": "https://github.com/handshake-project-dynamo/dynamo-16ea8e1-build-dependency-and-release-management/actions/runs/36039768728/job/107802179172"
-                  }
-                ]
-              },
-              "lastRunAt": 1790278897000,
-              "state": "failing",
-              "error": null,
-              "fetchedAt": 1790530157102
+              "state": "error",
+              "error": "fetch failed",
+              "fetchedAt": 1790567899999
             }
           }
         ],
@@ -925,10 +787,150 @@
   ],
   "lock": {
     "pid": 71408,
-    "ts": 1790530273866,
-    "ageSec": 3
+    "ts": 1790568554406,
+    "ageSec": 5
   },
   "events": [
+    {
+      "ts": "2026-09-28T04:09:17.433Z",
+      "kind": "info",
+      "text": "autoclaim: the portal said: \"PROJECT_PAUSED\" x6"
+    },
+    {
+      "ts": "2026-09-28T04:09:17.433Z",
+      "kind": "error",
+      "text": "autoclaim: volley of 6 on Project Dynamo in 472ms — 0 won, 0 lost to other fellows, 6 server error(s)"
+    },
+    {
+      "ts": "2026-09-28T04:09:17.431Z",
+      "kind": "error",
+      "text": "autoclaim: pick positions in a board of 9 — 4:error 1:error 8:error 0:error 6:error 3:error"
+    },
+    {
+      "ts": "2026-09-28T04:07:19.209Z",
+      "kind": "error",
+      "text": "project Project Dynamo: held-task list unreadable this cycle — deferring to auto-claim verdict"
+    },
+    {
+      "ts": "2026-09-28T04:00:38.270Z",
+      "kind": "info",
+      "text": "pages: published endpoint.json -> rajdeepraoextras-dev/hai-bot-dashboard@main (https://annotated-guestbook-lenders-vacancies.trycloudflare.com)"
+    },
+    {
+      "ts": "2026-09-28T04:00:36.384Z",
+      "kind": "info",
+      "text": "tunnel: up at https://annotated-guestbook-lenders-vacancies.trycloudflare.com"
+    },
+    {
+      "ts": "2026-09-28T04:00:18.942Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (null), restarting in 10s"
+    },
+    {
+      "ts": "2026-09-28T04:00:18.931Z",
+      "kind": "info",
+      "text": "tunnel: unreachable for 3 probes — recycling cloudflared"
+    },
+    {
+      "ts": "2026-09-28T04:00:18.930Z",
+      "kind": "error",
+      "text": "tunnel: probe 3/3 failed (fetch failed)"
+    },
+    {
+      "ts": "2026-09-28T04:00:07.541Z",
+      "kind": "info",
+      "text": "strike 1/2: rework-would-trap"
+    },
+    {
+      "ts": "2026-09-28T04:00:07.535Z",
+      "kind": "info",
+      "text": "blind: refusing untargeted claim on Project Dynamo — holding 5 task(s) in a fixing state (dac5155f 80401092 74e6c5bf 719c9dcb 0bf51024), which claimNextTask would return instead of a new task. Submit them to re-enable it."
+    },
+    {
+      "ts": "2026-09-28T04:00:02.694Z",
+      "kind": "info",
+      "text": "strike: armed — polling every 400ms around the predicted drop at 04:00:07.472Z"
+    },
+    {
+      "ts": "2026-09-28T03:59:19.883Z",
+      "kind": "error",
+      "text": "tunnel: probe 2/3 failed (HTTP 530)"
+    },
+    {
+      "ts": "2026-09-28T03:59:18.622Z",
+      "kind": "error",
+      "text": "project Project Dynamo: held-task list unreadable this cycle — deferring to auto-claim verdict"
+    },
+    {
+      "ts": "2026-09-28T03:59:18.610Z",
+      "kind": "info",
+      "text": "autoclaim: the portal said: \"PROJECT_PAUSED\" x6"
+    },
+    {
+      "ts": "2026-09-28T03:59:18.609Z",
+      "kind": "error",
+      "text": "autoclaim: pick positions in a board of 9 — 4:error 8:error 5:error 2:error 7:error 0:error"
+    },
+    {
+      "ts": "2026-09-28T03:59:18.610Z",
+      "kind": "error",
+      "text": "autoclaim: volley of 6 on Project Dynamo in 475ms — 0 won, 0 lost to other fellows, 6 server error(s)"
+    },
+    {
+      "ts": "2026-09-28T03:59:12.041Z",
+      "kind": "info",
+      "text": "blind: no fresh held snapshot for Project Dynamo — not firing an untargeted claim"
+    },
+    {
+      "ts": "2026-09-28T03:59:10.867Z",
+      "kind": "error",
+      "text": "autoclaim: a claimed-count read failed, not claiming [0]"
+    },
+    {
+      "ts": "2026-09-28T03:59:10.868Z",
+      "kind": "error",
+      "text": "project Project Dynamo: held-task list unreadable this cycle — deferring to auto-claim verdict"
+    },
+    {
+      "ts": "2026-09-28T03:58:20.152Z",
+      "kind": "error",
+      "text": "pages: status snapshot failed (TypeError: fetch failed) — backing off 10min"
+    },
+    {
+      "ts": "2026-09-28T03:58:19.999Z",
+      "kind": "error",
+      "text": "github: handshake-project-dynamo/dynamo-16ea8e1-build-dependency-and-release-management failed fetch failed"
+    },
+    {
+      "ts": "2026-09-28T03:58:19.994Z",
+      "kind": "error",
+      "text": "github: handshake-project-dynamo/dynamo-a6ce627-machine-learning-and-ai failed fetch failed"
+    },
+    {
+      "ts": "2026-09-28T03:58:19.993Z",
+      "kind": "error",
+      "text": "github: handshake-project-dynamo/dynamo-2ea3b19-debugging-and-repair failed fetch failed"
+    },
+    {
+      "ts": "2026-09-28T03:58:19.987Z",
+      "kind": "error",
+      "text": "github: handshake-project-dynamo/dynamo-d73e65f-mathematics-and-formal-reasoning failed fetch failed"
+    },
+    {
+      "ts": "2026-09-28T03:58:19.977Z",
+      "kind": "error",
+      "text": "github: handshake-project-dynamo/dynamo-0705184-scientific-computing-and-domain-science failed fetch failed"
+    },
+    {
+      "ts": "2026-09-28T03:58:19.971Z",
+      "kind": "error",
+      "text": "supabase: hai_drops write failed (0) fetch failed — telemetry only, claiming is unaffected"
+    },
+    {
+      "ts": "2026-09-28T03:58:19.535Z",
+      "kind": "error",
+      "text": "tunnel: probe 1/3 failed (fetch failed)"
+    },
     {
       "ts": "2026-09-27T17:30:08.347Z",
       "kind": "info",
@@ -1388,146 +1390,6 @@
       "ts": "2026-09-27T15:20:07.567Z",
       "kind": "info",
       "text": "strike 1/2: rework-would-trap"
-    },
-    {
-      "ts": "2026-09-27T15:20:07.560Z",
-      "kind": "info",
-      "text": "blind: refusing untargeted claim on Project Dynamo — holding 5 task(s) in a fixing state (dac5155f 80401092 74e6c5bf 719c9dcb 0bf51024), which claimNextTask would return instead of a new task. Submit them to re-enable it."
-    },
-    {
-      "ts": "2026-09-27T15:20:03.754Z",
-      "kind": "info",
-      "text": "strike: armed — polling every 400ms around the predicted drop at 15:20:07.472Z"
-    },
-    {
-      "ts": "2026-09-27T15:10:10.349Z",
-      "kind": "info",
-      "text": "autoclaim: the portal said: \"PROJECT_PAUSED\" x6"
-    },
-    {
-      "ts": "2026-09-27T15:10:10.348Z",
-      "kind": "error",
-      "text": "autoclaim: pick positions in a board of 9 — 1:error 6:error 3:error 2:error 5:error 8:error"
-    },
-    {
-      "ts": "2026-09-27T15:10:10.349Z",
-      "kind": "error",
-      "text": "autoclaim: volley of 6 on Project Dynamo in 527ms — 0 won, 0 lost to other fellows, 6 server error(s)"
-    },
-    {
-      "ts": "2026-09-27T15:10:07.707Z",
-      "kind": "info",
-      "text": "strike 1/2: rework-would-trap"
-    },
-    {
-      "ts": "2026-09-27T15:10:07.700Z",
-      "kind": "info",
-      "text": "blind: refusing untargeted claim on Project Dynamo — holding 5 task(s) in a fixing state (dac5155f 80401092 74e6c5bf 719c9dcb 0bf51024), which claimNextTask would return instead of a new task. Submit them to re-enable it."
-    },
-    {
-      "ts": "2026-09-27T15:10:02.650Z",
-      "kind": "info",
-      "text": "strike: armed — polling every 400ms around the predicted drop at 15:10:07.472Z"
-    },
-    {
-      "ts": "2026-09-27T15:06:18.454Z",
-      "kind": "error",
-      "text": "project Project Dynamo: held-task list unreadable this cycle — deferring to auto-claim verdict"
-    },
-    {
-      "ts": "2026-09-27T15:00:09.626Z",
-      "kind": "info",
-      "text": "autoclaim: the portal said: \"PROJECT_PAUSED\" x6"
-    },
-    {
-      "ts": "2026-09-27T15:00:09.626Z",
-      "kind": "error",
-      "text": "autoclaim: volley of 6 on Project Dynamo in 475ms — 0 won, 0 lost to other fellows, 6 server error(s)"
-    },
-    {
-      "ts": "2026-09-27T15:00:09.625Z",
-      "kind": "error",
-      "text": "autoclaim: pick positions in a board of 9 — 6:error 0:error 7:error 2:error 5:error 3:error"
-    },
-    {
-      "ts": "2026-09-27T15:00:08.251Z",
-      "kind": "info",
-      "text": "strike 1/2: rework-would-trap"
-    },
-    {
-      "ts": "2026-09-27T15:00:08.245Z",
-      "kind": "info",
-      "text": "blind: refusing untargeted claim on Project Dynamo — holding 5 task(s) in a fixing state (dac5155f 80401092 74e6c5bf 719c9dcb 0bf51024), which claimNextTask would return instead of a new task. Submit them to re-enable it."
-    },
-    {
-      "ts": "2026-09-27T15:00:04.668Z",
-      "kind": "info",
-      "text": "strike: armed — polling every 400ms around the predicted drop at 15:00:07.472Z"
-    },
-    {
-      "ts": "2026-09-27T14:59:17.798Z",
-      "kind": "error",
-      "text": "project Project Dynamo: held-task list unreadable this cycle — deferring to auto-claim verdict"
-    },
-    {
-      "ts": "2026-09-27T14:52:54.759Z",
-      "kind": "error",
-      "text": "tunnel: reachable again after 1 failed probe(s)"
-    },
-    {
-      "ts": "2026-09-27T14:52:01.568Z",
-      "kind": "error",
-      "text": "tunnel: probe 1/3 failed (fetch failed)"
-    },
-    {
-      "ts": "2026-09-27T14:50:10.524Z",
-      "kind": "info",
-      "text": "strike 1/2: rework-would-trap"
-    },
-    {
-      "ts": "2026-09-27T14:50:10.519Z",
-      "kind": "info",
-      "text": "blind: refusing untargeted claim on Project Dynamo — holding 5 task(s) in a fixing state (dac5155f 80401092 74e6c5bf 719c9dcb 0bf51024), which claimNextTask would return instead of a new task. Submit them to re-enable it."
-    },
-    {
-      "ts": "2026-09-27T14:50:10.398Z",
-      "kind": "error",
-      "text": "project Project Dynamo: held-task list unreadable this cycle — deferring to auto-claim verdict"
-    },
-    {
-      "ts": "2026-09-27T14:50:10.387Z",
-      "kind": "error",
-      "text": "autoclaim: volley of 6 on Project Dynamo in 486ms — 0 won, 0 lost to other fellows, 6 server error(s)"
-    },
-    {
-      "ts": "2026-09-27T14:50:10.387Z",
-      "kind": "info",
-      "text": "autoclaim: the portal said: \"PROJECT_PAUSED\" x6"
-    },
-    {
-      "ts": "2026-09-27T14:50:10.386Z",
-      "kind": "error",
-      "text": "autoclaim: pick positions in a board of 9 — 0:error 7:error 2:error 4:error 8:error 5:error"
-    },
-    {
-      "ts": "2026-09-27T14:50:02.530Z",
-      "kind": "info",
-      "text": "strike: armed — polling every 400ms around the predicted drop at 14:50:07.472Z"
-    },
-    {
-      "ts": "2026-09-27T14:40:08.453Z",
-      "kind": "info",
-      "text": "strike 1/2: rework-would-trap"
-    },
-    {
-      "ts": "2026-09-27T14:40:08.447Z",
-      "kind": "info",
-      "text": "blind: refusing untargeted claim on Project Dynamo — holding 5 task(s) in a fixing state (dac5155f 80401092 74e6c5bf 719c9dcb 0bf51024), which claimNextTask would return instead of a new task. Submit them to re-enable it."
-    },
-    {
-      "ts": "2026-09-27T14:40:05.547Z",
-      "kind": "info",
-      "text": "strike: armed — polling every 400ms around the predicted drop at 14:40:07.472Z"
     }
   ],
   "lastPollSummary": {
@@ -1535,9 +1397,10 @@
     "projects": {
       "Project Dynamo": {
         "tasks": 9,
-        "listMs": 516,
-        "listBreak": "427/14/2ms 145kb",
-        "heldMs": 1927,
+        "listMs": 736,
+        "listBreak": "502/59/2ms 145kb",
+        "heldMs": 1448,
+        "claimMs": 468,
         "newTasks": 9,
         "hasClaimable": true,
         "new": 0,
@@ -1549,53 +1412,53 @@
       "known": true,
       "paused": true,
       "since": 1790403254697,
-      "pausedForSec": 127022,
-      "refusals": 70,
-      "nextProbeInSec": 121
+      "pausedForSec": 165303,
+      "refusals": 72,
+      "nextProbeInSec": 600
     },
     "minGapMs": 60000
   },
   "health": {
-    "polls": 162,
-    "pollsFailed": 1,
-    "errors": 14,
+    "polls": 31,
+    "pollsFailed": 0,
+    "errors": 18,
     "rateLimited": 0,
     "claims": 0,
     "restarts": 0,
     "notifies": 0,
-    "medianPollGapSec": 3.8,
-    "pollsOk": 161,
-    "pollFailPct": 0.6,
+    "medianPollGapSec": 3.3,
+    "pollsOk": 31,
+    "pollFailPct": 0,
     "blind": false,
     "windowLabel": "last hour",
     "budget": {
-      "used": 3,
+      "used": 9,
       "limit": 52,
       "pollLimit": 46
     }
   },
   "latency": {
-    "listP50": 667,
-    "listP95": 1271,
+    "listP50": 668,
+    "listP95": 1270,
     "listMax": 2821,
-    "claimP50": 482,
+    "claimP50": 474,
     "claimMax": 2671,
-    "samples": 630,
+    "samples": 626,
     "waitP50": null,
     "waitMax": null,
     "waitSamples": 0
   },
   "runtime": {
-    "at": 1790530273866,
+    "at": 1790568554407,
     "tier": "idle",
     "gapMs": 2000,
-    "msToDrop": -66393.77954101562,
+    "msToDrop": 53065.220458984375,
     "alert": null,
     "hot": false,
     "strikes": {
-      "spent": 1,
+      "spent": 0,
       "max": 2,
-      "off": true
+      "off": false
     },
     "hotStrikes": {
       "spent": 1,
@@ -1603,9 +1466,9 @@
       "off": false
     },
     "lastStrikeVerdict": "rework-would-trap",
-    "lastStrikeAt": 1790530208347,
-    "ageSec": 3,
-    "lastStrikeAgoSec": 69,
+    "lastStrikeAt": 1790568007541,
+    "ageSec": 5,
+    "lastStrikeAgoSec": 552,
     "blindCooldownSec": 0,
     "blindOkAt": 1790261472879
   },
@@ -1617,8 +1480,8 @@
     "cooldownSecLeft": 0
   },
   "race": {
-    "volleys": 56,
-    "posts": 336,
+    "volleys": 58,
+    "posts": 348,
     "won": 0,
     "lost": 0,
     "throttledVolleys": 0,
@@ -1637,75 +1500,75 @@
     "top": [
       {
         "id": "20556321-83f5-4ed4-b985-2e91075fd94d",
-        "visits": 840,
+        "visits": 844,
         "title": "",
         "first": 1790174915802,
-        "last": 1790530276689,
-        "ageSec": 0
+        "last": 1790568556955,
+        "ageSec": 2
       },
       {
         "id": "a738d554-1a5b-466b-b2f0-8e55040587e1",
-        "visits": 839,
+        "visits": 843,
         "title": "",
         "first": 1790174947039,
-        "last": 1790530276689,
-        "ageSec": 0
+        "last": 1790568556955,
+        "ageSec": 2
       },
       {
         "id": "a86a408e-b1d3-4809-8d3a-0da79442995e",
-        "visits": 839,
+        "visits": 843,
         "title": "",
         "first": 1790174947039,
-        "last": 1790530276689,
-        "ageSec": 0
+        "last": 1790568556955,
+        "ageSec": 2
       },
       {
         "id": "b2015940-5792-47e6-9abd-029c74644bed",
-        "visits": 839,
+        "visits": 843,
         "title": "",
         "first": 1790174947039,
-        "last": 1790530276689,
-        "ageSec": 0
+        "last": 1790568556955,
+        "ageSec": 2
       },
       {
         "id": "c7833216-e935-4c5a-a06a-3c5d756b15a4",
-        "visits": 786,
+        "visits": 790,
         "title": "",
         "first": 1790316316343,
-        "last": 1790530276689,
-        "ageSec": 0
+        "last": 1790568556955,
+        "ageSec": 2
       },
       {
         "id": "0d8be869-fcc3-4b80-b677-791d9379fc56",
-        "visits": 773,
+        "visits": 777,
         "title": "",
         "first": 1790317936054,
-        "last": 1790530276689,
-        "ageSec": 0
+        "last": 1790568556955,
+        "ageSec": 2
       },
       {
         "id": "a72a821f-253d-455e-8010-6bf7a26ec4a5",
-        "visits": 758,
+        "visits": 762,
         "title": "",
         "first": 1790034283509,
-        "last": 1790530276689,
-        "ageSec": 0
+        "last": 1790568556955,
+        "ageSec": 2
       },
       {
         "id": "e061b205-f8c1-4e90-89c6-14a6e4e3e955",
-        "visits": 673,
+        "visits": 677,
         "title": "",
         "first": 1790101805726,
-        "last": 1790530276689,
-        "ageSec": 0
+        "last": 1790568556955,
+        "ageSec": 2
       },
       {
         "id": "6c515567-eecf-4b50-a55c-9885e00fdf9c",
-        "visits": 480,
+        "visits": 484,
         "title": "",
         "first": 1790202004281,
-        "last": 1790530276689,
-        "ageSec": 0
+        "last": 1790568556955,
+        "ageSec": 2
       },
       {
         "id": "a6d7217b-a525-46c8-954c-980ac88e48a4",
@@ -1713,7 +1576,7 @@
         "title": "",
         "first": 1790034283509,
         "last": 1790249060393,
-        "ageSec": 281217
+        "ageSec": 319499
       },
       {
         "id": "0d8a9ded-adfc-4b65-90f6-6fce323874fa",
@@ -1721,7 +1584,7 @@
         "title": "",
         "first": 1790119239890,
         "last": 1790235448428,
-        "ageSec": 294829
+        "ageSec": 333111
       },
       {
         "id": "03aca6cc-a415-482b-840c-42cfb4e66813",
@@ -1729,7 +1592,7 @@
         "title": "",
         "first": 1790034270579,
         "last": 1790221820195,
-        "ageSec": 308457
+        "ageSec": 346739
       }
     ]
   },
@@ -1916,12 +1779,12 @@
     "since": 1789797793124
   },
   "forecast": {
-    "expected": 20,
+    "expected": 59,
     "lo": 0,
-    "hi": 84,
-    "hoursLeft": 1,
+    "hi": 230,
+    "hoursLeft": 14.4,
     "daysObserved": 6,
-    "minSamplesPerHour": 7,
+    "minSamplesPerHour": 6,
     "confidence": "weak",
     "appearedToday": 0,
     "dropsToday": 0,
@@ -1931,25 +1794,25 @@
     "lastDropAt": null,
     "sinceLastDropSec": null
   },
-  "uptimeSec": 15321,
-  "startedAt": 1790514956110,
-  "lastPollAt": 1790530276695,
-  "lastPollAgoSec": 0,
+  "uptimeSec": 53604,
+  "startedAt": 1790514955133,
+  "lastPollAt": 1790568557464,
+  "lastPollAgoSec": 2,
   "alive": true,
-  "logSizeBytes": 2941037,
+  "logSizeBytes": 2956102,
   "net": {
     "enabled": true,
     "grade": "good",
     "p50": 96,
-    "p95": 130,
-    "jitter": 34,
+    "p95": 127,
+    "jitter": 31,
     "lossPct": 0,
     "stallPct": 0,
     "stallMs": 1000,
     "samples": 60,
     "windowSec": 600,
-    "lastAt": "2026-09-27T17:31:07.860Z",
-    "ageSec": 9
+    "lastAt": "2026-09-28T04:09:16.410Z",
+    "ageSec": 3
   },
   "projectStatus": [
     {
@@ -1958,10 +1821,10 @@
       "known": true,
       "paused": true,
       "since": 1790403254697,
-      "pausedForSec": 127022,
-      "refusals": 70,
-      "nextProbeInSec": 120
+      "pausedForSec": 165304,
+      "refusals": 72,
+      "nextProbeInSec": 598
     }
   ],
-  "publishedAt": "2026-09-27T17:31:17.189Z"
+  "publishedAt": "2026-09-28T04:09:19.505Z"
 }
