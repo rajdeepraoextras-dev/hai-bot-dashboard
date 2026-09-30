@@ -1,5 +1,5 @@
 {
-  "now": 1790757104115,
+  "now": 1790757824230,
   "ok": true,
   "config": {
     "pollIntervalSeconds": 2,
@@ -278,14 +278,14 @@
   },
   "schedule": {
     "locked": true,
-    "summary": "every 10m, phase ±3s, 60 samples, next in 503.4s",
+    "summary": "every 10m, phase ±3s, 60 samples, next in 383.2s",
     "periodMin": 10,
     "phaseSec": 7.5,
     "spreadSec": 2.9,
     "samples": 60,
     "inliers": 44,
-    "nextDropAt": 1790757607472.2205,
-    "nextDropInSec": 503,
+    "nextDropAt": 1790758207472.2205,
+    "nextDropInSec": 383,
     "observed": [
       1790193146078.5,
       1790194804458.5,
@@ -330,7 +330,7 @@
     "localDailyCap": null,
     "localConcurrentCap": null
   },
-  "lastClaimAttemptAt": 1790757009341,
+  "lastClaimAttemptAt": 1790757695036,
   "lastHeartbeatAt": 1790742886932,
   "sessionExpiredAlert": false,
   "stateLoadFailed": false,
@@ -348,21 +348,21 @@
       "hasClaimable": true,
       "tasksListed": 50,
       "newTaskCount": 50,
-      "lastCheckedAt": 1790757077402,
-      "lastCheckedAgoSec": 27,
+      "lastCheckedAt": 1790757798921,
+      "lastCheckedAgoSec": 25,
       "lastNotifyAt": 1790742894318,
       "lastHeldNagAt": 1789606246822,
       "lastClaimVerdict": {
         "verdict": "project-paused",
-        "at": 1790757077402
+        "at": 1790757798921
       },
       "availability": {
-        "lastAvailableAt": 1790757077402,
-        "lastAvailableAgoSec": 27,
+        "lastAvailableAt": 1790757798921,
+        "lastAvailableAgoSec": 25,
         "open": {
           "start": 1790309147283,
           "peak": 50,
-          "openMs": 447956832
+          "openMs": 448676947
         },
         "windows": [
           {
@@ -651,8 +651,8 @@
       },
       "held": {
         "count": 0,
-        "at": 1790757077402,
-        "ageSec": 27,
+        "at": 1790757798921,
+        "ageSec": 25,
         "tasks": [],
         "reworkCount": 0,
         "freeSlots": null
@@ -661,10 +661,445 @@
   ],
   "lock": {
     "pid": 11608,
-    "ts": 1790757073380,
-    "ageSec": 31
+    "ts": 1790757794782,
+    "ageSec": 29
   },
   "events": [
+    {
+      "ts": "2026-09-30T08:41:35.674Z",
+      "kind": "error",
+      "text": "recovered after 38 failed cycle(s)"
+    },
+    {
+      "ts": "2026-09-30T08:41:35.649Z",
+      "kind": "error",
+      "text": "autoclaim: volley of 6 on Project Dynamo in 612ms — 0 won, 0 lost to other fellows, 6 server error(s)"
+    },
+    {
+      "ts": "2026-09-30T08:41:35.649Z",
+      "kind": "info",
+      "text": "autoclaim: the portal said: \"PROJECT_PAUSED\" x6"
+    },
+    {
+      "ts": "2026-09-30T08:41:35.648Z",
+      "kind": "error",
+      "text": "autoclaim: pick positions in a board of 50 — 32:error 16:error 17:error 0:error 28:error 20:error"
+    },
+    {
+      "ts": "2026-09-30T08:40:33.534Z",
+      "kind": "info",
+      "text": "pages: published endpoint.json -> rajdeepraoextras-dev/hai-bot-dashboard@main (https://replied-bargains-nasa-workforce.trycloudflare.com)"
+    },
+    {
+      "ts": "2026-09-30T08:40:31.792Z",
+      "kind": "info",
+      "text": "tunnel: up at https://replied-bargains-nasa-workforce.trycloudflare.com"
+    },
+    {
+      "ts": "2026-09-30T08:40:14.774Z",
+      "kind": "error",
+      "text": "poll error (#38) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
+    },
+    {
+      "ts": "2026-09-30T08:40:14.365Z",
+      "kind": "error",
+      "text": "poll error (#37) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
+    },
+    {
+      "ts": "2026-09-30T08:40:13.953Z",
+      "kind": "error",
+      "text": "poll error (#36) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
+    },
+    {
+      "ts": "2026-09-30T08:40:13.545Z",
+      "kind": "error",
+      "text": "poll error (#35) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
+    },
+    {
+      "ts": "2026-09-30T08:40:13.136Z",
+      "kind": "error",
+      "text": "poll error (#34) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
+    },
+    {
+      "ts": "2026-09-30T08:40:12.733Z",
+      "kind": "error",
+      "text": "poll error (#33) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
+    },
+    {
+      "ts": "2026-09-30T08:40:12.682Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+    },
+    {
+      "ts": "2026-09-30T08:40:12.325Z",
+      "kind": "error",
+      "text": "poll error (#32) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
+    },
+    {
+      "ts": "2026-09-30T08:40:11.908Z",
+      "kind": "error",
+      "text": "poll error (#31) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
+    },
+    {
+      "ts": "2026-09-30T08:40:11.502Z",
+      "kind": "error",
+      "text": "poll error (#30) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
+    },
+    {
+      "ts": "2026-09-30T08:40:11.093Z",
+      "kind": "error",
+      "text": "poll error (#29) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
+    },
+    {
+      "ts": "2026-09-30T08:40:10.678Z",
+      "kind": "error",
+      "text": "poll error (#28) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
+    },
+    {
+      "ts": "2026-09-30T08:40:10.276Z",
+      "kind": "error",
+      "text": "poll error (#27) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
+    },
+    {
+      "ts": "2026-09-30T08:40:09.876Z",
+      "kind": "error",
+      "text": "poll error (#26) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
+    },
+    {
+      "ts": "2026-09-30T08:40:09.468Z",
+      "kind": "error",
+      "text": "poll error (#25) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
+    },
+    {
+      "ts": "2026-09-30T08:40:09.061Z",
+      "kind": "error",
+      "text": "poll error (#24) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
+    },
+    {
+      "ts": "2026-09-30T08:40:08.653Z",
+      "kind": "error",
+      "text": "poll error (#23) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
+    },
+    {
+      "ts": "2026-09-30T08:40:08.258Z",
+      "kind": "error",
+      "text": "poll error (#22) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
+    },
+    {
+      "ts": "2026-09-30T08:40:08.230Z",
+      "kind": "info",
+      "text": "blind: no fresh held snapshot for Project Dynamo — not firing an untargeted claim"
+    },
+    {
+      "ts": "2026-09-30T08:40:07.851Z",
+      "kind": "error",
+      "text": "poll error (#21) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
+    },
+    {
+      "ts": "2026-09-30T08:40:07.824Z",
+      "kind": "info",
+      "text": "blind: no fresh held snapshot for Project Dynamo — not firing an untargeted claim"
+    },
+    {
+      "ts": "2026-09-30T08:40:07.433Z",
+      "kind": "error",
+      "text": "poll error (#20) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
+    },
+    {
+      "ts": "2026-09-30T08:40:07.024Z",
+      "kind": "error",
+      "text": "poll error (#19) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
+    },
+    {
+      "ts": "2026-09-30T08:40:06.613Z",
+      "kind": "error",
+      "text": "poll error (#18) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
+    },
+    {
+      "ts": "2026-09-30T08:40:06.201Z",
+      "kind": "error",
+      "text": "poll error (#17) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
+    },
+    {
+      "ts": "2026-09-30T08:40:05.792Z",
+      "kind": "error",
+      "text": "poll error (#16) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
+    },
+    {
+      "ts": "2026-09-30T08:40:05.382Z",
+      "kind": "error",
+      "text": "poll error (#15) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
+    },
+    {
+      "ts": "2026-09-30T08:40:04.975Z",
+      "kind": "error",
+      "text": "poll error (#14) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
+    },
+    {
+      "ts": "2026-09-30T08:40:04.606Z",
+      "kind": "error",
+      "text": "poll error (#13) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
+    },
+    {
+      "ts": "2026-09-30T08:40:04.192Z",
+      "kind": "error",
+      "text": "poll error (#12) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
+    },
+    {
+      "ts": "2026-09-30T08:40:03.786Z",
+      "kind": "error",
+      "text": "poll error (#11) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
+    },
+    {
+      "ts": "2026-09-30T08:40:03.370Z",
+      "kind": "error",
+      "text": "poll error (#10) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
+    },
+    {
+      "ts": "2026-09-30T08:40:02.960Z",
+      "kind": "error",
+      "text": "poll error (#9) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
+    },
+    {
+      "ts": "2026-09-30T08:40:02.555Z",
+      "kind": "info",
+      "text": "strike: armed — polling every 400ms around the predicted drop at 08:40:07.472Z"
+    },
+    {
+      "ts": "2026-09-30T08:40:02.554Z",
+      "kind": "error",
+      "text": "poll error (#8) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
+    },
+    {
+      "ts": "2026-09-30T08:40:02.549Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+    },
+    {
+      "ts": "2026-09-30T08:39:52.342Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+    },
+    {
+      "ts": "2026-09-30T08:39:44.315Z",
+      "kind": "error",
+      "text": "supabase: hai_drops write failed (0) fetch failed — telemetry only, claiming is unaffected"
+    },
+    {
+      "ts": "2026-09-30T08:39:42.195Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+    },
+    {
+      "ts": "2026-09-30T08:39:32.054Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+    },
+    {
+      "ts": "2026-09-30T08:39:21.914Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+    },
+    {
+      "ts": "2026-09-30T08:39:13.460Z",
+      "kind": "error",
+      "text": "poll error (#7) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
+    },
+    {
+      "ts": "2026-09-30T08:39:11.770Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+    },
+    {
+      "ts": "2026-09-30T08:39:01.625Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+    },
+    {
+      "ts": "2026-09-30T08:38:51.466Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+    },
+    {
+      "ts": "2026-09-30T08:38:44.312Z",
+      "kind": "error",
+      "text": "supabase: hai_drops write failed (0) fetch failed — telemetry only, claiming is unaffected"
+    },
+    {
+      "ts": "2026-09-30T08:38:41.327Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+    },
+    {
+      "ts": "2026-09-30T08:38:31.191Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+    },
+    {
+      "ts": "2026-09-30T08:38:21.056Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+    },
+    {
+      "ts": "2026-09-30T08:38:13.448Z",
+      "kind": "error",
+      "text": "poll error (#6) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
+    },
+    {
+      "ts": "2026-09-30T08:38:10.917Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+    },
+    {
+      "ts": "2026-09-30T08:38:00.768Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+    },
+    {
+      "ts": "2026-09-30T08:37:50.622Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+    },
+    {
+      "ts": "2026-09-30T08:37:40.484Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+    },
+    {
+      "ts": "2026-09-30T08:37:30.351Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+    },
+    {
+      "ts": "2026-09-30T08:37:20.214Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+    },
+    {
+      "ts": "2026-09-30T08:37:13.449Z",
+      "kind": "error",
+      "text": "poll error (#5) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
+    },
+    {
+      "ts": "2026-09-30T08:37:10.067Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+    },
+    {
+      "ts": "2026-09-30T08:36:59.929Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+    },
+    {
+      "ts": "2026-09-30T08:36:49.781Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+    },
+    {
+      "ts": "2026-09-30T08:36:44.614Z",
+      "kind": "error",
+      "text": "supabase: hai_drops write failed (0) fetch failed — telemetry only, claiming is unaffected"
+    },
+    {
+      "ts": "2026-09-30T08:36:39.639Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+    },
+    {
+      "ts": "2026-09-30T08:36:29.499Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+    },
+    {
+      "ts": "2026-09-30T08:36:19.356Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+    },
+    {
+      "ts": "2026-09-30T08:36:13.437Z",
+      "kind": "error",
+      "text": "poll error (#4) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
+    },
+    {
+      "ts": "2026-09-30T08:36:09.210Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+    },
+    {
+      "ts": "2026-09-30T08:35:59.070Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+    },
+    {
+      "ts": "2026-09-30T08:35:48.921Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+    },
+    {
+      "ts": "2026-09-30T08:35:44.284Z",
+      "kind": "error",
+      "text": "supabase: hai_drops write failed (0) fetch failed — telemetry only, claiming is unaffected"
+    },
+    {
+      "ts": "2026-09-30T08:35:38.772Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+    },
+    {
+      "ts": "2026-09-30T08:35:28.619Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+    },
+    {
+      "ts": "2026-09-30T08:35:18.120Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (null), restarting in 10s"
+    },
+    {
+      "ts": "2026-09-30T08:35:18.111Z",
+      "kind": "error",
+      "text": "tunnel: probe 3/3 failed (fetch failed)"
+    },
+    {
+      "ts": "2026-09-30T08:35:18.111Z",
+      "kind": "info",
+      "text": "tunnel: unreachable for 3 probes — recycling cloudflared"
+    },
+    {
+      "ts": "2026-09-30T08:35:13.478Z",
+      "kind": "error",
+      "text": "poll error (#3) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
+    },
+    {
+      "ts": "2026-09-30T08:34:44.270Z",
+      "kind": "error",
+      "text": "supabase: hai_drops write failed (0) fetch failed — telemetry only, claiming is unaffected"
+    },
+    {
+      "ts": "2026-09-30T08:34:18.096Z",
+      "kind": "error",
+      "text": "tunnel: probe 2/3 failed (fetch failed)"
+    },
+    {
+      "ts": "2026-09-30T08:34:13.420Z",
+      "kind": "error",
+      "text": "poll error (#2) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
+    },
+    {
+      "ts": "2026-09-30T08:33:18.084Z",
+      "kind": "error",
+      "text": "tunnel: probe 1/3 failed (fetch failed)"
+    },
+    {
+      "ts": "2026-09-30T08:33:13.443Z",
+      "kind": "error",
+      "text": "poll error (#1) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
+    },
+    {
+      "ts": "2026-09-30T08:32:52.263Z",
+      "kind": "error",
+      "text": "supabase: hai_drops write failed (0) timed out — telemetry only, claiming is unaffected"
+    },
     {
       "ts": "2026-09-30T08:30:09.886Z",
       "kind": "info",
@@ -829,441 +1264,6 @@
       "ts": "2026-09-30T08:15:26.271Z",
       "kind": "info",
       "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-09-30T08:15:16.118Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-09-30T08:15:14.840Z",
-      "kind": "error",
-      "text": "poll error (#515) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
-    },
-    {
-      "ts": "2026-09-30T08:15:05.964Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-09-30T08:14:55.817Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-09-30T08:14:45.256Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-09-30T08:14:43.990Z",
-      "kind": "error",
-      "text": "supabase: hai_drops write failed (0) fetch failed — telemetry only, claiming is unaffected"
-    },
-    {
-      "ts": "2026-09-30T08:14:35.105Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-09-30T08:14:24.952Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-09-30T08:14:14.941Z",
-      "kind": "error",
-      "text": "poll error (#514) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
-    },
-    {
-      "ts": "2026-09-30T08:14:14.812Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-09-30T08:14:04.335Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-09-30T08:13:54.190Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-09-30T08:13:44.048Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-09-30T08:13:43.978Z",
-      "kind": "error",
-      "text": "supabase: hai_drops write failed (0) fetch failed — telemetry only, claiming is unaffected"
-    },
-    {
-      "ts": "2026-09-30T08:13:33.884Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-09-30T08:13:23.730Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-09-30T08:13:16.645Z",
-      "kind": "error",
-      "text": "poll error (#513) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
-    },
-    {
-      "ts": "2026-09-30T08:13:13.580Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-09-30T08:13:03.440Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-09-30T08:12:53.292Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-09-30T08:12:43.970Z",
-      "kind": "error",
-      "text": "supabase: hai_drops write failed (0) fetch failed — telemetry only, claiming is unaffected"
-    },
-    {
-      "ts": "2026-09-30T08:12:43.137Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-09-30T08:12:32.989Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-09-30T08:12:21.800Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-09-30T08:12:14.743Z",
-      "kind": "error",
-      "text": "poll error (#512) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
-    },
-    {
-      "ts": "2026-09-30T08:12:11.644Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-09-30T08:12:01.496Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-09-30T08:11:51.349Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-09-30T08:11:43.966Z",
-      "kind": "error",
-      "text": "supabase: hai_drops write failed (0) fetch failed — telemetry only, claiming is unaffected"
-    },
-    {
-      "ts": "2026-09-30T08:11:41.199Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-09-30T08:11:31.059Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-09-30T08:11:20.907Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-09-30T08:11:14.734Z",
-      "kind": "error",
-      "text": "poll error (#511) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
-    },
-    {
-      "ts": "2026-09-30T08:11:10.759Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-09-30T08:11:00.613Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-09-30T08:10:50.470Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-09-30T08:10:43.957Z",
-      "kind": "error",
-      "text": "supabase: hai_drops write failed (0) fetch failed — telemetry only, claiming is unaffected"
-    },
-    {
-      "ts": "2026-09-30T08:10:40.330Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-09-30T08:10:30.182Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-09-30T08:10:20.030Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-09-30T08:10:14.722Z",
-      "kind": "error",
-      "text": "poll error (#510) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
-    },
-    {
-      "ts": "2026-09-30T08:10:14.314Z",
-      "kind": "error",
-      "text": "poll error (#509) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
-    },
-    {
-      "ts": "2026-09-30T08:10:13.909Z",
-      "kind": "error",
-      "text": "poll error (#508) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
-    },
-    {
-      "ts": "2026-09-30T08:10:13.504Z",
-      "kind": "error",
-      "text": "poll error (#507) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
-    },
-    {
-      "ts": "2026-09-30T08:10:13.093Z",
-      "kind": "error",
-      "text": "poll error (#506) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
-    },
-    {
-      "ts": "2026-09-30T08:10:12.686Z",
-      "kind": "error",
-      "text": "poll error (#505) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
-    },
-    {
-      "ts": "2026-09-30T08:10:12.281Z",
-      "kind": "error",
-      "text": "poll error (#504) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
-    },
-    {
-      "ts": "2026-09-30T08:10:11.871Z",
-      "kind": "error",
-      "text": "poll error (#503) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
-    },
-    {
-      "ts": "2026-09-30T08:10:11.470Z",
-      "kind": "error",
-      "text": "poll error (#502) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
-    },
-    {
-      "ts": "2026-09-30T08:10:11.059Z",
-      "kind": "error",
-      "text": "poll error (#501) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
-    },
-    {
-      "ts": "2026-09-30T08:10:10.655Z",
-      "kind": "error",
-      "text": "poll error (#500) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
-    },
-    {
-      "ts": "2026-09-30T08:10:10.248Z",
-      "kind": "error",
-      "text": "poll error (#499) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
-    },
-    {
-      "ts": "2026-09-30T08:10:09.884Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-09-30T08:10:09.846Z",
-      "kind": "error",
-      "text": "poll error (#498) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
-    },
-    {
-      "ts": "2026-09-30T08:10:09.433Z",
-      "kind": "error",
-      "text": "poll error (#497) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
-    },
-    {
-      "ts": "2026-09-30T08:10:09.033Z",
-      "kind": "error",
-      "text": "poll error (#496) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
-    },
-    {
-      "ts": "2026-09-30T08:10:08.620Z",
-      "kind": "error",
-      "text": "poll error (#495) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
-    },
-    {
-      "ts": "2026-09-30T08:10:08.255Z",
-      "kind": "error",
-      "text": "poll error (#494) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
-    },
-    {
-      "ts": "2026-09-30T08:10:08.197Z",
-      "kind": "info",
-      "text": "blind: no fresh held snapshot for Project Dynamo — not firing an untargeted claim"
-    },
-    {
-      "ts": "2026-09-30T08:10:07.812Z",
-      "kind": "error",
-      "text": "poll error (#493) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
-    },
-    {
-      "ts": "2026-09-30T08:10:07.789Z",
-      "kind": "info",
-      "text": "blind: no fresh held snapshot for Project Dynamo — not firing an untargeted claim"
-    },
-    {
-      "ts": "2026-09-30T08:10:07.399Z",
-      "kind": "error",
-      "text": "poll error (#492) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
-    },
-    {
-      "ts": "2026-09-30T08:10:06.998Z",
-      "kind": "error",
-      "text": "poll error (#491) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
-    },
-    {
-      "ts": "2026-09-30T08:10:06.591Z",
-      "kind": "error",
-      "text": "poll error (#490) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
-    },
-    {
-      "ts": "2026-09-30T08:10:06.195Z",
-      "kind": "error",
-      "text": "poll error (#489) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
-    },
-    {
-      "ts": "2026-09-30T08:10:05.778Z",
-      "kind": "error",
-      "text": "poll error (#488) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
-    },
-    {
-      "ts": "2026-09-30T08:10:05.371Z",
-      "kind": "error",
-      "text": "poll error (#487) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
-    },
-    {
-      "ts": "2026-09-30T08:10:04.968Z",
-      "kind": "error",
-      "text": "poll error (#486) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
-    },
-    {
-      "ts": "2026-09-30T08:10:04.563Z",
-      "kind": "error",
-      "text": "poll error (#485) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
-    },
-    {
-      "ts": "2026-09-30T08:10:04.157Z",
-      "kind": "error",
-      "text": "poll error (#484) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
-    },
-    {
-      "ts": "2026-09-30T08:10:03.752Z",
-      "kind": "error",
-      "text": "poll error (#483) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
-    },
-    {
-      "ts": "2026-09-30T08:10:03.351Z",
-      "kind": "error",
-      "text": "poll error (#482) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
-    },
-    {
-      "ts": "2026-09-30T08:10:02.937Z",
-      "kind": "error",
-      "text": "poll error (#481) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
-    },
-    {
-      "ts": "2026-09-30T08:10:02.535Z",
-      "kind": "info",
-      "text": "strike: armed — polling every 400ms around the predicted drop at 08:10:07.472Z"
-    },
-    {
-      "ts": "2026-09-30T08:10:02.533Z",
-      "kind": "error",
-      "text": "poll error (#480) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
-    },
-    {
-      "ts": "2026-09-30T08:09:59.698Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-09-30T08:09:49.547Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-09-30T08:09:39.392Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-09-30T08:09:29.238Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-09-30T08:09:19.087Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-09-30T08:09:14.929Z",
-      "kind": "error",
-      "text": "poll error (#479) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
-    },
-    {
-      "ts": "2026-09-30T08:09:08.945Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-09-30T08:08:58.804Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-09-30T08:08:48.656Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-09-30T08:08:44.033Z",
-      "kind": "error",
-      "text": "supabase: hai_drops write failed (0) fetch failed — telemetry only, claiming is unaffected"
-    },
-    {
-      "ts": "2026-09-30T08:08:38.189Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-09-30T08:08:28.047Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
     }
   ],
   "lastPollSummary": {
@@ -1271,9 +1271,9 @@
     "projects": {
       "Project Dynamo": {
         "tasks": 50,
-        "listMs": 1391,
-        "listBreak": "566/465/4ms 906kb",
-        "heldMs": 2225,
+        "listMs": 1772,
+        "listBreak": "662/698/4ms 906kb",
+        "heldMs": 2013,
         "newTasks": 50,
         "hasClaimable": true,
         "new": 0,
@@ -1285,22 +1285,22 @@
       "known": true,
       "paused": true,
       "since": 1790403254697,
-      "pausedForSec": 353823,
-      "refusals": 228,
-      "nextProbeInSec": 422
+      "pausedForSec": 354544,
+      "refusals": 229,
+      "nextProbeInSec": 496
     },
     "minGapMs": 60000
   },
   "health": {
-    "polls": 37,
+    "polls": 41,
     "pollsFailed": 0,
-    "errors": 200,
+    "errors": 201,
     "rateLimited": 1,
     "claims": 0,
     "restarts": 0,
     "notifies": 0,
-    "medianPollGapSec": 6.3,
-    "pollsOk": 37,
+    "medianPollGapSec": 6.7,
+    "pollsOk": 41,
     "pollFailPct": 0,
     "blind": false,
     "windowLabel": "last hour",
@@ -1314,24 +1314,24 @@
     "listP50": 1945,
     "listP95": 3633,
     "listMax": 3802,
-    "claimP50": 468,
+    "claimP50": 611,
     "claimMax": 624,
-    "samples": 37,
+    "samples": 41,
     "waitP50": null,
     "waitMax": null,
     "waitSamples": 0
   },
   "runtime": {
-    "at": 1790757073381,
+    "at": 1790757794782,
     "tier": "idle",
     "gapMs": 2000,
-    "msToDrop": -65908.77954101562,
+    "msToDrop": -187309.77954101562,
     "alert": null,
     "hot": false,
     "strikes": {
-      "spent": 1,
+      "spent": 2,
       "max": 2,
-      "off": true
+      "off": false
     },
     "hotStrikes": {
       "spent": 1,
@@ -1340,8 +1340,8 @@
     },
     "lastStrikeVerdict": "empty",
     "lastStrikeAt": 1790757009886,
-    "ageSec": 31,
-    "lastStrikeAgoSec": 94,
+    "ageSec": 29,
+    "lastStrikeAgoSec": 814,
     "blindCooldownSec": 0,
     "blindOkAt": 1790261472879
   },
@@ -1353,14 +1353,14 @@
     "cooldownSecLeft": 0
   },
   "race": {
-    "volleys": 214,
-    "posts": 1284,
+    "volleys": 215,
+    "posts": 1290,
     "won": 0,
     "lost": 0,
     "throttledVolleys": 0,
     "winRate": null,
     "lastWinAt": null,
-    "since": 1790481270411,
+    "since": 1790481502369,
     "lastRefusedAt": null,
     "refusals": 0
   },
@@ -1377,7 +1377,7 @@
         "title": "",
         "first": 1790174915802,
         "last": 1790708118766,
-        "ageSec": 48985
+        "ageSec": 49705
       },
       {
         "id": "a738d554-1a5b-466b-b2f0-8e55040587e1",
@@ -1385,7 +1385,7 @@
         "title": "",
         "first": 1790174947039,
         "last": 1790708118766,
-        "ageSec": 48985
+        "ageSec": 49705
       },
       {
         "id": "a86a408e-b1d3-4809-8d3a-0da79442995e",
@@ -1393,7 +1393,7 @@
         "title": "",
         "first": 1790174947039,
         "last": 1790708118766,
-        "ageSec": 48985
+        "ageSec": 49705
       },
       {
         "id": "b2015940-5792-47e6-9abd-029c74644bed",
@@ -1401,15 +1401,15 @@
         "title": "",
         "first": 1790174947039,
         "last": 1790708118766,
-        "ageSec": 48985
+        "ageSec": 49705
       },
       {
         "id": "0d8be869-fcc3-4b80-b677-791d9379fc56",
-        "visits": 1556,
+        "visits": 1558,
         "title": "",
         "first": 1790317936054,
-        "last": 1790757077402,
-        "ageSec": 27
+        "last": 1790757798921,
+        "ageSec": 25
       },
       {
         "id": "c7833216-e935-4c5a-a06a-3c5d756b15a4",
@@ -1417,7 +1417,7 @@
         "title": "",
         "first": 1790316316343,
         "last": 1790708118766,
-        "ageSec": 48985
+        "ageSec": 49705
       },
       {
         "id": "a72a821f-253d-455e-8010-6bf7a26ec4a5",
@@ -1425,7 +1425,7 @@
         "title": "",
         "first": 1790034283509,
         "last": 1790708118766,
-        "ageSec": 48985
+        "ageSec": 49705
       },
       {
         "id": "e061b205-f8c1-4e90-89c6-14a6e4e3e955",
@@ -1433,7 +1433,7 @@
         "title": "",
         "first": 1790101805726,
         "last": 1790708118766,
-        "ageSec": 48985
+        "ageSec": 49705
       },
       {
         "id": "6c515567-eecf-4b50-a55c-9885e00fdf9c",
@@ -1441,15 +1441,15 @@
         "title": "",
         "first": 1790202004281,
         "last": 1790708118766,
-        "ageSec": 48985
+        "ageSec": 49705
       },
       {
         "id": "0c8ff07a-78cf-4ee8-a954-e40b9ebeaae3",
-        "visits": 287,
+        "visits": 289,
         "title": "",
         "first": 1790174908004,
-        "last": 1790757077402,
-        "ageSec": 27
+        "last": 1790757798921,
+        "ageSec": 25
       },
       {
         "id": "ba8888ab-d8e3-405e-82d4-6d312faba670",
@@ -1457,15 +1457,15 @@
         "title": "",
         "first": 1790174947039,
         "last": 1790708118766,
-        "ageSec": 48985
+        "ageSec": 49705
       },
       {
         "id": "03aca6cc-a415-482b-840c-42cfb4e66813",
-        "visits": 53,
+        "visits": 55,
         "title": "",
         "first": 1790034270579,
-        "last": 1790757077402,
-        "ageSec": 27
+        "last": 1790757798921,
+        "ageSec": 25
       }
     ]
   },
@@ -1652,10 +1652,10 @@
     "since": 1789797793124
   },
   "forecast": {
-    "expected": 52,
+    "expected": 51,
     "lo": 0,
     "hi": 205,
-    "hoursLeft": 10,
+    "hoursLeft": 9.8,
     "daysObserved": 6,
     "minSamplesPerHour": 7,
     "confidence": "weak",
@@ -1667,24 +1667,24 @@
     "lastDropAt": null,
     "sinceLastDropSec": null
   },
-  "uptimeSec": 72229,
-  "startedAt": 1790684875115,
-  "lastPollAt": 1790757077437,
-  "lastPollAgoSec": 27,
+  "uptimeSec": 72950,
+  "startedAt": 1790684874230,
+  "lastPollAt": 1790757798926,
+  "lastPollAgoSec": 25,
   "alive": true,
-  "logSizeBytes": 4922917,
+  "logSizeBytes": 4946225,
   "net": {
     "enabled": true,
-    "grade": "fair",
-    "p50": 167,
-    "p95": 2545,
-    "jitter": 2378,
-    "lossPct": 0,
-    "stallPct": 10,
+    "grade": "poor",
+    "p50": 214,
+    "p95": 1626,
+    "jitter": 1412,
+    "lossPct": 67,
+    "stallPct": 72,
     "stallMs": 1000,
     "samples": 60,
     "windowSec": 600,
-    "lastAt": "2026-09-30T08:31:36.713Z",
+    "lastAt": "2026-09-30T08:43:37.314Z",
     "ageSec": 7
   },
   "projectStatus": [
@@ -1694,10 +1694,10 @@
       "known": true,
       "paused": true,
       "since": 1790403254697,
-      "pausedForSec": 353849,
-      "refusals": 228,
-      "nextProbeInSec": 395
+      "pausedForSec": 354570,
+      "refusals": 229,
+      "nextProbeInSec": 471
     }
   ],
-  "publishedAt": "2026-09-30T08:31:44.166Z"
+  "publishedAt": "2026-09-30T08:43:44.274Z"
 }
