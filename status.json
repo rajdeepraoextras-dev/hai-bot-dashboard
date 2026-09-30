@@ -1,5 +1,5 @@
 {
-  "now": 1790759744630,
+  "now": 1790760464766,
   "ok": true,
   "config": {
     "pollIntervalSeconds": 2,
@@ -278,14 +278,14 @@
   },
   "schedule": {
     "locked": true,
-    "summary": "every 10m, phase ±3s, 60 samples, next in 262.8s",
+    "summary": "every 10m, phase ±3s, 60 samples, next in 142.7s",
     "periodMin": 10,
     "phaseSec": 7.5,
     "spreadSec": 2.9,
     "samples": 60,
     "inliers": 44,
-    "nextDropAt": 1790760007472.2205,
-    "nextDropInSec": 263,
+    "nextDropAt": 1790760607472.2205,
+    "nextDropInSec": 143,
     "observed": [
       1790193146078.5,
       1790194804458.5,
@@ -330,7 +330,7 @@
     "localDailyCap": null,
     "localConcurrentCap": null
   },
-  "lastClaimAttemptAt": 1790759596496,
+  "lastClaimAttemptAt": 1790760198137,
   "lastHeartbeatAt": 1790742886932,
   "sessionExpiredAlert": false,
   "stateLoadFailed": false,
@@ -348,21 +348,21 @@
       "hasClaimable": true,
       "tasksListed": 50,
       "newTaskCount": 50,
-      "lastCheckedAt": 1790759717561,
-      "lastCheckedAgoSec": 27,
+      "lastCheckedAt": 1790760436968,
+      "lastCheckedAgoSec": 28,
       "lastNotifyAt": 1790742894318,
       "lastHeldNagAt": 1789606246822,
       "lastClaimVerdict": {
         "verdict": "project-paused",
-        "at": 1790759717561
+        "at": 1790760436968
       },
       "availability": {
-        "lastAvailableAt": 1790759717561,
-        "lastAvailableAgoSec": 27,
+        "lastAvailableAt": 1790760436968,
+        "lastAvailableAgoSec": 28,
         "open": {
           "start": 1790309147283,
           "peak": 50,
-          "openMs": 450597347
+          "openMs": 451317483
         },
         "windows": [
           {
@@ -651,8 +651,8 @@
       },
       "held": {
         "count": 0,
-        "at": 1790759717561,
-        "ageSec": 27,
+        "at": 1790760436968,
+        "ageSec": 28,
         "tasks": [],
         "reworkCount": 0,
         "freeSlots": null
@@ -661,10 +661,65 @@
   ],
   "lock": {
     "pid": 11608,
-    "ts": 1790759713438,
+    "ts": 1790760433658,
     "ageSec": 31
   },
   "events": [
+    {
+      "ts": "2026-09-30T09:23:19.404Z",
+      "kind": "error",
+      "text": "autoclaim: volley of 6 on Project Dynamo in 1267ms — 0 won, 0 lost to other fellows, 6 server error(s)"
+    },
+    {
+      "ts": "2026-09-30T09:23:19.405Z",
+      "kind": "info",
+      "text": "autoclaim: the portal said: \"PROJECT_PAUSED\" x6"
+    },
+    {
+      "ts": "2026-09-30T09:23:19.403Z",
+      "kind": "error",
+      "text": "autoclaim: pick positions in a board of 50 — 15:error 47:error 10:error 9:error 16:error 23:error"
+    },
+    {
+      "ts": "2026-09-30T09:20:08.086Z",
+      "kind": "info",
+      "text": "strike 1/2: empty"
+    },
+    {
+      "ts": "2026-09-30T09:20:08.078Z",
+      "kind": "info",
+      "text": "blind: nothing to take on Project Dynamo in 515ms (HTTP 403)"
+    },
+    {
+      "ts": "2026-09-30T09:20:05.107Z",
+      "kind": "info",
+      "text": "strike: armed — polling every 400ms around the predicted drop at 09:20:07.472Z"
+    },
+    {
+      "ts": "2026-09-30T09:17:32.937Z",
+      "kind": "error",
+      "text": "tunnel: reachable again after 1 failed probe(s)"
+    },
+    {
+      "ts": "2026-09-30T09:16:55.238Z",
+      "kind": "error",
+      "text": "pages: status snapshot failed (TypeError: fetch failed) — backing off 10min"
+    },
+    {
+      "ts": "2026-09-30T09:16:52.653Z",
+      "kind": "error",
+      "text": "supabase: hai_drops write failed (0) timed out — telemetry only, claiming is unaffected"
+    },
+    {
+      "ts": "2026-09-30T09:16:42.259Z",
+      "kind": "error",
+      "text": "tunnel: probe 1/3 failed (fetch failed)"
+    },
+    {
+      "ts": "2026-09-30T09:15:52.648Z",
+      "kind": "error",
+      "text": "supabase: hai_drops write failed (0) timed out — telemetry only, claiming is unaffected"
+    },
     {
       "ts": "2026-09-30T09:13:17.359Z",
       "kind": "error",
@@ -1209,61 +1264,6 @@
       "ts": "2026-09-30T08:30:04.196Z",
       "kind": "info",
       "text": "strike: armed — polling every 400ms around the predicted drop at 08:30:07.472Z"
-    },
-    {
-      "ts": "2026-09-30T08:28:19.727Z",
-      "kind": "info",
-      "text": "autoclaim: the portal said: \"PROJECT_PAUSED\" x6"
-    },
-    {
-      "ts": "2026-09-30T08:28:19.726Z",
-      "kind": "error",
-      "text": "autoclaim: volley of 6 on Project Dynamo in 627ms — 0 won, 0 lost to other fellows, 6 server error(s)"
-    },
-    {
-      "ts": "2026-09-30T08:28:19.725Z",
-      "kind": "error",
-      "text": "autoclaim: pick positions in a board of 50 — 46:error 16:error 31:error 10:error 49:error 2:error"
-    },
-    {
-      "ts": "2026-09-30T08:24:57.999Z",
-      "kind": "error",
-      "text": "supabase: hai_tasks_seen write failed (0) timed out — telemetry only, claiming is unaffected"
-    },
-    {
-      "ts": "2026-09-30T08:20:19.456Z",
-      "kind": "error",
-      "text": "project Project Dynamo: held-task list unreadable this cycle — deferring to auto-claim verdict"
-    },
-    {
-      "ts": "2026-09-30T08:20:08.287Z",
-      "kind": "info",
-      "text": "strike 1/2: empty"
-    },
-    {
-      "ts": "2026-09-30T08:20:08.280Z",
-      "kind": "info",
-      "text": "blind: nothing to take on Project Dynamo in 627ms (HTTP 403)"
-    },
-    {
-      "ts": "2026-09-30T08:20:03.244Z",
-      "kind": "info",
-      "text": "strike: armed — polling every 400ms around the predicted drop at 08:20:07.472Z"
-    },
-    {
-      "ts": "2026-09-30T08:17:50.836Z",
-      "kind": "error",
-      "text": "autoclaim: volley of 6 on Project Dynamo in 470ms — 0 won, 0 lost to other fellows, 6 server error(s)"
-    },
-    {
-      "ts": "2026-09-30T08:17:50.836Z",
-      "kind": "info",
-      "text": "autoclaim: the portal said: \"PROJECT_PAUSED\" x6"
-    },
-    {
-      "ts": "2026-09-30T08:17:50.835Z",
-      "kind": "error",
-      "text": "autoclaim: pick positions in a board of 50 — 45:error 36:error 25:error 7:error 5:error 4:error"
     }
   ],
   "lastPollSummary": {
@@ -1271,9 +1271,9 @@
     "projects": {
       "Project Dynamo": {
         "tasks": 50,
-        "listMs": 1295,
-        "listBreak": "535/335/5ms 906kb",
-        "heldMs": 2455,
+        "listMs": 1739,
+        "listBreak": "604/664/4ms 906kb",
+        "heldMs": 1219,
         "newTasks": 50,
         "hasClaimable": true,
         "new": 0,
@@ -1285,22 +1285,22 @@
       "known": true,
       "paused": true,
       "since": 1790403254697,
-      "pausedForSec": 356463,
-      "refusals": 232,
-      "nextProbeInSec": 479
+      "pausedForSec": 357182,
+      "refusals": 233,
+      "nextProbeInSec": 361
     },
     "minGapMs": 60000
   },
   "health": {
-    "polls": 112,
+    "polls": 116,
     "pollsFailed": 0,
-    "errors": 68,
+    "errors": 66,
     "rateLimited": 0,
     "claims": 0,
     "restarts": 0,
     "notifies": 0,
-    "medianPollGapSec": 6.7,
-    "pollsOk": 112,
+    "medianPollGapSec": 7,
+    "pollsOk": 116,
     "pollFailPct": 0,
     "blind": false,
     "windowLabel": "last hour",
@@ -1311,21 +1311,21 @@
     }
   },
   "latency": {
-    "listP50": 1819,
-    "listP95": 2708,
+    "listP50": 1795,
+    "listP95": 2804,
     "listMax": 3802,
-    "claimP50": 611,
+    "claimP50": 624,
     "claimMax": 1384,
-    "samples": 112,
+    "samples": 136,
     "waitP50": null,
     "waitMax": null,
     "waitSamples": 0
   },
   "runtime": {
-    "at": 1790759713439,
+    "at": 1790760433658,
     "tier": "idle",
     "gapMs": 2000,
-    "msToDrop": 294033.2204589844,
+    "msToDrop": 173814.22045898438,
     "alert": null,
     "hot": false,
     "strikes": {
@@ -1339,9 +1339,9 @@
       "off": false
     },
     "lastStrikeVerdict": "empty",
-    "lastStrikeAt": 1790759408903,
+    "lastStrikeAt": 1790760008086,
     "ageSec": 31,
-    "lastStrikeAgoSec": 336,
+    "lastStrikeAgoSec": 457,
     "blindCooldownSec": 0,
     "blindOkAt": 1790261472879
   },
@@ -1353,14 +1353,14 @@
     "cooldownSecLeft": 0
   },
   "race": {
-    "volleys": 218,
-    "posts": 1308,
+    "volleys": 219,
+    "posts": 1314,
     "won": 0,
     "lost": 0,
     "throttledVolleys": 0,
     "winRate": null,
     "lastWinAt": null,
-    "since": 1790481779806,
+    "since": 1790481880484,
     "lastRefusedAt": null,
     "refusals": 0
   },
@@ -1373,11 +1373,11 @@
     "top": [
       {
         "id": "0d8be869-fcc3-4b80-b677-791d9379fc56",
-        "visits": 1574,
+        "visits": 1579,
         "title": "",
         "first": 1790317936054,
-        "last": 1790759717561,
-        "ageSec": 27
+        "last": 1790760436968,
+        "ageSec": 28
       },
       {
         "id": "20556321-83f5-4ed4-b985-2e91075fd94d",
@@ -1385,7 +1385,7 @@
         "title": "",
         "first": 1790174915802,
         "last": 1790708118766,
-        "ageSec": 51626
+        "ageSec": 52346
       },
       {
         "id": "a738d554-1a5b-466b-b2f0-8e55040587e1",
@@ -1393,7 +1393,7 @@
         "title": "",
         "first": 1790174947039,
         "last": 1790708118766,
-        "ageSec": 51626
+        "ageSec": 52346
       },
       {
         "id": "a86a408e-b1d3-4809-8d3a-0da79442995e",
@@ -1401,7 +1401,7 @@
         "title": "",
         "first": 1790174947039,
         "last": 1790708118766,
-        "ageSec": 51626
+        "ageSec": 52346
       },
       {
         "id": "b2015940-5792-47e6-9abd-029c74644bed",
@@ -1409,7 +1409,7 @@
         "title": "",
         "first": 1790174947039,
         "last": 1790708118766,
-        "ageSec": 51626
+        "ageSec": 52346
       },
       {
         "id": "c7833216-e935-4c5a-a06a-3c5d756b15a4",
@@ -1417,7 +1417,7 @@
         "title": "",
         "first": 1790316316343,
         "last": 1790708118766,
-        "ageSec": 51626
+        "ageSec": 52346
       },
       {
         "id": "a72a821f-253d-455e-8010-6bf7a26ec4a5",
@@ -1425,7 +1425,7 @@
         "title": "",
         "first": 1790034283509,
         "last": 1790708118766,
-        "ageSec": 51626
+        "ageSec": 52346
       },
       {
         "id": "e061b205-f8c1-4e90-89c6-14a6e4e3e955",
@@ -1433,7 +1433,7 @@
         "title": "",
         "first": 1790101805726,
         "last": 1790708118766,
-        "ageSec": 51626
+        "ageSec": 52346
       },
       {
         "id": "6c515567-eecf-4b50-a55c-9885e00fdf9c",
@@ -1441,15 +1441,15 @@
         "title": "",
         "first": 1790202004281,
         "last": 1790708118766,
-        "ageSec": 51626
+        "ageSec": 52346
       },
       {
         "id": "0c8ff07a-78cf-4ee8-a954-e40b9ebeaae3",
-        "visits": 305,
+        "visits": 310,
         "title": "",
         "first": 1790174908004,
-        "last": 1790759717561,
-        "ageSec": 27
+        "last": 1790760436968,
+        "ageSec": 28
       },
       {
         "id": "ba8888ab-d8e3-405e-82d4-6d312faba670",
@@ -1457,15 +1457,15 @@
         "title": "",
         "first": 1790174947039,
         "last": 1790708118766,
-        "ageSec": 51626
+        "ageSec": 52346
       },
       {
         "id": "03aca6cc-a415-482b-840c-42cfb4e66813",
-        "visits": 71,
+        "visits": 76,
         "title": "",
         "first": 1790034270579,
-        "last": 1790759717561,
-        "ageSec": 27
+        "last": 1790760436968,
+        "ageSec": 28
       }
     ]
   },
@@ -1654,8 +1654,8 @@
   "forecast": {
     "expected": 51,
     "lo": 0,
-    "hi": 204,
-    "hoursLeft": 9.3,
+    "hi": 203,
+    "hoursLeft": 9.1,
     "daysObserved": 6,
     "minSamplesPerHour": 7,
     "confidence": "weak",
@@ -1667,25 +1667,25 @@
     "lastDropAt": null,
     "sinceLastDropSec": null
   },
-  "uptimeSec": 74870,
-  "startedAt": 1790684874630,
-  "lastPollAt": 1790759717567,
-  "lastPollAgoSec": 27,
+  "uptimeSec": 75590,
+  "startedAt": 1790684874766,
+  "lastPollAt": 1790760436975,
+  "lastPollAgoSec": 28,
   "alive": true,
-  "logSizeBytes": 4975445,
+  "logSizeBytes": 4985767,
   "net": {
     "enabled": true,
     "grade": "good",
-    "p50": 126,
-    "p95": 174,
-    "jitter": 48,
+    "p50": 148,
+    "p95": 348,
+    "jitter": 200,
     "lossPct": 0,
     "stallPct": 0,
     "stallMs": 1000,
     "samples": 60,
     "windowSec": 600,
-    "lastAt": "2026-09-30T09:15:40.097Z",
-    "ageSec": 5
+    "lastAt": "2026-09-30T09:27:40.980Z",
+    "ageSec": 4
   },
   "projectStatus": [
     {
@@ -1694,10 +1694,10 @@
       "known": true,
       "paused": true,
       "since": 1790403254697,
-      "pausedForSec": 356490,
-      "refusals": 232,
-      "nextProbeInSec": 452
+      "pausedForSec": 357210,
+      "refusals": 233,
+      "nextProbeInSec": 333
     }
   ],
-  "publishedAt": "2026-09-30T09:15:44.686Z"
+  "publishedAt": "2026-09-30T09:27:44.821Z"
 }
