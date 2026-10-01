@@ -1,5 +1,5 @@
 {
-  "now": 1790856689182,
+  "now": 1790861190114,
   "ok": true,
   "config": {
     "pollIntervalSeconds": 2,
@@ -278,14 +278,14 @@
   },
   "schedule": {
     "locked": true,
-    "summary": "every 10m, phase ±3s, 60 samples, next in 518.3s",
+    "summary": "every 10m, phase ±3s, 60 samples, next in 217.4s",
     "periodMin": 10,
     "phaseSec": 7.5,
     "spreadSec": 2.9,
     "samples": 60,
     "inliers": 44,
-    "nextDropAt": 1790857207472.2205,
-    "nextDropInSec": 518,
+    "nextDropAt": 1790861407472.2205,
+    "nextDropInSec": 217,
     "observed": [
       1790193146078.5,
       1790194804458.5,
@@ -330,7 +330,7 @@
     "localDailyCap": null,
     "localConcurrentCap": null
   },
-  "lastClaimAttemptAt": 1790856607794,
+  "lastClaimAttemptAt": 1790861182801,
   "lastHeartbeatAt": 1790830771570,
   "sessionExpiredAlert": false,
   "stateLoadFailed": false,
@@ -348,21 +348,21 @@
       "hasClaimable": true,
       "tasksListed": 50,
       "newTaskCount": 50,
-      "lastCheckedAt": 1790856677997,
-      "lastCheckedAgoSec": 11,
+      "lastCheckedAt": 1790861183885,
+      "lastCheckedAgoSec": 6,
       "lastNotifyAt": 1790742894318,
       "lastHeldNagAt": 1789606246822,
       "lastClaimVerdict": {
         "verdict": "project-paused",
-        "at": 1790856677997
+        "at": 1790861183885
       },
       "availability": {
-        "lastAvailableAt": 1790856677997,
-        "lastAvailableAgoSec": 11,
+        "lastAvailableAt": 1790861183885,
+        "lastAvailableAgoSec": 6,
         "open": {
           "start": 1790309147283,
           "peak": 50,
-          "openMs": 547541899
+          "openMs": 552042831
         },
         "windows": [
           {
@@ -651,8 +651,8 @@
       },
       "held": {
         "count": 0,
-        "at": 1790856677997,
-        "ageSec": 11,
+        "at": 1790861183885,
+        "ageSec": 6,
         "tasks": [],
         "reworkCount": 0,
         "freeSlots": null
@@ -661,609 +661,609 @@
   ],
   "lock": {
     "pid": 11412,
-    "ts": 1790856673948,
-    "ageSec": 15
+    "ts": 1790861176667,
+    "ageSec": 13
   },
   "events": [
     {
-      "ts": "2026-10-01T12:10:08.504Z",
-      "kind": "info",
-      "text": "strike 1/2: empty"
-    },
-    {
-      "ts": "2026-10-01T12:10:08.497Z",
-      "kind": "info",
-      "text": "blind: nothing to take on Project Dynamo in 659ms (HTTP 403)"
-    },
-    {
-      "ts": "2026-10-01T12:10:03.225Z",
-      "kind": "info",
-      "text": "strike: armed — polling every 400ms around the predicted drop at 12:10:07.472Z"
-    },
-    {
-      "ts": "2026-10-01T12:03:18.864Z",
-      "kind": "error",
-      "text": "autoclaim: pick positions in a board of 50 — 36:error 4:error 47:error 27:error 46:error 25:error"
-    },
-    {
-      "ts": "2026-10-01T12:03:18.892Z",
+      "ts": "2026-10-01T13:26:23.872Z",
       "kind": "info",
       "text": "autoclaim: the portal said: \"PROJECT_PAUSED\" x6"
     },
     {
-      "ts": "2026-10-01T12:03:18.891Z",
+      "ts": "2026-10-01T13:26:23.871Z",
       "kind": "error",
-      "text": "autoclaim: volley of 6 on Project Dynamo in 604ms — 0 won, 0 lost to other fellows, 6 server error(s)"
+      "text": "autoclaim: volley of 6 on Project Dynamo in 1070ms — 0 won, 0 lost to other fellows, 6 server error(s)"
     },
     {
-      "ts": "2026-10-01T12:02:35.042Z",
+      "ts": "2026-10-01T13:26:23.870Z",
       "kind": "error",
-      "text": "supabase: hai_tasks_seen write failed (0) timed out — telemetry only, claiming is unaffected"
+      "text": "autoclaim: pick positions in a board of 50 — 13:error 42:error 26:error 23:error 38:error 19:error"
     },
     {
-      "ts": "2026-10-01T12:01:18.670Z",
-      "kind": "error",
-      "text": "project Project Dynamo: held-task list unreadable this cycle — deferring to auto-claim verdict"
-    },
-    {
-      "ts": "2026-10-01T12:00:08.954Z",
-      "kind": "info",
-      "text": "strike 1/2: empty"
-    },
-    {
-      "ts": "2026-10-01T12:00:08.946Z",
-      "kind": "info",
-      "text": "blind: nothing to take on Project Dynamo in 474ms (HTTP 403)"
-    },
-    {
-      "ts": "2026-10-01T12:00:03.861Z",
-      "kind": "info",
-      "text": "strike: armed — polling every 400ms around the predicted drop at 12:00:07.472Z"
-    },
-    {
-      "ts": "2026-10-01T11:59:53.983Z",
-      "kind": "error",
-      "text": "project Project Dynamo: held-task list unreadable this cycle — deferring to auto-claim verdict"
-    },
-    {
-      "ts": "2026-10-01T11:59:47.887Z",
-      "kind": "error",
-      "text": "project Project Dynamo: held-task list unreadable this cycle — deferring to auto-claim verdict"
-    },
-    {
-      "ts": "2026-10-01T11:59:38.668Z",
-      "kind": "error",
-      "text": "project Project Dynamo: API status 0 AbortError: signal is aborted without reason"
-    },
-    {
-      "ts": "2026-10-01T11:59:37.061Z",
-      "kind": "error",
-      "text": "supabase: hai_tasks_seen write failed (0) timed out — telemetry only, claiming is unaffected"
-    },
-    {
-      "ts": "2026-10-01T11:59:35.235Z",
-      "kind": "error",
-      "text": "project Project Dynamo: held-task list unreadable this cycle — deferring to auto-claim verdict"
-    },
-    {
-      "ts": "2026-10-01T11:59:28.284Z",
-      "kind": "error",
-      "text": "project Project Dynamo: held-task list unreadable this cycle — deferring to auto-claim verdict"
-    },
-    {
-      "ts": "2026-10-01T11:59:21.570Z",
-      "kind": "error",
-      "text": "project Project Dynamo: API status 0 AbortError: The user aborted a request."
-    },
-    {
-      "ts": "2026-10-01T11:58:36.442Z",
-      "kind": "error",
-      "text": "supabase: hai_tasks_seen write failed (0) timed out — telemetry only, claiming is unaffected"
-    },
-    {
-      "ts": "2026-10-01T11:53:22.680Z",
-      "kind": "error",
-      "text": "project Project Dynamo: held-task list unreadable this cycle — deferring to auto-claim verdict"
-    },
-    {
-      "ts": "2026-10-01T11:52:21.842Z",
-      "kind": "error",
-      "text": "autoclaim: volley of 6 on Project Dynamo in 720ms — 0 won, 0 lost to other fellows, 6 server error(s)"
-    },
-    {
-      "ts": "2026-10-01T11:52:21.841Z",
-      "kind": "error",
-      "text": "autoclaim: pick positions in a board of 50 — 2:error 27:error 6:error 14:error 30:error 10:error"
-    },
-    {
-      "ts": "2026-10-01T11:52:21.843Z",
-      "kind": "info",
-      "text": "autoclaim: the portal said: \"PROJECT_PAUSED\" x6"
-    },
-    {
-      "ts": "2026-10-01T11:50:38.458Z",
-      "kind": "error",
-      "text": "pages: status snapshot failed (TypeError: fetch failed) — backing off 10min"
-    },
-    {
-      "ts": "2026-10-01T11:50:22.360Z",
-      "kind": "error",
-      "text": "project Project Dynamo: held-task list unreadable this cycle — deferring to auto-claim verdict"
-    },
-    {
-      "ts": "2026-10-01T11:50:16.126Z",
-      "kind": "error",
-      "text": "project Project Dynamo: API status 0 AbortError: signal is aborted without reason"
-    },
-    {
-      "ts": "2026-10-01T11:50:13.000Z",
-      "kind": "info",
-      "text": "strike 1/2: empty"
-    },
-    {
-      "ts": "2026-10-01T11:50:12.992Z",
-      "kind": "info",
-      "text": "blind: nothing to take on Project Dynamo in 3674ms (HTTP 403)"
-    },
-    {
-      "ts": "2026-10-01T11:50:03.405Z",
-      "kind": "info",
-      "text": "strike: armed — polling every 400ms around the predicted drop at 11:50:07.472Z"
-    },
-    {
-      "ts": "2026-10-01T11:49:43.458Z",
-      "kind": "error",
-      "text": "project Project Dynamo: held-task list unreadable this cycle — deferring to auto-claim verdict"
-    },
-    {
-      "ts": "2026-10-01T11:49:38.202Z",
-      "kind": "error",
-      "text": "supabase: hai_tasks_seen write failed (0) timed out — telemetry only, claiming is unaffected"
-    },
-    {
-      "ts": "2026-10-01T11:49:34.455Z",
-      "kind": "error",
-      "text": "project Project Dynamo: API status 0 AbortError: The user aborted a request."
-    },
-    {
-      "ts": "2026-10-01T11:49:24.005Z",
-      "kind": "error",
-      "text": "project Project Dynamo: API status 0 AbortError: signal is aborted without reason"
-    },
-    {
-      "ts": "2026-10-01T11:49:17.602Z",
-      "kind": "error",
-      "text": "project Project Dynamo: API status 0 AbortError: signal is aborted without reason"
-    },
-    {
-      "ts": "2026-10-01T11:46:57.606Z",
-      "kind": "error",
-      "text": "tunnel: reachable again after 1 failed probe(s)"
-    },
-    {
-      "ts": "2026-10-01T11:46:06.067Z",
-      "kind": "error",
-      "text": "tunnel: probe 1/3 failed (fetch failed)"
-    },
-    {
-      "ts": "2026-10-01T11:45:19.823Z",
-      "kind": "error",
-      "text": "project Project Dynamo: held-task list unreadable this cycle — deferring to auto-claim verdict"
-    },
-    {
-      "ts": "2026-10-01T11:42:20.100Z",
-      "kind": "info",
-      "text": "autoclaim: the portal said: \"PROJECT_PAUSED\" x6"
-    },
-    {
-      "ts": "2026-10-01T11:42:20.089Z",
-      "kind": "error",
-      "text": "autoclaim: pick positions in a board of 50 — 43:error 45:error 1:error 47:error 37:error 6:error"
-    },
-    {
-      "ts": "2026-10-01T11:42:20.100Z",
-      "kind": "error",
-      "text": "autoclaim: volley of 6 on Project Dynamo in 644ms — 0 won, 0 lost to other fellows, 6 server error(s)"
-    },
-    {
-      "ts": "2026-10-01T11:40:14.299Z",
-      "kind": "info",
-      "text": "strike: armed — polling every 400ms around the predicted drop at 11:40:07.472Z"
-    },
-    {
-      "ts": "2026-10-01T11:40:14.191Z",
-      "kind": "error",
-      "text": "project Project Dynamo: held-task list unreadable this cycle — deferring to auto-claim verdict"
-    },
-    {
-      "ts": "2026-10-01T11:39:42.344Z",
-      "kind": "error",
-      "text": "project Project Dynamo: API status 0 AbortError: The user aborted a request."
-    },
-    {
-      "ts": "2026-10-01T11:39:32.521Z",
-      "kind": "error",
-      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
-    },
-    {
-      "ts": "2026-10-01T11:39:29.765Z",
-      "kind": "error",
-      "text": "supabase: hai_tasks_seen write failed (0) fetch failed — telemetry only, claiming is unaffected"
-    },
-    {
-      "ts": "2026-10-01T11:39:28.754Z",
-      "kind": "error",
-      "text": "project Project Dynamo: API status 0 AbortError: signal is aborted without reason"
-    },
-    {
-      "ts": "2026-10-01T11:31:35.897Z",
-      "kind": "info",
-      "text": "autoclaim: the portal said: \"PROJECT_PAUSED\" x6"
-    },
-    {
-      "ts": "2026-10-01T11:31:35.854Z",
-      "kind": "error",
-      "text": "autoclaim: pick positions in a board of 50 — 12:error 23:error 46:error 20:error 25:error 21:error"
-    },
-    {
-      "ts": "2026-10-01T11:31:35.895Z",
-      "kind": "error",
-      "text": "autoclaim: volley of 6 on Project Dynamo in 1605ms — 0 won, 0 lost to other fellows, 6 server error(s)"
-    },
-    {
-      "ts": "2026-10-01T11:31:24.886Z",
-      "kind": "error",
-      "text": "census: could not write EPERM: operation not permitted, rename 'C:\\Users\\resod\\hai-task-bot\\data\\task-census.json.tmp' -> 'C:\\Users\\resod\\hai-task-bot\\data\\task-census.json'"
-    },
-    {
-      "ts": "2026-10-01T11:31:18.288Z",
-      "kind": "error",
-      "text": "project Project Dynamo: API status 0 AbortError: The user aborted a request."
-    },
-    {
-      "ts": "2026-10-01T11:30:10.372Z",
-      "kind": "info",
-      "text": "strike 1/2: empty"
-    },
-    {
-      "ts": "2026-10-01T11:30:10.340Z",
-      "kind": "info",
-      "text": "blind: nothing to take on Project Dynamo in 520ms (HTTP 403)"
-    },
-    {
-      "ts": "2026-10-01T11:30:04.425Z",
-      "kind": "info",
-      "text": "strike: armed — polling every 400ms around the predicted drop at 11:30:07.472Z"
-    },
-    {
-      "ts": "2026-10-01T11:20:26.440Z",
-      "kind": "info",
-      "text": "autoclaim: the portal said: \"PROJECT_PAUSED\" x6"
-    },
-    {
-      "ts": "2026-10-01T11:20:26.440Z",
-      "kind": "error",
-      "text": "autoclaim: volley of 6 on Project Dynamo in 937ms — 0 won, 0 lost to other fellows, 6 server error(s)"
-    },
-    {
-      "ts": "2026-10-01T11:20:26.438Z",
-      "kind": "error",
-      "text": "autoclaim: pick positions in a board of 50 — 0:error 32:error 1:error 45:error 25:error 41:error"
-    },
-    {
-      "ts": "2026-10-01T11:20:21.262Z",
+      "ts": "2026-10-01T13:26:16.675Z",
       "kind": "info",
       "text": "blind: no fresh held snapshot for Project Dynamo — not firing an untargeted claim"
     },
     {
-      "ts": "2026-10-01T11:20:20.993Z",
-      "kind": "error",
-      "text": "recovered after 163 failed cycle(s)"
-    },
-    {
-      "ts": "2026-10-01T11:20:20.974Z",
+      "ts": "2026-10-01T13:26:16.384Z",
       "kind": "error",
       "text": "project Project Dynamo: held-task list unreadable this cycle — deferring to auto-claim verdict"
     },
     {
-      "ts": "2026-10-01T11:20:20.974Z",
+      "ts": "2026-10-01T13:26:16.383Z",
       "kind": "error",
       "text": "autoclaim: a claimed-count read failed, not claiming [0]"
     },
     {
-      "ts": "2026-10-01T11:19:56.899Z",
+      "ts": "2026-10-01T13:26:06.617Z",
       "kind": "info",
-      "text": "pages: published endpoint.json -> rajdeepraoextras-dev/hai-bot-dashboard@main (https://camcorders-attract-parameter-cookie.trycloudflare.com)"
+      "text": "pages: published endpoint.json -> rajdeepraoextras-dev/hai-bot-dashboard@main (https://outlets-wells-stunning-enhanced.trycloudflare.com)"
     },
     {
-      "ts": "2026-10-01T11:19:54.851Z",
+      "ts": "2026-10-01T13:26:03.309Z",
       "kind": "info",
-      "text": "tunnel: up at https://camcorders-attract-parameter-cookie.trycloudflare.com"
+      "text": "tunnel: up at https://outlets-wells-stunning-enhanced.trycloudflare.com"
     },
     {
-      "ts": "2026-10-01T11:19:32.253Z",
+      "ts": "2026-10-01T13:26:01.588Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 AbortError: signal is aborted without reason"
+    },
+    {
+      "ts": "2026-10-01T13:25:56.273Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:25:51.362Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:25:49.619Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:25:47.354Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:25:46.068Z",
       "kind": "info",
       "text": "tunnel: cloudflared exited (1), restarting in 10s"
     },
     {
-      "ts": "2026-10-01T11:19:24.136Z",
+      "ts": "2026-10-01T13:25:45.323Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:25:43.404Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:25:41.299Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:25:39.291Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:25:37.306Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:25:35.815Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+    },
+    {
+      "ts": "2026-10-01T13:25:35.274Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:25:34.842Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:25:30.711Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:25:28.702Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:25:26.698Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:25:26.029Z",
+      "kind": "error",
+      "text": "supabase: hai_tasks_seen write failed (0) fetch failed — telemetry only, claiming is unaffected"
+    },
+    {
+      "ts": "2026-10-01T13:25:25.457Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+    },
+    {
+      "ts": "2026-10-01T13:25:24.692Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:25:22.679Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:25:20.665Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:25:18.651Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:25:16.642Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:25:15.310Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+    },
+    {
+      "ts": "2026-10-01T13:25:14.637Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:25:12.622Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:25:10.619Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:25:08.606Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:25:06.602Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:25:05.163Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+    },
+    {
+      "ts": "2026-10-01T13:25:04.601Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:25:02.596Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:25:00.595Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:24:59.741Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:24:56.576Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:24:55.014Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+    },
+    {
+      "ts": "2026-10-01T13:24:54.566Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:24:52.563Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:24:50.559Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:24:48.548Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:24:46.548Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:24:44.876Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+    },
+    {
+      "ts": "2026-10-01T13:24:44.545Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:24:42.580Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:24:40.538Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:24:38.848Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:24:36.514Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:24:34.731Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+    },
+    {
+      "ts": "2026-10-01T13:24:34.499Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:24:32.497Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:24:30.479Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:24:28.476Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:24:27.556Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:24:26.028Z",
       "kind": "error",
       "text": "supabase: hai_drops write failed (0) fetch failed — telemetry only, claiming is unaffected"
     },
     {
-      "ts": "2026-10-01T11:19:21.993Z",
+      "ts": "2026-10-01T13:24:24.589Z",
       "kind": "info",
       "text": "tunnel: cloudflared exited (1), restarting in 10s"
     },
     {
-      "ts": "2026-10-01T11:19:15.102Z",
+      "ts": "2026-10-01T13:24:24.441Z",
       "kind": "error",
-      "text": "poll error (#163) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
     },
     {
-      "ts": "2026-10-01T11:19:11.841Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-10-01T11:19:01.692Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-10-01T11:18:51.548Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-10-01T11:18:41.408Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-10-01T11:18:31.261Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-10-01T11:18:24.130Z",
+      "ts": "2026-10-01T13:24:22.441Z",
       "kind": "error",
-      "text": "supabase: hai_drops write failed (0) fetch failed — telemetry only, claiming is unaffected"
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
     },
     {
-      "ts": "2026-10-01T11:18:21.115Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-10-01T11:18:14.815Z",
+      "ts": "2026-10-01T13:24:20.419Z",
       "kind": "error",
-      "text": "poll error (#162) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
     },
     {
-      "ts": "2026-10-01T11:18:10.970Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-10-01T11:18:00.819Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-10-01T11:17:50.676Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-10-01T11:17:40.538Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-10-01T11:17:30.397Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-10-01T11:17:20.260Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-10-01T11:17:14.803Z",
+      "ts": "2026-10-01T13:24:18.418Z",
       "kind": "error",
-      "text": "poll error (#161) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
     },
     {
-      "ts": "2026-10-01T11:17:10.128Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-10-01T11:16:59.988Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-10-01T11:16:49.843Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-10-01T11:16:39.650Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-10-01T11:16:29.513Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-10-01T11:16:25.784Z",
+      "ts": "2026-10-01T13:24:16.408Z",
       "kind": "error",
-      "text": "supabase: hai_drops write failed (0) fetch failed — telemetry only, claiming is unaffected"
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
     },
     {
-      "ts": "2026-10-01T11:16:19.375Z",
+      "ts": "2026-10-01T13:24:14.449Z",
       "kind": "info",
       "text": "tunnel: cloudflared exited (1), restarting in 10s"
     },
     {
-      "ts": "2026-10-01T11:16:14.796Z",
+      "ts": "2026-10-01T13:24:14.402Z",
       "kind": "error",
-      "text": "poll error (#160) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
     },
     {
-      "ts": "2026-10-01T11:16:09.232Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-10-01T11:15:59.092Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-10-01T11:15:48.949Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-10-01T11:15:38.813Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-10-01T11:15:28.668Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-10-01T11:15:24.109Z",
+      "ts": "2026-10-01T13:24:12.392Z",
       "kind": "error",
-      "text": "supabase: hai_drops write failed (0) fetch failed — telemetry only, claiming is unaffected"
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
     },
     {
-      "ts": "2026-10-01T11:15:18.519Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-10-01T11:15:14.793Z",
+      "ts": "2026-10-01T13:24:10.394Z",
       "kind": "error",
-      "text": "poll error (#159) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
     },
     {
-      "ts": "2026-10-01T11:15:08.385Z",
+      "ts": "2026-10-01T13:24:08.393Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:24:06.376Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:24:04.374Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:24:04.310Z",
       "kind": "info",
       "text": "tunnel: cloudflared exited (1), restarting in 10s"
     },
     {
-      "ts": "2026-10-01T11:14:58.252Z",
+      "ts": "2026-10-01T13:24:02.363Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:24:00.348Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:23:58.352Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:23:57.308Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:23:54.334Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:23:54.157Z",
       "kind": "info",
       "text": "tunnel: cloudflared exited (1), restarting in 10s"
     },
     {
-      "ts": "2026-10-01T11:14:48.107Z",
+      "ts": "2026-10-01T13:23:52.332Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:23:50.325Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:23:48.306Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:23:46.305Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:23:44.293Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:23:44.008Z",
       "kind": "info",
       "text": "tunnel: cloudflared exited (1), restarting in 10s"
     },
     {
-      "ts": "2026-10-01T11:14:37.968Z",
+      "ts": "2026-10-01T13:23:42.292Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:23:40.282Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:23:38.282Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:23:36.268Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:23:34.256Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:23:33.862Z",
       "kind": "info",
       "text": "tunnel: cloudflared exited (1), restarting in 10s"
     },
     {
-      "ts": "2026-10-01T11:14:27.831Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+      "ts": "2026-10-01T13:23:32.247Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
     },
     {
-      "ts": "2026-10-01T11:14:24.097Z",
+      "ts": "2026-10-01T13:23:30.236Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:23:28.222Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:23:26.214Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:23:26.017Z",
       "kind": "error",
       "text": "supabase: hai_drops write failed (0) fetch failed — telemetry only, claiming is unaffected"
     },
     {
-      "ts": "2026-10-01T11:14:17.698Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-10-01T11:14:14.791Z",
+      "ts": "2026-10-01T13:23:24.199Z",
       "kind": "error",
-      "text": "poll error (#158) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
     },
     {
-      "ts": "2026-10-01T11:14:07.549Z",
+      "ts": "2026-10-01T13:23:23.724Z",
       "kind": "info",
       "text": "tunnel: cloudflared exited (1), restarting in 10s"
     },
     {
-      "ts": "2026-10-01T11:13:57.415Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-10-01T11:13:47.273Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-10-01T11:13:37.139Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-10-01T11:13:26.997Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-10-01T11:13:24.082Z",
+      "ts": "2026-10-01T13:23:22.188Z",
       "kind": "error",
-      "text": "supabase: hai_drops write failed (0) fetch failed — telemetry only, claiming is unaffected"
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
     },
     {
-      "ts": "2026-10-01T11:13:16.862Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-10-01T11:13:14.773Z",
+      "ts": "2026-10-01T13:23:20.186Z",
       "kind": "error",
-      "text": "poll error (#157) page.goto: net::ERR_NAME_NOT_RESOLVED at https://ai.joinhandshake.com/fellow/projects"
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
     },
     {
-      "ts": "2026-10-01T11:13:06.724Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-10-01T11:12:56.591Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-10-01T11:12:46.440Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-10-01T11:12:36.312Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-10-01T11:12:26.166Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-10-01T11:12:24.080Z",
+      "ts": "2026-10-01T13:23:19.757Z",
       "kind": "error",
-      "text": "supabase: hai_held_snapshots write failed (0) fetch failed — telemetry only, claiming is unaffected"
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:23:16.014Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:23:14.001Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:23:13.582Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+    },
+    {
+      "ts": "2026-10-01T13:23:11.985Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:23:09.985Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:23:07.980Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:23:05.970Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:23:03.965Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:23:03.433Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
+    },
+    {
+      "ts": "2026-10-01T13:23:01.956Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:22:59.938Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:22:57.926Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:22:55.912Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:22:53.912Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 TypeError: Failed to fetch"
+    },
+    {
+      "ts": "2026-10-01T13:22:53.285Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (1), restarting in 10s"
     }
   ],
   "lastPollSummary": {
@@ -1271,9 +1271,10 @@
     "projects": {
       "Project Dynamo": {
         "tasks": 50,
-        "listMs": 1871,
-        "listBreak": "605/669/6ms 906kb",
-        "heldMs": 1780,
+        "listMs": 4102,
+        "listBreak": "1082/1195/5ms 906kb",
+        "heldMs": 2012,
+        "claimMs": 1057,
         "newTasks": 50,
         "hasClaimable": true,
         "new": 0,
@@ -1285,63 +1286,63 @@
       "known": true,
       "paused": true,
       "since": 1790403254697,
-      "pausedForSec": 453423,
-      "refusals": 268,
-      "nextProbeInSec": 120
+      "pausedForSec": 457929,
+      "refusals": 269,
+      "nextProbeInSec": 599
     },
     "minGapMs": 60000
   },
   "health": {
-    "polls": 102,
-    "pollsFailed": 10,
-    "errors": 57,
+    "polls": 668,
+    "pollsFailed": 666,
+    "errors": 691,
     "rateLimited": 0,
     "claims": 0,
     "restarts": 0,
     "notifies": 0,
-    "medianPollGapSec": 9.2,
-    "pollsOk": 92,
-    "pollFailPct": 9.8,
-    "blind": false,
+    "medianPollGapSec": 2,
+    "pollsOk": 2,
+    "pollFailPct": 99.7,
+    "blind": true,
     "windowLabel": "last hour",
     "budget": {
-      "used": 3,
+      "used": 24,
       "limit": 52,
       "pollLimit": 46
     }
   },
   "latency": {
-    "listP50": 2342,
-    "listP95": 3593,
-    "listMax": 14275,
-    "claimP50": 574,
-    "claimMax": 1553,
-    "samples": 118,
+    "listP50": 4102,
+    "listP95": 4102,
+    "listMax": 6889,
+    "claimP50": 1057,
+    "claimMax": 1057,
+    "samples": 2,
     "waitP50": null,
     "waitMax": null,
     "waitSamples": 0
   },
   "runtime": {
-    "at": 1790856673949,
-    "tier": "idle",
-    "gapMs": 2000,
-    "msToDrop": -66476.77954101562,
+    "at": 1790861176668,
+    "tier": "hot",
+    "gapMs": 1000,
+    "msToDrop": null,
     "alert": null,
-    "hot": false,
+    "hot": true,
     "strikes": {
-      "spent": 1,
+      "spent": 0,
       "max": 2,
-      "off": true
+      "off": false
     },
     "hotStrikes": {
-      "spent": 1,
+      "spent": 0,
       "max": 2,
       "off": false
     },
     "lastStrikeVerdict": "empty",
     "lastStrikeAt": 1790856608504,
-    "ageSec": 15,
-    "lastStrikeAgoSec": 81,
+    "ageSec": 13,
+    "lastStrikeAgoSec": 4582,
     "blindCooldownSec": 0,
     "blindOkAt": 1790261472879
   },
@@ -1353,8 +1354,8 @@
     "cooldownSecLeft": 0
   },
   "race": {
-    "volleys": 12,
-    "posts": 72,
+    "volleys": 13,
+    "posts": 78,
     "won": 0,
     "lost": 0,
     "throttledVolleys": 0,
@@ -1373,11 +1374,11 @@
     "top": [
       {
         "id": "0d8be869-fcc3-4b80-b677-791d9379fc56",
-        "visits": 1769,
+        "visits": 1770,
         "title": "",
         "first": 1790317936054,
-        "last": 1790856677997,
-        "ageSec": 11
+        "last": 1790861182799,
+        "ageSec": 7
       },
       {
         "id": "20556321-83f5-4ed4-b985-2e91075fd94d",
@@ -1385,7 +1386,7 @@
         "title": "",
         "first": 1790174915802,
         "last": 1790708118766,
-        "ageSec": 148570
+        "ageSec": 153071
       },
       {
         "id": "a738d554-1a5b-466b-b2f0-8e55040587e1",
@@ -1393,7 +1394,7 @@
         "title": "",
         "first": 1790174947039,
         "last": 1790708118766,
-        "ageSec": 148570
+        "ageSec": 153071
       },
       {
         "id": "a86a408e-b1d3-4809-8d3a-0da79442995e",
@@ -1401,7 +1402,7 @@
         "title": "",
         "first": 1790174947039,
         "last": 1790708118766,
-        "ageSec": 148570
+        "ageSec": 153071
       },
       {
         "id": "b2015940-5792-47e6-9abd-029c74644bed",
@@ -1409,7 +1410,7 @@
         "title": "",
         "first": 1790174947039,
         "last": 1790708118766,
-        "ageSec": 148570
+        "ageSec": 153071
       },
       {
         "id": "c7833216-e935-4c5a-a06a-3c5d756b15a4",
@@ -1417,7 +1418,7 @@
         "title": "",
         "first": 1790316316343,
         "last": 1790708118766,
-        "ageSec": 148570
+        "ageSec": 153071
       },
       {
         "id": "a72a821f-253d-455e-8010-6bf7a26ec4a5",
@@ -1425,7 +1426,7 @@
         "title": "",
         "first": 1790034283509,
         "last": 1790708118766,
-        "ageSec": 148570
+        "ageSec": 153071
       },
       {
         "id": "e061b205-f8c1-4e90-89c6-14a6e4e3e955",
@@ -1433,7 +1434,7 @@
         "title": "",
         "first": 1790101805726,
         "last": 1790708118766,
-        "ageSec": 148570
+        "ageSec": 153071
       },
       {
         "id": "6c515567-eecf-4b50-a55c-9885e00fdf9c",
@@ -1441,31 +1442,31 @@
         "title": "",
         "first": 1790202004281,
         "last": 1790708118766,
-        "ageSec": 148570
+        "ageSec": 153071
       },
       {
         "id": "0c8ff07a-78cf-4ee8-a954-e40b9ebeaae3",
-        "visits": 500,
+        "visits": 501,
         "title": "",
         "first": 1790174908004,
-        "last": 1790856677997,
-        "ageSec": 11
+        "last": 1790861182799,
+        "ageSec": 7
       },
       {
         "id": "03aca6cc-a415-482b-840c-42cfb4e66813",
-        "visits": 266,
+        "visits": 267,
         "title": "",
         "first": 1790034270579,
-        "last": 1790856677997,
-        "ageSec": 11
+        "last": 1790861182799,
+        "ageSec": 7
       },
       {
         "id": "16b28371-3248-452c-87db-d0ee7fb213fb",
-        "visits": 266,
+        "visits": 267,
         "title": "",
         "first": 1790041807161,
-        "last": 1790856677997,
-        "ageSec": 11
+        "last": 1790861182799,
+        "ageSec": 7
       }
     ]
   },
@@ -1654,8 +1655,8 @@
   "forecast": {
     "expected": 38,
     "lo": 0,
-    "hi": 155,
-    "hoursLeft": 6.3,
+    "hi": 153,
+    "hoursLeft": 5.1,
     "daysObserved": 6,
     "minSamplesPerHour": 7,
     "confidence": "weak",
@@ -1667,25 +1668,25 @@
     "lastDropAt": null,
     "sinceLastDropSec": null
   },
-  "uptimeSec": 85070,
-  "startedAt": 1790771619182,
-  "lastPollAt": 1790856678005,
-  "lastPollAgoSec": 11,
+  "uptimeSec": 89570,
+  "startedAt": 1790771620114,
+  "lastPollAt": 1790861183890,
+  "lastPollAgoSec": 6,
   "alive": true,
-  "logSizeBytes": 512810,
+  "logSizeBytes": 969545,
   "net": {
     "enabled": true,
-    "grade": "fair",
-    "p50": 168,
-    "p95": 2465,
-    "jitter": 2297,
-    "lossPct": 0,
-    "stallPct": 10,
+    "grade": "poor",
+    "p50": 1812,
+    "p95": 1991,
+    "jitter": 179,
+    "lossPct": 93,
+    "stallPct": 98,
     "stallMs": 1000,
     "samples": 60,
     "windowSec": 600,
-    "lastAt": "2026-10-01T12:11:22.963Z",
-    "ageSec": 6
+    "lastAt": "2026-10-01T13:26:28.983Z",
+    "ageSec": 1
   },
   "projectStatus": [
     {
@@ -1694,10 +1695,10 @@
       "known": true,
       "paused": true,
       "since": 1790403254697,
-      "pausedForSec": 453434,
-      "refusals": 268,
-      "nextProbeInSec": 109
+      "pausedForSec": 457935,
+      "refusals": 269,
+      "nextProbeInSec": 593
     }
   ],
-  "publishedAt": "2026-10-01T12:11:29.212Z"
+  "publishedAt": "2026-10-01T13:26:30.161Z"
 }
