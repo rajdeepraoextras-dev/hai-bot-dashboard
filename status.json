@@ -1,5 +1,5 @@
 {
-  "now": 1790959944101,
+  "now": 1790960622869,
   "ok": true,
   "config": {
     "pollIntervalSeconds": 2,
@@ -278,14 +278,14 @@
   },
   "schedule": {
     "locked": true,
-    "summary": "every 10m, phase ±3s, 60 samples, next in 463.4s",
+    "summary": "every 10m, phase ±3s, 60 samples, next in 384.6s",
     "periodMin": 10,
     "phaseSec": 7.5,
     "spreadSec": 2.9,
     "samples": 60,
     "inliers": 44,
-    "nextDropAt": 1790960407472.2205,
-    "nextDropInSec": 463,
+    "nextDropAt": 1790961007472.2205,
+    "nextDropInSec": 385,
     "observed": [
       1790193146078.5,
       1790194804458.5,
@@ -330,8 +330,8 @@
     "localDailyCap": null,
     "localConcurrentCap": null
   },
-  "lastClaimAttemptAt": 1790959809240,
-  "lastHeartbeatAt": 1790917103852,
+  "lastClaimAttemptAt": 1790960407811,
+  "lastHeartbeatAt": 1790960323355,
   "sessionExpiredAlert": false,
   "stateLoadFailed": false,
   "pause": {
@@ -348,21 +348,21 @@
       "hasClaimable": true,
       "tasksListed": 50,
       "newTaskCount": 50,
-      "lastCheckedAt": 1790959937915,
-      "lastCheckedAgoSec": 6,
+      "lastCheckedAt": 1790960608662,
+      "lastCheckedAgoSec": 14,
       "lastNotifyAt": 1790742894318,
       "lastHeldNagAt": 1789606246822,
       "lastClaimVerdict": {
         "verdict": "project-paused",
-        "at": 1790959937915
+        "at": 1790960608662
       },
       "availability": {
-        "lastAvailableAt": 1790959937915,
-        "lastAvailableAgoSec": 6,
+        "lastAvailableAt": 1790960608662,
+        "lastAvailableAgoSec": 14,
         "open": {
           "start": 1790309147283,
           "peak": 50,
-          "openMs": 650796818
+          "openMs": 651475586
         },
         "windows": [
           {
@@ -651,8 +651,8 @@
       },
       "held": {
         "count": 0,
-        "at": 1790959937915,
-        "ageSec": 6,
+        "at": 1790960544720,
+        "ageSec": 78,
         "tasks": [],
         "reworkCount": 0,
         "freeSlots": null
@@ -661,10 +661,105 @@
   ],
   "lock": {
     "pid": 9280,
-    "ts": 1790959932770,
-    "ageSec": 11
+    "ts": 1790960594590,
+    "ageSec": 28
   },
   "events": [
+    {
+      "ts": "2026-10-02T17:03:28.656Z",
+      "kind": "error",
+      "text": "project Project Dynamo: held-task list unreadable this cycle — deferring to auto-claim verdict"
+    },
+    {
+      "ts": "2026-10-02T17:00:08.773Z",
+      "kind": "info",
+      "text": "strike 1/2: empty"
+    },
+    {
+      "ts": "2026-10-02T17:00:08.741Z",
+      "kind": "info",
+      "text": "blind: nothing to take on Project Dynamo in 930ms (HTTP 403)"
+    },
+    {
+      "ts": "2026-10-02T17:00:05.367Z",
+      "kind": "info",
+      "text": "strike: armed — polling every 400ms around the predicted drop at 17:00:07.472Z"
+    },
+    {
+      "ts": "2026-10-02T17:00:00.558Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 AbortError: signal is aborted without reason"
+    },
+    {
+      "ts": "2026-10-02T16:56:35.116Z",
+      "kind": "error",
+      "text": "project Project Dynamo: held-task list unreadable this cycle — deferring to auto-claim verdict"
+    },
+    {
+      "ts": "2026-10-02T16:56:34.327Z",
+      "kind": "info",
+      "text": "autoclaim: the portal said: \"PROJECT_PAUSED\" x6"
+    },
+    {
+      "ts": "2026-10-02T16:56:34.047Z",
+      "kind": "error",
+      "text": "autoclaim: volley of 6 on Project Dynamo in 1399ms — 0 won, 0 lost to other fellows, 6 server error(s)"
+    },
+    {
+      "ts": "2026-10-02T16:56:33.735Z",
+      "kind": "error",
+      "text": "autoclaim: pick positions in a board of 50 — 32:error 37:error 43:error 25:error 12:error 39:error"
+    },
+    {
+      "ts": "2026-10-02T16:55:10.892Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 AbortError: The user aborted a request."
+    },
+    {
+      "ts": "2026-10-02T16:55:07.410Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 AbortError: The user aborted a request."
+    },
+    {
+      "ts": "2026-10-02T16:55:05.853Z",
+      "kind": "error",
+      "text": "tunnel: reachable again after 1 failed probe(s)"
+    },
+    {
+      "ts": "2026-10-02T16:55:03.969Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 AbortError: The user aborted a request."
+    },
+    {
+      "ts": "2026-10-02T16:55:00.405Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 AbortError: The user aborted a request."
+    },
+    {
+      "ts": "2026-10-02T16:54:56.748Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 AbortError: The user aborted a request."
+    },
+    {
+      "ts": "2026-10-02T16:54:14.718Z",
+      "kind": "error",
+      "text": "supabase: hai_claims write failed (0) timed out — telemetry only, claiming is unaffected"
+    },
+    {
+      "ts": "2026-10-02T16:54:03.693Z",
+      "kind": "error",
+      "text": "tunnel: probe 1/3 failed (HTTP 530)"
+    },
+    {
+      "ts": "2026-10-02T16:53:40.295Z",
+      "kind": "error",
+      "text": "pages: status snapshot failed (TypeError: fetch failed) — backing off 10min"
+    },
+    {
+      "ts": "2026-10-02T16:53:12.446Z",
+      "kind": "error",
+      "text": "supabase: hai_tasks_seen write failed (0) timed out — telemetry only, claiming is unaffected"
+    },
     {
       "ts": "2026-10-02T16:50:09.873Z",
       "kind": "info",
@@ -1169,101 +1264,6 @@
       "ts": "2026-10-02T16:12:53.279Z",
       "kind": "error",
       "text": "project Project Dynamo: API status 0 AbortError: The user aborted a request."
-    },
-    {
-      "ts": "2026-10-02T16:12:49.854Z",
-      "kind": "error",
-      "text": "project Project Dynamo: API status 0 AbortError: signal is aborted without reason"
-    },
-    {
-      "ts": "2026-10-02T16:12:46.425Z",
-      "kind": "error",
-      "text": "project Project Dynamo: API status 0 AbortError: signal is aborted without reason"
-    },
-    {
-      "ts": "2026-10-02T16:12:42.997Z",
-      "kind": "error",
-      "text": "project Project Dynamo: API status 0 AbortError: signal is aborted without reason"
-    },
-    {
-      "ts": "2026-10-02T16:12:39.574Z",
-      "kind": "error",
-      "text": "project Project Dynamo: API status 0 AbortError: The user aborted a request."
-    },
-    {
-      "ts": "2026-10-02T16:12:36.142Z",
-      "kind": "error",
-      "text": "project Project Dynamo: API status 0 AbortError: signal is aborted without reason"
-    },
-    {
-      "ts": "2026-10-02T16:12:32.722Z",
-      "kind": "error",
-      "text": "project Project Dynamo: API status 0 AbortError: The user aborted a request."
-    },
-    {
-      "ts": "2026-10-02T16:12:29.288Z",
-      "kind": "error",
-      "text": "project Project Dynamo: API status 0 AbortError: signal is aborted without reason"
-    },
-    {
-      "ts": "2026-10-02T16:12:25.859Z",
-      "kind": "error",
-      "text": "project Project Dynamo: API status 0 AbortError: signal is aborted without reason"
-    },
-    {
-      "ts": "2026-10-02T16:12:24.176Z",
-      "kind": "error",
-      "text": "supabase: hai_held_snapshots write failed (0) timed out — telemetry only, claiming is unaffected"
-    },
-    {
-      "ts": "2026-10-02T16:12:22.433Z",
-      "kind": "error",
-      "text": "project Project Dynamo: API status 0 AbortError: signal is aborted without reason"
-    },
-    {
-      "ts": "2026-10-02T16:12:19.009Z",
-      "kind": "error",
-      "text": "project Project Dynamo: API status 0 AbortError: The user aborted a request."
-    },
-    {
-      "ts": "2026-10-02T16:12:15.586Z",
-      "kind": "error",
-      "text": "project Project Dynamo: API status 0 AbortError: signal is aborted without reason"
-    },
-    {
-      "ts": "2026-10-02T16:12:12.147Z",
-      "kind": "error",
-      "text": "project Project Dynamo: API status 0 AbortError: signal is aborted without reason"
-    },
-    {
-      "ts": "2026-10-02T16:12:08.724Z",
-      "kind": "error",
-      "text": "project Project Dynamo: API status 0 AbortError: signal is aborted without reason"
-    },
-    {
-      "ts": "2026-10-02T16:12:07.403Z",
-      "kind": "error",
-      "text": "tunnel: probe 1/3 failed (fetch failed)"
-    },
-    {
-      "ts": "2026-10-02T16:12:05.307Z",
-      "kind": "error",
-      "text": "project Project Dynamo: API status 0 AbortError: The user aborted a request."
-    },
-    {
-      "ts": "2026-10-02T16:12:01.876Z",
-      "kind": "error",
-      "text": "project Project Dynamo: API status 0 AbortError: signal is aborted without reason"
-    },
-    {
-      "ts": "2026-10-02T16:11:58.455Z",
-      "kind": "error",
-      "text": "project Project Dynamo: API status 0 AbortError: signal is aborted without reason"
-    },
-    {
-      "ts": "2026-10-02T16:11:55.033Z",
-      "kind": "error",
-      "text": "project Project Dynamo: API status 0 AbortError: The user aborted a request."
     }
   ],
   "lastPollSummary": {
@@ -1271,61 +1271,62 @@
     "projects": {
       "Project Dynamo": {
         "tasks": 50,
-        "listMs": 2958,
-        "listBreak": "1156/914/11ms 906kb",
-        "heldMs": 2130,
+        "listMs": 10505,
+        "listBreak": "998/777/14ms 906kb",
+        "heldMs": 3048,
         "newTasks": 50,
         "hasClaimable": true,
         "new": 0,
         "notified": false,
-        "autoClaim": "project-paused"
+        "autoClaim": "project-paused",
+        "heldUnknown": true
       }
     },
     "projectStatus": {
       "known": true,
       "paused": true,
       "since": 1790403254697,
-      "pausedForSec": 556683,
-      "refusals": 287,
-      "nextProbeInSec": 241
+      "pausedForSec": 557354,
+      "refusals": 288,
+      "nextProbeInSec": 182
     },
     "minGapMs": 60000
   },
   "health": {
-    "polls": 365,
-    "pollsFailed": 284,
-    "errors": 375,
+    "polls": 269,
+    "pollsFailed": 180,
+    "errors": 251,
     "rateLimited": 0,
     "claims": 0,
     "restarts": 0,
     "notifies": 0,
     "medianPollGapSec": 3.4,
-    "pollsOk": 81,
-    "pollFailPct": 77.8,
+    "pollsOk": 89,
+    "pollFailPct": 66.9,
     "blind": true,
     "windowLabel": "last hour",
     "budget": {
-      "used": 2,
+      "used": 3,
       "limit": 52,
       "pollLimit": 46
     }
   },
   "latency": {
-    "listP50": 2766,
-    "listP95": 6217,
+    "listP50": 2829,
+    "listP95": 8302,
     "listMax": 43612,
-    "claimP50": 972,
+    "claimP50": 1082,
     "claimMax": 4173,
-    "samples": 102,
+    "samples": 120,
     "waitP50": null,
     "waitMax": null,
     "waitSamples": 0
   },
   "runtime": {
-    "at": 1790959932773,
+    "at": 1790960594595,
     "tier": "idle",
     "gapMs": 2000,
-    "msToDrop": -125299.77954101562,
+    "msToDrop": -187122.77954101562,
     "alert": null,
     "hot": false,
     "strikes": {
@@ -1339,9 +1340,9 @@
       "off": false
     },
     "lastStrikeVerdict": "empty",
-    "lastStrikeAt": 1790959809873,
-    "ageSec": 11,
-    "lastStrikeAgoSec": 134,
+    "lastStrikeAt": 1790960408773,
+    "ageSec": 28,
+    "lastStrikeAgoSec": 214,
     "blindCooldownSec": 0,
     "blindOkAt": 1790261472879
   },
@@ -1353,14 +1354,14 @@
     "cooldownSecLeft": 0
   },
   "race": {
-    "volleys": 6,
-    "posts": 36,
+    "volleys": 7,
+    "posts": 42,
     "won": 0,
     "lost": 0,
     "throttledVolleys": 0,
     "winRate": null,
     "lastWinAt": null,
-    "since": 1790926110854,
+    "since": 1790926209748,
     "lastRefusedAt": null,
     "refusals": 0
   },
@@ -1373,11 +1374,11 @@
     "top": [
       {
         "id": "0d8be869-fcc3-4b80-b677-791d9379fc56",
-        "visits": 1866,
+        "visits": 1872,
         "title": "",
         "first": 1790317936054,
-        "last": 1790959937914,
-        "ageSec": 6
+        "last": 1790960608656,
+        "ageSec": 14
       },
       {
         "id": "20556321-83f5-4ed4-b985-2e91075fd94d",
@@ -1385,7 +1386,7 @@
         "title": "",
         "first": 1790174915802,
         "last": 1790708118766,
-        "ageSec": 251825
+        "ageSec": 252504
       },
       {
         "id": "a738d554-1a5b-466b-b2f0-8e55040587e1",
@@ -1393,7 +1394,7 @@
         "title": "",
         "first": 1790174947039,
         "last": 1790708118766,
-        "ageSec": 251825
+        "ageSec": 252504
       },
       {
         "id": "a86a408e-b1d3-4809-8d3a-0da79442995e",
@@ -1401,7 +1402,7 @@
         "title": "",
         "first": 1790174947039,
         "last": 1790708118766,
-        "ageSec": 251825
+        "ageSec": 252504
       },
       {
         "id": "b2015940-5792-47e6-9abd-029c74644bed",
@@ -1409,7 +1410,7 @@
         "title": "",
         "first": 1790174947039,
         "last": 1790708118766,
-        "ageSec": 251825
+        "ageSec": 252504
       },
       {
         "id": "c7833216-e935-4c5a-a06a-3c5d756b15a4",
@@ -1417,7 +1418,7 @@
         "title": "",
         "first": 1790316316343,
         "last": 1790708118766,
-        "ageSec": 251825
+        "ageSec": 252504
       },
       {
         "id": "a72a821f-253d-455e-8010-6bf7a26ec4a5",
@@ -1425,7 +1426,7 @@
         "title": "",
         "first": 1790034283509,
         "last": 1790708118766,
-        "ageSec": 251825
+        "ageSec": 252504
       },
       {
         "id": "e061b205-f8c1-4e90-89c6-14a6e4e3e955",
@@ -1433,7 +1434,7 @@
         "title": "",
         "first": 1790101805726,
         "last": 1790708118766,
-        "ageSec": 251825
+        "ageSec": 252504
       },
       {
         "id": "6c515567-eecf-4b50-a55c-9885e00fdf9c",
@@ -1441,31 +1442,31 @@
         "title": "",
         "first": 1790202004281,
         "last": 1790708118766,
-        "ageSec": 251825
+        "ageSec": 252504
       },
       {
         "id": "0c8ff07a-78cf-4ee8-a954-e40b9ebeaae3",
-        "visits": 597,
+        "visits": 603,
         "title": "",
         "first": 1790174908004,
-        "last": 1790959937914,
-        "ageSec": 6
+        "last": 1790960608656,
+        "ageSec": 14
       },
       {
         "id": "03aca6cc-a415-482b-840c-42cfb4e66813",
-        "visits": 363,
+        "visits": 369,
         "title": "",
         "first": 1790034270579,
-        "last": 1790959937914,
-        "ageSec": 6
+        "last": 1790960608656,
+        "ageSec": 14
       },
       {
         "id": "16b28371-3248-452c-87db-d0ee7fb213fb",
-        "visits": 363,
+        "visits": 369,
         "title": "",
         "first": 1790041807161,
-        "last": 1790959937914,
-        "ageSec": 6
+        "last": 1790960608656,
+        "ageSec": 14
       }
     ]
   },
@@ -1654,8 +1655,8 @@
   "forecast": {
     "expected": 21,
     "lo": 0,
-    "hi": 88,
-    "hoursLeft": 1.6,
+    "hi": 87,
+    "hoursLeft": 1.5,
     "daysObserved": 6,
     "minSamplesPerHour": 7,
     "confidence": "weak",
@@ -1667,25 +1668,25 @@
     "lastDropAt": null,
     "sinceLastDropSec": null
   },
-  "uptimeSec": 42993,
-  "startedAt": 1790916951101,
-  "lastPollAt": 1790959937923,
-  "lastPollAgoSec": 6,
+  "uptimeSec": 43697,
+  "startedAt": 1790916925869,
+  "lastPollAt": 1790960608752,
+  "lastPollAgoSec": 14,
   "alive": true,
-  "logSizeBytes": 5491103,
+  "logSizeBytes": 5500598,
   "net": {
     "enabled": true,
-    "grade": "fair",
-    "p50": 247,
-    "p95": 2167,
-    "jitter": 1920,
-    "lossPct": 2,
-    "stallPct": 12,
+    "grade": "poor",
+    "p50": 401,
+    "p95": 3995,
+    "jitter": 3594,
+    "lossPct": 7,
+    "stallPct": 33,
     "stallMs": 1000,
     "samples": 60,
     "windowSec": 600,
-    "lastAt": "2026-10-02T16:52:18.718Z",
-    "ageSec": 5
+    "lastAt": "2026-10-02T17:03:59.399Z",
+    "ageSec": -17
   },
   "projectStatus": [
     {
@@ -1694,10 +1695,10 @@
       "known": true,
       "paused": true,
       "since": 1790403254697,
-      "pausedForSec": 556689,
-      "refusals": 287,
-      "nextProbeInSec": 235
+      "pausedForSec": 557368,
+      "refusals": 288,
+      "nextProbeInSec": 168
     }
   ],
-  "publishedAt": "2026-10-02T16:52:24.630Z"
+  "publishedAt": "2026-10-02T17:04:10.051Z"
 }
