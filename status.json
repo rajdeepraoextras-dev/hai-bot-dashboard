@@ -1,5 +1,5 @@
 {
-  "now": 1793474478944,
+  "now": 1793474538952,
   "ok": true,
   "config": {
     "pollIntervalSeconds": 2,
@@ -278,14 +278,14 @@
   },
   "schedule": {
     "locked": true,
-    "summary": "every 10m, phase ±3s, 60 samples, next in 528.5s",
+    "summary": "every 10m, phase ±3s, 60 samples, next in 468.5s",
     "periodMin": 10,
     "phaseSec": 7.5,
     "spreadSec": 2.9,
     "samples": 60,
     "inliers": 44,
     "nextDropAt": 1793475007472.2205,
-    "nextDropInSec": 529,
+    "nextDropInSec": 469,
     "observed": [
       1790193146078.5,
       1790194804458.5,
@@ -348,7 +348,7 @@
       "hasClaimable": false,
       "tasksListed": 0,
       "newTaskCount": 0,
-      "lastCheckedAt": 1793474477485,
+      "lastCheckedAt": 1793474537713,
       "lastCheckedAgoSec": 1,
       "lastNotifyAt": 1790742894318,
       "lastHeldNagAt": 1789606246822,
@@ -358,7 +358,7 @@
       },
       "availability": {
         "lastAvailableAt": 1790960608662,
-        "lastAvailableAgoSec": 2513870,
+        "lastAvailableAgoSec": 2513930,
         "open": null,
         "windows": [
           {
@@ -647,7 +647,7 @@
       },
       "held": {
         "count": 0,
-        "at": 1793474477485,
+        "at": 1793474537713,
         "ageSec": 1,
         "tasks": [],
         "reworkCount": 0,
@@ -657,10 +657,15 @@
   ],
   "lock": {
     "pid": 9280,
-    "ts": 1793474474419,
+    "ts": 1793474534426,
     "ageSec": 5
   },
   "events": [
+    {
+      "ts": "2026-10-31T19:22:09.245Z",
+      "kind": "error",
+      "text": "supabase: hai_drops write failed (0) fetch failed — telemetry only, claiming is unaffected"
+    },
     {
       "ts": "2026-10-31T19:20:09.244Z",
       "kind": "error",
@@ -1255,11 +1260,6 @@
       "ts": "2026-10-02T16:24:31.622Z",
       "kind": "error",
       "text": "project Project Dynamo: API status 0 AbortError: The user aborted a request."
-    },
-    {
-      "ts": "2026-10-02T16:24:28.176Z",
-      "kind": "error",
-      "text": "project Project Dynamo: API status 0 AbortError: The user aborted a request."
     }
   ],
   "lastPollSummary": {
@@ -1277,27 +1277,27 @@
       "known": true,
       "paused": true,
       "since": 1790403254697,
-      "pausedForSec": 3071223,
+      "pausedForSec": 3071283,
       "refusals": 288,
       "nextProbeInSec": 0
     },
     "minGapMs": 60000
   },
   "health": {
-    "polls": 151,
+    "polls": 152,
     "pollsFailed": 7,
-    "errors": 50,
+    "errors": 51,
     "rateLimited": 0,
     "claims": 0,
     "restarts": 0,
     "notifies": 0,
     "medianPollGapSec": 3.4,
-    "pollsOk": 144,
+    "pollsOk": 145,
     "pollFailPct": 4.6,
     "blind": false,
     "windowLabel": "last hour",
     "budget": {
-      "used": 3,
+      "used": 2,
       "limit": 52,
       "pollLimit": 46
     }
@@ -1314,10 +1314,10 @@
     "waitSamples": 0
   },
   "runtime": {
-    "at": 1793474474420,
+    "at": 1793474534426,
     "tier": "idle",
     "gapMs": 2000,
-    "msToDrop": -66947.77954101562,
+    "msToDrop": -126953.77954101562,
     "alert": null,
     "hot": false,
     "strikes": {
@@ -1333,7 +1333,7 @@
     "lastStrikeVerdict": "empty",
     "lastStrikeAt": 1793474408160,
     "ageSec": 5,
-    "lastStrikeAgoSec": 71,
+    "lastStrikeAgoSec": 131,
     "blindCooldownSec": 0,
     "blindOkAt": 1790261472879
   },
@@ -1352,7 +1352,7 @@
     "throttledVolleys": 0,
     "winRate": null,
     "lastWinAt": null,
-    "since": 1790926699587,
+    "since": 1790926703602,
     "lastRefusedAt": null,
     "refusals": 0
   },
@@ -1369,7 +1369,7 @@
         "title": "",
         "first": 1790317936054,
         "last": 1790960608656,
-        "ageSec": 2513870
+        "ageSec": 2513930
       },
       {
         "id": "20556321-83f5-4ed4-b985-2e91075fd94d",
@@ -1377,7 +1377,7 @@
         "title": "",
         "first": 1790174915802,
         "last": 1790708118766,
-        "ageSec": 2766360
+        "ageSec": 2766420
       },
       {
         "id": "a738d554-1a5b-466b-b2f0-8e55040587e1",
@@ -1385,7 +1385,7 @@
         "title": "",
         "first": 1790174947039,
         "last": 1790708118766,
-        "ageSec": 2766360
+        "ageSec": 2766420
       },
       {
         "id": "a86a408e-b1d3-4809-8d3a-0da79442995e",
@@ -1393,7 +1393,7 @@
         "title": "",
         "first": 1790174947039,
         "last": 1790708118766,
-        "ageSec": 2766360
+        "ageSec": 2766420
       },
       {
         "id": "b2015940-5792-47e6-9abd-029c74644bed",
@@ -1401,7 +1401,7 @@
         "title": "",
         "first": 1790174947039,
         "last": 1790708118766,
-        "ageSec": 2766360
+        "ageSec": 2766420
       },
       {
         "id": "c7833216-e935-4c5a-a06a-3c5d756b15a4",
@@ -1409,7 +1409,7 @@
         "title": "",
         "first": 1790316316343,
         "last": 1790708118766,
-        "ageSec": 2766360
+        "ageSec": 2766420
       },
       {
         "id": "a72a821f-253d-455e-8010-6bf7a26ec4a5",
@@ -1417,7 +1417,7 @@
         "title": "",
         "first": 1790034283509,
         "last": 1790708118766,
-        "ageSec": 2766360
+        "ageSec": 2766420
       },
       {
         "id": "e061b205-f8c1-4e90-89c6-14a6e4e3e955",
@@ -1425,7 +1425,7 @@
         "title": "",
         "first": 1790101805726,
         "last": 1790708118766,
-        "ageSec": 2766360
+        "ageSec": 2766420
       },
       {
         "id": "6c515567-eecf-4b50-a55c-9885e00fdf9c",
@@ -1433,7 +1433,7 @@
         "title": "",
         "first": 1790202004281,
         "last": 1790708118766,
-        "ageSec": 2766360
+        "ageSec": 2766420
       },
       {
         "id": "0c8ff07a-78cf-4ee8-a954-e40b9ebeaae3",
@@ -1441,7 +1441,7 @@
         "title": "",
         "first": 1790174908004,
         "last": 1790960608656,
-        "ageSec": 2513870
+        "ageSec": 2513930
       },
       {
         "id": "03aca6cc-a415-482b-840c-42cfb4e66813",
@@ -1449,7 +1449,7 @@
         "title": "",
         "first": 1790034270579,
         "last": 1790960608656,
-        "ageSec": 2513870
+        "ageSec": 2513930
       },
       {
         "id": "16b28371-3248-452c-87db-d0ee7fb213fb",
@@ -1457,7 +1457,7 @@
         "title": "",
         "first": 1790041807161,
         "last": 1790960608656,
-        "ageSec": 2513870
+        "ageSec": 2513930
       }
     ]
   },
@@ -1644,10 +1644,10 @@
     "since": 1789797793124
   },
   "forecast": {
-    "expected": 130,
+    "expected": 129,
     "lo": 0,
-    "hi": 478,
-    "hoursLeft": 23.2,
+    "hi": 477,
+    "hoursLeft": 23.1,
     "daysObserved": 6,
     "minSamplesPerHour": 6,
     "confidence": "weak",
@@ -1659,24 +1659,24 @@
     "lastDropAt": null,
     "sinceLastDropSec": null
   },
-  "uptimeSec": 2557535,
-  "startedAt": 1790916943944,
-  "lastPollAt": 1793474477490,
+  "uptimeSec": 2557595,
+  "startedAt": 1790916943952,
+  "lastPollAt": 1793474537740,
   "lastPollAgoSec": 1,
   "alive": true,
-  "logSizeBytes": 5551952,
+  "logSizeBytes": 5552369,
   "net": {
     "enabled": true,
     "grade": "good",
     "p50": 125,
-    "p95": 173,
-    "jitter": 48,
+    "p95": 154,
+    "jitter": 29,
     "lossPct": 0,
     "stallPct": 0,
     "stallMs": 1000,
     "samples": 60,
     "windowSec": 600,
-    "lastAt": "2026-10-31T19:21:10.292Z",
+    "lastAt": "2026-10-31T19:22:10.344Z",
     "ageSec": 9
   },
   "projectStatus": [
@@ -1686,10 +1686,10 @@
       "known": true,
       "paused": true,
       "since": 1790403254697,
-      "pausedForSec": 3071224,
+      "pausedForSec": 3071284,
       "refusals": 288,
       "nextProbeInSec": 0
     }
   ],
-  "publishedAt": "2026-10-31T19:21:19.148Z"
+  "publishedAt": "2026-10-31T19:22:19.129Z"
 }
