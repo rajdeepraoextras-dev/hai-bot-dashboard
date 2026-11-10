@@ -1,5 +1,5 @@
 {
-  "now": 1794324436042,
+  "now": 1794325326379,
   "ok": true,
   "config": {
     "pollIntervalSeconds": 2,
@@ -278,14 +278,14 @@
   },
   "schedule": {
     "locked": true,
-    "summary": "every 10m, phase ±3s, 60 samples, next in 171.4s",
+    "summary": "every 10m, phase ±3s, 60 samples, next in 481.1s",
     "periodMin": 10,
     "phaseSec": 7.5,
     "spreadSec": 2.9,
     "samples": 60,
     "inliers": 44,
-    "nextDropAt": 1794324607472.2205,
-    "nextDropInSec": 171,
+    "nextDropAt": 1794325807472.2205,
+    "nextDropInSec": 481,
     "observed": [
       1790193146078.5,
       1790194804458.5,
@@ -330,7 +330,7 @@
     "localDailyCap": null,
     "localConcurrentCap": null
   },
-  "lastClaimAttemptAt": 1793778008031,
+  "lastClaimAttemptAt": 1794325207982,
   "lastHeartbeatAt": 1794321052170,
   "sessionExpiredAlert": false,
   "stateLoadFailed": false,
@@ -348,8 +348,8 @@
       "hasClaimable": false,
       "tasksListed": 0,
       "newTaskCount": 0,
-      "lastCheckedAt": 1794321103884,
-      "lastCheckedAgoSec": 3332,
+      "lastCheckedAt": 1794325290771,
+      "lastCheckedAgoSec": 36,
       "lastNotifyAt": 1790742894318,
       "lastHeldNagAt": 1789606246822,
       "lastClaimVerdict": {
@@ -358,7 +358,7 @@
       },
       "availability": {
         "lastAvailableAt": 1790960608662,
-        "lastAvailableAgoSec": 3363827,
+        "lastAvailableAgoSec": 3364718,
         "open": null,
         "windows": [
           {
@@ -647,8 +647,8 @@
       },
       "held": {
         "count": 0,
-        "at": 1793778316621,
-        "ageSec": 546119,
+        "at": 1794325290771,
+        "ageSec": 36,
         "tasks": [],
         "reworkCount": 0,
         "freeSlots": null
@@ -657,10 +657,90 @@
   ],
   "lock": {
     "pid": 6724,
-    "ts": 1794324548841,
-    "ageSec": -113
+    "ts": 1794325288231,
+    "ageSec": 38
   },
   "events": [
+    {
+      "ts": "2026-11-10T15:41:08.694Z",
+      "kind": "error",
+      "text": "supabase: hai_drops write failed (0) fetch failed — telemetry only, claiming is unaffected"
+    },
+    {
+      "ts": "2026-11-10T15:40:26.499Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 AbortError: signal is aborted without reason"
+    },
+    {
+      "ts": "2026-11-10T15:40:19.527Z",
+      "kind": "error",
+      "text": "project Project Dynamo: API status 0 AbortError: signal is aborted without reason"
+    },
+    {
+      "ts": "2026-11-10T15:40:12.433Z",
+      "kind": "info",
+      "text": "strike 1/2: empty"
+    },
+    {
+      "ts": "2026-11-10T15:40:12.279Z",
+      "kind": "ratelimit",
+      "text": "blind: nothing to take on Project Dynamo in 4294ms (HTTP 403)"
+    },
+    {
+      "ts": "2026-11-10T15:40:07.760Z",
+      "kind": "info",
+      "text": "strike: armed — polling every 400ms around the predicted drop at 15:40:07.472Z"
+    },
+    {
+      "ts": "2026-11-10T15:40:07.580Z",
+      "kind": "error",
+      "text": "supabase: hai_drops write failed (0) fetch failed — telemetry only, claiming is unaffected"
+    },
+    {
+      "ts": "2026-11-10T15:39:06.515Z",
+      "kind": "error",
+      "text": "supabase: hai_drops write failed (0) fetch failed — telemetry only, claiming is unaffected"
+    },
+    {
+      "ts": "2026-11-10T15:38:06.322Z",
+      "kind": "error",
+      "text": "supabase: hai_drops write failed (0) fetch failed — telemetry only, claiming is unaffected"
+    },
+    {
+      "ts": "2026-11-10T15:36:06.583Z",
+      "kind": "error",
+      "text": "supabase: hai_drops write failed (0) fetch failed — telemetry only, claiming is unaffected"
+    },
+    {
+      "ts": "2026-11-10T15:35:31.214Z",
+      "kind": "info",
+      "text": "pages: published endpoint.json -> rajdeepraoextras-dev/hai-bot-dashboard@main (https://about-profit-weight-symposium.trycloudflare.com)"
+    },
+    {
+      "ts": "2026-11-10T15:35:22.170Z",
+      "kind": "info",
+      "text": "tunnel: up at https://about-profit-weight-symposium.trycloudflare.com"
+    },
+    {
+      "ts": "2026-11-10T15:35:06.329Z",
+      "kind": "error",
+      "text": "supabase: hai_drops write failed (0) fetch failed — telemetry only, claiming is unaffected"
+    },
+    {
+      "ts": "2026-11-10T15:33:08.051Z",
+      "kind": "error",
+      "text": "supabase: hai_drops write failed (0) fetch failed — telemetry only, claiming is unaffected"
+    },
+    {
+      "ts": "2026-11-10T15:32:47.789Z",
+      "kind": "info",
+      "text": "auth check inconclusive, will retry next cycle"
+    },
+    {
+      "ts": "2026-11-10T15:31:57.504Z",
+      "kind": "error",
+      "text": "supabase: hai_drops write failed (0) fetch failed — telemetry only, claiming is unaffected"
+    },
     {
       "ts": "2026-11-10T15:30:01.022Z",
       "kind": "error",
@@ -1180,86 +1260,6 @@
       "ts": "2026-11-10T14:27:15.076Z",
       "kind": "info",
       "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-11-10T14:27:14.335Z",
-      "kind": "error",
-      "text": "poll error (#766) page.goto: net::ERR_INTERNET_DISCONNECTED at https://ai.joinhandshake.com/fellow/projects"
-    },
-    {
-      "ts": "2026-11-10T14:27:12.314Z",
-      "kind": "error",
-      "text": "poll error (#765) page.goto: net::ERR_INTERNET_DISCONNECTED at https://ai.joinhandshake.com/fellow/projects"
-    },
-    {
-      "ts": "2026-11-10T14:27:10.288Z",
-      "kind": "error",
-      "text": "poll error (#764) page.goto: net::ERR_INTERNET_DISCONNECTED at https://ai.joinhandshake.com/fellow/projects"
-    },
-    {
-      "ts": "2026-11-10T14:27:08.285Z",
-      "kind": "error",
-      "text": "poll error (#763) page.goto: net::ERR_INTERNET_DISCONNECTED at https://ai.joinhandshake.com/fellow/projects"
-    },
-    {
-      "ts": "2026-11-10T14:27:06.272Z",
-      "kind": "error",
-      "text": "poll error (#762) page.goto: net::ERR_INTERNET_DISCONNECTED at https://ai.joinhandshake.com/fellow/projects"
-    },
-    {
-      "ts": "2026-11-10T14:27:04.302Z",
-      "kind": "error",
-      "text": "poll error (#761) page.goto: net::ERR_INTERNET_DISCONNECTED at https://ai.joinhandshake.com/fellow/projects"
-    },
-    {
-      "ts": "2026-11-10T14:27:03.832Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-11-10T14:27:02.257Z",
-      "kind": "error",
-      "text": "poll error (#760) page.goto: net::ERR_INTERNET_DISCONNECTED at https://ai.joinhandshake.com/fellow/projects"
-    },
-    {
-      "ts": "2026-11-10T14:27:00.297Z",
-      "kind": "error",
-      "text": "poll error (#759) page.goto: net::ERR_INTERNET_DISCONNECTED at https://ai.joinhandshake.com/fellow/projects"
-    },
-    {
-      "ts": "2026-11-10T14:26:58.285Z",
-      "kind": "error",
-      "text": "poll error (#758) page.goto: net::ERR_INTERNET_DISCONNECTED at https://ai.joinhandshake.com/fellow/projects"
-    },
-    {
-      "ts": "2026-11-10T14:26:56.263Z",
-      "kind": "error",
-      "text": "poll error (#757) page.goto: net::ERR_INTERNET_DISCONNECTED at https://ai.joinhandshake.com/fellow/projects"
-    },
-    {
-      "ts": "2026-11-10T14:26:54.259Z",
-      "kind": "error",
-      "text": "poll error (#756) page.goto: net::ERR_INTERNET_DISCONNECTED at https://ai.joinhandshake.com/fellow/projects"
-    },
-    {
-      "ts": "2026-11-10T14:26:52.863Z",
-      "kind": "info",
-      "text": "tunnel: cloudflared exited (1), restarting in 10s"
-    },
-    {
-      "ts": "2026-11-10T14:26:52.272Z",
-      "kind": "error",
-      "text": "poll error (#755) page.goto: net::ERR_INTERNET_DISCONNECTED at https://ai.joinhandshake.com/fellow/projects"
-    },
-    {
-      "ts": "2026-11-10T14:26:50.257Z",
-      "kind": "error",
-      "text": "poll error (#754) page.goto: net::ERR_INTERNET_DISCONNECTED at https://ai.joinhandshake.com/fellow/projects"
-    },
-    {
-      "ts": "2026-11-10T14:26:48.227Z",
-      "kind": "error",
-      "text": "poll error (#753) page.goto: net::ERR_INTERNET_DISCONNECTED at https://ai.joinhandshake.com/fellow/projects"
     }
   ],
   "lastPollSummary": {
@@ -1277,27 +1277,27 @@
       "known": true,
       "paused": true,
       "since": 1790403254697,
-      "pausedForSec": 3917849,
+      "pausedForSec": 3922036,
       "refusals": 288,
       "nextProbeInSec": 0
     },
     "minGapMs": 60000
   },
   "health": {
-    "polls": 4,
+    "polls": 16,
     "pollsFailed": 2,
-    "errors": 85,
-    "rateLimited": 0,
+    "errors": 17,
+    "rateLimited": 1,
     "claims": 0,
     "restarts": 0,
     "notifies": 0,
-    "medianPollGapSec": 24.4,
-    "pollsOk": 2,
-    "pollFailPct": 50,
+    "medianPollGapSec": 32.3,
+    "pollsOk": 14,
+    "pollFailPct": 12.5,
     "blind": false,
     "windowLabel": "last hour",
     "budget": {
-      "used": 1,
+      "used": 2,
       "limit": 52,
       "pollLimit": 46
     }
@@ -1314,26 +1314,26 @@
     "waitSamples": 0
   },
   "runtime": {
-    "at": 1794324567795,
-    "tier": "approach",
-    "gapMs": 6000,
-    "msToDrop": 39677.220458984375,
+    "at": 1794325288243,
+    "tier": "idle",
+    "gapMs": 2000,
+    "msToDrop": -80770.77954101562,
     "alert": null,
     "hot": false,
     "strikes": {
-      "spent": 0,
+      "spent": 1,
       "max": 2,
-      "off": false
+      "off": true
     },
     "hotStrikes": {
       "spent": 0,
       "max": 2,
       "off": false
     },
-    "lastStrikeVerdict": null,
-    "lastStrikeAt": 0,
-    "ageSec": -132,
-    "lastStrikeAgoSec": null,
+    "lastStrikeVerdict": "empty",
+    "lastStrikeAt": 1794325212433,
+    "ageSec": 38,
+    "lastStrikeAgoSec": 114,
     "blindCooldownSec": 0,
     "blindOkAt": 1790261472879
   },
@@ -1352,7 +1352,7 @@
     "throttledVolleys": 0,
     "winRate": null,
     "lastWinAt": null,
-    "since": 1790940767563,
+    "since": 1790940823803,
     "lastRefusedAt": null,
     "refusals": 0
   },
@@ -1369,7 +1369,7 @@
         "title": "",
         "first": 1790317936054,
         "last": 1790960608656,
-        "ageSec": 3363827
+        "ageSec": 3364718
       },
       {
         "id": "20556321-83f5-4ed4-b985-2e91075fd94d",
@@ -1377,7 +1377,7 @@
         "title": "",
         "first": 1790174915802,
         "last": 1790708118766,
-        "ageSec": 3616317
+        "ageSec": 3617208
       },
       {
         "id": "a738d554-1a5b-466b-b2f0-8e55040587e1",
@@ -1385,7 +1385,7 @@
         "title": "",
         "first": 1790174947039,
         "last": 1790708118766,
-        "ageSec": 3616317
+        "ageSec": 3617208
       },
       {
         "id": "a86a408e-b1d3-4809-8d3a-0da79442995e",
@@ -1393,7 +1393,7 @@
         "title": "",
         "first": 1790174947039,
         "last": 1790708118766,
-        "ageSec": 3616317
+        "ageSec": 3617208
       },
       {
         "id": "b2015940-5792-47e6-9abd-029c74644bed",
@@ -1401,7 +1401,7 @@
         "title": "",
         "first": 1790174947039,
         "last": 1790708118766,
-        "ageSec": 3616317
+        "ageSec": 3617208
       },
       {
         "id": "c7833216-e935-4c5a-a06a-3c5d756b15a4",
@@ -1409,7 +1409,7 @@
         "title": "",
         "first": 1790316316343,
         "last": 1790708118766,
-        "ageSec": 3616317
+        "ageSec": 3617208
       },
       {
         "id": "a72a821f-253d-455e-8010-6bf7a26ec4a5",
@@ -1417,7 +1417,7 @@
         "title": "",
         "first": 1790034283509,
         "last": 1790708118766,
-        "ageSec": 3616317
+        "ageSec": 3617208
       },
       {
         "id": "e061b205-f8c1-4e90-89c6-14a6e4e3e955",
@@ -1425,7 +1425,7 @@
         "title": "",
         "first": 1790101805726,
         "last": 1790708118766,
-        "ageSec": 3616317
+        "ageSec": 3617208
       },
       {
         "id": "6c515567-eecf-4b50-a55c-9885e00fdf9c",
@@ -1433,7 +1433,7 @@
         "title": "",
         "first": 1790202004281,
         "last": 1790708118766,
-        "ageSec": 3616317
+        "ageSec": 3617208
       },
       {
         "id": "0c8ff07a-78cf-4ee8-a954-e40b9ebeaae3",
@@ -1441,7 +1441,7 @@
         "title": "",
         "first": 1790174908004,
         "last": 1790960608656,
-        "ageSec": 3363827
+        "ageSec": 3364718
       },
       {
         "id": "03aca6cc-a415-482b-840c-42cfb4e66813",
@@ -1449,7 +1449,7 @@
         "title": "",
         "first": 1790034270579,
         "last": 1790960608656,
-        "ageSec": 3363827
+        "ageSec": 3364718
       },
       {
         "id": "16b28371-3248-452c-87db-d0ee7fb213fb",
@@ -1457,7 +1457,7 @@
         "title": "",
         "first": 1790041807161,
         "last": 1790960608656,
-        "ageSec": 3363827
+        "ageSec": 3364718
       }
     ]
   },
@@ -1646,8 +1646,8 @@
   "forecast": {
     "expected": 23,
     "lo": 0,
-    "hi": 97,
-    "hoursLeft": 3.1,
+    "hi": 93,
+    "hoursLeft": 2.8,
     "daysObserved": 6,
     "minSamplesPerHour": 7,
     "confidence": "weak",
@@ -1659,25 +1659,25 @@
     "lastDropAt": null,
     "sinceLastDropSec": null
   },
-  "uptimeSec": 5580,
-  "startedAt": 1794318856042,
-  "lastPollAt": 1794321123938,
-  "lastPollAgoSec": 3312,
+  "uptimeSec": 6194,
+  "startedAt": 1794319132379,
+  "lastPollAt": 1794325290819,
+  "lastPollAgoSec": 36,
   "alive": false,
-  "logSizeBytes": 7002456,
+  "logSizeBytes": 7008335,
   "net": {
     "enabled": true,
     "grade": "poor",
-    "p50": 1221,
-    "p95": 36766,
-    "jitter": 35545,
-    "lossPct": 73,
-    "stallPct": 90,
+    "p50": 391,
+    "p95": 4426,
+    "jitter": 4035,
+    "lossPct": 0,
+    "stallPct": 22,
     "stallMs": 1000,
     "samples": 60,
     "windowSec": 600,
-    "lastAt": "2026-11-10T15:31:24.830Z",
-    "ageSec": -249
+    "lastAt": "2026-11-10T15:42:04.432Z",
+    "ageSec": 2
   },
   "projectStatus": [
     {
@@ -1686,10 +1686,10 @@
       "known": true,
       "paused": true,
       "since": 1790403254697,
-      "pausedForSec": 3921181,
+      "pausedForSec": 3922072,
       "refusals": 288,
       "nextProbeInSec": 0
     }
   ],
-  "publishedAt": "2026-11-10T15:31:56.234Z"
+  "publishedAt": "2026-11-10T15:42:08.390Z"
 }
