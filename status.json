@@ -1,5 +1,5 @@
 {
-  "now": 1794860642531,
+  "now": 1794888244632,
   "ok": true,
   "config": {
     "pollIntervalSeconds": 2,
@@ -278,14 +278,14 @@
   },
   "schedule": {
     "locked": true,
-    "summary": "every 10m, phase ±3s, 60 samples, next in 364.9s",
+    "summary": "every 10m, phase ±3s, 60 samples, next in 362.8s",
     "periodMin": 10,
     "phaseSec": 7.5,
     "spreadSec": 2.9,
     "samples": 60,
     "inliers": 44,
-    "nextDropAt": 1794861007472.2205,
-    "nextDropInSec": 365,
+    "nextDropAt": 1794888607472.2205,
+    "nextDropInSec": 363,
     "observed": [
       1790193146078.5,
       1790194804458.5,
@@ -330,7 +330,7 @@
     "localDailyCap": null,
     "localConcurrentCap": null
   },
-  "lastClaimAttemptAt": 1794859208234,
+  "lastClaimAttemptAt": 1794888007790,
   "lastHeartbeatAt": 1794850094816,
   "sessionExpiredAlert": false,
   "stateLoadFailed": false,
@@ -348,8 +348,8 @@
       "hasClaimable": false,
       "tasksListed": 0,
       "newTaskCount": 0,
-      "lastCheckedAt": 1794860587840,
-      "lastCheckedAgoSec": 55,
+      "lastCheckedAt": 1794888196526,
+      "lastCheckedAgoSec": 48,
       "lastNotifyAt": 1790742894318,
       "lastHeldNagAt": 1789606246822,
       "lastClaimVerdict": {
@@ -358,7 +358,7 @@
       },
       "availability": {
         "lastAvailableAt": 1790960608662,
-        "lastAvailableAgoSec": 3900034,
+        "lastAvailableAgoSec": 3927636,
         "open": null,
         "windows": [
           {
@@ -647,8 +647,8 @@
       },
       "held": {
         "count": 0,
-        "at": 1794860587840,
-        "ageSec": 55,
+        "at": 1794888196526,
+        "ageSec": 48,
         "tasks": [],
         "reworkCount": 0,
         "freeSlots": null
@@ -657,10 +657,130 @@
   ],
   "lock": {
     "pid": 41824,
-    "ts": 1794860584103,
-    "ageSec": 58
+    "ts": 1794888193590,
+    "ageSec": 51
   },
   "events": [
+    {
+      "ts": "2026-11-17T04:03:05.323Z",
+      "kind": "error",
+      "text": "supabase: hai_drops write failed (0) fetch failed — telemetry only, claiming is unaffected"
+    },
+    {
+      "ts": "2026-11-17T04:01:05.341Z",
+      "kind": "error",
+      "text": "supabase: hai_held_snapshots write failed (0) fetch failed — telemetry only, claiming is unaffected"
+    },
+    {
+      "ts": "2026-11-17T04:00:08.395Z",
+      "kind": "info",
+      "text": "strike 1/2: empty"
+    },
+    {
+      "ts": "2026-11-17T04:00:08.390Z",
+      "kind": "info",
+      "text": "blind: nothing to take on Project Dynamo in 600ms (HTTP 403)"
+    },
+    {
+      "ts": "2026-11-17T04:00:05.340Z",
+      "kind": "error",
+      "text": "supabase: hai_tasks_seen write failed (0) fetch failed — telemetry only, claiming is unaffected"
+    },
+    {
+      "ts": "2026-11-17T04:00:03.516Z",
+      "kind": "info",
+      "text": "strike: armed — polling every 400ms around the predicted drop at 04:00:07.472Z"
+    },
+    {
+      "ts": "2026-11-17T03:59:05.267Z",
+      "kind": "error",
+      "text": "supabase: hai_drops write failed (0) fetch failed — telemetry only, claiming is unaffected"
+    },
+    {
+      "ts": "2026-11-17T03:58:05.245Z",
+      "kind": "error",
+      "text": "supabase: hai_drops write failed (0) fetch failed — telemetry only, claiming is unaffected"
+    },
+    {
+      "ts": "2026-11-17T03:57:05.241Z",
+      "kind": "error",
+      "text": "supabase: hai_daily write failed (0) fetch failed — telemetry only, claiming is unaffected"
+    },
+    {
+      "ts": "2026-11-17T03:56:05.239Z",
+      "kind": "error",
+      "text": "supabase: hai_events write failed (0) fetch failed — telemetry only, claiming is unaffected"
+    },
+    {
+      "ts": "2026-11-17T03:55:23.635Z",
+      "kind": "info",
+      "text": "pages: published endpoint.json -> rajdeepraoextras-dev/hai-bot-dashboard@main (https://fitting-information-meals-requirement.trycloudflare.com)"
+    },
+    {
+      "ts": "2026-11-17T03:55:22.048Z",
+      "kind": "info",
+      "text": "tunnel: up at https://fitting-information-meals-requirement.trycloudflare.com"
+    },
+    {
+      "ts": "2026-11-17T03:55:05.524Z",
+      "kind": "info",
+      "text": "tunnel: cloudflared exited (null), restarting in 10s"
+    },
+    {
+      "ts": "2026-11-17T03:55:05.363Z",
+      "kind": "info",
+      "text": "tunnel: unreachable for 3 probes — recycling cloudflared"
+    },
+    {
+      "ts": "2026-11-17T03:55:05.363Z",
+      "kind": "error",
+      "text": "tunnel: probe 3/3 failed (HTTP 530)"
+    },
+    {
+      "ts": "2026-11-17T03:55:05.236Z",
+      "kind": "error",
+      "text": "supabase: hai_drops write failed (0) fetch failed — telemetry only, claiming is unaffected"
+    },
+    {
+      "ts": "2026-11-17T03:54:26.794Z",
+      "kind": "error",
+      "text": "recovered after 2 failed cycle(s)"
+    },
+    {
+      "ts": "2026-11-17T03:54:06.236Z",
+      "kind": "error",
+      "text": "tunnel: probe 2/3 failed (HTTP 530)"
+    },
+    {
+      "ts": "2026-11-17T03:53:08.661Z",
+      "kind": "error",
+      "text": "poll error (#2) page.goto: net::ERR_NETWORK_IO_SUSPENDED at https://ai.joinhandshake.com/fellow/projects"
+    },
+    {
+      "ts": "2026-11-17T03:53:07.218Z",
+      "kind": "error",
+      "text": "pages: status snapshot failed (TypeError: fetch failed) — backing off 10min"
+    },
+    {
+      "ts": "2026-11-17T03:53:07.215Z",
+      "kind": "error",
+      "text": "supabase: hai_drops write failed (0) fetch failed — telemetry only, claiming is unaffected"
+    },
+    {
+      "ts": "2026-11-17T03:53:06.393Z",
+      "kind": "error",
+      "text": "tunnel: probe 1/3 failed (fetch failed)"
+    },
+    {
+      "ts": "2026-11-16T20:24:05.339Z",
+      "kind": "error",
+      "text": "poll error (#1) page.goto: net::ERR_NETWORK_IO_SUSPENDED at https://ai.joinhandshake.com/fellow/projects"
+    },
+    {
+      "ts": "2026-11-16T20:24:02.873Z",
+      "kind": "error",
+      "text": "supabase: hai_drops write failed (0) fetch failed — telemetry only, claiming is unaffected"
+    },
     {
       "ts": "2026-11-16T20:23:02.845Z",
       "kind": "error",
@@ -1140,126 +1260,6 @@
       "ts": "2026-11-16T19:05:59.435Z",
       "kind": "error",
       "text": "supabase: hai_drops write failed (0) fetch failed — telemetry only, claiming is unaffected"
-    },
-    {
-      "ts": "2026-11-16T19:04:59.432Z",
-      "kind": "error",
-      "text": "supabase: hai_tasks_seen write failed (0) fetch failed — telemetry only, claiming is unaffected"
-    },
-    {
-      "ts": "2026-11-16T19:03:59.430Z",
-      "kind": "error",
-      "text": "supabase: hai_drops write failed (0) fetch failed — telemetry only, claiming is unaffected"
-    },
-    {
-      "ts": "2026-11-16T19:02:59.425Z",
-      "kind": "error",
-      "text": "supabase: hai_drops write failed (0) fetch failed — telemetry only, claiming is unaffected"
-    },
-    {
-      "ts": "2026-11-16T19:01:59.417Z",
-      "kind": "error",
-      "text": "supabase: hai_drops write failed (0) fetch failed — telemetry only, claiming is unaffected"
-    },
-    {
-      "ts": "2026-11-16T19:00:08.255Z",
-      "kind": "info",
-      "text": "strike 1/2: empty"
-    },
-    {
-      "ts": "2026-11-16T19:00:08.246Z",
-      "kind": "info",
-      "text": "blind: nothing to take on Project Dynamo in 381ms (HTTP 403)"
-    },
-    {
-      "ts": "2026-11-16T19:00:03.202Z",
-      "kind": "info",
-      "text": "strike: armed — polling every 400ms around the predicted drop at 19:00:07.472Z"
-    },
-    {
-      "ts": "2026-11-16T18:59:59.467Z",
-      "kind": "error",
-      "text": "supabase: hai_drops write failed (0) fetch failed — telemetry only, claiming is unaffected"
-    },
-    {
-      "ts": "2026-11-16T18:57:59.411Z",
-      "kind": "error",
-      "text": "supabase: hai_drops write failed (0) fetch failed — telemetry only, claiming is unaffected"
-    },
-    {
-      "ts": "2026-11-16T18:56:59.392Z",
-      "kind": "error",
-      "text": "supabase: hai_drops write failed (0) fetch failed — telemetry only, claiming is unaffected"
-    },
-    {
-      "ts": "2026-11-16T18:55:59.390Z",
-      "kind": "error",
-      "text": "supabase: hai_claims write failed (0) fetch failed — telemetry only, claiming is unaffected"
-    },
-    {
-      "ts": "2026-11-16T18:54:59.389Z",
-      "kind": "error",
-      "text": "supabase: hai_claims write failed (0) fetch failed — telemetry only, claiming is unaffected"
-    },
-    {
-      "ts": "2026-11-16T18:53:59.386Z",
-      "kind": "error",
-      "text": "supabase: hai_tasks_seen write failed (0) fetch failed — telemetry only, claiming is unaffected"
-    },
-    {
-      "ts": "2026-11-16T18:52:59.381Z",
-      "kind": "error",
-      "text": "supabase: hai_claims write failed (0) fetch failed — telemetry only, claiming is unaffected"
-    },
-    {
-      "ts": "2026-11-16T18:51:59.380Z",
-      "kind": "error",
-      "text": "supabase: hai_held_snapshots write failed (0) fetch failed — telemetry only, claiming is unaffected"
-    },
-    {
-      "ts": "2026-11-16T18:50:59.376Z",
-      "kind": "error",
-      "text": "supabase: hai_drops write failed (0) fetch failed — telemetry only, claiming is unaffected"
-    },
-    {
-      "ts": "2026-11-16T18:50:13.905Z",
-      "kind": "info",
-      "text": "blind: no fresh held snapshot for Project Dynamo — not firing an untargeted claim"
-    },
-    {
-      "ts": "2026-11-16T18:50:10.372Z",
-      "kind": "info",
-      "text": "blind: no fresh held snapshot for Project Dynamo — not firing an untargeted claim"
-    },
-    {
-      "ts": "2026-11-16T18:50:03.198Z",
-      "kind": "info",
-      "text": "strike: armed — polling every 400ms around the predicted drop at 18:50:07.472Z"
-    },
-    {
-      "ts": "2026-11-16T18:49:59.365Z",
-      "kind": "error",
-      "text": "supabase: hai_drops write failed (0) fetch failed — telemetry only, claiming is unaffected"
-    },
-    {
-      "ts": "2026-11-16T18:48:59.363Z",
-      "kind": "error",
-      "text": "supabase: hai_claims write failed (0) fetch failed — telemetry only, claiming is unaffected"
-    },
-    {
-      "ts": "2026-11-16T18:47:59.360Z",
-      "kind": "error",
-      "text": "supabase: hai_tasks_seen write failed (0) fetch failed — telemetry only, claiming is unaffected"
-    },
-    {
-      "ts": "2026-11-16T18:46:59.359Z",
-      "kind": "error",
-      "text": "supabase: hai_held_snapshots write failed (0) fetch failed — telemetry only, claiming is unaffected"
-    },
-    {
-      "ts": "2026-11-16T18:45:59.358Z",
-      "kind": "error",
-      "text": "supabase: hai_drops write failed (0) fetch failed — telemetry only, claiming is unaffected"
     }
   ],
   "lastPollSummary": {
@@ -1277,27 +1277,27 @@
       "known": true,
       "paused": true,
       "since": 1790403254697,
-      "pausedForSec": 4457333,
+      "pausedForSec": 4484942,
       "refusals": 288,
       "nextProbeInSec": 0
     },
     "minGapMs": 60000
   },
   "health": {
-    "polls": 116,
+    "polls": 29,
     "pollsFailed": 0,
-    "errors": 55,
+    "errors": 15,
     "rateLimited": 0,
     "claims": 0,
     "restarts": 0,
     "notifies": 0,
-    "medianPollGapSec": 5.7,
-    "pollsOk": 116,
+    "medianPollGapSec": 5.6,
+    "pollsOk": 29,
     "pollFailPct": 0,
     "blind": false,
     "windowLabel": "last hour",
     "budget": {
-      "used": 2,
+      "used": 3,
       "limit": 52,
       "pollLimit": 46
     }
@@ -1314,16 +1314,16 @@
     "waitSamples": 0
   },
   "runtime": {
-    "at": 1794860584107,
+    "at": 1794888193593,
     "tier": "idle",
     "gapMs": 2000,
-    "msToDrop": -176634.77954101562,
+    "msToDrop": -186119.77954101562,
     "alert": null,
     "hot": false,
     "strikes": {
       "spent": 1,
       "max": 2,
-      "off": false
+      "off": true
     },
     "hotStrikes": {
       "spent": 0,
@@ -1331,9 +1331,9 @@
       "off": false
     },
     "lastStrikeVerdict": "empty",
-    "lastStrikeAt": 1794859208663,
-    "ageSec": 58,
-    "lastStrikeAgoSec": 1434,
+    "lastStrikeAt": 1794888008395,
+    "ageSec": 51,
+    "lastStrikeAgoSec": 236,
     "blindCooldownSec": 0,
     "blindOkAt": 1790261472879
   },
@@ -1369,7 +1369,7 @@
         "title": "",
         "first": 1790317936054,
         "last": 1790960608656,
-        "ageSec": 3900034
+        "ageSec": 3927636
       },
       {
         "id": "20556321-83f5-4ed4-b985-2e91075fd94d",
@@ -1377,7 +1377,7 @@
         "title": "",
         "first": 1790174915802,
         "last": 1790708118766,
-        "ageSec": 4152524
+        "ageSec": 4180126
       },
       {
         "id": "a738d554-1a5b-466b-b2f0-8e55040587e1",
@@ -1385,7 +1385,7 @@
         "title": "",
         "first": 1790174947039,
         "last": 1790708118766,
-        "ageSec": 4152524
+        "ageSec": 4180126
       },
       {
         "id": "a86a408e-b1d3-4809-8d3a-0da79442995e",
@@ -1393,7 +1393,7 @@
         "title": "",
         "first": 1790174947039,
         "last": 1790708118766,
-        "ageSec": 4152524
+        "ageSec": 4180126
       },
       {
         "id": "b2015940-5792-47e6-9abd-029c74644bed",
@@ -1401,7 +1401,7 @@
         "title": "",
         "first": 1790174947039,
         "last": 1790708118766,
-        "ageSec": 4152524
+        "ageSec": 4180126
       },
       {
         "id": "c7833216-e935-4c5a-a06a-3c5d756b15a4",
@@ -1409,7 +1409,7 @@
         "title": "",
         "first": 1790316316343,
         "last": 1790708118766,
-        "ageSec": 4152524
+        "ageSec": 4180126
       },
       {
         "id": "a72a821f-253d-455e-8010-6bf7a26ec4a5",
@@ -1417,7 +1417,7 @@
         "title": "",
         "first": 1790034283509,
         "last": 1790708118766,
-        "ageSec": 4152524
+        "ageSec": 4180126
       },
       {
         "id": "e061b205-f8c1-4e90-89c6-14a6e4e3e955",
@@ -1425,7 +1425,7 @@
         "title": "",
         "first": 1790101805726,
         "last": 1790708118766,
-        "ageSec": 4152524
+        "ageSec": 4180126
       },
       {
         "id": "6c515567-eecf-4b50-a55c-9885e00fdf9c",
@@ -1433,7 +1433,7 @@
         "title": "",
         "first": 1790202004281,
         "last": 1790708118766,
-        "ageSec": 4152524
+        "ageSec": 4180126
       },
       {
         "id": "0c8ff07a-78cf-4ee8-a954-e40b9ebeaae3",
@@ -1441,7 +1441,7 @@
         "title": "",
         "first": 1790174908004,
         "last": 1790960608656,
-        "ageSec": 3900034
+        "ageSec": 3927636
       },
       {
         "id": "03aca6cc-a415-482b-840c-42cfb4e66813",
@@ -1449,7 +1449,7 @@
         "title": "",
         "first": 1790034270579,
         "last": 1790960608656,
-        "ageSec": 3900034
+        "ageSec": 3927636
       },
       {
         "id": "16b28371-3248-452c-87db-d0ee7fb213fb",
@@ -1457,7 +1457,7 @@
         "title": "",
         "first": 1790041807161,
         "last": 1790960608656,
-        "ageSec": 3900034
+        "ageSec": 3927636
       }
     ]
   },
@@ -1644,10 +1644,10 @@
     "since": 1789797793124
   },
   "forecast": {
-    "expected": 128,
+    "expected": 60,
     "lo": 0,
-    "hi": 472,
-    "hoursLeft": 22.1,
+    "hi": 231,
+    "hoursLeft": 14.4,
     "daysObserved": 6,
     "minSamplesPerHour": 6,
     "confidence": "weak",
@@ -1659,24 +1659,24 @@
     "lastDropAt": null,
     "sinceLastDropSec": null
   },
-  "uptimeSec": 10631,
+  "uptimeSec": 38239,
   "startedAt": 1794850017351,
-  "lastPollAt": 1794860587874,
-  "lastPollAgoSec": 55,
+  "lastPollAt": 1794888196544,
+  "lastPollAgoSec": 48,
   "alive": false,
-  "logSizeBytes": 288395,
+  "logSizeBytes": 300067,
   "net": {
     "enabled": true,
     "grade": "good",
-    "p50": 148,
-    "p95": 652,
-    "jitter": 504,
+    "p50": 100,
+    "p95": 339,
+    "jitter": 239,
     "lossPct": 0,
-    "stallPct": 2,
+    "stallPct": 0,
     "stallMs": 1000,
     "samples": 60,
     "windowSec": 600,
-    "lastAt": "2026-11-16T20:23:54.823Z",
+    "lastAt": "2026-11-17T04:03:56.661Z",
     "ageSec": 8
   },
   "projectStatus": [
@@ -1686,10 +1686,10 @@
       "known": true,
       "paused": true,
       "since": 1790403254697,
-      "pausedForSec": 4457388,
+      "pausedForSec": 4484990,
       "refusals": 288,
       "nextProbeInSec": 0
     }
   ],
-  "publishedAt": "2026-11-16T20:24:02.995Z"
+  "publishedAt": "2026-11-17T04:04:05.854Z"
 }
